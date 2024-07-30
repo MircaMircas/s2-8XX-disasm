@@ -308,7 +308,7 @@ Mus_FinalBoss_Voices:
 	smpsVcReleaseRate   $0F, $0F, $0F, $0F
 	smpsVcTotalLevel    $80, $80, $80, $1E
 
-; unused voice
+; Unused voice
 ;	Voice $03
 ;	$3D
 ;	$01, $21, $51, $01, 	$12, $14, $14, $0F, 	$07, $05, $05, $05

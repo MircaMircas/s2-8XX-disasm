@@ -530,7 +530,8 @@ Mus_GHZ_Voices:
 	smpsVcReleaseRate   $0F, $0F, $0F, $0F
 	smpsVcTotalLevel    $00, $13, $2D, $24
 
-;	unused Voice $08
+; Unused voice
+;	Voice $08
 ;	$3D
 ;	$01, $00, $02, $01, 	$1F, $0E, $0E, $0E, 	$07, $1F, $1F, $1F
 ;	$00, $00, $00, $00, 	$1F, $0F, $0F, $0F, 	$17, $8C, $8D, $8C
