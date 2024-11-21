@@ -467,11 +467,12 @@ smpsPSGAlterVol macro vol
 	endm
 
 ; Clears pushing sound flag in S1
+; interesting how this exists in S2 Simon Wai
 smpsClearPush macro
-	if SonicDriverVer==1
+	if SonicDriverVer<3
 		dc.b	$ED
 	else
-		fatal "Coord. Flag to clear S1 push block flag does not exist in S2 or S3 drivers. Complain to Flamewing to add it."
+		fatal "Coord. Flag to clear S1 push block flag does not exist in S3 drivers. Complain to Flamewing to add it."
 	endif
 	endm
 

@@ -8,6 +8,131 @@ Size_of_DAC_samples =		$2723
 Size_of_SEGA_sound =		$6174
 Size_of_Snd_driver_guess =	$DF3 ; approximate post-compressed size of the Z80 sound driver
 
+; ---------------------------------------------------------------------------
+; Object Status Table offsets (for everything between Object_RAM and Primary_Collision)
+; ---------------------------------------------------------------------------
+; universally followed object conventions:
+id =			  0 ; object ID (if you change this, change insn1op and insn2op in s2.macrosetup.asm, if you still use them)
+render_flags =		  1 ; bitfield ; bit 7 = onscreen flag, bit 0 = x mirror, bit 1 = y mirror, bit 2 = coordinate system, bit 6 = render subobjects
+art_tile =		  2 ; and 3 ; start of sprite's art
+mappings =		  4 ; and 5 and 6 and 7
+x_pos =			  8 ; and 9 ... some objects use $A and $B as well when extra precision is required (see ObjectMove) ... for screen-space objects this is called x_pixel instead
+x_sub =			 $A ; and $B
+y_pos =			 $C ; and $D ... some objects use $E and $F as well when extra precision is required ... screen-space objects use y_pixel instead
+y_sub =			 $E ; and $F
+priority =		$18 ; 0 = front
+width_pixels =		$19
+mapping_frame =		$1A
+; ---------------------------------------------------------------------------
+; conventions followed by most objects:
+x_vel =			$10 ; and $11 ; horizontal velocity
+y_vel =			$12 ; and $13 ; vertical velocity
+y_radius =		$16 ; collision height / 2
+x_radius =		$17 ; collision width / 2
+anim_frame =		$1B
+anim =			$1C
+prev_anim =		$1D
+anim_frame_duration =	$1E
+status =		$22 ; note: exact meaning depends on the object... for Sonic/Tails: bit 0: left-facing. bit 1: in-air. bit 2: spinning. bit 3: on-object. bit 4: roll-jumping. bit 5: pushing. bit 6: underwater.
+routine =		$24
+routine_secondary =	$25
+angle =			$26 ; angle about the z axis (360 degrees = 256)
+; ---------------------------------------------------------------------------
+; conventions followed by many objects but NOT Sonic/Tails:
+collision_flags =	$20
+collision_property =	$21
+respawn_index =		$23
+subtype =		$28
+; ---------------------------------------------------------------------------
+; conventions specific to Sonic/Tails (Obj01, Obj02, and ObjDB):
+; note: $1F, $20, and $21 are unused and available (however, $1F is cleared by loc_A53A and ObjB2_Landed_on_plane)
+inertia =		$14 ; and $15 ; directionless representation of speed... not updated in the air
+flip_angle =		$27 ; angle about the x axis (360 degrees = 256) (twist/tumble)
+air_left =		$28
+flip_turned =		$29 ; 0 for normal, 1 to invert flipping (it's a 180 degree rotation about the axis of Sonic's spine, so he stays in the same position but looks turned around)
+obj_control =		$2A ; 0 for normal, 1 for hanging or for resting on a flipper, $81 for going through CNZ/OOZ/MTZ tubes or stopped in CNZ cages or stoppers or flying if Tails
+status_secondary =	$2B
+flips_remaining =	$2C ; number of flip revolutions remaining
+flip_speed =		$2D ; number of flip revolutions per frame / 256
+move_lock =		$2E ; and $2F ; horizontal control lock, counts down to 0
+invulnerable_time =	$30 ; and $31 ; time remaining until you stop blinking
+invincibility_time =	$32 ; and $33 ; remaining
+speedshoes_time =	$34 ; and $35 ; remaining
+next_tilt =		$36 ; angle on ground in front of sprite
+tilt =			$37 ; angle on ground
+stick_to_convex =	$38 ; 0 for normal, 1 to make Sonic stick to convex surfaces like the rotating discs in Sonic 1 and 3 (unused in Sonic 2 but fully functional)
+spindash_flag =		$39 ; 0 for normal, 1 for charging a spindash or forced rolling
+pinball_mode =		spindash_flag
+spindash_counter =	$3A ; and $3B
+restart_countdown =	spindash_counter; and 1+spindash_counter
+jumping =		$3C
+interact =		$3D ; RAM address of the last object Sonic stood on, minus $FFFFB000 and divided by $40
+top_solid_bit = 	$3E ; the bit to check for top solidity (either $C or $E)
+lrb_solid_bit =		$3F ; the bit to check for left/right/bottom solidity (either $D or $F)
+; ---------------------------------------------------------------------------
+; conventions followed by several objects but NOT Sonic/Tails:
+y_pixel =		2+x_pos ; and 3+x_pos ; y coordinate for objects using screen-space coordinate system
+x_pixel =		x_pos ; and 1+x_pos ; x coordinate for objects using screen-space coordinate system
+parent =		objoff_3E ; and $3F ; address of object that owns or spawned this one, if applicable
+; TODO: $2C is often parent instead (see LoadChildObject); consider defining parent2 = $2C and changing some objoff_2Cs to that
+; ---------------------------------------------------------------------------
+; conventions followed by some/most bosses:
+boss_subtype		= objoff_A
+boss_invulnerable_time	= objoff_14
+boss_sine_count		= mapping_frame
+boss_routine		= angle
+boss_defeated		= objoff_2C
+boss_hitcount2		= objoff_32
+boss_hurt_sonic		= objoff_38	; flag set by collision response routine when Sonic has just been hurt (by boss?)
+; ---------------------------------------------------------------------------
+; when childsprites are activated (i.e. bit #6 of render_flags set)
+next_subspr		= $6
+mainspr_mapframe	= objoff_B
+mainspr_width		= objoff_E
+mainspr_childsprites 	= objoff_F	; amount of child sprites
+mainspr_height		= objoff_14
+subspr_data		= $10
+sub2_x_pos		= subspr_data+next_subspr*0+0	;x_vel
+sub2_y_pos		= subspr_data+next_subspr*0+2	;y_vel
+sub2_mapframe		= subspr_data+next_subspr*0+5
+sub3_x_pos		= subspr_data+next_subspr*1+0	;y_radius
+sub3_y_pos		= subspr_data+next_subspr*1+2	;priority
+sub3_mapframe		= subspr_data+next_subspr*1+5	;anim_frame
+sub4_x_pos		= subspr_data+next_subspr*2+0	;anim
+sub4_y_pos		= subspr_data+next_subspr*2+2	;anim_frame_duration
+sub4_mapframe		= subspr_data+next_subspr*2+5	;collision_property
+sub5_x_pos		= subspr_data+next_subspr*3+0	;status
+sub5_y_pos		= subspr_data+next_subspr*3+2	;routine
+sub5_mapframe		= subspr_data+next_subspr*3+5
+sub6_x_pos		= subspr_data+next_subspr*4+0	;subtype
+sub6_y_pos		= subspr_data+next_subspr*4+2
+sub6_mapframe		= subspr_data+next_subspr*4+5
+sub7_x_pos		= subspr_data+next_subspr*5+0
+sub7_y_pos		= subspr_data+next_subspr*5+2
+sub7_mapframe		= subspr_data+next_subspr*5+5
+sub8_x_pos		= subspr_data+next_subspr*6+0
+sub8_y_pos		= subspr_data+next_subspr*6+2
+sub8_mapframe		= subspr_data+next_subspr*6+5
+sub9_x_pos		= subspr_data+next_subspr*7+0
+sub9_y_pos		= subspr_data+next_subspr*7+2
+sub9_mapframe		= subspr_data+next_subspr*7+5
+; ---------------------------------------------------------------------------
+; unknown or inconsistently used offsets that are not applicable to Sonic/Tails:
+; (provided because rearrangement of the above values sometimes requires making space in here too)
+objoff_A =		x_sub+0 ; note: x_pos can be 4 bytes, but sometimes the last 2 bytes of x_pos are used for other unrelated things
+objoff_B =		x_sub+1 ; unused
+objoff_E =		y_sub+0	; unused
+objoff_F =		y_sub+1 ; unused
+objoff_10 =		x_vel
+objoff_14 =		inertia+0
+objoff_15 =		inertia+1
+objoff_1F =		anim_frame_duration+1
+objoff_27 =		$27
+objoff_28 =		subtype ; overlaps subtype, but a few objects use it for other things anyway
+ enum               objoff_29=$29,objoff_2A=$2A,objoff_2B=$2B,objoff_2C=$2C,objoff_2D=$2D,objoff_2E=$2E,objoff_2F=$2F
+ enum objoff_30=$30,objoff_31=$31,objoff_32=$32,objoff_33=$33,objoff_34=$34,objoff_35=$35,objoff_36=$36,objoff_37=$37
+ enum objoff_38=$38,objoff_39=$39,objoff_3A=$3A,objoff_3B=$3B,objoff_3C=$3C,objoff_3D=$3D,objoff_3E=$3E,objoff_3F=$3F
+
 object_size = $40
 ; ---------------------------------------------------------------------------
 ; Constants that can be used instead of hard-coded IDs for various things.
@@ -270,6 +395,95 @@ S1MusID_Boss =		MusID_FinalBoss
 S1MusID_ActClear =	MusID_Boss
 S1MusID_Emerald =	MusID_BOZ
 
+; Sound IDs
+offset :=	SoundIndex
+ptrsize :=	2
+idstart :=	$A0
+; $80 is reserved for silence, so if you make idstart $80 or less,
+; you may need to insert a dummy SndPtr in the $80 slot
+
+SndID__First = idstart
+SndID_Jump =		id(SndPtr_Jump)			; A0
+SndID_Checkpoint =	id(SndPtr_Checkpoint)		; A1
+SndID_SpikeSwitch =	id(SndPtr_SpikeSwitch)		; A2
+SndID_Hurt =		id(SndPtr_Hurt)			; A3
+SndID_Skidding =	id(SndPtr_Skidding)		; A4
+SndID_MissileDissolve =	id(SndPtr_MissileDissolve)	; A5
+SndID_HurtBySpikes =	id(SndPtr_HurtBySpikes)		; A6
+SndID_PushBlock =	id(SndPtr_PushBlock)		; A7
+SndID_SSGoal =		id(SndPtr_SSGoal)		; A8
+SndID_Bwoop =		id(SndPtr_Bwoop)		; A9
+SndID_Splash =		id(SndPtr_Splash)		; AA
+SndID_Swish =		id(SndPtr_Swish)		; AB
+SndID_BossHit =		id(SndPtr_BossHit)		; AC
+SndID_InhalingBubble =	id(SndPtr_InhalingBubble)	; AD
+SndID_ArrowFiring =	id(SndPtr_ArrowFiring)		; AE
+SndID_LavaBall =	id(SndPtr_LavaBall)		; AE
+SndID_Shield =		id(SndPtr_Shield)		; AF
+SndID_Saw =		id(SndPtr_Saw)			; B0
+SndID_Electric =	id(SndPtr_Electric)		; B1
+SndID_Drown =		id(SndPtr_Drown)		; B2
+SndID_FireBurn =	id(SndPtr_FireBurn)		; B3
+SndID_Bumper =		id(SndPtr_Bumper)		; B4
+SndID_Ring =		id(SndPtr_Ring)			; B5
+SndID_RingRight =	id(SndPtr_RingRight)		; B5
+SndID_SpikesMove =	id(SndPtr_SpikesMove)		; B6
+SndID_Rumbling =	id(SndPtr_Rumbling)		; B7
+SndID_Smash =		id(SndPtr_Smash)		; B9
+SndID_SSGlass =		id(SndPtr_SSGlass)		; BA
+SndID_DoorSlam =	id(SndPtr_DoorSlam)		; BB
+SndID_SpindashRelease =	id(SndPtr_SpindashRelease)	; BC
+SndID_Hammer =		id(SndPtr_Hammer)		; BD
+SndID_Roll =		id(SndPtr_Roll)			; BE
+SndID_ContinueJingle =	id(SndPtr_ContinueJingle)	; BF
+SndID_BasaranFlap =	id(SndPtr_BasaranFlap)		; C0
+SndID_Explosion =	id(SndPtr_Explosion)		; C1
+SndID_WaterWarning =	id(SndPtr_WaterWarning)		; C2
+SndID_EnterGiantRing =	id(SndPtr_EnterGiantRing)	; C3
+SndID_BossExplosion =	id(SndPtr_BossExplosion)	; C4
+SndID_TallyEnd =	id(SndPtr_TallyEnd)		; C5
+SndID_RingSpill =	id(SndPtr_RingSpill)		; C6
+SndID_Flamethrower =	id(SndPtr_Flamethrower)		; C8
+SndID_Bonus =		id(SndPtr_Bonus)		; C9
+SndID_SpecStageEntry =	id(SndPtr_SpecStageEntry)	; CA
+SndID_SlowSmash =	id(SndPtr_SlowSmash)		; CB
+SndID_Spring =		id(SndPtr_Spring)		; CC
+SndID_Blip =		id(SndPtr_Blip)			; CD
+SndID_RingLeft =	id(SndPtr_RingLeft)		; CE
+SndID_Signpost =	id(SndPtr_Signpost)		; CF
+SndID_CNZBossZap =	id(SndPtr_CNZBossZap)		; D0
+SndID_Signpost2P =	id(SndPtr_Signpost2P)		; D3
+SndID_OOZLidPop =	id(SndPtr_OOZLidPop)		; D4
+SndID_SlidingSpike =	id(SndPtr_SlidingSpike)		; D5
+SndID_CNZElevator =	id(SndPtr_CNZElevator)		; D6
+SndID_PlatformKnock =	id(SndPtr_PlatformKnock)	; D7
+SndID_BonusBumper =	id(SndPtr_BonusBumper)		; D8
+SndID_LargeBumper =	id(SndPtr_LargeBumper)		; D9
+SndID_Gloop =		id(SndPtr_Gloop)		; DA
+SndID_PreArrowFiring =	id(SndPtr_PreArrowFiring)	; DB
+SndID_Fire =		id(SndPtr_Fire)			; DC
+SndID_ArrowStick =	id(SndPtr_ArrowStick)		; DD
+SndID_Helicopter =	id(SndPtr_Helicopter)		; DE
+SndID_SuperTransform =	id(SndPtr_SuperTransform)	; DF
+SndID_SpindashRev =	id(SndPtr_SpindashRev)		; E0
+SndID__End =		id(SndPtr__End)			; E1
+
+; Sound command IDs
+offset :=	zCommandIndex
+ptrsize :=	4
+idstart :=	$F9
+
+CmdID__First = idstart
+MusID_FadeOut =		id(CmdPtr_FadeOut)	; F9
+SndID_SegaSound =	id(CmdPtr_SegaSound)	; FA
+MusID_SpeedUp =		id(CmdPtr_SpeedUp)	; FB
+MusID_SlowDown =	id(CmdPtr_SlowDown)	; FC
+MusID_Stop =		id(CmdPtr_Stop)		; FD
+CmdID__End =		id(CmdPtr__End)		; FE
+
+MusID_Pause =		$7E+$80			; FE
+MusID_Unpause =		$7F+$80			; FF
+
 ; Other sizes
 palette_line_size =	$10*2	; 16 word entries
 
@@ -283,7 +497,7 @@ ramaddr function x,-(-x)&$FFFFFFFF
 	phase	ramaddr($FFFF0000)	; Pretend we're in the RAM
 RAM_Start:
 Chunk_Table:			ds.b	$8000
-
+Chunk_Table_End:
 Level_Layout:			ds.b	$1000
 Level_Layout_End:
 
