@@ -300,7 +300,7 @@ dpcmLoopCounter function sampleRate, pcmLoopCounterBase(sampleRate,297/2) ; 297 
 		jp	zStartDAC
 ; ---------------------------------------------------------------------------
 
-	if OptimiseDriver=0
+	if ~~OptimiseDriver
 ; ||||||||||||||| S U B R O U T I N E |||||||||||||||||||||||||||||||||||||||
 		align 8
 ; zsub_8:
@@ -319,11 +319,7 @@ zWaitForYM:	rsttarget
 zWriteFMIorII:	rsttarget
 		bit	2,(ix+zTrack.VoiceControl)
 		jr	z,zWriteFMI
-	if OptimiseDriver
-		jp	zWriteFMII
-	else
 		jr	zWriteFMII
-	endif
 ; End of function zWriteFMIorII
 
 ; ||||||||||||||| S U B R O U T I N E |||||||||||||||||||||||||||||||||||||||
@@ -331,14 +327,14 @@ zWriteFMIorII:	rsttarget
 ; zsub_18
 zWriteFMI:	rsttarget
 		; Write reg/data pair to part I; 'a' is register, 'c' is data
-	if OptimiseDriver=0
+	if ~~OptimiseDriver
 		push	af
 		rst	zWaitForYM
 		pop	af
 	endif
 		ld	(zYM2612_A0),a
 		push	af
-	if OptimiseDriver=0
+	if ~~OptimiseDriver
 		rst	zWaitForYM
 	endif
 		ld	a,c
@@ -352,14 +348,14 @@ zWriteFMI:	rsttarget
 ; zsub_28:
 zWriteFMII:	rsttarget
 		; Write reg/data pair to part II; 'a' is register, 'c' is data
-	if OptimiseDriver=0
+	if ~~OptimiseDriver
 		push	af
 		rst	zWaitForYM
 		pop	af
 	endif
 		ld	(zYM2612_A1),a
 		push	af
-	if OptimiseDriver=0
+	if ~~OptimiseDriver
 		rst	zWaitForYM
 	endif
 		ld	a,c
@@ -588,9 +584,11 @@ zWriteToDAC:
 					; 297
 		; 297 cycles for two samples. dpcmLoopCounter should use 297 divided by 2.
 ; ---------------------------------------------------------------------------
-DPCMData:	db 0,1,2,4,8,10h,20h,40h
+DPCMData:
+		db 0,1,2,4,8,10h,20h,40h
 		db 80h,-1,-2,-4,-8,-10h,-20h,-40h
-BGMChnPtrs:	dw zSongFM3
+BGMChnPtrs:
+		dw zSongFM3
 		dw 0
 		dw zSongFM4
 		dw zSongFM5
@@ -598,7 +596,8 @@ BGMChnPtrs:	dw zSongFM3
 		dw zSongPSG2
 		dw zSongPSG3
 		dw zSongPSG3
-SFXChnPtrs:	dw zSFX_FM3
+SFXChnPtrs:
+		dw zSFX_FM3
 		dw 0
 		dw zSFX_FM4
 		dw zSFX_FM5
@@ -852,7 +851,8 @@ loc_30B:
 ; End of function DoModulation
 
 ; ---------------------------------------------------------------------------
-FMFreqs:	dw 25Eh,284h,2ABh,2D3h,2FEh,32Dh,35Ch,38Fh,3C5h,3FFh,43Ch,47Ch
+FMFreqs:
+		dw 25Eh,284h,2ABh,2D3h,2FEh,32Dh,35Ch,38Fh,3C5h,3FFh,43Ch,47Ch
 		dw 0A5Eh,0A84h,0AABh,0AD3h,0AFEh,0B2Dh,0B5Ch,0B8Fh,0BC5h,0BFFh,0C3Ch,0C7Ch
 		dw 125Eh,1284h,12ABh,12D3h,12FEh,132Dh,135Ch,138Fh,13C5h,13FFh,143Ch,147Ch
 		dw 1A5Eh,1A84h,1AABh,1AD3h,1AFEh,1B2Dh,1B5Ch,1B8Fh,1BC5h,1BFFh,1C3Ch,1C7Ch
@@ -1370,11 +1370,7 @@ loc_707:
 		ld	(zAbsVar.1upPlaying),a
 		xor	a
 		ld	(zAbsVar.SFXPriorityVal),a
-	if OptimiseDriver
-		jp	loc_72C
-	else
 		jr	loc_72C
-	endif
 ; ---------------------------------------------------------------------------
 
 loc_725:
@@ -1472,11 +1468,7 @@ loc_79A:
 		jr	nz,loc_7DB
 		xor	a
 		ld	c,a
-	if OptimiseDriver
-		jp	loc_7F3
-	else
 		jr	loc_7F3
-	endif
 ; ---------------------------------------------------------------------------
 
 loc_7DB:
@@ -1556,11 +1548,7 @@ loc_84E:
 		jp	m,loc_860
 		sub	2
 		add	a,a
-	if OptimiseDriver
-		jp	loc_866
-	else
 		jr	loc_866
-	endif
 ; ---------------------------------------------------------------------------
 
 loc_860:
@@ -1596,8 +1584,10 @@ loc_883:
 		djnz	loc_883
 		ret
 ; ---------------------------------------------------------------------------
-FMInitBytes:	db 6,0,1,2,4,5,6
-PSGInitBytes:	db 80h,0A0h,0C0h
+FMInitBytes:
+		db 6,0,1,2,4,5,6
+PSGInitBytes:
+		db 80h,0A0h,0C0h
 ; ---------------------------------------------------------------------------
 
 PlaySFX:
@@ -1861,11 +1851,7 @@ loc_A27:
 		inc	(ix+zTrack.Volume)
 		jp	p,loc_A39
 		res	7,(ix+zTrack.PlaybackControl)
-	if OptimiseDriver
-		jp	loc_A3E
-	else
 		jr	loc_A3E
-	endif
 ; ---------------------------------------------------------------------------
 
 loc_A39:
@@ -1887,11 +1873,7 @@ loc_A47:
 		cp	(ix+zTrack.Volume)
 		jp	nc,loc_A5E
 		res	7,(ix+zTrack.PlaybackControl)
-	if OptimiseDriver
-		jp	loc_A66
-	else
 		jr	loc_A66
-	endif
 ; ---------------------------------------------------------------------------
 
 loc_A5E:
@@ -2276,8 +2258,12 @@ cfE0_Pan:
 		ld	a,(ix+zTrack.VoiceControl)
 		and	3
 		add	a,0B4h
+	if OptimiseDriver
+		jp	zWriteFMIorII
+	else
 		rst	zWriteFMIorII
 		ret
+	endif
 ; ---------------------------------------------------------------------------
 
 cfE1_Detune:
@@ -2786,18 +2772,24 @@ SndPriorities:	db 80h,70h,70h,70h,70h,70h,70h,70h,70h,70h,68h
 		db 90h,90h,90h
 ; word_F75
 zDACPtrTbl:
-zDACPtr_Kick:	dw	zmake68kPtr(DAC_Sample01)
+zDACPtr_Kick:
+		dw	zmake68kPtr(DAC_Sample01)
 zDACLenTbl:
 		dw	DAC_Sample01_End-DAC_Sample01
-zDACPtr_Snare:	dw	zmake68kPtr(DAC_Sample02)
+zDACPtr_Snare:
+		dw	zmake68kPtr(DAC_Sample02)
 		dw	DAC_Sample02_End-DAC_Sample02
-zDACPtr_Clap:	dw	zmake68kPtr(DAC_Sample03)
+zDACPtr_Clap:
+		dw	zmake68kPtr(DAC_Sample03)
 		dw	DAC_Sample03_End-DAC_Sample03
-zDACPtr_Scratch:	dw	zmake68kPtr(DAC_Sample04)
+zDACPtr_Scratch:
+		dw	zmake68kPtr(DAC_Sample04)
 		dw	DAC_Sample04_End-DAC_Sample04
-zDACPtr_Timpani:	dw	zmake68kPtr(DAC_Sample05)
+zDACPtr_Timpani:
+		dw	zmake68kPtr(DAC_Sample05)
 		dw	DAC_Sample05_End-DAC_Sample05
-zDACPtr_Tom:	dw	zmake68kPtr(DAC_Sample06)
+zDACPtr_Tom:
+		dw	zmake68kPtr(DAC_Sample06)
 		dw	DAC_Sample06_End-DAC_Sample06
 
 ; byte_F8D
@@ -2948,4 +2940,3 @@ byte_11A9:	db 0
 zDoSFXFlag:	db 0
 byte_11AB:	db 0
 zPushingFlag:	db 0
-; end of 'RAM'

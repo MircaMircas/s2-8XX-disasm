@@ -2655,13 +2655,13 @@ loc_34C4:
 		cmp.w	d3,d4
 		bcc.w	loc_34d6
 		lsl.l	#8,d4
-		divu.w  d3,d4
+		divu.w	d3,d4
 		moveq	#0,d0
 		move.b	AngleData(pc,d4.w),d0
 		bra.s	loc_34E0
 loc_34d6:
 		lsl.l	#8,d3
-		divu.w  d4,d3
+		divu.w	d4,d3
 		moveq	#$40,d0
 		sub.b	AngleData(pc,d3.w),d0
 loc_34E0:
@@ -3420,23 +3420,23 @@ Unused_Code3_Loop3: ; loc_40E6:
 		movem.l A1-A3,-(sp)
 		move.w	#$3F,d0
 Unused_Code3_Loop4: ; loc_40EE:		
-		cmpm.w  (a1)+,(a3)+
+		cmpm.w	(a1)+,(a3)+
 		bne.s	Unused_Code3_loc_4104
-		dbf	d0,Unused_Code3_Loop4  ; loc_40EE
+		dbf	d0,Unused_Code3_Loop4	; loc_40EE
 		movem.l (sp)+,A1-A3
 		adda.w	#$80,A1
-		dbf	d5,Unused_Code3_Loop2  ; loc_40DE
+		dbf	d5,Unused_Code3_Loop2	; loc_40DE
 		bra.s	Unused_Code3_loc_411E
 Unused_Code3_loc_4104:
 		movem.l (sp)+,A1-A3
 		adda.w	#$80,A3
-		dbf	d6,Unused_Code3_Loop3  ; loc_40E6
+		dbf	d6,Unused_Code3_Loop3	; loc_40E6
 		moveq	#$1F,d0
 Unused_Code3_Loop5: ; loc_4112:		
 		move.l	(a1)+,(a3)+
-		dbf	d0,Unused_Code3_Loop5  ; loc_4112
+		dbf	d0,Unused_Code3_Loop5	; loc_4112
 		addq.l	#1,d7
-		dbf	d5,Unused_Code3_Loop2  ; loc_40DE
+		dbf	d5,Unused_Code3_Loop2	; loc_40DE
 Unused_Code3_loc_411E:
 		bra.s	Unused_Code3_loc_411E
 Unused_Code4: ; loc_4120:
@@ -4184,7 +4184,7 @@ loc_48A8:
 		move.w	#SndID_CNZBossZap,d0
 		jsr	(PlaySound).l	; loc_14C6
 loc_48CC:
-		rts  
+		rts
 loc_48CE:
 		dc.b	$A,$F5,$A,$F6,$F5,$F4,$B,0,2,7,3,$4C,$4B,8,$04 
 loc_48DD:
@@ -4704,11 +4704,11 @@ loc_538A:
 		move.b	#GameModeID_Level,(Game_Mode).w
 		cmpi.w	#metropolis_zone_act_6,(Current_ZoneAndAct).w
 		bcs.s	loc_53AE
-		clr.w   (Current_ZoneAndAct).w
+		clr.w	(Current_ZoneAndAct).w
 loc_53AE:
 		move.w	#60,(Demo_Time_left).w
 		move.w	#$3F,(Palette_fade_range).w
-		clr.w   (PalChangeSpeed).w
+		clr.w	(PalChangeSpeed).w
 loc_53BE:
 		move.b	#VintID_SSResults,(Vint_routine).w
 		bsr.w	WaitForVint
@@ -6707,7 +6707,7 @@ loc_6B38:
 		blt.s   loc_6B4A
 		subi.w	#$10,d0
 		bge.s   loc_6B62
-		clr.w   (a4)
+		clr.w	(a4)
 		rts
 loc_6B4A:
 		cmpi.w	#-$10,d0
@@ -6759,7 +6759,7 @@ loc_6BB6:
 		tst.b	(Camera_Max_Y_Pos_Changing).w
 		bne.s	loc_6C12
 loc_6BC2:
-		clr.w   (a4)
+		clr.w	(a4)
 		rts
 loc_6BC6:
 		cmpi.w	#$60,(Camera_Y_pos_bias).w
@@ -7618,7 +7618,7 @@ loc_745C:
 		andi.w	#$7F,d0
 		add.w   d3,d0
 		moveq	#-1,d3
-		clr.w   d3
+		clr.w	d3
 		move.b	(A4,d0),d3
 		lsl.w	#7,d3
 		andi.w	#$70,d4
@@ -7793,7 +7793,7 @@ loc_7602:
 		andi.w	#$7F,d0
 		add.w   d3,d0
 		moveq	#-1,d3
-		clr.w   d3
+		clr.w	d3
 		move.b	(A4,d0),d3
 		lsl.w	#7,d3
 		andi.w	#$70,d4
@@ -21388,7 +21388,7 @@ Tails_SlopeRepel: ; loc_117d0:
 loc_117F4:
 		cmpi.w	#$0280,d0
 		bcc.s	loc_1180A
-		clr.w   $0014(a0)
+		clr.w	$0014(a0)
 		bset	#1,$0022(a0)
 		move.w	#$001E,$002E(a0)
 loc_1180A:
@@ -22315,7 +22315,7 @@ loc_121C0:
 		cmpi.b	#7,$1C(a0)
 		bcc.s	loc_1220A
 		move.w	#$F,$38(a0)
-		clr.w   $12(a0)
+		clr.w	$12(a0)
 		move.b	#$80,1(a0)
 		move.w	8(a0),d0
 		sub.w   (Camera_X_pos).w,d0
@@ -22475,7 +22475,7 @@ loc_124DA:
 loc_124F2:
 		subq.b	#1,$34(a0)
 		bpl.s	loc_124FC
-		clr.w   $36(a0)
+		clr.w	$36(a0)
 loc_124FC:
 		rts
 ResumeMusic: ; loc_124FE:
@@ -23255,7 +23255,7 @@ Floor_ChkTile: ; loc_1308A:
 		andi.w	#$007F,d1
 		add.w   d1,d0
 		moveq	#-1,d1
-		clr.w   d1
+		clr.w	d1
 		lea	(Level_Layout).w,A1
 		move.b	$00(A1,d0),d1
 		add.w   d1,d1
@@ -24313,7 +24313,7 @@ Lamp_Post_Load_Info: ; loc_13CE4:
 		move.w	(Saved_y_pos).w,(MainCharacter+$C).w
 		move.w	(Saved_Ring_count).w,(Ring_count).w
 		move.b	(Saved_Extra_life_flags).w,(Extra_life_flags).w
-		clr.w   (Ring_count).w
+		clr.w	(Ring_count).w
 		clr.b   (Extra_life_flags).w
 		move.l	(Saved_Timer).w,(Timer).w
 		move.b	#$3B,(Timer_frame).w
@@ -24635,9 +24635,9 @@ loc_1410A:
 		move.w	#SndID_InhalingBubble,d0
 		jsr	(PlaySound).l		; (loc_14C6)
 		lea	(MainCharacter).w,A1
-		clr.w   $0010(a1)
-		clr.w   $0012(a1)
-		clr.w   $0014(a1)
+		clr.w	$0010(a1)
+		clr.w	$0012(a1)
+		clr.w	$0014(a1)
 		move.b	#$15,$001C(a1)
 		move.w	#$0023,$002E(a1)
 		move.b	#$00,$003C(a1)
@@ -24738,7 +24738,7 @@ loc_142AE:
 		andi.w	#$007F,d0
 		addi.w	#$0080,d0
 		add.w   d0,$0038(a0)
-		clr.w   $0036(a0)
+		clr.w	$0036(a0)
 loc_142CA:
 		lea	(loc_14348).l,A1
 		jsr	 AnimateSprite           ; (loc_d412)
@@ -27098,7 +27098,7 @@ loc_166B4:
 		cmp.w	$000C(a0),d0
 		bhi.s	loc_166CC
 		move.w	$0034(a0),$0012(a0)
-		clr.w   $0010(a0)
+		clr.w	$0010(a0)
 		subq.b	#$02,$0024(a0)
 loc_166CC:
 		bra.w	JmpTo3_MarkObjGone
@@ -29196,7 +29196,7 @@ loc_18BE0:
 		tst.w	d1
 		bpl.w	 loc_18C32
 		add.w   d1,$000C(a0)
-		clr.w   $0012(a0)
+		clr.w	$0012(a0)
 		bclr	#1,$0022(a0)
 		move.w	#$0100,$0010(a0)
 		btst	#$00,$0022(a0)
@@ -30080,7 +30080,7 @@ loc_1997C:
 		tst.w	d1
 		bpl.w	 loc_199A8
 		add.w   d1,$000C(a0)
-		clr.w   $0012(a0)
+		clr.w	$0012(a0)
 		move.w	$000C(a0),$0032(a0)
 		move.b	#$02,$001A(a0)
 		clr.b   $0025(a0)
@@ -32033,7 +32033,7 @@ loc_1B656:
 		move.b	(Timer_frames+1).w,d0
 		andi.b	#$3F,d0
 		bne.s	loc_1B6d6
-		clr.w   $0038(a0)
+		clr.w	$0038(a0)
 		tst.b	$0001(a0)
 		bpl.s	loc_1B67A
 		move.w	#SndID_SpikesMove,d0
@@ -32117,7 +32117,7 @@ loc_1B794:
 		sub.b   $0028(a0),d0
 		andi.b	#$7F,d0
 		bne.s	loc_1B7EE
-		clr.w   $0038(a0)
+		clr.w	$0038(a0)
 loc_1B7AC:
 		tst.w	$0036(a0)
 		beq.s	loc_1B7CE
@@ -32292,7 +32292,7 @@ loc_1B982:
 		tst.w	d1
 		bpl.w	 loc_1B9A2
 		add.w   d1,$000C(a0)
-		clr.w   $0012(a0)
+		clr.w	$0012(a0)
 		addq.b	#$02,$0024(a0)
 loc_1B9A2:
 		bra.w	loc_1B880     
@@ -32910,7 +32910,7 @@ loc_1C150:
 		move.w	d3,$0012(a0)
 		swap	d0
 		move.w	d0,$000A(a0)
-		clr.w   $000E(a0)
+		clr.w	$000E(a0)
 		rts
 loc_1C164:
 		move.w	$000C(a0),d1
@@ -32925,7 +32925,7 @@ loc_1C176:
 		move.w	d2,$0010(a0)
 		swap	d1
 		move.w	d1,$000E(a0)
-		clr.w   $000A(a0)
+		clr.w	$000A(a0)
 		rts    
 loc_1C18A:
 		dc.w    loc_1C190-loc_1C18A
@@ -35230,7 +35230,7 @@ loc_1E2AE:
 		bgt.s   loc_1E2CA
 		subq.b	#$02,$0025(a0)
 		st      $002C(a0)
-		clr.w   $0012(a0)
+		clr.w	$0012(a0)
 loc_1E2CA:
 		rts
 loc_1E2CC:
@@ -35238,7 +35238,7 @@ loc_1E2CC:
 		blt.s   loc_1E2CA
 		subq.b	#$02,$0025(a0)
 		sf      $002C(a0)
-		clr.w   $0012(a0)
+		clr.w	$0012(a0)
 		rts
 loc_1E2E0:
 		moveq	#$0A,d0
@@ -36820,7 +36820,7 @@ loc_1FA6A:
 		dc.w	$6A00,$0000
 		bset	#$00,$0022(a0)
 		bclr	#$07,$0022(a0)
-		clr.w   $0010(a0)
+		clr.w	$0010(a0)
 		addq.b	#$02,$0025(a0)
 		move.w	#$FFDA,$003C(a0)
 		move.w	#$000C,$002A(a0)
