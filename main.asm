@@ -6470,7 +6470,7 @@ loc_68CC:
 loc_6908:
 		neg.w	d0
 		add.w   d2,d2
-		jmp     loc_6922(pc,d2)
+		jmp	loc_6922(pc,d2)
 loc_6910:
 		move.w	(Camera_BG_X_pos).w,d0
 		cmpi.b	#$12,d4
@@ -6645,7 +6645,7 @@ loc_6AA8:
 		andi.w	#$F,d2
 		add.w   d2,d2
 		move.w	(a2)+,d0
-		jmp     loc_6AC6(pc,d2)
+		jmp	loc_6AC6(pc,d2)
 loc_6AC4:
 		move.w	(a2)+,d0
 loc_6AC6:
@@ -7394,7 +7394,7 @@ loc_7226:
 		lea	(A0,d0),A0
 		bra.w	loc_7244
 loc_723C:
-		dc.w    Camera_BG_copy,Camera_BG_copy,Camera_BG2_copy,Camera_BG3_copy
+		dc.w	Camera_BG_copy,Camera_BG_copy,Camera_BG2_copy,Camera_BG3_copy
 loc_7244:
 		tst.w	(Two_player_mode).w
 		bne.s	loc_7286
@@ -8259,11 +8259,11 @@ loc_7A50:
 		moveq	#0,d0
 		move.b	(Dynamic_Resize_Routine).w,d0
 		move.w	loc_7A5E(pc,d0),d0
-		jmp     loc_7A5E(pc,d0)
+		jmp	loc_7A5E(pc,d0)
 loc_7A5E:
-		dc.w    loc_7A64-loc_7A5E
-		dc.w    loc_7AB4-loc_7A5E
-		dc.w    loc_7AC8-loc_7A5E
+		dc.w	loc_7A64-loc_7A5E
+		dc.w	loc_7AB4-loc_7A5E
+		dc.w	loc_7AC8-loc_7A5E
 loc_7A64:
 		cmpi.w	#$26E0,(Camera_X_pos).w
 		bcs.s	loc_7AB2
@@ -8317,11 +8317,11 @@ loc_7AE4:
 		moveq	#0,d0
 		move.b	(Dynamic_Resize_Routine).w,d0
 		move.w	loc_7AFA(pc,d0),d0
-		jmp     loc_7AFA(pc,d0)
+		jmp	loc_7AFA(pc,d0)
 loc_7AFA:
-		dc.w    loc_7B00-loc_7AFA
-		dc.w    loc_7B6C-loc_7AFA
-		dc.w    loc_7C20-loc_7AFA
+		dc.w	loc_7B00-loc_7AFA
+		dc.w	loc_7B6C-loc_7AFA
+		dc.w	loc_7C20-loc_7AFA
 loc_7B00:
 		cmpi.w	#$400,(Camera_Y_pos).w
 		bcs.s	loc_7B48
@@ -8478,13 +8478,13 @@ loc_7CF6:
 		moveq	#0,d0
 		move.b	(Dynamic_Resize_Routine).w,d0
 		move.w	loc_7d04(pc,d0),d0
-		jmp     loc_7d04(pc,d0)
+		jmp	loc_7d04(pc,d0)
 loc_7d04:
-		dc.w    loc_7d0E-loc_7d04
-		dc.w    loc_7D90-loc_7d04
-		dc.w    loc_7E44-loc_7d04
-		dc.w    loc_7EA8-loc_7d04
-		dc.w    loc_7F5C-loc_7d04
+		dc.w	loc_7d0E-loc_7d04
+		dc.w	loc_7D90-loc_7d04
+		dc.w	loc_7E44-loc_7d04
+		dc.w	loc_7EA8-loc_7d04
+		dc.w	loc_7F5C-loc_7d04
 loc_7d0E:
 		cmpi.w	#$14C0,(Camera_X_pos).w
 		bcs.s	loc_7d6C
@@ -9234,18 +9234,18 @@ Obj_0x15_Swing_Platform: ; loc_85F8:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_8618(pc,d0),d1
-		jmp     loc_8618(pc,d1)
+		jmp	loc_8618(pc,d1)
 loc_8610:
 		move.w	#$200,d0
 		bra.w	DisplaySprite3     ; loc_d3FE
 loc_8618:
-		dc.w    loc_8626-loc_8618
-		dc.w    loc_8764-loc_8618
-		dc.w    loc_892A-loc_8618
-		dc.w    loc_892E-loc_8618
-		dc.w    loc_89E8-loc_8618
-		dc.w    loc_89F0-loc_8618
-		dc.w    loc_8A56-loc_8618
+		dc.w	loc_8626-loc_8618
+		dc.w	loc_8764-loc_8618
+		dc.w	loc_892A-loc_8618
+		dc.w	loc_892E-loc_8618
+		dc.w	loc_89E8-loc_8618
+		dc.w	loc_89F0-loc_8618
+		dc.w	loc_8A56-loc_8618
 loc_8626:
 		addq.b	#2,$24(a0)
 		move.l	#Obj15_MapUnc_8AD8,4(a0) ; loc_8AD8
@@ -9611,9 +9611,9 @@ loc_8AC0:
 Obj15_MapUnc_8AD8:	binclude	"mappings/sprite/obj15_OOZ.bin"
 Obj15_MapUnc_8B0E:	binclude	"mappings/sprite/obj15_NGHZ.bin"
 Obj15_MapUnc_8B46:
-		dc.w    Dhz_Swing_Platforms_Map_01-Obj15_MapUnc_8B46
-		dc.w    Dhz_Swing_Platforms_Map_02-Obj15_MapUnc_8B46
-		dc.w    Dhz_Swing_Platforms_Map_03-Obj15_MapUnc_8B46
+		dc.w	Dhz_Swing_Platforms_Map_01-Obj15_MapUnc_8B46
+		dc.w	Dhz_Swing_Platforms_Map_02-Obj15_MapUnc_8B46
+		dc.w	Dhz_Swing_Platforms_Map_03-Obj15_MapUnc_8B46
 Dhz_Swing_Platforms_Map_01: ; loc_8B4C:
 		dc.w	$0002
 		dc.l	$F8096060,$6030FFE8,$F8096860,$68300000
@@ -9624,9 +9624,9 @@ Dhz_Swing_Platforms_Map_03: ; loc_8B68:
 		dc.w	$0002
 		dc.l	$E805406A,$4035FFF4,$F80B406E,$4037FFF4   
 Obj15_MapUnc_8B7A: ; loc_8B7A:
-		dc.w    Dhz_Swing_Platforms_Map_04-Obj15_MapUnc_8B7A
-		dc.w    Dhz_Swing_Platforms_Map_02-Obj15_MapUnc_8B7A
-		dc.w    Dhz_Swing_Platforms_Map_03-Obj15_MapUnc_8B7A
+		dc.w	Dhz_Swing_Platforms_Map_04-Obj15_MapUnc_8B7A
+		dc.w	Dhz_Swing_Platforms_Map_02-Obj15_MapUnc_8B7A
+		dc.w	Dhz_Swing_Platforms_Map_03-Obj15_MapUnc_8B7A
 Dhz_Swing_Platforms_Map_04: ; loc_8B80:
 		dc.w	$0002
 		dc.l	$F80d6058,$602CFFE0,$F80d6858,$682C0000				          
@@ -9794,13 +9794,13 @@ Obj_0x18_Platforms: ; loc_8d38:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_8d46(pc,d0),d1
-		jmp     loc_8d46(pc,d1)
+		jmp	loc_8d46(pc,d1)
 loc_8d46:
-		dc.w    loc_8d5A-loc_8d46
-		dc.w    loc_8DF6-loc_8d46
-		dc.w    loc_8E5C-loc_8d46
-		dc.w    loc_8E34-loc_8d46
-		dc.w    loc_8E60-loc_8d46
+		dc.w	loc_8d5A-loc_8d46
+		dc.w	loc_8DF6-loc_8d46
+		dc.w	loc_8E5C-loc_8d46
+		dc.w	loc_8E34-loc_8d46
+		dc.w	loc_8E60-loc_8d46
 loc_8d50:
 		dc.w	$2000,$2001,$2002,$4003,$3004
 loc_8d5A:
@@ -9918,22 +9918,22 @@ loc_8EC4:
 		andi.w	#$F,d0
 		add.w   d0,d0
 		move.w	loc_8ED8(pc,d0),d1
-		jmp     loc_8ED8(pc,d1)
+		jmp	loc_8ED8(pc,d1)
 loc_8ED8:
-		dc.w    loc_8EF4-loc_8ED8
-		dc.w    loc_8F06-loc_8ED8
-		dc.w    loc_8F4C-loc_8ED8
-		dc.w    loc_8F64-loc_8ED8
-		dc.w    loc_8F8C-loc_8ED8
-		dc.w    loc_8EF6-loc_8ED8
-		dc.w    loc_8F3C-loc_8ED8
-		dc.w    loc_8FFA-loc_8ED8
-		dc.w    loc_9026-loc_8ED8
-		dc.w    loc_8EF4-loc_8ED8
-		dc.w    loc_903E-loc_8ED8
-		dc.w    loc_9058-loc_8ED8
-		dc.w    loc_8F2E-loc_8ED8
-		dc.w    loc_8F1E-loc_8ED8
+		dc.w	loc_8EF4-loc_8ED8
+		dc.w	loc_8F06-loc_8ED8
+		dc.w	loc_8F4C-loc_8ED8
+		dc.w	loc_8F64-loc_8ED8
+		dc.w	loc_8F8C-loc_8ED8
+		dc.w	loc_8EF6-loc_8ED8
+		dc.w	loc_8F3C-loc_8ED8
+		dc.w	loc_8FFA-loc_8ED8
+		dc.w	loc_9026-loc_8ED8
+		dc.w	loc_8EF4-loc_8ED8
+		dc.w	loc_903E-loc_8ED8
+		dc.w	loc_9058-loc_8ED8
+		dc.w	loc_8F2E-loc_8ED8
+		dc.w	loc_8F1E-loc_8ED8
 loc_8EF4:
 		rts
 loc_8EF6:
@@ -10084,11 +10084,11 @@ Obj_0x1A_Collapsing_Platforms: ; loc_9128:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_9136(pc,d0),d1
-		jmp     loc_9136(pc,d1)
+		jmp	loc_9136(pc,d1)
 loc_9136:
-		dc.w    loc_913C-loc_9136
-		dc.w    loc_91E8-loc_9136
-		dc.w    loc_9220-loc_9136
+		dc.w	loc_913C-loc_9136
+		dc.w	loc_91E8-loc_9136
+		dc.w	loc_9220-loc_9136
 loc_913C:
 		addq.b	#2,routine(a0)
 		move.l	#Collapsing_Platforms_Mappings,4(a0) ; loc_94A8
@@ -10180,11 +10180,11 @@ Obj_0x1F_Collapsing_Platforms: ; loc_9274:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_9282(pc,d0),d1
-		jmp     loc_9282(pc,d1)
+		jmp	loc_9282(pc,d1)
 loc_9282:
-		dc.w    loc_9288-loc_9282
-		dc.w    loc_931A-loc_9282
-		dc.w    loc_9352-loc_9282
+		dc.w	loc_9288-loc_9282
+		dc.w	loc_931A-loc_9282
+		dc.w	loc_9352-loc_9282
 loc_9288:
 		addq.b	#2,$24(a0)
 		move.l	#loc_9748,4(a0)
@@ -10321,10 +10321,10 @@ loc_9478:
 		dc.b	$25,$25,$26,$26,$27,$27,$28,$28,$29,$29,$2A,$2A,$2B,$2B,$2C,$2C
 		dc.b	$2D,$2D,$2E,$2E,$2F,$2F,$30,$30,$30,$30,$30,$30,$30,$30,$30,$30		  
 Collapsing_Platforms_Mappings: ; loc_94A8:
-		dc.w    Collapsing_Platforms_Map_01-Collapsing_Platforms_Mappings
-		dc.w    Collapsing_Platforms_Map_02-Collapsing_Platforms_Mappings
-		dc.w    Collapsing_Platforms_Map_03-Collapsing_Platforms_Mappings
-		dc.w    Collapsing_Platforms_Map_04-Collapsing_Platforms_Mappings
+		dc.w	Collapsing_Platforms_Map_01-Collapsing_Platforms_Mappings
+		dc.w	Collapsing_Platforms_Map_02-Collapsing_Platforms_Mappings
+		dc.w	Collapsing_Platforms_Map_03-Collapsing_Platforms_Mappings
+		dc.w	Collapsing_Platforms_Map_04-Collapsing_Platforms_Mappings
 Collapsing_Platforms_Map_01: ; loc_94B0:
 		dc.w	$0010
 		dc.l	$C80E0057,$002B0010,$d00d0063,$0031FFF0
@@ -10376,10 +10376,10 @@ Collapsing_Platforms_Map_04: ; loc_967E:
 		dc.l	$100500AB,$00550020,$100500AB,$00550010
 		dc.l	$100500B7,$005B0000              
 loc_9748:
-		dc.w    loc_9750-loc_9748
-		dc.w    loc_9772-loc_9748
-		dc.w    loc_97B4-loc_9748
-		dc.w    loc_97d6-loc_9748
+		dc.w	loc_9750-loc_9748
+		dc.w	loc_9772-loc_9748
+		dc.w	loc_97B4-loc_9748
+		dc.w	loc_97d6-loc_9748
 loc_9750:
 		dc.w	$0004
 		dc.l	$F80d0000,$0000FFE0,$080d0000,$0000FFE0
@@ -11149,11 +11149,11 @@ Obj28_Speeds:
 		dc.w	-$440,-$400
 		dc.w	-$440,-$400
 		dc.w	-$300,-$400
-		dc.w    -$300,-$400
+		dc.w	-$300,-$400
 		dc.w	-$180,-$300
 		dc.w	-$180,-$300
 		dc.w	-$140,-$180
-		dc.w    -$1C0,-$300
+		dc.w	-$1C0,-$300
 		dc.w	-$200,-$300
 		dc.w	-$280,-$380
 ; off_A370:
@@ -12083,12 +12083,12 @@ Obj_0x4B_Big_Ring: ; loc_AEB6:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	Big_Ring_Index(pc,d0),d1  ; loc_AEC4
-		jmp     Big_Ring_Index(pc,d1)      ; loc_AEC4
+		jmp	Big_Ring_Index(pc,d1)      ; loc_AEC4
 Big_Ring_Index: ; loc_AEC4:
-		dc.w    loc_AECC-Big_Ring_Index
-		dc.w    loc_AF1A-Big_Ring_Index
-		dc.w    loc_AF38-Big_Ring_Index
-		dc.w    loc_AF7C-Big_Ring_Index
+		dc.w	loc_AECC-Big_Ring_Index
+		dc.w	loc_AF1A-Big_Ring_Index
+		dc.w	loc_AF38-Big_Ring_Index
+		dc.w	loc_AF7C-Big_Ring_Index
 loc_AECC:		
 		move.l	#Big_Ring_Mappings,4(a0) ; loc_B09A
 		move.w	#$2400,2(a0)
@@ -12149,11 +12149,11 @@ Obj_0x7C_Big_Ring_Flash: ; loc_AF80:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	Big_Ring_Flash_Index(pc,d0),d1   ; loc_AF8E
-		jmp     Big_Ring_Flash_Index(pc,d1)       ; loc_AF8E
+		jmp	Big_Ring_Flash_Index(pc,d1)       ; loc_AF8E
 Big_Ring_Flash_Index: ; loc_AF8E:
-		dc.w    loc_AF94-Big_Ring_Flash_Index
-		dc.w    loc_AFC2-Big_Ring_Flash_Index
-		dc.w    loc_B02A-Big_Ring_Flash_Index
+		dc.w	loc_AF94-Big_Ring_Flash_Index
+		dc.w	loc_AFC2-Big_Ring_Flash_Index
+		dc.w	loc_B02A-Big_Ring_Flash_Index
 loc_AF94:		
 		addq.b	#2,$24(a0)
 		move.l	#Big_Ring_Flash_Mappings,4(a0) ; loc_B19A
@@ -12210,10 +12210,10 @@ byte_B030:	dc.b   5, 4, 5, 6, 7,$FC
 Obj25_MapUnc_B036:	binclude	"mappings/sprite/obj25.bin"
 
 Big_Ring_Mappings: ; loc_B09A:
-		dc.w    Big_Ring_Map_01-Big_Ring_Mappings
-		dc.w    Big_Ring_Map_02-Big_Ring_Mappings
-		dc.w    Big_Ring_Map_03-Big_Ring_Mappings
-		dc.w    Big_Ring_Map_04-Big_Ring_Mappings
+		dc.w	Big_Ring_Map_01-Big_Ring_Mappings
+		dc.w	Big_Ring_Map_02-Big_Ring_Mappings
+		dc.w	Big_Ring_Map_03-Big_Ring_Mappings
+		dc.w	Big_Ring_Map_04-Big_Ring_Mappings
 Big_Ring_Map_01: ; loc_B0A2:
 		dc.w	$000A
 		dc.l	$E0080000,$0000FFE8,$E0080003,$00010000
@@ -12238,14 +12238,14 @@ Big_Ring_Map_04: ; loc_B158:
 		dc.l	$F8050841,$0820FFE8,$08090845,$0822FFE8
 		dc.l	$1008084B,$08250000,$180C084E,$0827FFF0 
 Big_Ring_Flash_Mappings: ; loc_B19A:
-		dc.w    Big_Ring_Flash_Map_01-Big_Ring_Flash_Mappings
-		dc.w    Big_Ring_Flash_Map_02-Big_Ring_Flash_Mappings
-		dc.w    Big_Ring_Flash_Map_03-Big_Ring_Flash_Mappings
-		dc.w    Big_Ring_Flash_Map_04-Big_Ring_Flash_Mappings
-		dc.w    Big_Ring_Flash_Map_05-Big_Ring_Flash_Mappings
-		dc.w    Big_Ring_Flash_Map_06-Big_Ring_Flash_Mappings
-		dc.w    Big_Ring_Flash_Map_07-Big_Ring_Flash_Mappings
-		dc.w    Big_Ring_Flash_Map_08-Big_Ring_Flash_Mappings
+		dc.w	Big_Ring_Flash_Map_01-Big_Ring_Flash_Mappings
+		dc.w	Big_Ring_Flash_Map_02-Big_Ring_Flash_Mappings
+		dc.w	Big_Ring_Flash_Map_03-Big_Ring_Flash_Mappings
+		dc.w	Big_Ring_Flash_Map_04-Big_Ring_Flash_Mappings
+		dc.w	Big_Ring_Flash_Map_05-Big_Ring_Flash_Mappings
+		dc.w	Big_Ring_Flash_Map_06-Big_Ring_Flash_Mappings
+		dc.w	Big_Ring_Flash_Map_07-Big_Ring_Flash_Mappings
+		dc.w	Big_Ring_Flash_Map_08-Big_Ring_Flash_Mappings
 Big_Ring_Flash_Map_01: ; loc_B1AA:
 		dc.w	$0002
 		dc.l	$E00F0000,$00000000,$000F1000,$10000000
@@ -12453,11 +12453,11 @@ Obj_0x2E_Monitors_Contents: ; loc_B46A:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_B478(pc,d0),d1
-		jmp     loc_B478(pc,d1)
+		jmp	loc_B478(pc,d1)
 loc_B478:
-		dc.w    loc_B47E-loc_B478
-		dc.w    loc_B4C2-loc_B478
-		dc.w    loc_B5E4-loc_B478
+		dc.w	loc_B47E-loc_B478
+		dc.w	loc_B4C2-loc_B478
+		dc.w	loc_B5E4-loc_B478
 loc_B47E:
 		addq.b	#2,$24(a0)
 		move.w	#$680,2(a0)
@@ -12491,30 +12491,30 @@ loc_B4DC:
 		move.b	$1C(a0),d0
 		add.w   d0,d0
 		move.w	Monitor_Subroutines(pc,d0),d0 ; loc_B4F6
-		jmp     Monitor_Subroutines(pc,d0)     ; loc_B4F6
+		jmp	Monitor_Subroutines(pc,d0)     ; loc_B4F6
 Monitor_Subroutines: ; loc_B4F6:
-		dc.w    Monitor_Null-Monitor_Subroutines          ; loc_B50A
-		dc.w    Monitor_SonicLife-Monitor_Subroutines     ; loc_B50C
-		dc.w    Monitor_TailsLife-Monitor_Subroutines     ; loc_B51E
-		dc.w    Monitor_Null-Monitor_Subroutines          ; loc_B50A
-		dc.w    Monitor_Rings-Monitor_Subroutines         ; loc_B530
-		dc.w    Monitor_Shoes-Monitor_Subroutines         ; loc_B56A
-		dc.w    Monitor_Shield-Monitor_Subroutines        ; loc_B592
-		dc.w    Monitor_Invincibility-Monitor_Subroutines ; loc_B5A8
-		dc.w    Monitor_SuperSonic-Monitor_Subroutines    ; loc_B5d4
-		dc.w    Monitor_Null-Monitor_Subroutines          ; loc_B50A
+		dc.w	Monitor_Null-Monitor_Subroutines          ; loc_B50A
+		dc.w	Monitor_SonicLife-Monitor_Subroutines     ; loc_B50C
+		dc.w	Monitor_TailsLife-Monitor_Subroutines     ; loc_B51E
+		dc.w	Monitor_Null-Monitor_Subroutines          ; loc_B50A
+		dc.w	Monitor_Rings-Monitor_Subroutines         ; loc_B530
+		dc.w	Monitor_Shoes-Monitor_Subroutines         ; loc_B56A
+		dc.w	Monitor_Shield-Monitor_Subroutines        ; loc_B592
+		dc.w	Monitor_Invincibility-Monitor_Subroutines ; loc_B5A8
+		dc.w	Monitor_SuperSonic-Monitor_Subroutines    ; loc_B5d4
+		dc.w	Monitor_Null-Monitor_Subroutines          ; loc_B50A
 Monitor_Null: ; loc_B50A:
 		rts
 Monitor_SonicLife: ; loc_B50C:
 		addq.b	#1,(Life_count).w
 		addq.b	#1,(Update_HUD_lives).w
 		move.w	#MusID_ExtraLife,d0
-		jmp     (PlayMusic).l            ; loc_14C0
+		jmp	(PlayMusic).l            ; loc_14C0
 Monitor_TailsLife: ; loc_B51E:
 		addq.b	#1,(Life_count).w
 		addq.b	#1,(Update_HUD_lives).w
 		move.w	#MusID_ExtraLife,d0
-		jmp     (PlayMusic).l            ; loc_14C0
+		jmp	(PlayMusic).l            ; loc_14C0
 Monitor_Rings: ; loc_B530:
 		addi.w	#10,(Ring_count).w
 		ori.b   #1,(Update_HUD_rings).w
@@ -12528,7 +12528,7 @@ Monitor_Rings: ; loc_B530:
 		beq.w	Monitor_SonicLife       ; loc_B50C
 loc_B560:
 		move.w	#SndID_Ring,d0
-		jmp     (PlayMusic).l            ; loc_14C0
+		jmp	(PlayMusic).l            ; loc_14C0
 Monitor_Shoes: ; loc_B56A:
 		move.b	#1,(Speed_shoes).w
 		move.w	#$4B0,(MainCharacter+$34).w
@@ -12536,12 +12536,12 @@ Monitor_Shoes: ; loc_B56A:
 		move.w	#$18,(Sonic_acceleration).w
 		move.w	#$80,(Sonic_deceleration).w
 		move.w	#MusID_SpeedUp,d0
-		jmp     (PlayMusic).l            ; loc_14C0
+		jmp	(PlayMusic).l            ; loc_14C0
 Monitor_Shield: ; loc_B592:
 		move.b	#1,(Shield_flag).w
 		move.b	#$38,(Shield).w
 		move.w	#SndID_Shield,d0
-		jmp     (PlayMusic).l            ; loc_14C0
+		jmp	(PlayMusic).l            ; loc_14C0
 Monitor_Invincibility: ; loc_B5A8:
 		move.b	#1,(Invincibility_flag).w
 		move.w	#$4B0,(MainCharacter+$32).w
@@ -12551,13 +12551,13 @@ Monitor_Invincibility: ; loc_B5A8:
 		cmpi.w	#$C,(Current_Air).w
 		bls.s   loc_B5d2
 		move.w	#MusID_Invinc,d0
-		jmp     (PlayMusic).l            ; loc_14C0
+		jmp	(PlayMusic).l            ; loc_14C0
 loc_B5d2:
 		rts
 Monitor_SuperSonic: ; loc_B5d4:
 		move.b	#1,(Super_Sonic_palette).w
 		move.w	#SndID_Shield,d0
-		jmp     (PlayMusic).l            ; loc_14C0
+		jmp	(PlayMusic).l            ; loc_14C0
 loc_B5E4:
 		subq.w	#1,$1E(a0)
 		bmi.w	DeleteObject            ; loc_d3B4
@@ -12615,17 +12615,17 @@ loc_B64C:
 		moveq	#-1,d1
 		rts  
 loc_B66A:
-		dc.w    loc_B680-loc_B66A
-		dc.w    loc_B684-loc_B66A
-		dc.w    loc_B68C-loc_B66A
-		dc.w    loc_B694-loc_B66A
-		dc.w    loc_B69C-loc_B66A
-		dc.w    loc_B6A4-loc_B66A
-		dc.w    loc_B6AC-loc_B66A
-		dc.w    loc_B6B4-loc_B66A
-		dc.w    loc_B6BC-loc_B66A
-		dc.w    loc_B6C4-loc_B66A
-		dc.w    loc_B6CC-loc_B66A
+		dc.w	loc_B680-loc_B66A
+		dc.w	loc_B684-loc_B66A
+		dc.w	loc_B68C-loc_B66A
+		dc.w	loc_B694-loc_B66A
+		dc.w	loc_B69C-loc_B66A
+		dc.w	loc_B6A4-loc_B66A
+		dc.w	loc_B6AC-loc_B66A
+		dc.w	loc_B6B4-loc_B66A
+		dc.w	loc_B6BC-loc_B66A
+		dc.w	loc_B6C4-loc_B66A
+		dc.w	loc_B6CC-loc_B66A
 loc_B680:
 		dc.b	$01,$00,$01,$FF
 loc_B684:
@@ -12944,11 +12944,11 @@ Obj_0x39_Time_Game_Over: ; loc_Bd76:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	Time_Game_Over_Index(pc,d0),d1 ; loc_BD84
-		jmp     Time_Game_Over_Index(pc,d1)     ; loc_BD84
+		jmp	Time_Game_Over_Index(pc,d1)     ; loc_BD84
 Time_Game_Over_Index: ; loc_BD84:
-		dc.w    loc_BD8A-Time_Game_Over_Index
-		dc.w    loc_BDCE-Time_Game_Over_Index
-		dc.w    loc_BDF0-Time_Game_Over_Index
+		dc.w	loc_BD8A-Time_Game_Over_Index
+		dc.w	loc_BDCE-Time_Game_Over_Index
+		dc.w	loc_BDF0-Time_Game_Over_Index
 loc_BD8A:
 		tst.l	(Plc_Buffer).w
 		beq.s	loc_BD92
@@ -13014,12 +13014,12 @@ Obj_0x3A_Level_Results: ; loc_BE38:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	Level_Results_Index(pc,d0),d1  ; loc_BE46
-		jmp     Level_Results_Index(pc,d1)      ; loc_BE46
+		jmp	Level_Results_Index(pc,d1)      ; loc_BE46
 Level_Results_Index: ; loc_BE46:
-		dc.w    loc_BE4E-Level_Results_Index
-		dc.w    loc_BEAA-Level_Results_Index
-		dc.w    loc_BEF6-Level_Results_Index
-		dc.w    loc_BF66-Level_Results_Index
+		dc.w	loc_BE4E-Level_Results_Index
+		dc.w	loc_BEAA-Level_Results_Index
+		dc.w	loc_BEF6-Level_Results_Index
+		dc.w	loc_BF66-Level_Results_Index
 loc_BE4E:
 		tst.l	(Plc_Buffer).w
 		beq.s	loc_BE56
@@ -13193,7 +13193,7 @@ loc_C004:
 		addq.b	#2,$24(a0)
 		clr.b   (Control_Locked).w
 		move.w	#MusID_ActClear,d0
-		jmp     (PlayMusic).l            ; loc_14C0
+		jmp	(PlayMusic).l            ; loc_14C0
 		addq.w	#2,(Camera_Max_X_pos).w
 		cmpi.w	#$2100,(Camera_Max_X_pos).w
 		beq.w	DeleteObject            ; loc_d3B4
@@ -13216,19 +13216,19 @@ Special_Stage_Results: ; loc_C068:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	SS_Results_Index(pc,d0),d1  ; loc_C076
-		jmp     SS_Results_Index(pc,d1)      ; loc_C076
+		jmp	SS_Results_Index(pc,d1)      ; loc_C076
 SS_Results_Index: ; loc_C076:
-		dc.w    loc_C08C-SS_Results_Index
-		dc.w    loc_C104-SS_Results_Index
-		dc.w    loc_C13C-SS_Results_Index
-		dc.w    loc_C14A-SS_Results_Index
-		dc.w    loc_C13C-SS_Results_Index
-		dc.w    loc_C1A4-SS_Results_Index
-		dc.w    loc_C13C-SS_Results_Index
-		dc.w    loc_C1AE-SS_Results_Index
-		dc.w    loc_C13C-SS_Results_Index
-		dc.w    loc_C1A4-SS_Results_Index
-		dc.w    loc_C1d2-SS_Results_Index
+		dc.w	loc_C08C-SS_Results_Index
+		dc.w	loc_C104-SS_Results_Index
+		dc.w	loc_C13C-SS_Results_Index
+		dc.w	loc_C14A-SS_Results_Index
+		dc.w	loc_C13C-SS_Results_Index
+		dc.w	loc_C1A4-SS_Results_Index
+		dc.w	loc_C13C-SS_Results_Index
+		dc.w	loc_C1AE-SS_Results_Index
+		dc.w	loc_C13C-SS_Results_Index
+		dc.w	loc_C1A4-SS_Results_Index
+		dc.w	loc_C1d2-SS_Results_Index
 loc_C08C:
 		tst.l	(Plc_Buffer).w
 		beq.s	loc_C094
@@ -13350,10 +13350,10 @@ Emeralds: ; loc_C20E:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_C21C(pc,d0),d1
-		jmp     loc_C21C(pc,d1)
+		jmp	loc_C21C(pc,d1)
 loc_C21C:
-		dc.w    loc_C22C-loc_C21C
-		dc.w    loc_C286-loc_C21C
+		dc.w	loc_C22C-loc_C21C
+		dc.w	loc_C286-loc_C21C
 loc_C220:
 		dc.w	$110,$128,$F8,$140,$E0,$158
 loc_C22C:
@@ -13394,18 +13394,18 @@ loc_C29C:
 ; Can't split some of these due to reusing mappings between each other
 ; ---------------------------------------------------------------------------
 Obj34_MapUnc_C2A0: ; loc_C2A0: ; Object $34 - Mappings
-		dc.w    TC_GHz_Map-Obj34_MapUnc_C2A0  ; Green Hill
-		dc.w    TC_Lz_Map-Obj34_MapUnc_C2A0   ; Labyrinth
-		dc.w    TC_Mz_Map-Obj34_MapUnc_C2A0   ; Marble  
-		dc.w    TC_SLz_Map-Obj34_MapUnc_C2A0  ; Star Light
-		dc.w    TC_SYz_Map-Obj34_MapUnc_C2A0  ; Spring Yard
-		dc.w    TC_SBz_Map-Obj34_MapUnc_C2A0  ; Scrap Brain
-		dc.w    TC_Zone_Map-Obj34_MapUnc_C2A0 ; Zone
-		dc.w    TC_Act1_Map-Obj34_MapUnc_C2A0 ; Act 1
-		dc.w    TC_Act2_Map-Obj34_MapUnc_C2A0 ; Act 2
-		dc.w    TC_Act3_Map-Obj34_MapUnc_C2A0 ; Act 3
-		dc.w    TC_Oval_Map-Obj34_MapUnc_C2A0 ; Oval
-		dc.w    TC_Fz_Map-Obj34_MapUnc_C2A0   ; Final  
+		dc.w	TC_GHz_Map-Obj34_MapUnc_C2A0  ; Green Hill
+		dc.w	TC_Lz_Map-Obj34_MapUnc_C2A0   ; Labyrinth
+		dc.w	TC_Mz_Map-Obj34_MapUnc_C2A0   ; Marble  
+		dc.w	TC_SLz_Map-Obj34_MapUnc_C2A0  ; Star Light
+		dc.w	TC_SYz_Map-Obj34_MapUnc_C2A0  ; Spring Yard
+		dc.w	TC_SBz_Map-Obj34_MapUnc_C2A0  ; Scrap Brain
+		dc.w	TC_Zone_Map-Obj34_MapUnc_C2A0 ; Zone
+		dc.w	TC_Act1_Map-Obj34_MapUnc_C2A0 ; Act 1
+		dc.w	TC_Act2_Map-Obj34_MapUnc_C2A0 ; Act 2
+		dc.w	TC_Act3_Map-Obj34_MapUnc_C2A0 ; Act 3
+		dc.w	TC_Oval_Map-Obj34_MapUnc_C2A0 ; Oval
+		dc.w	TC_Fz_Map-Obj34_MapUnc_C2A0   ; Final  
 TC_GHz_Map: ; loc_C2B8: ; Green Hill		 
 		dc.w	$0009 
 		dc.l	$F8050018,$000CFFB4,$F805003A,$001DFFC4
@@ -13474,10 +13474,10 @@ TC_Fz_Map: ; loc_C52E: ; Final
 		dc.l	$F805002E,$0017FFF4,$F8050000,$00000004
 		dc.l	$F8050026,$00130014
 Time_Game_Over_Mappings: ; loc_C558:
-		dc.w    loc_C560-Time_Game_Over_Mappings
-		dc.w    loc_C572-Time_Game_Over_Mappings
-		dc.w    loc_C584-Time_Game_Over_Mappings
-		dc.w    loc_C596-Time_Game_Over_Mappings
+		dc.w	loc_C560-Time_Game_Over_Mappings
+		dc.w	loc_C572-Time_Game_Over_Mappings
+		dc.w	loc_C584-Time_Game_Over_Mappings
+		dc.w	loc_C596-Time_Game_Over_Mappings
 loc_C560:
 		dc.w	$0002
 		dc.l	$F80d0000,$0000FFB8,$F80d0008,$0004FFD8
@@ -13491,15 +13491,15 @@ loc_C596:
 		dc.w	$0002
 		dc.l	$F80d0014,$000A000C,$F80d000C,$0006002C  
 Level_Results_Mappings: ; loc_C5A8:
-		dc.w    LR_Sonic_Has_Map-Level_Results_Mappings
-		dc.w    LR_Passed_Map-Level_Results_Mappings
-		dc.w    LR_Score_Map-Level_Results_Mappings
-		dc.w    LR_Time_Bonus_Map-Level_Results_Mappings
-		dc.w    LR_Ring_Bonus_Map-Level_Results_Mappings
-		dc.w    TC_Oval_Map-Level_Results_Mappings
-		dc.w    TC_Act1_Map-Level_Results_Mappings
-		dc.w    TC_Act2_Map-Level_Results_Mappings
-		dc.w    TC_Act3_Map-Level_Results_Mappings
+		dc.w	LR_Sonic_Has_Map-Level_Results_Mappings
+		dc.w	LR_Passed_Map-Level_Results_Mappings
+		dc.w	LR_Score_Map-Level_Results_Mappings
+		dc.w	LR_Time_Bonus_Map-Level_Results_Mappings
+		dc.w	LR_Ring_Bonus_Map-Level_Results_Mappings
+		dc.w	TC_Oval_Map-Level_Results_Mappings
+		dc.w	TC_Act1_Map-Level_Results_Mappings
+		dc.w	TC_Act2_Map-Level_Results_Mappings
+		dc.w	TC_Act3_Map-Level_Results_Mappings
 LR_Sonic_Has_Map: ; loc_C5BA: ; Sonic Has
 		dc.w	$0008
 		dc.l	$F805003E,$001FFFB8,$F8050032,$0019FFC8
@@ -13529,15 +13529,15 @@ LR_Ring_Bonus_Map: ; loc_C69A:
 		dc.l	$FF04186E,$1837FFF6,$F80DFFF8,$FBFC0028
 		dc.l	$F8010170,$00B80048    
 Special_Stage_Results_Mappings: ; loc_C6d4:
-		dc.w    loc_C6E6-Special_Stage_Results_Mappings
-		dc.w    loc_C750-Special_Stage_Results_Mappings
-		dc.w    loc_C782-Special_Stage_Results_Mappings
-		dc.w    TC_Oval_Map-Special_Stage_Results_Mappings
-		dc.w    loc_C7BC-Special_Stage_Results_Mappings
-		dc.w    loc_C7DE-Special_Stage_Results_Mappings
-		dc.w    loc_C800-Special_Stage_Results_Mappings
-		dc.w    loc_C81A-Special_Stage_Results_Mappings
-		dc.w    loc_C87C-Special_Stage_Results_Mappings
+		dc.w	loc_C6E6-Special_Stage_Results_Mappings
+		dc.w	loc_C750-Special_Stage_Results_Mappings
+		dc.w	loc_C782-Special_Stage_Results_Mappings
+		dc.w	TC_Oval_Map-Special_Stage_Results_Mappings
+		dc.w	loc_C7BC-Special_Stage_Results_Mappings
+		dc.w	loc_C7DE-Special_Stage_Results_Mappings
+		dc.w	loc_C800-Special_Stage_Results_Mappings
+		dc.w	loc_C81A-Special_Stage_Results_Mappings
+		dc.w	loc_C87C-Special_Stage_Results_Mappings
 loc_C6E6:
 		dc.w	$000D
 		dc.l	$F8050008,$0004FF90,$F805001C,$000EFFA0
@@ -13589,13 +13589,13 @@ loc_C87C:
 		dc.l	$F8050000,$00000058,$F8050026,$00130068
 		dc.l	$F8050026,$00130078		
 Emeralds_Mappings: ; loc_C8F6:
-		dc.w    loc_C904-Emeralds_Mappings
-		dc.w    loc_C90E-Emeralds_Mappings
-		dc.w    loc_C918-Emeralds_Mappings
-		dc.w    loc_C922-Emeralds_Mappings
-		dc.w    loc_C92C-Emeralds_Mappings
-		dc.w    loc_C936-Emeralds_Mappings
-		dc.w    loc_C940-Emeralds_Mappings
+		dc.w	loc_C904-Emeralds_Mappings
+		dc.w	loc_C90E-Emeralds_Mappings
+		dc.w	loc_C918-Emeralds_Mappings
+		dc.w	loc_C922-Emeralds_Mappings
+		dc.w	loc_C92C-Emeralds_Mappings
+		dc.w	loc_C936-Emeralds_Mappings
+		dc.w	loc_C940-Emeralds_Mappings
 loc_C904:
 		dc.w	$0001
 		dc.l	$F8052004,$2002FFF8
@@ -13625,12 +13625,12 @@ Obj_0x36_Spikes: ; loc_C944:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_C952(pc,d0),d1
-		jmp     loc_C952(pc,d1)
+		jmp	loc_C952(pc,d1)
 loc_C952:
-		dc.w    loc_C96A-loc_C952
-		dc.w    loc_C9d6-loc_C952
-		dc.w    loc_CA26-loc_C952
-		dc.w    loc_CA82-loc_C952		
+		dc.w	loc_C96A-loc_C952
+		dc.w	loc_C9d6-loc_C952
+		dc.w	loc_CA26-loc_C952
+		dc.w	loc_CA82-loc_C952		
 loc_C95A:
 		dc.b	$10,$10,$20,$10,$30,$10,$40,$10,$10,$10,$10,$20,$10,$30,$10,$40		  
 loc_C96A:
@@ -13777,11 +13777,11 @@ loc_CAFE:
 		move.b	$0028(a0),d0
 		add.w   d0,d0
 		move.w	loc_CB0E(pc,d0),d1
-		jmp     loc_CB0E(pc,d1)
+		jmp	loc_CB0E(pc,d1)
 loc_CB0E:
-		dc.w    loc_CB14-loc_CB0E
-		dc.w    loc_CB16-loc_CB0E
-		dc.w    loc_CB2A-loc_CB0E
+		dc.w	loc_CB14-loc_CB0E
+		dc.w	loc_CB16-loc_CB0E
+		dc.w	loc_CB2A-loc_CB0E
 loc_CB14:		  
 		rts
 loc_CB16:
@@ -16675,12 +16675,12 @@ loc_E7d0:
 		bhi.w	DeleteObject            ; loc_d3B4
 		bra.w	DisplaySprite           ; loc_d3C2
 loc_E7E8:
-		dc.w    loc_E7F4-loc_E7E8
-		dc.w    loc_E8CC-loc_E7E8
-		dc.w    loc_E9BE-loc_E7E8
-		dc.w    loc_EBd0-loc_E7E8
-		dc.w    loc_ECBC-loc_E7E8
-		dc.w    loc_EDF2-loc_E7E8
+		dc.w	loc_E7F4-loc_E7E8
+		dc.w	loc_E8CC-loc_E7E8
+		dc.w	loc_E9BE-loc_E7E8
+		dc.w	loc_EBd0-loc_E7E8
+		dc.w	loc_ECBC-loc_E7E8
+		dc.w	loc_EDF2-loc_E7E8
 loc_E7F4:
 		addq.b	#$02,$0024(a0)
 		move.l	#Spring_Mappings,$0004(a0) ; loc_EF70
@@ -16692,13 +16692,13 @@ loc_E7F4:
 		lsr.w	#$03,d0
 		andi.w	#$000E,d0
 		move.w	loc_E82A(pc,d0),d0
-		jmp     loc_E82A(pc,d0)
+		jmp	loc_E82A(pc,d0)
 loc_E82A:
-		dc.w    loc_E8A0-loc_E82A
-		dc.w    loc_E834-loc_E82A
-		dc.w    loc_E854-loc_E82A
-		dc.w    loc_E868-loc_E82A
-		dc.w    loc_E882-loc_E82A		    
+		dc.w	loc_E8A0-loc_E82A
+		dc.w	loc_E834-loc_E82A
+		dc.w	loc_E854-loc_E82A
+		dc.w	loc_E868-loc_E82A
+		dc.w	loc_E882-loc_E82A		    
 loc_E834:
 		move.b	#$04,$0024(a0)
 		move.b	#$02,$001C(a0)
@@ -17191,29 +17191,29 @@ loc_EF36:
 		dc.b	$07,$09,$09,$09,$09,$09,$09,$FD,$04,$00
 Spring_Mappings:
 loc_EF70:
-		dc.w    loc_EF9C-loc_EF70
-		dc.w    loc_EFAE-loc_EF70
-		dc.w    loc_EFB8-loc_EF70
-		dc.w    loc_EFCA-loc_EF70
-		dc.w    loc_EFDC-loc_EF70
-		dc.w    loc_EFE6-loc_EF70
-		dc.w    loc_EFF8-loc_EF70
-		dc.w    loc_F00A-loc_EF70
-		dc.w    loc_F02C-loc_EF70
-		dc.w    loc_F046-loc_EF70
-		dc.w    loc_F068-loc_EF70
+		dc.w	loc_EF9C-loc_EF70
+		dc.w	loc_EFAE-loc_EF70
+		dc.w	loc_EFB8-loc_EF70
+		dc.w	loc_EFCA-loc_EF70
+		dc.w	loc_EFDC-loc_EF70
+		dc.w	loc_EFE6-loc_EF70
+		dc.w	loc_EFF8-loc_EF70
+		dc.w	loc_F00A-loc_EF70
+		dc.w	loc_F02C-loc_EF70
+		dc.w	loc_F046-loc_EF70
+		dc.w	loc_F068-loc_EF70
 loc_EF86:
-		dc.w    loc_EF9C-loc_EF86
-		dc.w    loc_EFAE-loc_EF86
-		dc.w    loc_EFB8-loc_EF86
-		dc.w    loc_EFCA-loc_EF86
-		dc.w    loc_EFDC-loc_EF86
-		dc.w    loc_EFE6-loc_EF86
-		dc.w    loc_EFF8-loc_EF86
-		dc.w    loc_F08A-loc_EF86
-		dc.w    loc_F0AC-loc_EF86
-		dc.w    loc_F0C6-loc_EF86
-		dc.w    loc_F0E8-loc_EF86		 
+		dc.w	loc_EF9C-loc_EF86
+		dc.w	loc_EFAE-loc_EF86
+		dc.w	loc_EFB8-loc_EF86
+		dc.w	loc_EFCA-loc_EF86
+		dc.w	loc_EFDC-loc_EF86
+		dc.w	loc_EFE6-loc_EF86
+		dc.w	loc_EFF8-loc_EF86
+		dc.w	loc_F08A-loc_EF86
+		dc.w	loc_F0AC-loc_EF86
+		dc.w	loc_F0C6-loc_EF86
+		dc.w	loc_F0E8-loc_EF86		 
 loc_EF9C:
 		dc.w	$0002
 		dc.l	$F00d0000,$0000FFF0,$00050008,$0004FFF8
@@ -17280,11 +17280,11 @@ Obj_0x44: ; loc_F10C:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_F11A(pc,d0),d1
-		jmp     loc_F11A(pc,d1)
+		jmp	loc_F11A(pc,d1)
 loc_F11A:
-		dc.w    loc_F120-loc_F11A
-		dc.w    loc_F15C-loc_F11A
-		dc.w    loc_F170-loc_F11A
+		dc.w	loc_F120-loc_F11A
+		dc.w	loc_F15C-loc_F11A
+		dc.w	loc_F170-loc_F11A
 loc_F120:
 		addq.b	#$02,$0024(a0)
 		move.l	#loc_F188,$0004(a0)
@@ -17313,9 +17313,9 @@ loc_F170:
 		bhi.w	 DeleteObject            ; loc_d3B4
 		bra.w	DisplaySprite           ; loc_d3C2
 loc_F188:
-		dc.w    loc_F18E-loc_F188
-		dc.w    loc_F1B0-loc_F188
-		dc.w    loc_F1d2-loc_F188
+		dc.w	loc_F18E-loc_F188
+		dc.w	loc_F1B0-loc_F188
+		dc.w	loc_F1d2-loc_F188
 loc_F18E:
 		dc.w	$0004
 		dc.l	$E0050004,$0002FFF8,$F0050008,$0004FFF8
@@ -20438,7 +20438,7 @@ TailsCPU_Normal_HumanControl:
 +
 		move.w	(Tails_CPU_routine).w,d0
 		move.w	TailsCPU_States(pc,d0.w),d0
-		jmp     TailsCPU_States(pc,d0.w)
+		jmp	TailsCPU_States(pc,d0.w)
 ; ===========================================================================
 ; off_10FC6: Tails_ControlIndex:
 TailsCPU_States: offsetTable
@@ -21674,7 +21674,7 @@ loc_11ADE:
 		bsr.w	Tails_LevelBoundaries   ; loc_114FE
 		bsr.w	Tails_Animate           ; loc_11BA2
 		bsr.w	LoadTailsDynPLC  ; loc_11F42
-		jmp     DisplaySprite           ; loc_d3C2
+		jmp	DisplaySprite           ; loc_d3C2
 		
 ;=============================================================================== 
 ; Sub Routine Tails_HurtStop
@@ -21707,7 +21707,7 @@ Tails_Death: ; loc_11B32:
 		jsr	 ObjectMoveAndFall              ; loc_d24E
 		bsr.w	Tails_Animate           ; loc_11BA2
 		bsr.w	LoadTailsDynPLC  ; loc_11F42
-		jmp     DisplaySprite           ; loc_d3C2
+		jmp	DisplaySprite           ; loc_d3C2
 		
 ;=============================================================================== 
 ; Sub Routine Tails_GameOver
@@ -21956,37 +21956,37 @@ loc_11DCA:
 		add.b   d3,$001A(a0)
 		rts 
 Tails_AnimateData: ; loc_11DF4: ; Tails Data               
-		dc.w    Tails_Animate_Walk-Tails_AnimateData           ; loc_11E32
-		dc.w    Tails_Animate_Run-Tails_AnimateData            ; loc_11E3C
-		dc.w    Tails_Animate_Roll-Tails_AnimateData           ; loc_11E46
-		dc.w    Tails_Animate_Roll2-Tails_AnimateData          ; loc_11E4B
-		dc.w    Tails_Animate_Push_NoArt-Tails_AnimateData     ; loc_11E50
-		dc.w    Tails_Animate_Wait-Tails_AnimateData           ; loc_11E58
-		dc.w    Tails_Animate_Balance_NoArt-Tails_AnimateData  ; loc_11E96
-		dc.w    Tails_Animate_LookUp-Tails_AnimateData         ; loc_11EA0
-		dc.w    Tails_Animate_Duck-Tails_AnimateData           ; loc_11EA3
-		dc.w    Tails_Animate_Spindash-Tails_AnimateData       ; loc_11EA6
-		dc.w    Tails_Animate_0x0A-Tails_AnimateData           ; loc_11EAB
-		dc.w    Tails_Animate_0x0B-Tails_AnimateData           ; loc_11EAE
-		dc.w    Tails_Animate_0x0C-Tails_AnimateData           ; loc_11EB4
-		dc.w    Tails_Animate_Stop-Tails_AnimateData           ; loc_11EB8
-		dc.w    Tails_Animate_Fly-Tails_AnimateData            ; loc_11EBC
-		dc.w    Tails_Animate_0x0F-Tails_AnimateData           ; loc_11EC0
-		dc.w    Tails_Animate_Jump-Tails_AnimateData           ; loc_11EC7
-		dc.w    Tails_Animate_0x11-Tails_AnimateData           ; loc_11Ed6
-		dc.w    Tails_Animate_0x12-Tails_AnimateData           ; loc_11EDA
-		dc.w    Tails_Animate_0x13-Tails_AnimateData           ; loc_11EE0
-		dc.w    Tails_Animate_0x14-Tails_AnimateData           ; loc_11EE5
-		dc.w    Tails_Animate_0x15-Tails_AnimateData           ; loc_11EE8
-		dc.w    Tails_Animate_Death1-Tails_AnimateData         ; loc_11EEF
-		dc.w    Tails_Animate_Unused_Drown-Tails_AnimateData   ; loc_11EF2
-		dc.w    Tails_Animate_Death2-Tails_AnimateData         ; loc_11EF5
-		dc.w    Tails_Animate_0x19-Tails_AnimateData           ; loc_11EF8
-		dc.w    Tails_Animate_0x1A-Tails_AnimateData           ; loc_11EFB
-		dc.w    Tails_Animate_0x1B-Tails_AnimateData           ; loc_11EFE
-		dc.w    Tails_Animate_0x1C-Tails_AnimateData           ; loc_11F02
-		dc.w    Tails_Animate_0x1D-Tails_AnimateData           ; loc_11F06
-		dc.w    Tails_Animate_0x1E-Tails_AnimateData           ; loc_11F10
+		dc.w	Tails_Animate_Walk-Tails_AnimateData           ; loc_11E32
+		dc.w	Tails_Animate_Run-Tails_AnimateData            ; loc_11E3C
+		dc.w	Tails_Animate_Roll-Tails_AnimateData           ; loc_11E46
+		dc.w	Tails_Animate_Roll2-Tails_AnimateData          ; loc_11E4B
+		dc.w	Tails_Animate_Push_NoArt-Tails_AnimateData     ; loc_11E50
+		dc.w	Tails_Animate_Wait-Tails_AnimateData           ; loc_11E58
+		dc.w	Tails_Animate_Balance_NoArt-Tails_AnimateData  ; loc_11E96
+		dc.w	Tails_Animate_LookUp-Tails_AnimateData         ; loc_11EA0
+		dc.w	Tails_Animate_Duck-Tails_AnimateData           ; loc_11EA3
+		dc.w	Tails_Animate_Spindash-Tails_AnimateData       ; loc_11EA6
+		dc.w	Tails_Animate_0x0A-Tails_AnimateData           ; loc_11EAB
+		dc.w	Tails_Animate_0x0B-Tails_AnimateData           ; loc_11EAE
+		dc.w	Tails_Animate_0x0C-Tails_AnimateData           ; loc_11EB4
+		dc.w	Tails_Animate_Stop-Tails_AnimateData           ; loc_11EB8
+		dc.w	Tails_Animate_Fly-Tails_AnimateData            ; loc_11EBC
+		dc.w	Tails_Animate_0x0F-Tails_AnimateData           ; loc_11EC0
+		dc.w	Tails_Animate_Jump-Tails_AnimateData           ; loc_11EC7
+		dc.w	Tails_Animate_0x11-Tails_AnimateData           ; loc_11Ed6
+		dc.w	Tails_Animate_0x12-Tails_AnimateData           ; loc_11EDA
+		dc.w	Tails_Animate_0x13-Tails_AnimateData           ; loc_11EE0
+		dc.w	Tails_Animate_0x14-Tails_AnimateData           ; loc_11EE5
+		dc.w	Tails_Animate_0x15-Tails_AnimateData           ; loc_11EE8
+		dc.w	Tails_Animate_Death1-Tails_AnimateData         ; loc_11EEF
+		dc.w	Tails_Animate_Unused_Drown-Tails_AnimateData   ; loc_11EF2
+		dc.w	Tails_Animate_Death2-Tails_AnimateData         ; loc_11EF5
+		dc.w	Tails_Animate_0x19-Tails_AnimateData           ; loc_11EF8
+		dc.w	Tails_Animate_0x1A-Tails_AnimateData           ; loc_11EFB
+		dc.w	Tails_Animate_0x1B-Tails_AnimateData           ; loc_11EFE
+		dc.w	Tails_Animate_0x1C-Tails_AnimateData           ; loc_11F02
+		dc.w	Tails_Animate_0x1D-Tails_AnimateData           ; loc_11F06
+		dc.w	Tails_Animate_0x1E-Tails_AnimateData           ; loc_11F10
 Tails_Animate_Walk: ; loc_11E32:
 		dc.b	$FF,$10,$11,$12,$13,$14,$15,$0E,$0F,$FF  
 Tails_Animate_Run: ; loc_11E3C:
@@ -22205,7 +22205,7 @@ loc_1206C: 	dc.b	  2,$81,$82,$83,$84,$FF
 ;===============================================================================		    
 		nop
 KillTails: ; loc_12074:
-		jmp     (KillSonic).l               ; loc_21422
+		jmp	(KillSonic).l               ; loc_21422
 		align 4
 ;===============================================================================
 ; Object 0x0A -
@@ -22215,17 +22215,17 @@ Obj_0x0A_Bubbles_And_Numbers: ; loc_1207C:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_1208A(pc,d0),d1
-		jmp     loc_1208A(pc,d1)
+		jmp	loc_1208A(pc,d1)
 loc_1208A:
-		dc.w    loc_1209C-loc_1208A
-		dc.w    loc_120F8-loc_1208A
-		dc.w    loc_12104-loc_1208A
-		dc.w    loc_1216E-loc_1208A
-		dc.w    JmpTo2_DeleteObject-loc_1208A ; loc_12182-...
-		dc.w    loc_1230C-loc_1208A
-		dc.w    loc_12188-loc_1208A
-		dc.w    loc_1216E-loc_1208A
-		dc.w    JmpTo2_DeleteObject-loc_1208A ; loc_12182-...
+		dc.w	loc_1209C-loc_1208A
+		dc.w	loc_120F8-loc_1208A
+		dc.w	loc_12104-loc_1208A
+		dc.w	loc_1216E-loc_1208A
+		dc.w	JmpTo2_DeleteObject-loc_1208A ; loc_12182-...
+		dc.w	loc_1230C-loc_1208A
+		dc.w	loc_12188-loc_1208A
+		dc.w	loc_1216E-loc_1208A
+		dc.w	JmpTo2_DeleteObject-loc_1208A ; loc_12182-...
 loc_1209C:
 		addq.b	#2,$24(a0)
 		move.l	#Obj_0x0A_Bubbles_Mappings,4(a0) ; loc_14374
@@ -22277,7 +22277,7 @@ loc_12134:
 		jsr	(ObjectMove).l              ; (loc_d27A)
 		tst.b	1(a0)
 		bpl.s	JmpTo_DeleteObject
-		jmp     DisplaySprite           ; (loc_d3C2)
+		jmp	DisplaySprite           ; (loc_d3C2)
 ; loc_12168:
 JmpTo_DeleteObject:
 		jmp	(DeleteObject).l
@@ -22286,7 +22286,7 @@ loc_1216E:
 		bsr.s	loc_121C0
 		lea	(loc_12530).l,A1
 		jsr	(AnimateSprite).l           ; (loc_d412)
-		jmp     DisplaySprite           ; (loc_d3C2)
+		jmp	DisplaySprite           ; (loc_d3C2)
 ; loc_12182:
 JmpTo2_DeleteObject:
 		jmp	(DeleteObject).l
@@ -22303,7 +22303,7 @@ loc_121A2:
 		jsr	(AnimateSprite).l           ; (loc_d412)
 		tst.b	1(a0)
 		bpl.s	JmpTo3_DeleteObject
-		jmp     DisplaySprite           ; (loc_d3C2)
+		jmp	DisplaySprite           ; (loc_d3C2)
 ; loc_121BA:
 JmpTo3_DeleteObject:
 		jmp	(DeleteObject).l
@@ -22496,21 +22496,21 @@ loc_12524:
 		clr.b   (BreathingBubbles+$32).w
 		rts
 loc_12530:
-		dc.w    loc_1254E-loc_12530
-		dc.w    loc_12557-loc_12530
-		dc.w    loc_12560-loc_12530
-		dc.w    loc_12569-loc_12530
-		dc.w    loc_12572-loc_12530
-		dc.w    loc_1257B-loc_12530
-		dc.w    loc_12584-loc_12530
-		dc.w    loc_12589-loc_12530
-		dc.w    loc_12591-loc_12530
-		dc.w    loc_12599-loc_12530
-		dc.w    loc_125A1-loc_12530
-		dc.w    loc_125A9-loc_12530
-		dc.w    loc_125B1-loc_12530
-		dc.w    loc_125B9-loc_12530
-		dc.w    loc_125BB-loc_12530
+		dc.w	loc_1254E-loc_12530
+		dc.w	loc_12557-loc_12530
+		dc.w	loc_12560-loc_12530
+		dc.w	loc_12569-loc_12530
+		dc.w	loc_12572-loc_12530
+		dc.w	loc_1257B-loc_12530
+		dc.w	loc_12584-loc_12530
+		dc.w	loc_12589-loc_12530
+		dc.w	loc_12591-loc_12530
+		dc.w	loc_12599-loc_12530
+		dc.w	loc_125A1-loc_12530
+		dc.w	loc_125A9-loc_12530
+		dc.w	loc_125B1-loc_12530
+		dc.w	loc_125B9-loc_12530
+		dc.w	loc_125BB-loc_12530
 loc_1254E:
 		dc.b	$05,$00,$01,$02,$03,$04,$09,$0D,$FC
 loc_12557:
@@ -22542,7 +22542,7 @@ loc_125B9:
 loc_125BB:
 		dc.b	$0E,$01,$02,$03,$04,$FC,$00
 Obj_0x0A_Numbers_Mappings: ; loc_125C2:
-		dc.w    loc_125C4-Obj_0x0A_Numbers_Mappings
+		dc.w	loc_125C4-Obj_0x0A_Numbers_Mappings
 loc_125C4:
 		dc.w	$0001
 		dc.l	$E80E0000,$0000FFF2
@@ -22558,10 +22558,10 @@ Obj_0x38_Shield: ; loc_125CE:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_125DC(pc,d0),d1
-		jmp     loc_125DC(pc,d1)
+		jmp	loc_125DC(pc,d1)
 loc_125DC:		 
-		dc.w    loc_125E0-loc_125DC
-		dc.w    loc_12616-loc_125DC
+		dc.w	loc_125E0-loc_125DC
+		dc.w	loc_12616-loc_125DC
 loc_125E0:
 		addq.b	#$02,$0024(a0)
 		move.l	#loc_12BB0,$0004(a0)
@@ -22583,7 +22583,7 @@ loc_12616:
 		move.b	(MainCharacter+$22).w,$0022(a0)
 		lea	(loc_12BA2).l,A1
 		jsr	 AnimateSprite           ; (loc_d412)
-		jmp     DisplaySprite           ; (loc_d3C2)
+		jmp	DisplaySprite           ; (loc_d3C2)
 loc_12646:
 		rts  
 ; loc_12648:
@@ -22601,10 +22601,10 @@ Obj_0x35_Invincibility: ; loc_1264E:
 		moveq	#0,d0
 		move.b	$000A(a0),d0
 		move.w	loc_1265C(pc,d0),d1
-		jmp     loc_1265C(pc,d1)
+		jmp	loc_1265C(pc,d1)
 loc_1265C:
-		dc.w    loc_12660-loc_1265C
-		dc.w    loc_1268E-loc_1265C
+		dc.w	loc_12660-loc_1265C
+		dc.w	loc_1268E-loc_1265C
 loc_12660:
 		addq.b	#$02,$000A(a0)
 		move.l	#loc_12C88,$0004(a0)
@@ -22800,11 +22800,11 @@ Obj_0x08_Water_Splash: ; loc_12B42:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_12B50(pc,d0),d1
-		jmp     loc_12B50(pc,d1)
+		jmp	loc_12B50(pc,d1)
 loc_12B50:
-		dc.w    loc_12B56-loc_12B50
-		dc.w    loc_12B84-loc_12B50
-		dc.w    JmpTo5_DeleteObject-loc_12B50 ; loc_12B9C-...
+		dc.w	loc_12B56-loc_12B50
+		dc.w	loc_12B84-loc_12B50
+		dc.w	JmpTo5_DeleteObject-loc_12B50 ; loc_12B9C-...
 loc_12B56:
 		addq.b	#$02,$0024(a0)
 		move.l	#Obj_0x08_Mappings,$0004(a0) ; loc_12CF4
@@ -22818,21 +22818,21 @@ loc_12B84:
 		move.w	(Water_Level_1).w,$000C(a0)
 		lea	(loc_12CEC).l,A1
 		jsr	 AnimateSprite           ; (loc_d412)
-		jmp     DisplaySprite           ; (loc_d3C2)
+		jmp	DisplaySprite           ; (loc_d3C2)
 ; loc_12B9C:
 JmpTo5_DeleteObject:
 		jmp	(DeleteObject).l
 loc_12BA2:
-		dc.w    loc_12BA4-loc_12BA2
+		dc.w	loc_12BA4-loc_12BA2
 loc_12BA4:
 		dc.b	$00,$05,$00,$05,$01,$05,$02,$05,$03,$05,$04,$FF
 loc_12BB0:
-		dc.w    loc_12BBC-loc_12BB0
-		dc.w    loc_12BDE-loc_12BB0
-		dc.w    loc_12C00-loc_12BB0
-		dc.w    loc_12C22-loc_12BB0
-		dc.w    loc_12C44-loc_12BB0
-		dc.w    loc_12C66-loc_12BB0
+		dc.w	loc_12BBC-loc_12BB0
+		dc.w	loc_12BDE-loc_12BB0
+		dc.w	loc_12C00-loc_12BB0
+		dc.w	loc_12C22-loc_12BB0
+		dc.w	loc_12C44-loc_12BB0
+		dc.w	loc_12C66-loc_12BB0
 loc_12BBC:
 		dc.w	$0004
 		dc.l	$F0050000,$0000FFF0,$F0050800,$08000000
@@ -22858,15 +22858,15 @@ loc_12C66:
 		dc.l	$E00B0014,$000AFFE8,$E00B0814,$080A0000
 		dc.l	$000B1014,$100AFFE8,$000B1814,$180A0000
 loc_12C88:
-		dc.w    loc_12C9A-loc_12C88
-		dc.w    loc_12C9C-loc_12C88
-		dc.w    loc_12CA6-loc_12C88
-		dc.w    loc_12CB0-loc_12C88
-		dc.w    loc_12CBA-loc_12C88
-		dc.w    loc_12CC4-loc_12C88
-		dc.w    loc_12CCE-loc_12C88
-		dc.w    loc_12CD8-loc_12C88
-		dc.w    loc_12CE2-loc_12C88
+		dc.w	loc_12C9A-loc_12C88
+		dc.w	loc_12C9C-loc_12C88
+		dc.w	loc_12CA6-loc_12C88
+		dc.w	loc_12CB0-loc_12C88
+		dc.w	loc_12CBA-loc_12C88
+		dc.w	loc_12CC4-loc_12C88
+		dc.w	loc_12CCE-loc_12C88
+		dc.w	loc_12CD8-loc_12C88
+		dc.w	loc_12CE2-loc_12C88
 loc_12C9A:
 		dc.w	$0000
 loc_12C9C:
@@ -22894,14 +22894,14 @@ loc_12CE2:
 		dc.w	$0001
 		dc.l	$F00F0012,$0009FFF0
 loc_12CEC:		
-		dc.w    loc_12CEE-loc_12CEC
+		dc.w	loc_12CEE-loc_12CEC
 loc_12CEE:
 		dc.b	$04,$00,$01,$02,$FC,$00  
 Obj_0x08_Mappings:		 
 loc_12CF4:
-		dc.w    loc_12CFA-loc_12CF4
-		dc.w    loc_12d0C-loc_12CF4
-		dc.w    loc_12d1E-loc_12CF4
+		dc.w	loc_12CFA-loc_12CF4
+		dc.w	loc_12d0C-loc_12CF4
+		dc.w	loc_12d1E-loc_12CF4
 loc_12CFA:
 		dc.w	$0002
 		dc.l	$F204006D,$0036FFF8,$FA0C006F,$0037FFF0
@@ -24211,11 +24211,11 @@ Obj_0x79_Lamp_Post: ; loc_13B54:
 		move.b	routine(a0),d0
 		move.w	loc_13B68(pc,d0),d1
 		jsr	loc_13B68(pc,d1)
-		jmp     MarkObjGone             ; (loc_d2A0)
+		jmp	MarkObjGone             ; (loc_d2A0)
 loc_13B68:
-		dc.w    loc_13B6E-loc_13B68
-		dc.w    loc_13Bd0-loc_13B68
-		dc.w    loc_13C58-loc_13B68
+		dc.w	loc_13B6E-loc_13B68
+		dc.w	loc_13Bd0-loc_13B68
+		dc.w	loc_13C58-loc_13B68
 loc_13B6E:
 		addq.b	#$02,$0024(a0)
 		move.l	#Obj79_MapUnc_13D8E,$0004(a0) ; loc_13D8E
@@ -24421,7 +24421,7 @@ Obj7D_Points:
 		dc.w	0
 		dc.w 1000
 		dc.w  100
-		dc.w    1
+		dc.w	1
 ; ===========================================================================
 ; loc_13EB2:
 Obj7D_Main:
@@ -24443,10 +24443,10 @@ JmpTo7_DeleteObject:
 ; ---------------------------------------------------------------------------
 ; Hidden_Bonus_Mappings:
 Obj7D_MapUnc_13Ed6:
-		dc.w    loc_13EDE-Obj7D_MapUnc_13Ed6
-		dc.w    loc_13EE0-Obj7D_MapUnc_13Ed6
-		dc.w    loc_13EEA-Obj7D_MapUnc_13Ed6
-		dc.w    loc_13EF4-Obj7D_MapUnc_13Ed6
+		dc.w	loc_13EDE-Obj7D_MapUnc_13Ed6
+		dc.w	loc_13EE0-Obj7D_MapUnc_13Ed6
+		dc.w	loc_13EEA-Obj7D_MapUnc_13Ed6
+		dc.w	loc_13EF4-Obj7D_MapUnc_13Ed6
 loc_13EDE:
 		dc.w	$0000
 loc_13EE0:
@@ -24471,10 +24471,10 @@ S1_Obj_0x47: ; Unknow_Obj_0x013F00: ; loc_13F00:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_13F0E(pc,d0),d1
-		jmp     loc_13F0E(pc,d1)
+		jmp	loc_13F0E(pc,d1)
 loc_13F0E:
-		dc.w    loc_13F12-loc_13F0E
-		dc.w    loc_13F40-loc_13F0E
+		dc.w	loc_13F12-loc_13F0E
+		dc.w	loc_13F40-loc_13F0E
 loc_13F12:
 		addq.b	#2,$24(a0)
 		move.l	#S1_Obj_0x47_Mappings,4(a0) ; loc_1401E
@@ -24542,16 +24542,16 @@ loc_14002:
 		bsr.w	AnimateSprite           ; loc_d412
 		bra.w	MarkObjGone             ; loc_d2A0              
 loc_14010:
-		dc.w    loc_14014-loc_14010
-		dc.w    loc_14017-loc_14010
+		dc.w	loc_14014-loc_14010
+		dc.w	loc_14017-loc_14010
 loc_14014:
 		dc.b	$0F,$00,$FF
 loc_14017:
 		dc.b	$03,$01,$02,$01,$02,$FD,$00
 S1_Obj_0x47_Mappings: ; Unknow_Obj_0x013F00_Mappings:   loc_1401E:
-		dc.w    loc_14024-S1_Obj_0x47_Mappings
-		dc.w    loc_14036-S1_Obj_0x47_Mappings
-		dc.w    loc_14048-S1_Obj_0x47_Mappings
+		dc.w	loc_14024-S1_Obj_0x47_Mappings
+		dc.w	loc_14036-S1_Obj_0x47_Mappings
+		dc.w	loc_14048-S1_Obj_0x47_Mappings
 loc_14024:
 		dc.w	$0002
 		dc.l	$F0070000,$0000FFF0,$F0070800,$08000000
@@ -24574,14 +24574,14 @@ S1_Obj_0x64: ; Unknow_Obj_0x01405C: ; loc_1405C:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_1406A(pc,d0),d1
-		jmp     loc_1406A(pc,d1)
+		jmp	loc_1406A(pc,d1)
 loc_1406A:
-		dc.w    loc_14076-loc_1406A
-		dc.w    loc_140D8-loc_1406A
-		dc.w    loc_140F2-loc_1406A
-		dc.w    loc_141AC-loc_1406A
-		dc.w    loc_141CA-loc_1406A
-		dc.w    loc_141CE-loc_1406A
+		dc.w	loc_14076-loc_1406A
+		dc.w	loc_140D8-loc_1406A
+		dc.w	loc_140F2-loc_1406A
+		dc.w	loc_141AC-loc_1406A
+		dc.w	loc_141CA-loc_1406A
+		dc.w	loc_141CE-loc_1406A
 loc_14076:
 		addq.b	#$02,$0024(a0)
 		move.l	#Obj_0x0A_Bubbles_Mappings,$0004(a0) ; loc_14374
@@ -24654,7 +24654,7 @@ loc_14196:
 		bsr.w	ObjectMove              ; loc_d27A
 		tst.b	$0001(a0)
 		bpl.s	JmpTo8_DeleteObject
-		jmp     DisplaySprite           ; (loc_d3C2)
+		jmp	DisplaySprite           ; (loc_d3C2)
 ; loc_141A6:
 JmpTo8_DeleteObject:
 		jmp	(DeleteObject).l
@@ -24663,7 +24663,7 @@ loc_141AC:
 		jsr	 AnimateSprite           ; (loc_d412)
 		tst.b	$0001(a0)
 		bpl.s	JmpTo9_DeleteObject
-		jmp     DisplaySprite           ; (loc_d3C2)
+		jmp	DisplaySprite           ; (loc_d3C2)
 ; loc_141C4:
 JmpTo9_DeleteObject:
 		jmp	(DeleteObject).l
@@ -24780,13 +24780,13 @@ loc_14344:
 		moveq	#0,d0
 		rts		
 loc_14348:
-		dc.w    loc_14356-loc_14348
-		dc.w    loc_1435B-loc_14348
-		dc.w    loc_14361-loc_14348
-		dc.w    loc_14368-loc_14348
-		dc.w    loc_14368-loc_14348
-		dc.w    loc_1436A-loc_14348
-		dc.w    loc_1436F-loc_14348
+		dc.w	loc_14356-loc_14348
+		dc.w	loc_1435B-loc_14348
+		dc.w	loc_14361-loc_14348
+		dc.w	loc_14368-loc_14348
+		dc.w	loc_14368-loc_14348
+		dc.w	loc_1436A-loc_14348
+		dc.w	loc_1436F-loc_14348
 loc_14356:
 		dc.b	$0E,$00,$01,$02,$FC
 loc_1435B:
@@ -24800,29 +24800,29 @@ loc_1436A:
 loc_1436F:
 		dc.b	$0F,$13,$14,$15,$FF
 Obj_0x0A_Bubbles_Mappings: ; loc_14374:
-		dc.w    loc_143A2-Obj_0x0A_Bubbles_Mappings
-		dc.w    loc_143AC-Obj_0x0A_Bubbles_Mappings
-		dc.w    loc_143B6-Obj_0x0A_Bubbles_Mappings
-		dc.w    loc_143C0-Obj_0x0A_Bubbles_Mappings
-		dc.w    loc_143CA-Obj_0x0A_Bubbles_Mappings
-		dc.w    loc_143d4-Obj_0x0A_Bubbles_Mappings
-		dc.w    loc_143DE-Obj_0x0A_Bubbles_Mappings
-		dc.w    loc_143E8-Obj_0x0A_Bubbles_Mappings
-		dc.w    loc_1440A-Obj_0x0A_Bubbles_Mappings
-		dc.w    loc_1442C-Obj_0x0A_Bubbles_Mappings
-		dc.w    loc_14436-Obj_0x0A_Bubbles_Mappings
-		dc.w    loc_14440-Obj_0x0A_Bubbles_Mappings
-		dc.w    loc_1444A-Obj_0x0A_Bubbles_Mappings
-		dc.w    loc_14454-Obj_0x0A_Bubbles_Mappings
-		dc.w    loc_1445E-Obj_0x0A_Bubbles_Mappings
-		dc.w    loc_14468-Obj_0x0A_Bubbles_Mappings
-		dc.w    loc_14472-Obj_0x0A_Bubbles_Mappings
-		dc.w    loc_1447C-Obj_0x0A_Bubbles_Mappings
-		dc.w    loc_14486-Obj_0x0A_Bubbles_Mappings
-		dc.w    loc_14490-Obj_0x0A_Bubbles_Mappings
-		dc.w    loc_1449A-Obj_0x0A_Bubbles_Mappings
-		dc.w    loc_144A4-Obj_0x0A_Bubbles_Mappings
-		dc.w    loc_144AE-Obj_0x0A_Bubbles_Mappings
+		dc.w	loc_143A2-Obj_0x0A_Bubbles_Mappings
+		dc.w	loc_143AC-Obj_0x0A_Bubbles_Mappings
+		dc.w	loc_143B6-Obj_0x0A_Bubbles_Mappings
+		dc.w	loc_143C0-Obj_0x0A_Bubbles_Mappings
+		dc.w	loc_143CA-Obj_0x0A_Bubbles_Mappings
+		dc.w	loc_143d4-Obj_0x0A_Bubbles_Mappings
+		dc.w	loc_143DE-Obj_0x0A_Bubbles_Mappings
+		dc.w	loc_143E8-Obj_0x0A_Bubbles_Mappings
+		dc.w	loc_1440A-Obj_0x0A_Bubbles_Mappings
+		dc.w	loc_1442C-Obj_0x0A_Bubbles_Mappings
+		dc.w	loc_14436-Obj_0x0A_Bubbles_Mappings
+		dc.w	loc_14440-Obj_0x0A_Bubbles_Mappings
+		dc.w	loc_1444A-Obj_0x0A_Bubbles_Mappings
+		dc.w	loc_14454-Obj_0x0A_Bubbles_Mappings
+		dc.w	loc_1445E-Obj_0x0A_Bubbles_Mappings
+		dc.w	loc_14468-Obj_0x0A_Bubbles_Mappings
+		dc.w	loc_14472-Obj_0x0A_Bubbles_Mappings
+		dc.w	loc_1447C-Obj_0x0A_Bubbles_Mappings
+		dc.w	loc_14486-Obj_0x0A_Bubbles_Mappings
+		dc.w	loc_14490-Obj_0x0A_Bubbles_Mappings
+		dc.w	loc_1449A-Obj_0x0A_Bubbles_Mappings
+		dc.w	loc_144A4-Obj_0x0A_Bubbles_Mappings
+		dc.w	loc_144AE-Obj_0x0A_Bubbles_Mappings
 loc_143A2:
 		dc.w	$0001
 		dc.l	$FC000000,$0000FFFC
@@ -25684,10 +25684,10 @@ Obj_0x49_Waterfall: ; loc_15352:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_15360(pc,d0),d1
-		jmp     loc_15360(pc,d1)
+		jmp	loc_15360(pc,d1)
 loc_15360:
-		dc.w    loc_15364-loc_15360
-		dc.w    loc_1539E-loc_15360
+		dc.w	loc_15364-loc_15360
+		dc.w	loc_1539E-loc_15360
                
 loc_15364:
 		addq.b	#$02,$0024(a0)
@@ -25751,10 +25751,10 @@ Obj_0x31_Lava_Attributes: ; loc_155A0:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_155AE(pc,d0),d1
-		jmp     loc_155AE(pc,d1)
+		jmp	loc_155AE(pc,d1)
 loc_155AE:
-		dc.w    loc_155B6-loc_155AE
-		dc.w    loc_155EC-loc_155AE
+		dc.w	loc_155B6-loc_155AE
+		dc.w	loc_155EC-loc_155AE
 loc_155B2: 
 		dc.w	$9694,$9500
 		
@@ -25785,9 +25785,9 @@ loc_15610:
 		rts
 ; Lava_Attributes_Mappings:		loc_15612:
 Obj31_MapUnc_15612:
-		dc.w    loc_15618-Obj31_MapUnc_15612
-		dc.w    loc_15618-Obj31_MapUnc_15612
-		dc.w    loc_15618-Obj31_MapUnc_15612
+		dc.w	loc_15618-Obj31_MapUnc_15612
+		dc.w	loc_15618-Obj31_MapUnc_15612
+		dc.w	loc_15618-Obj31_MapUnc_15612
 loc_15618:
 		dc.w	$0000
 ;=============================================================================== 
@@ -25802,10 +25802,10 @@ Obj_0x74_Invisible_Block: ; loc_1561A:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_15628(pc,d0),d1
-		jmp     loc_15628(pc,d1)
+		jmp	loc_15628(pc,d1)
 loc_15628:
-		dc.w    loc_1562C-loc_15628
-		dc.w    loc_15668-loc_15628
+		dc.w	loc_1562C-loc_15628
+		dc.w	loc_15668-loc_15628
 loc_1562C:
 		addq.b	#$02,$0024(a0)
 		move.l	#Obj74_MapUnc_156B2,$0004(a0) ; loc_156B2
@@ -25845,7 +25845,7 @@ loc_1568A:
 loc_156A4:
 		tst.w	(Debug_placement_mode).w
 		beq.s	loc_156B0
-		jmp     DisplaySprite           ; (loc_d3C2)
+		jmp	DisplaySprite           ; (loc_d3C2)
 loc_156B0:
 		rts
 ; ---------------------------------------------------------------------------
@@ -26708,10 +26708,10 @@ Obj_0x19_Elevator: ; loc_1621C:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_1622A(pc,d0),d1
-		jmp     loc_1622A(pc,d1)
+		jmp	loc_1622A(pc,d1)
 loc_1622A:
-		dc.w    loc_16238-loc_1622A
-		dc.w    loc_162A0-loc_1622A
+		dc.w	loc_16238-loc_1622A
+		dc.w	loc_162A0-loc_1622A
 loc_1622E		
 		dc.b	$20,$00,$18,$01,$20,$02,$40,$03,$30,$04
 loc_16238:
@@ -26758,24 +26758,24 @@ loc_162d0:
 		andi.w	#$000F,d0
 		add.w   d0,d0
 		move.w	loc_162E4(pc,d0),d1
-		jmp     loc_162E4(pc,d1)
+		jmp	loc_162E4(pc,d1)
 loc_162E4:
-		dc.w    loc_16304-loc_162E4
-		dc.w    loc_1630E-loc_162E4
-		dc.w    loc_1632E-loc_162E4
-		dc.w    loc_1634E-loc_162E4
-		dc.w    loc_1635E-loc_162E4
-		dc.w    loc_1637E-loc_162E4
-		dc.w    loc_16380-loc_162E4
-		dc.w    loc_16380-loc_162E4
-		dc.w    loc_1639C-loc_162E4
-		dc.w    loc_1639C-loc_162E4
-		dc.w    loc_1639C-loc_162E4
-		dc.w    loc_1639C-loc_162E4
-		dc.w    loc_163d6-loc_162E4
-		dc.w    loc_163d6-loc_162E4
-		dc.w    loc_163d6-loc_162E4
-		dc.w    loc_163d6-loc_162E4
+		dc.w	loc_16304-loc_162E4
+		dc.w	loc_1630E-loc_162E4
+		dc.w	loc_1632E-loc_162E4
+		dc.w	loc_1634E-loc_162E4
+		dc.w	loc_1635E-loc_162E4
+		dc.w	loc_1637E-loc_162E4
+		dc.w	loc_16380-loc_162E4
+		dc.w	loc_16380-loc_162E4
+		dc.w	loc_1639C-loc_162E4
+		dc.w	loc_1639C-loc_162E4
+		dc.w	loc_1639C-loc_162E4
+		dc.w	loc_1639C-loc_162E4
+		dc.w	loc_163d6-loc_162E4
+		dc.w	loc_163d6-loc_162E4
+		dc.w	loc_163d6-loc_162E4
+		dc.w	loc_163d6-loc_162E4
 loc_16304:
 		move.b	(Oscillating_Data+8).w,d0
 		move.w	#$0040,d1
@@ -27021,13 +27021,13 @@ Obj_0x1D_Worms: ; loc_165B0:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_165BE(pc,d0),d1
-		jmp     loc_165BE(pc,d1)
+		jmp	loc_165BE(pc,d1)
 loc_165BE:
-		dc.w    loc_165d0-loc_165BE
-		dc.w    loc_1667E-loc_165BE
-		dc.w    loc_1669C-loc_165BE
-		dc.w    loc_1667E-loc_165BE
-		dc.w    loc_166d0-loc_165BE		 
+		dc.w	loc_165d0-loc_165BE
+		dc.w	loc_1667E-loc_165BE
+		dc.w	loc_1669C-loc_165BE
+		dc.w	loc_1667E-loc_165BE
+		dc.w	loc_166d0-loc_165BE		 
 ;loc_165C8:
 		dc.w	$FB80,$FB00,$FA00,$F900		  
 loc_165d0:
@@ -27149,8 +27149,8 @@ Obj_0x1E_Tube_Attributes: ; loc_16724:
 		beq.w	 JmpTo_MarkObjGone3
 		rts
 loc_16740:
-		dc.w    loc_1674A-loc_16740
-		dc.w    loc_1675E-loc_16740
+		dc.w	loc_1674A-loc_16740
+		dc.w	loc_1675E-loc_16740
 loc_16744:		
 		dc.w	$00A0,$0100,$0120
 loc_1674A:
@@ -27169,12 +27169,12 @@ loc_16770:
 		moveq	#0,d0
 		move.b	(a4),d0
 		move.w	loc_1677C(pc,d0),d0
-		jmp     loc_1677C(pc,d0)
+		jmp	loc_1677C(pc,d0)
 loc_1677C:
-		dc.w    loc_16784-loc_1677C
-		dc.w    loc_16898-loc_1677C
-		dc.w    loc_1697C-loc_1677C
-		dc.w    loc_169E8-loc_1677C
+		dc.w	loc_16784-loc_1677C
+		dc.w	loc_16898-loc_1677C
+		dc.w	loc_1697C-loc_1677C
+		dc.w	loc_169E8-loc_1677C
 loc_16784:
 		tst.w	(Debug_placement_mode).w
 		bne.w	 loc_16896
@@ -27462,18 +27462,18 @@ loc_16AF8:
 		move.w	d0,$0002(a4)
 		rts
 loc_16AFE:              
-		dc.w    loc_16B16-loc_16AFE
-		dc.w    loc_16B8C-loc_16AFE
-		dc.w    loc_16BEA-loc_16AFE
-		dc.w    loc_16C60-loc_16AFE
-		dc.w    loc_16CBE-loc_16AFE
-		dc.w    loc_16d30-loc_16AFE
-		dc.w    loc_16D8E-loc_16AFE
-		dc.w    loc_16E00-loc_16AFE
-		dc.w    loc_16E5E-loc_16AFE
-		dc.w    loc_16Ed4-loc_16AFE
-		dc.w    loc_16F32-loc_16AFE
-		dc.w    loc_16FA8-loc_16AFE
+		dc.w	loc_16B16-loc_16AFE
+		dc.w	loc_16B8C-loc_16AFE
+		dc.w	loc_16BEA-loc_16AFE
+		dc.w	loc_16C60-loc_16AFE
+		dc.w	loc_16CBE-loc_16AFE
+		dc.w	loc_16d30-loc_16AFE
+		dc.w	loc_16D8E-loc_16AFE
+		dc.w	loc_16E00-loc_16AFE
+		dc.w	loc_16E5E-loc_16AFE
+		dc.w	loc_16Ed4-loc_16AFE
+		dc.w	loc_16F32-loc_16AFE
+		dc.w	loc_16FA8-loc_16AFE
 loc_16B16:
 		dc.w	$0074
 		dc.w	$0090,$0010,$0090,$0070,$0040,$0070,$0035,$006F
@@ -27581,21 +27581,21 @@ loc_16FA8:
 		dc.w	$0010,$0040,$0013,$0053,$001D,$0062,$002E,$006E
 		dc.w	$0040,$0070,$0110,$0070,$0110,$0010
 loc_17006:
-		dc.w    loc_17024-loc_17006
-		dc.w    loc_17024-loc_17006
-		dc.w    loc_1703A-loc_17006
-		dc.w    loc_17064-loc_17006
-		dc.w    loc_1707A-loc_17006
-		dc.w    loc_17090-loc_17006
-		dc.w    loc_170A6-loc_17006
-		dc.w    loc_170B8-loc_17006
-		dc.w    loc_170d2-loc_17006
-		dc.w    loc_170EC-loc_17006
-		dc.w    loc_170FE-loc_17006
-		dc.w    loc_17110-loc_17006
-		dc.w    loc_1712A-loc_17006
-		dc.w    loc_17140-loc_17006
-		dc.w    loc_1714E-loc_17006
+		dc.w	loc_17024-loc_17006
+		dc.w	loc_17024-loc_17006
+		dc.w	loc_1703A-loc_17006
+		dc.w	loc_17064-loc_17006
+		dc.w	loc_1707A-loc_17006
+		dc.w	loc_17090-loc_17006
+		dc.w	loc_170A6-loc_17006
+		dc.w	loc_170B8-loc_17006
+		dc.w	loc_170d2-loc_17006
+		dc.w	loc_170EC-loc_17006
+		dc.w	loc_170FE-loc_17006
+		dc.w	loc_17110-loc_17006
+		dc.w	loc_1712A-loc_17006
+		dc.w	loc_17140-loc_17006
+		dc.w	loc_1714E-loc_17006
 loc_17024:
 		dc.w	$0014
 		dc.w	$0790,$03B0,$0710,$03B0,$0710,$06B0,$0A90,$06B0
@@ -27655,7 +27655,7 @@ loc_1714E:
 ;===============================================================================		   
 ; loc_1716C:
 JmpTo_MarkObjGone3:
-		jmp     (MarkObjGone3).l
+		jmp	(MarkObjGone3).l
 
 		align 4
 ;=============================================================================== 
@@ -27666,15 +27666,15 @@ Obj_0x20_Fireball: ; loc_17174:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_17182(pc,d0),d1
-		jmp     loc_17182(pc,d1)
+		jmp	loc_17182(pc,d1)
 loc_17182:
-		dc.w    loc_17190-loc_17182
-		dc.w    loc_171F2-loc_17182
-		dc.w    loc_17200-loc_17182
-		dc.w    loc_1729A-loc_17182
-		dc.w    loc_172C0-loc_17182
-		dc.w    loc_1734E-loc_17182
-		dc.w    loc_173AE-loc_17182
+		dc.w	loc_17190-loc_17182
+		dc.w	loc_171F2-loc_17182
+		dc.w	loc_17200-loc_17182
+		dc.w	loc_1729A-loc_17182
+		dc.w	loc_172C0-loc_17182
+		dc.w	loc_1734E-loc_17182
+		dc.w	loc_173AE-loc_17182
 loc_17190:
 		addq.b	#$02,$0024(a0)
 		move.b	#$08,$0016(a0)
@@ -27816,9 +27816,9 @@ loc_173A0:
 loc_173AE:
 		bra.w	JmpTo14_DeleteObject
 loc_173B2:
-		dc.w    loc_173B8-loc_173B2
-		dc.w    loc_173BF-loc_173B2
-		dc.w    loc_173C2-loc_173B2
+		dc.w	loc_173B8-loc_173B2
+		dc.w	loc_173BF-loc_173B2
+		dc.w	loc_173C2-loc_173B2
 loc_173B8:
 		dc.b	$0B,$02,$03,$FC,$04,$FD,$01
 loc_173BF:
@@ -27827,12 +27827,12 @@ loc_173C2:
 		dc.b	$05,$04,$05,$02,$03,$00,$01,$00,$01,$02,$03,$04,$05,$FC
 Fireball_Mappings:		
 loc_173d0:
-		dc.w    loc_173DC-loc_173d0
-		dc.w    loc_173E6-loc_173d0
-		dc.w    loc_173F0-loc_173d0
-		dc.w    loc_173FA-loc_173d0
-		dc.w    loc_17404-loc_173d0
-		dc.w    loc_1740E-loc_173d0
+		dc.w	loc_173DC-loc_173d0
+		dc.w	loc_173E6-loc_173d0
+		dc.w	loc_173F0-loc_173d0
+		dc.w	loc_173FA-loc_173d0
+		dc.w	loc_17404-loc_173d0
+		dc.w	loc_1740E-loc_173d0
 loc_173DC:
 		dc.w	$0001
 		dc.l	$F8050000,$0000FFF8
@@ -27851,12 +27851,12 @@ loc_17404:
 loc_1740E:
 		dc.w	$0000
 loc_17410_B:
-		dc.w    loc_1741C-loc_17410_B
-		dc.w    loc_17426-loc_17410_B
-		dc.w    loc_17430-loc_17410_B
-		dc.w    loc_1743A-loc_17410_B
-		dc.w    loc_17444-loc_17410_B
-		dc.w    loc_1744E-loc_17410_B
+		dc.w	loc_1741C-loc_17410_B
+		dc.w	loc_17426-loc_17410_B
+		dc.w	loc_17430-loc_17410_B
+		dc.w	loc_1743A-loc_17410_B
+		dc.w	loc_17444-loc_17410_B
+		dc.w	loc_1744E-loc_17410_B
 loc_1741C:
 		dc.w	$0001
 		dc.l	$F0070000,$0000FFF8
@@ -27905,11 +27905,11 @@ Obj_0x2F_Breakable_Floor: ; loc_1747C:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_1748A(pc,d0),d1
-		jmp     loc_1748A(pc,d1)
+		jmp	loc_1748A(pc,d1)
 loc_1748A:
-		dc.w    loc_1749A-loc_1748A
-		dc.w    loc_174D8-loc_1748A
-		dc.w    loc_1764C-loc_1748A
+		dc.w	loc_1749A-loc_1748A
+		dc.w	loc_174D8-loc_1748A
+		dc.w	loc_1764C-loc_1748A
 loc_17490:
 		dc.b	$24,$00,$20,$02,$18,$04,$10,$06,$08,$08
 loc_1749A:
@@ -28059,11 +28059,11 @@ Obj_0x32_Breakable_Obstacule: ; loc_1768A:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_17698(pc,d0),d1
-		jmp     loc_17698(pc,d1)
+		jmp	loc_17698(pc,d1)
 loc_17698:
-		dc.w    loc_1769E-loc_17698
-		dc.w    loc_176F2-loc_17698
-		dc.w    loc_177DA-loc_17698
+		dc.w	loc_1769E-loc_17698
+		dc.w	loc_176F2-loc_17698
+		dc.w	loc_177DA-loc_17698
 loc_1769E:
 		addq.b	#$02,$0024(a0)
 		move.l	#Obj32_MapUnc_179C2,$0004(a0) ; loc_179C2
@@ -28232,10 +28232,10 @@ Obj_0x30: ; loc_17A4C:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_17A5A(pc,d0),d1
-		jmp     loc_17A5A(pc,d1)
+		jmp	loc_17A5A(pc,d1)
 loc_17A5A:
-		dc.w    loc_17A68-loc_17A5A
-		dc.w    loc_17AB4-loc_17A5A
+		dc.w	loc_17A68-loc_17A5A
+		dc.w	loc_17AB4-loc_17A5A
 loc_17A5E:
 		dc.w	$C000,$C000,$C000,$E000,$FF00
 loc_17A68:
@@ -28274,11 +28274,11 @@ loc_17AB4:
 		beq.w	 JmpTo2_MarkObjGone3
 		rts
 loc_17AD8:
-		dc.w    loc_17AE2-loc_17AD8
-		dc.w    loc_17AE2-loc_17AD8
-		dc.w    loc_17AFA-loc_17AD8
-		dc.w    loc_17B40-loc_17AD8
-		dc.w    loc_17B5A-loc_17AD8
+		dc.w	loc_17AE2-loc_17AD8
+		dc.w	loc_17AE2-loc_17AD8
+		dc.w	loc_17AFA-loc_17AD8
+		dc.w	loc_17B40-loc_17AD8
+		dc.w	loc_17B5A-loc_17AD8
 loc_17AE2:
 		move.w	#$00CB,d1
 		move.w	#$0080,d2
@@ -28356,7 +28356,7 @@ JmpTo_Touch_ChkHurt:
 		jmp	(Touch_ChkHurt).l
 ; loc_17C8C:
 JmpTo2_MarkObjGone3:
-		jmp     (MarkObjGone3)
+		jmp	(MarkObjGone3)
 ; loc_17C92:
 JmpTo_SolidObject_Always:
 		jmp	(SolidObject_Always).l
@@ -28374,10 +28374,10 @@ Obj_0x33_Touch_Booster: ; loc_17CA0:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_17CAE(pc,d0),d1
-		jmp     loc_17CAE(pc,d1)
+		jmp	loc_17CAE(pc,d1)
 loc_17CAE:
-		dc.w    loc_17CB2-loc_17CAE
-		dc.w    loc_17CF6-loc_17CAE
+		dc.w	loc_17CB2-loc_17CAE
+		dc.w	loc_17CF6-loc_17CAE
 loc_17CB2:
 		addq.b	#$02,$0024(a0)
 		move.l	#Obj33_MapUnc_17EE2,$0004(a0) ; loc_17EE2
@@ -28408,11 +28408,11 @@ loc_17CF6:
 		bsr.w	JmpTo2_SolidObject
 		bra.w	JmpTo6_MarkObjGone
 loc_17d22:
-		dc.w    loc_17d2C-loc_17d22
-		dc.w    loc_17d46-loc_17d22
-		dc.w    loc_17D82-loc_17d22
-		dc.w    loc_17E68-loc_17d22
-		dc.w    loc_17EE0-loc_17d22
+		dc.w	loc_17d2C-loc_17d22
+		dc.w	loc_17d46-loc_17d22
+		dc.w	loc_17D82-loc_17d22
+		dc.w	loc_17E68-loc_17d22
+		dc.w	loc_17EE0-loc_17d22
 loc_17d2C:
 		subq.w	#1,$0036(a0)
 		bpl.s	loc_17d44
@@ -28562,11 +28562,11 @@ Obj_0x43_Giant_Spikeball: ; loc_17F0C:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_17F1A(pc,d0),d1
-		jmp     loc_17F1A(pc,d1)
+		jmp	loc_17F1A(pc,d1)
 loc_17F1A:
-		dc.w    loc_17F32-loc_17F1A
-		dc.w    loc_17Fd6-loc_17F1A
-		dc.w    loc_18028-loc_17F1A
+		dc.w	loc_17F32-loc_17F1A
+		dc.w	loc_17Fd6-loc_17F1A
+		dc.w	loc_18028-loc_17F1A
 loc_17F20:
 		dc.b	$00,$68,$00,$00,$00,$00,$01,$E8,$FF,$E8,$00,$18,$01,$A8,$FF,$A8
 		dc.b	$FF,$D8
@@ -28627,7 +28627,7 @@ loc_17Fd6:
 		cmpi.w	#$0280,d0
 		bhi.s	loc_18002
 loc_17FFC:
-		jmp     DisplaySprite           ; (loc_d3C2)
+		jmp	DisplaySprite           ; (loc_d3C2)
 loc_18002:
 		move.l	$003C(a0),A1
 		cmpa.l  A0,A1
@@ -28645,7 +28645,7 @@ JmpTo17_DeleteObject:
 loc_18028:
 		bsr.s	loc_18032
 		bsr.s	loc_18068
-		jmp     DisplaySprite           ; (loc_d3C2)
+		jmp	DisplaySprite           ; (loc_d3C2)
 loc_18032:
 		tst.b	$0036(a0)
 		bne.s	loc_18050
@@ -28800,9 +28800,9 @@ Obj_0x45_Spring_Push_Boost: ; loc_181A0:
 		jsr	 loc_181B2(pc,d1)
 		bra.w	JmpTo7_MarkObjGone
 loc_181B2:
-		dc.w    loc_181B8-loc_181B2
-		dc.w    loc_1822E-loc_181B2
-		dc.w    loc_18322-loc_181B2
+		dc.w	loc_181B8-loc_181B2
+		dc.w	loc_1822E-loc_181B2
+		dc.w	loc_18322-loc_181B2
 loc_181B8:
 		addq.b	#$02,$0024(a0)
 		move.l	#Obj45_MapUnc_185C2,$0004(a0) ; loc_185C2
@@ -28814,10 +28814,10 @@ loc_181B8:
 		lsr.w	#$03,d0
 		andi.w	#$000E,d0
 		move.w	loc_181EE(pc,d0),d0
-		jmp     loc_181EE(pc,d0)
+		jmp	loc_181EE(pc,d0)
 loc_181EE:
-		dc.w    loc_18216-loc_181EE
-		dc.w    loc_181F2-loc_181EE
+		dc.w	loc_18216-loc_181EE
+		dc.w	loc_181F2-loc_181EE
 loc_181F2:
 		move.b	#$04,$0024(a0)
 		move.b	#1,$001C(a0)
@@ -29090,8 +29090,8 @@ loc_18562:
 loc_18578:
 		rts 
 loc_1857A:   ; Unused Obj Conf
-		dc.w    loc_1857E-loc_1857A
-		dc.w    loc_185A0-loc_1857A
+		dc.w	loc_1857E-loc_1857A
+		dc.w	loc_185A0-loc_1857A
 loc_1857E:
 		dc.b	$00,$00,$01,$02,$03,$04,$05,$06,$07,$08,$09,$09,$09,$09,$09,$09
 		dc.b	$09,$09,$08,$07,$06,$05,$04,$03,$02,$01,$00,$00,$00,$00,$00,$00
@@ -29114,12 +29114,12 @@ Obj_0x46_Spring_Ball: ; loc_18ABE:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_18ACC(pc,d0),d1
-		jmp     loc_18ACC(pc,d1)
+		jmp	loc_18ACC(pc,d1)
 loc_18ACC:
-		dc.w    loc_18Ad4-loc_18ACC
-		dc.w    loc_18B92-loc_18ACC
-		dc.w    loc_18BE0-loc_18ACC
-		dc.w    loc_18C84-loc_18ACC
+		dc.w	loc_18Ad4-loc_18ACC
+		dc.w	loc_18B92-loc_18ACC
+		dc.w	loc_18BE0-loc_18ACC
+		dc.w	loc_18C84-loc_18ACC
 loc_18Ad4:
 		lea	(Object_Respawn_Table).w,A2
 		moveq	#0,d0
@@ -29320,10 +29320,10 @@ Obj_0x47_Switch: ; loc_18D9C:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_18DAA(pc,d0),d1
-		jmp     loc_18DAA(pc,d1)  
+		jmp	loc_18DAA(pc,d1)  
 loc_18DAA:		  
-		dc.w    loc_18DAE-loc_18DAA
-		dc.w    loc_18DDA-loc_18DAA
+		dc.w	loc_18DAE-loc_18DAA
+		dc.w	loc_18DDA-loc_18DAA
 loc_18DAE:
 		addq.b	#$02,$0024(a0)
 		move.l	#Obj47_MapUnc_18E3E,$0004(a0) ; loc_18E3E
@@ -29392,12 +29392,12 @@ Obj_0x3D_Break_Boost: ; loc_18E78:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_18E86(pc,d0),d1
-		jmp     loc_18E86(pc,d1)
+		jmp	loc_18E86(pc,d1)
 loc_18E86:
-		dc.w    loc_18E8E-loc_18E86
-		dc.w    loc_18EB6-loc_18E86
-		dc.w    loc_18FCC-loc_18E86
-		dc.w    loc_18FE2-loc_18E86
+		dc.w	loc_18E8E-loc_18E86
+		dc.w	loc_18EB6-loc_18E86
+		dc.w	loc_18FCC-loc_18E86
+		dc.w	loc_18FE2-loc_18E86
 loc_18E8E:
 		addq.b	#$02,$0024(a0)
 		move.l	#Obj3D_MapUnc_1916E,$0004(a0) ; loc_1916E
@@ -29508,10 +29508,10 @@ loc_19004:
 		moveq	#0,d0
 		move.b	(a4),d0
 		move.w	loc_19010(pc,d0),d0
-		jmp     loc_19010(pc,d0)   
+		jmp	loc_19010(pc,d0)   
 loc_19010:
-		dc.w    loc_19014-loc_19010
-		dc.w    loc_19092-loc_19010
+		dc.w	loc_19014-loc_19010
+		dc.w	loc_19092-loc_19010
 loc_19014:
 		move.w	8(a1),d0
 		sub.w   8(a0),d0
@@ -29648,8 +29648,8 @@ Obj_0x48_Cannon: ; loc_19250:
 		beq.w	 JmpTo10_MarkObjGone
 		bra.w	JmpTo5_DisplaySprite
 loc_1926E:
-		dc.w    loc_19282-loc_1926E
-		dc.w    loc_192d2-loc_1926E
+		dc.w	loc_19282-loc_1926E
+		dc.w	loc_192d2-loc_1926E
 loc_19272:
 		dc.b	$04
 loc_19273:
@@ -29686,12 +29686,12 @@ loc_192E8:
 		moveq	#0,d0
 		move.b	(a4),d0
 		move.w	loc_192F4(pc,d0),d0
-		jmp     loc_192F4(pc,d0)
+		jmp	loc_192F4(pc,d0)
 loc_192F4:
-		dc.w    loc_192FC-loc_192F4
-		dc.w    loc_193B0-loc_192F4
-		dc.w    loc_1945E-loc_192F4
-		dc.w    loc_194BE-loc_192F4
+		dc.w	loc_192FC-loc_192F4
+		dc.w	loc_193B0-loc_192F4
+		dc.w	loc_1945E-loc_192F4
+		dc.w	loc_194BE-loc_192F4
 loc_192FC:
 		tst.w	(Debug_placement_mode).w
 		bne.w	 loc_193AE
@@ -29850,13 +29850,13 @@ Obj_0x22_Arrow_Shooter: ; loc_19660:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_1966E(pc,d0),d1
-		jmp     loc_1966E(pc,d1)
+		jmp	loc_1966E(pc,d1)
 loc_1966E:
-		dc.w    loc_19678-loc_1966E
-		dc.w    loc_196AC-loc_1966E
-		dc.w    loc_196F6-loc_1966E
-		dc.w    loc_1973C-loc_1966E
-		dc.w    loc_19780-loc_1966E
+		dc.w	loc_19678-loc_1966E
+		dc.w	loc_196AC-loc_1966E
+		dc.w	loc_196F6-loc_1966E
+		dc.w	loc_1973C-loc_1966E
+		dc.w	loc_19780-loc_1966E
 loc_19678:
 		addq.b	#$02,$0024(a0)
 		move.l	#Obj22_MapUnc_197C6,$0004(a0) ; loc_197C6
@@ -29946,9 +29946,9 @@ loc_197A0:
 		bmi.w	 loc_1979C
 		bra.w	JmpTo11_MarkObjGone
 loc_197B0:		
-		dc.w    loc_197B6-loc_197B0
-		dc.w    loc_197B9-loc_197B0
-		dc.w    loc_197BD-loc_197B0
+		dc.w	loc_197B6-loc_197B0
+		dc.w	loc_197B9-loc_197B0
+		dc.w	loc_197BD-loc_197B0
 loc_197B6:
 		dc.b	$1F,$01,$FF
 loc_197B9:
@@ -29988,10 +29988,10 @@ Obj_0x23_Pillar: ; loc_19850:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_1985E(pc,d0),d1
-		jmp     loc_1985E(pc,d1)
+		jmp	loc_1985E(pc,d1)
 loc_1985E:
-		dc.w    loc_19862-loc_1985E
-		dc.w    loc_198E6-loc_1985E
+		dc.w	loc_19862-loc_1985E
+		dc.w	loc_198E6-loc_1985E
 loc_19862:
 		addq.b	#$02,$0024(a0)
 		move.l	#Pillar_Mappings,$0004(a0) ; loc_199AA
@@ -30034,12 +30034,12 @@ loc_1990C:
 		moveq	#0,d0
 		move.b	$0025(a0),d0
 		move.w	loc_1991A(pc,d0),d1
-		jmp     loc_1991A(pc,d1)		 
+		jmp	loc_1991A(pc,d1)		 
 loc_1991A:
-		dc.w    loc_19950-loc_1991A
-		dc.w    loc_19922-loc_1991A
-		dc.w    loc_19952-loc_1991A
-		dc.w    loc_1997C-loc_1991A
+		dc.w	loc_19950-loc_1991A
+		dc.w	loc_19922-loc_1991A
+		dc.w	loc_19952-loc_1991A
+		dc.w	loc_1997C-loc_1991A
 loc_19922:
 		tst.w	(Debug_placement_mode).w
 		bne.s	loc_19950
@@ -30088,9 +30088,9 @@ loc_199A8:
 		rts
 Pillar_Mappings:		
 loc_199AA:		
-		dc.w    loc_199B0-loc_199AA
-		dc.w    loc_199E2-loc_199AA
-		dc.w    loc_199FC-loc_199AA
+		dc.w	loc_199B0-loc_199AA
+		dc.w	loc_199E2-loc_199AA
+		dc.w	loc_199FC-loc_199AA
 loc_199B0:
 		dc.w	$0006
 		dc.l	$E005005D,$002EFFE0,$E005085D,$082E0010
@@ -30116,11 +30116,11 @@ Obj_0x2B_Breakable_Pillar: ; loc_19A1E:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_19A2C(pc,d0),d1
-		jmp     loc_19A2C(pc,d1)
+		jmp	loc_19A2C(pc,d1)
 loc_19A2C:
-		dc.w    loc_19A32-loc_19A2C
-		dc.w    loc_19A60-loc_19A2C
-		dc.w    loc_19B50-loc_19A2C
+		dc.w	loc_19A32-loc_19A2C
+		dc.w	loc_19A60-loc_19A2C
+		dc.w	loc_19B50-loc_19A2C
 loc_19A32:
 		addq.b	#$02,$0024(a0)
 		move.l	#Breakable_Pillar_Mappings,$0004(a0) ; loc_19C30
@@ -30173,11 +30173,11 @@ loc_19AEA:
 		moveq	#0,d0
 		move.b	$0025(a0),d0
 		move.w	loc_19AF8(pc,d0),d1
-		jmp     loc_19AF8(pc,d1)
+		jmp	loc_19AF8(pc,d1)
 loc_19AF8:
-		dc.w    loc_19AFE-loc_19AF8
-		dc.w    loc_19B28-loc_19AF8
-		dc.w    loc_19B26-loc_19AF8
+		dc.w	loc_19AFE-loc_19AF8
+		dc.w	loc_19B28-loc_19AF8
+		dc.w	loc_19B26-loc_19AF8
 loc_19AFE:
 		tst.w	(Debug_placement_mode).w
 		bne.s	loc_19B26
@@ -30262,20 +30262,20 @@ loc_19C26:
 		jmp	(PlaySound).l             ; loc_14C6  
 Breakable_Pillar_Mappings:				             
 loc_19C30:
-		dc.w    loc_19C4C-loc_19C30
-		dc.w    loc_19C7E-loc_19C30
-		dc.w    loc_19CB8-loc_19C30
-		dc.w    loc_19CF2-loc_19C30
-		dc.w    loc_19d34-loc_19C30
-		dc.w    loc_19d76-loc_19C30
-		dc.w    loc_19DC0-loc_19C30
-		dc.w    loc_19E0A-loc_19C30
-		dc.w    loc_19E4C-loc_19C30
-		dc.w    loc_19E9E-loc_19C30
-		dc.w    loc_19EF0-loc_19C30
-		dc.w    loc_19F52-loc_19C30
-		dc.w    loc_19FB4-loc_19C30
-		dc.w    loc_1A026-loc_19C30
+		dc.w	loc_19C4C-loc_19C30
+		dc.w	loc_19C7E-loc_19C30
+		dc.w	loc_19CB8-loc_19C30
+		dc.w	loc_19CF2-loc_19C30
+		dc.w	loc_19d34-loc_19C30
+		dc.w	loc_19d76-loc_19C30
+		dc.w	loc_19DC0-loc_19C30
+		dc.w	loc_19E0A-loc_19C30
+		dc.w	loc_19E4C-loc_19C30
+		dc.w	loc_19E9E-loc_19C30
+		dc.w	loc_19EF0-loc_19C30
+		dc.w	loc_19F52-loc_19C30
+		dc.w	loc_19FB4-loc_19C30
+		dc.w	loc_1A026-loc_19C30
 loc_19C4C:
 		dc.w	$0006
 		dc.l	$100d208B,$2045FFF0,$E805005D,$002EFFE0
@@ -30609,7 +30609,7 @@ JmpTo4_SingleObjLoad:
 		jmp	(SingleObjLoad).l
 ; loc_1A2FE:
 JmpTo_PseudoRandomNumber:
-		jmp     (PseudoRandomNumber).l
+		jmp	(PseudoRandomNumber).l
 ; loc_1A304:
 JmpTo3_CalcSine:
 		jmp	(CalcSine).l
@@ -30627,8 +30627,8 @@ Obj_0x40_Diagonal_Springs: ; loc_1A30C:
 		jsr	 loc_1A31E(pc,d1)
 		bra.w	JmpTo13_MarkObjGone
 loc_1A31E:
-		dc.w    loc_1A328-loc_1A31E
-		dc.w    loc_1A364-loc_1A31E
+		dc.w	loc_1A328-loc_1A31E
+		dc.w	loc_1A364-loc_1A31E
 loc_1A322:
 		dc.w	$FC00,$F600,$F800
 loc_1A328:
@@ -30775,8 +30775,8 @@ loc_1A556:
 		dc.b	$0D,$0D,$0D,$0D,$0E,$0E,$0F,$0F,$10,$10,$10,$10,$0F,$0F,$0E,$0E
 		dc.b	$0D,$0D,$0D,$0D,$0D,$0D,$0D,$0D		
 loc_1A57E:
-		dc.w    loc_1A582-loc_1A57E
-		dc.w    loc_1A585-loc_1A57E
+		dc.w	loc_1A582-loc_1A57E
+		dc.w	loc_1A585-loc_1A57E
 loc_1A582:
 		dc.b	$0F,$00,$FF
 loc_1A585:
@@ -30808,11 +30808,11 @@ Obj_0x42_Steam_Vent: ; loc_1A5CC:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_1A5DA(pc,d0),d1
-		jmp     loc_1A5DA(pc,d1)
+		jmp	loc_1A5DA(pc,d1)
 loc_1A5DA:
-		dc.w    loc_1A5E0-loc_1A5DA
-		dc.w    loc_1A620-loc_1A5DA
-		dc.w    loc_1A7CC-loc_1A5DA
+		dc.w	loc_1A5E0-loc_1A5DA
+		dc.w	loc_1A620-loc_1A5DA
+		dc.w	loc_1A7CC-loc_1A5DA
 loc_1A5E0:
 		addq.b	#$02,$0024(a0)
 		move.l	#Obj42_MapUnc_1A7FE,$0004(a0) ; loc_1A7FE
@@ -30993,10 +30993,10 @@ Obj_0x64_Pistons: ; loc_1A8B4:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_1A8C2(pc,d0),d1
-		jmp     loc_1A8C2(pc,d1)
+		jmp	loc_1A8C2(pc,d1)
 loc_1A8C2:
-		dc.w    loc_1A8CE-loc_1A8C2
-		dc.w    loc_1A936-loc_1A8C2
+		dc.w	loc_1A8CE-loc_1A8C2
+		dc.w	loc_1A936-loc_1A8C2
 loc_1A8C6:
 		dc.b	$40,$0C,$40,$01,$10,$20,$40,$01
 loc_1A8CE:
@@ -31049,12 +31049,12 @@ loc_1A96A:
 		sub.w   (Camera_X_pos_coarse).w,d0
 		cmpi.w	#$0280,d0
 		bhi.s	J_DeleteObject_17       ; loc_1A982
-		jmp     DisplaySprite           ; (loc_d3C2)
+		jmp	DisplaySprite           ; (loc_d3C2)
 J_DeleteObject_17: ; loc_1A982:
-		jmp     DeleteObject            ; (loc_d3B4)   
+		jmp	DeleteObject            ; (loc_d3B4)   
 loc_1A988:		              
-		dc.w    loc_1A98C-loc_1A988
-		dc.w    loc_1A98E-loc_1A988
+		dc.w	loc_1A98C-loc_1A988
+		dc.w	loc_1A98E-loc_1A988
 loc_1A98C:
 		rts
 loc_1A98E:
@@ -31115,12 +31115,12 @@ Obj_0x65_Platform: ; loc_1AA74:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_1AA82(pc,d0),d1
-		jmp     loc_1AA82(pc,d1)
+		jmp	loc_1AA82(pc,d1)
 loc_1AA82:
-		dc.w    loc_1AA9A-loc_1AA82
-		dc.w    loc_1ABB0-loc_1AA82
-		dc.w    loc_1AE08-loc_1AA82
-		dc.w    loc_1AE26-loc_1AA82
+		dc.w	loc_1AA9A-loc_1AA82
+		dc.w	loc_1ABB0-loc_1AA82
+		dc.w	loc_1AE08-loc_1AA82
+		dc.w	loc_1AE26-loc_1AA82
 loc_1AA8A:
 		dc.b	$40,$0C,$80,$01,$20,$0C,$40,$03,$10,$10,$20,$00,$40,$0C,$80,$07
 loc_1AA9A:
@@ -31213,7 +31213,7 @@ loc_1ABB0:
 		sub.w   (Camera_X_pos_coarse).w,d0
 		cmpi.w	#$0280,d0
 		bhi.s	loc_1ABF6
-		jmp     DisplaySprite           ; (loc_d3C2)
+		jmp	DisplaySprite           ; (loc_d3C2)
 loc_1ABF6:
 		lea	(Object_Respawn_Table).w,A2
 		moveq	#0,d0
@@ -31224,14 +31224,14 @@ loc_1ABF6:
 JmpTo25_DeleteObject:
 		jmp	(DeleteObject).l
 loc_1AC0E:
-		dc.w    loc_1AC1E-loc_1AC0E
-		dc.w    loc_1AC34-loc_1AC0E
-		dc.w    loc_1ACC0-loc_1AC0E
-		dc.w    loc_1Ad1C-loc_1AC0E
-		dc.w    loc_1ADC0-loc_1AC0E
-		dc.w    loc_1ADCE-loc_1AC0E
-		dc.w    loc_1AC20-loc_1AC0E
-		dc.w    loc_1ACA0-loc_1AC0E
+		dc.w	loc_1AC1E-loc_1AC0E
+		dc.w	loc_1AC34-loc_1AC0E
+		dc.w	loc_1ACC0-loc_1AC0E
+		dc.w	loc_1Ad1C-loc_1AC0E
+		dc.w	loc_1ADC0-loc_1AC0E
+		dc.w	loc_1ADCE-loc_1AC0E
+		dc.w	loc_1AC20-loc_1AC0E
+		dc.w	loc_1ACA0-loc_1AC0E
 loc_1AC1E:
 		rts
 loc_1AC20:
@@ -31449,10 +31449,10 @@ Obj_0x66_Spring_Wall: ; loc_1AEBC:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_1AECA(pc,d0),d1
-		jmp     loc_1AECA(pc,d1)
+		jmp	loc_1AECA(pc,d1)
 loc_1AECA:
-		dc.w    loc_1AECE-loc_1AECA
-		dc.w    loc_1AF12-loc_1AECA
+		dc.w	loc_1AECE-loc_1AECA
+		dc.w	loc_1AF12-loc_1AECA
 loc_1AECE:
 		addq.b	#$02,$0024(a0)
 		move.l	#Obj66_MapUnc_1B084,$0004(a0) ; loc_1B084
@@ -31611,8 +31611,8 @@ Obj_0x67_Teleport_Attributes: ; loc_1B0C4:
 		bsr.w	JmpTo4_AnimateSprite
 		bra.w	JmpTo10_DisplaySprite
 loc_1B0EC:
-		dc.w    loc_1B0F0-loc_1B0EC
-		dc.w    loc_1B114-loc_1B0EC
+		dc.w	loc_1B0F0-loc_1B0EC
+		dc.w	loc_1B114-loc_1B0EC
 loc_1B0F0:
 		addq.b	#$02,$0024(a0)
 		move.l	#Teleport_Attributes_Mappings,$0004(a0) ; loc_1B4d4
@@ -31630,11 +31630,11 @@ loc_1B126:
 		moveq	#0,d0
 		move.b	(a4),d0
 		move.w	loc_1B132(pc,d0),d0
-		jmp     loc_1B132(pc,d0)
+		jmp	loc_1B132(pc,d0)
 loc_1B132:
-		dc.w    loc_1B138-loc_1B132
-		dc.w    loc_1B1C8-loc_1B132
-		dc.w    loc_1B1FC-loc_1B132
+		dc.w	loc_1B138-loc_1B132
+		dc.w	loc_1B1C8-loc_1B132
+		dc.w	loc_1B1FC-loc_1B132
 loc_1B138:
 		tst.w	(Debug_placement_mode).w
 		bne.w	 loc_1B1C6
@@ -31824,22 +31824,22 @@ loc_1B354:
 		move.w	d0,$0002(a4)
 		rts
 loc_1B35A:
-		dc.w    loc_1B37A-loc_1B35A
-		dc.w    loc_1B394-loc_1B35A
-		dc.w    loc_1B39E-loc_1B35A
-		dc.w    loc_1B3A8-loc_1B35A
-		dc.w    loc_1B3B2-loc_1B35A
-		dc.w    loc_1B3BC-loc_1B35A
-		dc.w    loc_1B3C6-loc_1B35A
-		dc.w    loc_1B3d0-loc_1B35A
-		dc.w    loc_1B3EA-loc_1B35A
-		dc.w    loc_1B404-loc_1B35A
-		dc.w    loc_1B41E-loc_1B35A
-		dc.w    loc_1B438-loc_1B35A
-		dc.w    loc_1B452-loc_1B35A
-		dc.w    loc_1B46C-loc_1B35A
-		dc.w    loc_1B486-loc_1B35A
-		dc.w    loc_1B4A0-loc_1B35A
+		dc.w	loc_1B37A-loc_1B35A
+		dc.w	loc_1B394-loc_1B35A
+		dc.w	loc_1B39E-loc_1B35A
+		dc.w	loc_1B3A8-loc_1B35A
+		dc.w	loc_1B3B2-loc_1B35A
+		dc.w	loc_1B3BC-loc_1B35A
+		dc.w	loc_1B3C6-loc_1B35A
+		dc.w	loc_1B3d0-loc_1B35A
+		dc.w	loc_1B3EA-loc_1B35A
+		dc.w	loc_1B404-loc_1B35A
+		dc.w	loc_1B41E-loc_1B35A
+		dc.w	loc_1B438-loc_1B35A
+		dc.w	loc_1B452-loc_1B35A
+		dc.w	loc_1B46C-loc_1B35A
+		dc.w	loc_1B486-loc_1B35A
+		dc.w	loc_1B4A0-loc_1B35A
 loc_1B37A:
 		dc.w	$0018
 		dc.b	$07,$28,$02,$70,$06,$d0,$02,$70,$06,$C0,$02,$88,$06,$C0,$03,$E0
@@ -31899,8 +31899,8 @@ loc_1B4A0:
 		dc.b	$22,$D8,$02,$B0,$23,$30,$02,$B0,$23,$40,$02,$C0,$23,$40,$04,$60
 		dc.b	$23,$30,$04,$70,$22,$D8,$04,$70		
 loc_1B4BA:		 
-		dc.w    loc_1B4BE-loc_1B4BA
-		dc.w    loc_1B4C1-loc_1B4BA
+		dc.w	loc_1B4BE-loc_1B4BA
+		dc.w	loc_1B4C1-loc_1B4BA
 loc_1B4BE:
 		dc.b	$1F,$00,$FF
 loc_1B4C1:
@@ -31908,8 +31908,8 @@ loc_1B4C1:
 		dc.b	$FE,$02,$00   
 Teleport_Attributes_Mappings:
 loc_1B4d4:
-		dc.w    loc_1B4D8-loc_1B4d4
-		dc.w    loc_1B4DA-loc_1B4d4
+		dc.w	loc_1B4D8-loc_1B4d4
+		dc.w	loc_1B4DA-loc_1B4d4
 loc_1B4D8:
 		dc.w	$0000
 loc_1B4DA:
@@ -31940,11 +31940,11 @@ Obj_0x68_Block_Arrow: ; loc_1B520:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_1B52E(pc,d0),d1
-		jmp     loc_1B52E(pc,d1)
+		jmp	loc_1B52E(pc,d1)
 loc_1B52E:
-		dc.w    loc_1B534-loc_1B52E
-		dc.w    loc_1B5d6-loc_1B52E
-		dc.w    loc_1B5EE-loc_1B52E
+		dc.w	loc_1B534-loc_1B52E
+		dc.w	loc_1B5d6-loc_1B52E
+		dc.w	loc_1B5EE-loc_1B52E
 loc_1B534:
 		addq.b	#$02,$0024(a0)
 		move.l	#Obj68_MapUnc_1B6DC,$0004(a0) ; loc_1B6DC
@@ -31997,10 +31997,10 @@ loc_1B5EE:
 		move.w	$0030(a0),d0
 		bra.w	JmpTo2_MarkObjGone2
 loc_1B60A:
-		dc.w    loc_1B612-loc_1B60A
-		dc.w    loc_1B624-loc_1B60A
-		dc.w    loc_1B634-loc_1B60A
-		dc.w    loc_1B644-loc_1B60A
+		dc.w	loc_1B612-loc_1B60A
+		dc.w	loc_1B624-loc_1B60A
+		dc.w	loc_1B634-loc_1B60A
+		dc.w	loc_1B644-loc_1B60A
 loc_1B612:
 		moveq	#0,d0
 		move.b	$0034(a0),d0
@@ -32081,10 +32081,10 @@ Obj_0x6D_Harpoon: ; loc_1B720:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_1B72E(pc,d0),d1
-		jmp     loc_1B72E(pc,d1)
+		jmp	loc_1B72E(pc,d1)
 loc_1B72E:
-		dc.w    loc_1B732-loc_1B72E
-		dc.w    loc_1B76C-loc_1B72E
+		dc.w	loc_1B732-loc_1B72E
+		dc.w	loc_1B76C-loc_1B72E
 loc_1B732:
 		addq.b	#$02,$0024(a0)
 		move.l	#Obj68_MapUnc_1B6DC,$0004(a0) ; loc_1B6DC
@@ -32165,12 +32165,12 @@ Obj_0x69_Screw_Nut: ; loc_1B810:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_1B81E(pc,d0),d1
-		jmp     loc_1B81E(pc,d1)
+		jmp	loc_1B81E(pc,d1)
 loc_1B81E:
-		dc.w    loc_1B826-loc_1B81E
-		dc.w    loc_1B868-loc_1B81E
-		dc.w    loc_1B982-loc_1B81E
-		dc.w    loc_1B880-loc_1B81E
+		dc.w	loc_1B826-loc_1B81E
+		dc.w	loc_1B868-loc_1B81E
+		dc.w	loc_1B982-loc_1B81E
+		dc.w	loc_1B880-loc_1B81E
 loc_1B826:
 		addq.b	#$02,$0024(a0)
 		move.l	#Obj69_MapUnc_1B9A6,$0004(a0) ; loc_1B9A6
@@ -32209,11 +32209,11 @@ loc_1B8A0:
 		moveq	#0,d0
 		move.b	(a4),d0
 		move.w	loc_1B8AC(pc,d0),d0
-		jmp     loc_1B8AC(pc,d0)
+		jmp	loc_1B8AC(pc,d0)
 loc_1B8AC:
-		dc.w    loc_1B8B2-loc_1B8AC
-		dc.w    loc_1B8d2-loc_1B8AC
-		dc.w    loc_1B8F4-loc_1B8AC
+		dc.w	loc_1B8B2-loc_1B8AC
+		dc.w	loc_1B8d2-loc_1B8AC
+		dc.w	loc_1B8F4-loc_1B8AC
 loc_1B8B2:
 		btst	d6,$0022(a0)
 		bne.s	loc_1B8BA
@@ -32328,11 +32328,11 @@ Obj_0x6A_Rotating_Boxes: ; loc_1BA30:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_1BA3E(pc,d0),d1
-		jmp     loc_1BA3E(pc,d1)
+		jmp	loc_1BA3E(pc,d1)
 loc_1BA3E:
-		dc.w    loc_1BA44-loc_1BA3E
-		dc.w    loc_1BB5E-loc_1BA3E
-		dc.w    loc_1BBE6-loc_1BA3E
+		dc.w	loc_1BA44-loc_1BA3E
+		dc.w	loc_1BB5E-loc_1BA3E
+		dc.w	loc_1BBE6-loc_1BA3E
 loc_1BA44:
 		addq.b	#$02,$0024(a0)
 		move.l	#Obj65_MapUnc_1AE2C,$0004(a0) ; loc_1AE2C
@@ -32512,10 +32512,10 @@ Obj_0x6B_Mz_Platform: ; Obj_0x6B_Block: ; loc_1BCEC:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_1BCFA(pc,d0),d1
-		jmp     loc_1BCFA(pc,d1)
+		jmp	loc_1BCFA(pc,d1)
 loc_1BCFA:
-		dc.w    loc_1Bd06-loc_1BCFA
-		dc.w    loc_1BD88-loc_1BCFA
+		dc.w	loc_1Bd06-loc_1BCFA
+		dc.w	loc_1BD88-loc_1BCFA
 loc_1BCFE:
 		dc.b	$20,$0C,$01,$00,$10,$10,$00,$00
 loc_1Bd06:
@@ -32574,18 +32574,18 @@ loc_1BDC0:
 		move.w	$0034(a0),d0
 		bra.w	JmpTo4_MarkObjGone2
 loc_1BDC8:
-		dc.w    loc_1BDE0-loc_1BDC8
-		dc.w    loc_1BDE2-loc_1BDC8
-		dc.w    loc_1BDEE-loc_1BDC8
-		dc.w    loc_1BE10-loc_1BDC8
-		dc.w    loc_1BE1C-loc_1BDC8
-		dc.w    loc_1BE3E-loc_1BDC8
-		dc.w    loc_1BE5C-loc_1BDC8
-		dc.w    loc_1BDE0-loc_1BDC8
-		dc.w    loc_1BE8A-loc_1BDC8
-		dc.w    loc_1BE9C-loc_1BDC8
-		dc.w    loc_1BEAC-loc_1BDC8
-		dc.w    loc_1BEBC-loc_1BDC8
+		dc.w	loc_1BDE0-loc_1BDC8
+		dc.w	loc_1BDE2-loc_1BDC8
+		dc.w	loc_1BDEE-loc_1BDC8
+		dc.w	loc_1BE10-loc_1BDC8
+		dc.w	loc_1BE1C-loc_1BDC8
+		dc.w	loc_1BE3E-loc_1BDC8
+		dc.w	loc_1BE5C-loc_1BDC8
+		dc.w	loc_1BDE0-loc_1BDC8
+		dc.w	loc_1BE8A-loc_1BDC8
+		dc.w	loc_1BE9C-loc_1BDC8
+		dc.w	loc_1BEAC-loc_1BDC8
+		dc.w	loc_1BEBC-loc_1BDC8
 loc_1BDE0:
 		rts
 loc_1BDE2:
@@ -32738,7 +32738,7 @@ JmpTo12_SolidObject:
 		jmp	(SolidObject).l
 ; loc_1BF64:
 JmpTo4_MarkObjGone2:
-		jmp     (MarkObjGone2).l
+		jmp	(MarkObjGone2).l
 
 		align 4
 ;=============================================================================== 
@@ -32759,8 +32759,8 @@ Obj_0x6C_Mz_Moving_Platforms: ; loc_1BF6C:
 loc_1BF90:
 		bra.w	JmpTo27_DeleteObject
 loc_1BF94:
-		dc.w    loc_1BF98-loc_1BF94
-		dc.w    loc_1C0A0-loc_1BF94
+		dc.w	loc_1BF98-loc_1BF94
+		dc.w	loc_1C0A0-loc_1BF94
 loc_1BF98:
 		move.b	$0028(a0),d0
 		bmi.w	 loc_1C04A
@@ -32928,9 +32928,9 @@ loc_1C176:
 		clr.w	$000A(a0)
 		rts  
 loc_1C18A:
-		dc.w    loc_1C190-loc_1C18A
-		dc.w    loc_1C1BA-loc_1C18A
-		dc.w    loc_1C1E4-loc_1C18A
+		dc.w	loc_1C190-loc_1C18A
+		dc.w	loc_1C1BA-loc_1C18A
+		dc.w	loc_1C1E4-loc_1C18A
 loc_1C190:
 		dc.w	$0028
 		dc.b	$00,$00,$00,$00,$FF,$EA,$00,$0A,$FF,$E0,$00,$20,$FF,$E0,$00,$E0
@@ -32947,9 +32947,9 @@ loc_1C1E4:
 		dc.b	$FF,$EA,$01,$F6,$00,$00,$02,$00,$00,$16,$01,$F6,$00,$20,$01,$E0
 		dc.b	$00,$20,$00,$20,$00,$16,$00,$0A		
 loc_1C20E: 
-		dc.w    loc_1C214-loc_1C20E
-		dc.w    loc_1C246-loc_1C20E
-		dc.w    loc_1C278-loc_1C20E
+		dc.w	loc_1C214-loc_1C20E
+		dc.w	loc_1C246-loc_1C20E
+		dc.w	loc_1C278-loc_1C20E
 loc_1C214:
 		dc.w	$0007
 		dc.b	$00,$00,$00,$00,$00,$01,$FF,$E0,$00,$3A,$00,$03,$FF,$E0,$00,$80
@@ -32998,11 +32998,11 @@ Obj_0x6E_Machine: ; loc_1C2E4:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_1C2F2(pc,d0),d1
-		jmp     loc_1C2F2(pc,d1)
+		jmp	loc_1C2F2(pc,d1)
 loc_1C2F2:
-		dc.w    loc_1C300-loc_1C2F2
-		dc.w    loc_1C36A-loc_1C2F2
-		dc.w    loc_1C3F4-loc_1C2F2
+		dc.w	loc_1C300-loc_1C2F2
+		dc.w	loc_1C36A-loc_1C2F2
+		dc.w	loc_1C3F4-loc_1C2F2
 loc_1C2F8: 
 		dc.b	$10,$0C,$28,$08,$60,$18,$0C,$0C
 loc_1C300:
@@ -33067,7 +33067,7 @@ loc_1C39A:
 		sub.w   (Camera_X_pos_coarse).w,d0
 		cmpi.w	#$0280,d0
 		bhi.s	loc_1C3DC
-		jmp     DisplaySprite           ; (loc_d3C2)
+		jmp	DisplaySprite           ; (loc_d3C2)
 loc_1C3DC:
 		lea	(Object_Respawn_Table).w,A2
 		moveq	#0,d0
@@ -33104,7 +33104,7 @@ loc_1C424:
 		sub.w   (Camera_X_pos_coarse).w,d0
 		cmpi.w	#$0280,d0
 		bhi.s	loc_1C44C
-		jmp     DisplaySprite           ; (loc_d3C2)
+		jmp	DisplaySprite           ; (loc_d3C2)
 loc_1C44C:
 		lea	(Object_Respawn_Table).w,A2
 		moveq	#0,d0
@@ -33138,10 +33138,10 @@ Obj_Ox6F_Parallelogram_Elevator: ; loc_1C4F8:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_1C506(pc,d0),d1
-		jmp     loc_1C506(pc,d1)
+		jmp	loc_1C506(pc,d1)
 loc_1C506:
-		dc.w    loc_1C50A-loc_1C506
-		dc.w    loc_1C570-loc_1C506
+		dc.w	loc_1C50A-loc_1C506
+		dc.w	loc_1C570-loc_1C506
 loc_1C50A:
 		addq.b	#$02,$0024(a0)
 		move.l	#Obj6F_MapUnc_1C7BE,$0004(a0) ; loc_1C7BE
@@ -33180,7 +33180,7 @@ loc_1C570:
 		sub.w   (Camera_X_pos_coarse).w,d0
 		cmpi.w	#$0280,d0
 		bhi.s	loc_1C5AE
-		jmp     DisplaySprite           ; (loc_d3C2)
+		jmp	DisplaySprite           ; (loc_d3C2)
 loc_1C5AE:
 		move.w	$0032(a0),d0
 		andi.w	#$FF80,d0
@@ -33198,9 +33198,9 @@ JmpTo30_DeleteObject:
 		jmp	(DeleteObject).l
 
 loc_1C5DA:
-		dc.w    loc_1C5E0-loc_1C5DA
-		dc.w    loc_1C5E2-loc_1C5DA
-		dc.w    loc_1C5F2-loc_1C5DA
+		dc.w	loc_1C5E0-loc_1C5DA
+		dc.w	loc_1C5E2-loc_1C5DA
+		dc.w	loc_1C5F2-loc_1C5DA
 loc_1C5E0:
 		rts
 loc_1C5E2:
@@ -33233,11 +33233,11 @@ loc_1C604:
 loc_1C630:
 		rts 
 loc_1C632:
-		dc.w    loc_1C63C-loc_1C632
-		dc.w    loc_1C64A-loc_1C632
-		dc.w    loc_1C658-loc_1C632
-		dc.w    loc_1C672-loc_1C632
-		dc.w    loc_1C6A4-loc_1C632
+		dc.w	loc_1C63C-loc_1C632
+		dc.w	loc_1C64A-loc_1C632
+		dc.w	loc_1C658-loc_1C632
+		dc.w	loc_1C672-loc_1C632
+		dc.w	loc_1C6A4-loc_1C632
 loc_1C63C:
 		dc.w	$000C
 		dc.b	$01,$00,$FF,$80,$01,$00,$FF,$00,$00,$80,$01,$00
@@ -33295,10 +33295,10 @@ Obj_0x70_Rotating_Gears: ; loc_1C850:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_1C85E(pc,d0),d1
-		jmp     loc_1C85E(pc,d1)
+		jmp	loc_1C85E(pc,d1)
 loc_1C85E:
-		dc.w    loc_1C862-loc_1C85E
-		dc.w    loc_1C8E2-loc_1C85E
+		dc.w	loc_1C862-loc_1C85E
+		dc.w	loc_1C8E2-loc_1C85E
 loc_1C862:
 		moveq	#$07,d1
 		moveq	#0,d4
@@ -33390,7 +33390,7 @@ loc_1C95A:
 		sub.w   (Camera_X_pos_coarse).w,d0
 		cmpi.w	#$0280,d0
 		bhi.s	JmpTo31_DeleteObject
-		jmp     DisplaySprite           ; (loc_d3C2)
+		jmp	DisplaySprite           ; (loc_d3C2)
 ; loc_1C990:
 JmpTo31_DeleteObject:
 		jmp	(DeleteObject).l
@@ -33433,10 +33433,10 @@ Obj_0x72_Conveyor_Belt_Attributes: ; loc_1CBCC:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_1CBDA(pc,d0),d1
-		jmp     loc_1CBDA(pc,d1)
+		jmp	loc_1CBDA(pc,d1)
 loc_1CBDA:
-		dc.w    loc_1CBDE-loc_1CBDA
-		dc.w    loc_1CBFE-loc_1CBDA
+		dc.w	loc_1CBDE-loc_1CBDA
+		dc.w	loc_1CBFE-loc_1CBDA
 loc_1CBDE:
 		addq.b	#$02,$0024(a0)
 		move.b	$0028(a0),d0
@@ -33676,14 +33676,14 @@ Obj_0x75_Spikeball_Chain: ; loc_1CE48:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_1CE68(pc,d0),d1
-		jmp     loc_1CE68(pc,d1)
+		jmp	loc_1CE68(pc,d1)
 loc_1CE60:
 		move.w	#$0280,d0
 		bra.w	JmpTo_DisplaySprite3
 loc_1CE68:
-		dc.w    loc_1CE6E-loc_1CE68
-		dc.w    loc_1CF4A-loc_1CE68
-		dc.w    loc_1CFEC-loc_1CE68
+		dc.w	loc_1CE6E-loc_1CE68
+		dc.w	loc_1CF4A-loc_1CE68
+		dc.w	loc_1CFEC-loc_1CE68
 loc_1CE6E:
 		addq.b	#$02,$0024(a0)
 		move.l	#Obj75_MapUnc_1d00A,$0004(a0) ; loc_1d00A
@@ -33847,10 +33847,10 @@ Obj_0x76_Platform_Spikes: ; loc_1d078:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_1d086(pc,d0),d1
-		jmp     loc_1d086(pc,d1)
+		jmp	loc_1d086(pc,d1)
 loc_1d086:
-		dc.w    loc_1d08E-loc_1d086
-		dc.w    loc_1d0DE-loc_1d086
+		dc.w	loc_1d08E-loc_1d086
+		dc.w	loc_1d0DE-loc_1d086
 loc_1d08A:
 		dc.b	$40,$10,$00,$00
 loc_1d08E:
@@ -33907,8 +33907,8 @@ loc_1d142:
 		move.w	$0034(a0),d0
 		bra.w	JmpTo5_MarkObjGone2
 loc_1d14A:		  
-		dc.w    loc_1d14E-loc_1d14A
-		dc.w    loc_1d19E-loc_1d14A
+		dc.w	loc_1d14E-loc_1d14A
+		dc.w	loc_1d19E-loc_1d14A
 loc_1d14E:
 		lea	(MainCharacter).w,A1
 		bsr.s	loc_1d158
@@ -33974,10 +33974,10 @@ Obj_0x77_Bridge: ; loc_1d208:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_1d216(pc,d0),d1
-		jmp     loc_1d216(pc,d1)
+		jmp	loc_1d216(pc,d1)
 loc_1d216:
-		dc.w    loc_1d21A-loc_1d216
-		dc.w    loc_1d23C-loc_1d216
+		dc.w	loc_1d21A-loc_1d216
+		dc.w	loc_1d23C-loc_1d216
 loc_1d21A:
 		addq.b	#$02,$0024(a0)
 		move.l	#Obj77_MapUnc_1d2E0,$0004(a0) ; loc_1d2E0
@@ -34031,8 +34031,8 @@ loc_1d2CC:
 		bra.w	JmpTo19_MarkObjGone
 
 loc_1d2d0:               
-		dc.w    loc_1d2d4-loc_1d2d0
-		dc.w    loc_1d2DA-loc_1d2d0
+		dc.w	loc_1d2d4-loc_1d2d0
+		dc.w	loc_1d2DA-loc_1d2d0
 loc_1d2d4:
 		dc.b	$03,$02,$01,$00,$FE,$01
 loc_1d2DA:
@@ -34066,9 +34066,9 @@ Obj_0x78_Rotating_Platforms: ; loc_1d3C0:
 		move.w	$0030(a0),d0
 		bra.w	JmpTo6_MarkObjGone2
 loc_1d3d6:
-		dc.w    loc_1d3DC-loc_1d3d6
-		dc.w    loc_1d460-loc_1d3d6
-		dc.w    loc_1d474-loc_1d3d6
+		dc.w	loc_1d3DC-loc_1d3d6
+		dc.w	loc_1d460-loc_1d3d6
+		dc.w	loc_1d474-loc_1d3d6
 loc_1d3DC:
 		addq.b	#$02,$0024(a0)
 		moveq	#$34,d3
@@ -34129,14 +34129,14 @@ loc_1d474:
 		or.b    d6,$002E(a2)
 		rts
 loc_1d4AC:
-		dc.w    loc_1d4BC-loc_1d4AC
-		dc.w    loc_1d528-loc_1d4AC
-		dc.w    loc_1d4E0-loc_1d4AC
-		dc.w    loc_1d528-loc_1d4AC
-		dc.w    loc_1d4BC-loc_1d4AC
-		dc.w    loc_1d552-loc_1d4AC
-		dc.w    loc_1d4E0-loc_1d4AC
-		dc.w    loc_1d552-loc_1d4AC
+		dc.w	loc_1d4BC-loc_1d4AC
+		dc.w	loc_1d528-loc_1d4AC
+		dc.w	loc_1d4E0-loc_1d4AC
+		dc.w	loc_1d528-loc_1d4AC
+		dc.w	loc_1d4BC-loc_1d4AC
+		dc.w	loc_1d552-loc_1d4AC
+		dc.w	loc_1d4E0-loc_1d4AC
+		dc.w	loc_1d552-loc_1d4AC
 loc_1d4BC:
 		tst.w	$002C(a0)
 		bne.s	loc_1d4d4
@@ -34245,11 +34245,11 @@ Obj_0x7A_Platform_Horizontal: ; loc_1d594:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_1d5A2(pc,d0),d1
-		jmp     loc_1d5A2(pc,d1)
+		jmp	loc_1d5A2(pc,d1)
 loc_1d5A2:
-		dc.w    loc_1d5BA-loc_1d5A2
-		dc.w    loc_1d660-loc_1d5A2
-		dc.w    loc_1d6B2-loc_1d5A2
+		dc.w	loc_1d5BA-loc_1d5A2
+		dc.w	loc_1d660-loc_1d5A2
+		dc.w	loc_1d6B2-loc_1d5A2
 loc_1d5A8:		
 		dc.b	$00,$70,$FF,$90,$00,$00,$01,$B0,$FF,$50,$00,$40,$01,$F0,$FF,$80
 		dc.b	$00,$80
@@ -34312,7 +34312,7 @@ loc_1d660:
 		cmpi.w	#$0280,d0
 		bhi.s	loc_1d68C
 loc_1d686:
-		jmp     DisplaySprite           ; (loc_d3C2)
+		jmp	DisplaySprite           ; (loc_d3C2)
 loc_1d68C:
 		move.l	$003C(a0),A1
 		cmpa.l  A0,A1
@@ -34325,11 +34325,11 @@ loc_1d69A:
 		beq.s	J_DeleteObject_20       ; loc_1d6AC
 		bclr	#$07,$02(A2,d0)
 J_DeleteObject_20: ; loc_1d6AC:
-		jmp     DeleteObject            ; (loc_d3B4)
+		jmp	DeleteObject            ; (loc_d3B4)
 loc_1d6B2:
 		bsr.s	loc_1d6BC
 		bsr.s	loc_1d706
-		jmp     DisplaySprite           ; (loc_d3C2)
+		jmp	DisplaySprite           ; (loc_d3C2)
 loc_1d6BC:
 		move.w	8(a0),-(sp)
 		tst.b	$0036(a0)
@@ -34406,8 +34406,8 @@ loc_1d764:
 		bhi.w	 JmpTo34_DeleteObject
 		bra.w	JmpTo14_DisplaySprite
 loc_1d77C:
-		dc.w    loc_1d784-loc_1d77C
-		dc.w    loc_1d7BA-loc_1d77C
+		dc.w	loc_1d784-loc_1d77C
+		dc.w	loc_1d7BA-loc_1d77C
 loc_1d780:
 		dc.w	$F000,$F600
 loc_1d784:
@@ -34520,10 +34520,10 @@ loc_1D8FE:
 		move.w	#SndID_Spring,d0
 		jmp	(PlaySound).l             ; loc_14C6    
 loc_1D908:
-		dc.w    loc_1D910-loc_1D908
-		dc.w    loc_1D913-loc_1D908
-		dc.w    loc_1D917-loc_1D908
-		dc.w    loc_1D917-loc_1D908
+		dc.w	loc_1D910-loc_1D908
+		dc.w	loc_1D913-loc_1D908
+		dc.w	loc_1D917-loc_1D908
+		dc.w	loc_1D917-loc_1D908
 loc_1D910:
 		dc.b	$0F,$00,$FF
 loc_1D913:
@@ -34562,10 +34562,10 @@ Obj_0x4D_Rhinobot: ; loc_1D984:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_1D992(pc,d0),d1
-		jmp     loc_1D992(pc,d1)
+		jmp	loc_1D992(pc,d1)
 loc_1D992:
-		dc.w    loc_1D996-loc_1D992
-		dc.w    loc_1D9E6-loc_1D992
+		dc.w	loc_1D996-loc_1D992
+		dc.w	loc_1D9E6-loc_1D992
 loc_1D996:
 		move.l	#Rhinobot_Mappings,$0004(a0) ; loc_1DAEE
 		move.w	#$23C4,$0002(a0)
@@ -34593,8 +34593,8 @@ loc_1D9E6:
 		bsr.w	JmpTo6_AnimateSprite
 		bra.w	JmpTo20_MarkObjGone
 loc_1DA02:
-		dc.w    loc_1DA06-loc_1DA02
-		dc.w    loc_1DA2A-loc_1DA02
+		dc.w	loc_1DA06-loc_1DA02
+		dc.w	loc_1DA2A-loc_1DA02
 loc_1DA06:
 		subq.w	#1,$0030(a0)
 		bpl.s	loc_1DA28
@@ -34657,9 +34657,9 @@ loc_1DAC4:
 		move.w	#$FF80,$0010(a0)
 		rts
 loc_1DAd2:
-		dc.w    loc_1DAD8-loc_1DAd2
-		dc.w    loc_1DAE6-loc_1DAd2
-		dc.w    loc_1DAE9-loc_1DAd2
+		dc.w	loc_1DAD8-loc_1DAd2
+		dc.w	loc_1DAE6-loc_1DAd2
+		dc.w	loc_1DAE9-loc_1DAd2
 loc_1DAD8:
 		dc.b	$02,$00,$00,$00,$03,$03,$04,$01,$01,$02,$05,$05,$05,$FF
 loc_1DAE6:
@@ -34668,14 +34668,14 @@ loc_1DAE9:
 		dc.b	$02,$06,$07,$FF,$00
 Rhinobot_Mappings:		
 loc_1DAEE:
-		dc.w    loc_1DAFE-loc_1DAEE
-		dc.w    loc_1DB28-loc_1DAEE
-		dc.w    loc_1DB52-loc_1DAEE
-		dc.w    loc_1DB7C-loc_1DAEE
-		dc.w    loc_1DBA6-loc_1DAEE
-		dc.w    loc_1DBd0-loc_1DAEE
-		dc.w    loc_1DBFA-loc_1DAEE
-		dc.w    loc_1DC1C-loc_1DAEE
+		dc.w	loc_1DAFE-loc_1DAEE
+		dc.w	loc_1DB28-loc_1DAEE
+		dc.w	loc_1DB52-loc_1DAEE
+		dc.w	loc_1DB7C-loc_1DAEE
+		dc.w	loc_1DBA6-loc_1DAEE
+		dc.w	loc_1DBd0-loc_1DAEE
+		dc.w	loc_1DBFA-loc_1DAEE
+		dc.w	loc_1DC1C-loc_1DAEE
 loc_1DAFE:
 		dc.w	$0005
 		dc.l	$F0050000,$0000FFF0,$F0050004,$00020000
@@ -34739,11 +34739,11 @@ Obj_0x52_Piranha: ; loc_1DC54:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_1DC62(pc,d0),d1
-		jmp     loc_1DC62(pc,d1)
+		jmp	loc_1DC62(pc,d1)
 loc_1DC62:
-		dc.w    loc_1DC68-loc_1DC62
-		dc.w    loc_1DCE0-loc_1DC62
-		dc.w    loc_1Dd50-loc_1DC62
+		dc.w	loc_1DC68-loc_1DC62
+		dc.w	loc_1DCE0-loc_1DC62
+		dc.w	loc_1Dd50-loc_1DC62
 loc_1DC68:
 		addq.b	#$02,$0024(a0)
 		move.l	#Piranha_Mappings,$0004(a0) ; loc_1DE66
@@ -34868,10 +34868,10 @@ loc_1DE3C:
 		move.l	d3,$000C(a0)
 		rts    
 loc_1DE4E:		 
-		dc.w    loc_1DE56-loc_1DE4E
-		dc.w    loc_1DE5A-loc_1DE4E
-		dc.w    loc_1DE5E-loc_1DE4E
-		dc.w    loc_1DE62-loc_1DE4E
+		dc.w	loc_1DE56-loc_1DE4E
+		dc.w	loc_1DE5A-loc_1DE4E
+		dc.w	loc_1DE5E-loc_1DE4E
+		dc.w	loc_1DE62-loc_1DE4E
 loc_1DE56:
 		dc.b	$0E,$00,$01,$FF
 loc_1DE5A:
@@ -34881,10 +34881,10 @@ loc_1DE5E:
 loc_1DE62:
 		dc.b	$03,$02,$03,$FF  
 Piranha_Mappings: ; loc_1DE66:
-		dc.w    loc_1DE6E-Piranha_Mappings
-		dc.w    loc_1DE78-Piranha_Mappings
-		dc.w    loc_1DE82-Piranha_Mappings
-		dc.w    loc_1DE8C-Piranha_Mappings               
+		dc.w	loc_1DE6E-Piranha_Mappings
+		dc.w	loc_1DE78-Piranha_Mappings
+		dc.w	loc_1DE82-Piranha_Mappings
+		dc.w	loc_1DE8C-Piranha_Mappings               
 loc_1DE6E:
 		dc.w	$0001
 		dc.l	$F00F0000,$0000FFF0
@@ -34922,11 +34922,11 @@ Obj_0x4F_Dinobot: ; loc_1DEAC:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_1DEBA(pc,d0),d1
-		jmp     loc_1DEBA(pc,d1)
+		jmp	loc_1DEBA(pc,d1)
 loc_1DEBA:		
-		dc.w    loc_1DEC0-loc_1DEBA
-		dc.w    loc_1DF16-loc_1DEBA
-		dc.w    loc_1DFB8-loc_1DEBA
+		dc.w	loc_1DEC0-loc_1DEBA
+		dc.w	loc_1DF16-loc_1DEBA
+		dc.w	loc_1DFB8-loc_1DEBA
 loc_1DEC0:
 		move.l	#Obj4F_MapUnc_1DFCA,$0004(a0) ; loc_1DFCA
 		move.w	#$0500,$0002(a0)
@@ -34996,8 +34996,8 @@ loc_1DFA0:
 loc_1DFB8:
 		bra.w	JmpTo35_DeleteObject
 loc_1DFBC:
-		dc.w    loc_1DFC0-loc_1DFBC
-		dc.w    loc_1DFC3-loc_1DFBC
+		dc.w	loc_1DFC0-loc_1DFBC
+		dc.w	loc_1DFC3-loc_1DFBC
 loc_1DFC0:				 
 		dc.b	$09,$01,$FF 
 loc_1DFC3:
@@ -35035,14 +35035,14 @@ Obj_0x50_Aquis: ; loc_1E010:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_1E01E(pc,d0),d1
-		jmp     loc_1E01E(pc,d1)
+		jmp	loc_1E01E(pc,d1)
 loc_1E01E:
-		dc.w    loc_1E02A-loc_1E01E
-		dc.w    loc_1E0E2-loc_1E01E
-		dc.w    loc_1E10E-loc_1E01E
-		dc.w    loc_1E138-loc_1E01E
-		dc.w    loc_1E31A-loc_1E01E
-		dc.w    loc_1E356-loc_1E01E
+		dc.w	loc_1E02A-loc_1E01E
+		dc.w	loc_1E0E2-loc_1E01E
+		dc.w	loc_1E10E-loc_1E01E
+		dc.w	loc_1E138-loc_1E01E
+		dc.w	loc_1E31A-loc_1E01E
+		dc.w	loc_1E356-loc_1E01E
 loc_1E02A:
 		addq.b	#$02,$0024(a0)
 		move.l	#Aquis_Mappings,$0004(a0) ; loc_1E4E0
@@ -35092,9 +35092,9 @@ loc_1E0E2:
 		bsr.w	loc_1E2E0
 		bra.w	JmpTo22_MarkObjGone
 loc_1E108:
-		dc.w    loc_1E14E-loc_1E108
-		dc.w    loc_1E160-loc_1E108
-		dc.w    loc_1E16E-loc_1E108
+		dc.w	loc_1E14E-loc_1E108
+		dc.w	loc_1E160-loc_1E108
+		dc.w	loc_1E16E-loc_1E108
 loc_1E10E:
 		move.l	$0036(a0),A1
 		tst.b	(a1)
@@ -35363,14 +35363,14 @@ loc_1E4A2:
 loc_1E4A6:
 		rts  
 loc_1E4A8:
-		dc.w    loc_1E4B8-loc_1E4A8
-		dc.w    loc_1E4BB-loc_1E4A8
-		dc.w    loc_1E4C3-loc_1E4A8
-		dc.w    loc_1E4C9-loc_1E4A8
-		dc.w    loc_1E4CD-loc_1E4A8
-		dc.w    loc_1E4d0-loc_1E4A8
-		dc.w    loc_1E4d3-loc_1E4A8
-		dc.w    loc_1E4d7-loc_1E4A8
+		dc.w	loc_1E4B8-loc_1E4A8
+		dc.w	loc_1E4BB-loc_1E4A8
+		dc.w	loc_1E4C3-loc_1E4A8
+		dc.w	loc_1E4C9-loc_1E4A8
+		dc.w	loc_1E4CD-loc_1E4A8
+		dc.w	loc_1E4d0-loc_1E4A8
+		dc.w	loc_1E4d3-loc_1E4A8
+		dc.w	loc_1E4d7-loc_1E4A8
 loc_1E4B8:
 		dc.b	$0E,$00,$FF
 loc_1E4BB:
@@ -35389,19 +35389,19 @@ loc_1E4d7:
 		dc.b	$05,$0B,$0C,$0B,$0C,$0B,$0C,$FF,$00
 Aquis_Mappings:		
 loc_1E4E0:
-		dc.w    loc_1E4FA-loc_1E4E0
-		dc.w    loc_1E514-loc_1E4E0
-		dc.w    loc_1E51E-loc_1E4E0
-		dc.w    loc_1E528-loc_1E4E0
-		dc.w    loc_1E54A-loc_1E4E0
-		dc.w    loc_1E56C-loc_1E4E0
-		dc.w    loc_1E576-loc_1E4E0
-		dc.w    loc_1E580-loc_1E4E0
-		dc.w    loc_1E58A-loc_1E4E0
-		dc.w    loc_1E594-loc_1E4E0
-		dc.w    loc_1E5B6-loc_1E4E0
-		dc.w    loc_1E5D8-loc_1E4E0
-		dc.w    loc_1E602-loc_1E4E0
+		dc.w	loc_1E4FA-loc_1E4E0
+		dc.w	loc_1E514-loc_1E4E0
+		dc.w	loc_1E51E-loc_1E4E0
+		dc.w	loc_1E528-loc_1E4E0
+		dc.w	loc_1E54A-loc_1E4E0
+		dc.w	loc_1E56C-loc_1E4E0
+		dc.w	loc_1E576-loc_1E4E0
+		dc.w	loc_1E580-loc_1E4E0
+		dc.w	loc_1E58A-loc_1E4E0
+		dc.w	loc_1E594-loc_1E4E0
+		dc.w	loc_1E5B6-loc_1E4E0
+		dc.w	loc_1E5D8-loc_1E4E0
+		dc.w	loc_1E602-loc_1E4E0
 loc_1E4FA:
 		dc.w	$0003
 		dc.l	$E80d0000,$0000FFF0,$F8090016,$000BFFF8
@@ -35462,11 +35462,11 @@ Obj_0x51_Aquis: ; loc_1E62C:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_1E63A(pc,d0),d1
-		jmp     loc_1E63A(pc,d1)
+		jmp	loc_1E63A(pc,d1)
 loc_1E63A:
-		dc.w    loc_1E646-loc_1E63A
-		dc.w    loc_1E6A4-loc_1E63A
-		dc.w    loc_1E6C8-loc_1E63A
+		dc.w	loc_1E646-loc_1E63A
+		dc.w	loc_1E6A4-loc_1E63A
+		dc.w	loc_1E6C8-loc_1E63A
 loc_1E640:
 		dc.w	$0000,$FCE0,$Fd1C
 loc_1E646:
@@ -35499,8 +35499,8 @@ loc_1E6A4:
 		jsr	 loc_1E6C4(pc,d1)
 		bra.w	JmpTo22_MarkObjGone
 loc_1E6C4:
-		dc.w    loc_1E6DC-loc_1E6C4
-		dc.w    loc_1E6F2-loc_1E6C4
+		dc.w	loc_1E6DC-loc_1E6C4
+		dc.w	loc_1E6F2-loc_1E6C4
 loc_1E6C8:
 		bsr.w	loc_1E404
 		bsr.w	JmpTo14_ObjectMove
@@ -35671,12 +35671,12 @@ Obj_0x4B_Buzz_Bomber: ; loc_1E89C:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_1E8AA(pc,d0),d1
-		jmp     loc_1E8AA(pc,d1)
+		jmp	loc_1E8AA(pc,d1)
 loc_1E8AA:
-		dc.w    loc_1E8FC-loc_1E8AA
-		dc.w    loc_1E9A8-loc_1E8AA
-		dc.w    loc_1E8C4-loc_1E8AA
-		dc.w    loc_1E8B2-loc_1E8AA
+		dc.w	loc_1E8FC-loc_1E8AA
+		dc.w	loc_1E9A8-loc_1E8AA
+		dc.w	loc_1E8C4-loc_1E8AA
+		dc.w	loc_1E8B2-loc_1E8AA
 loc_1E8B2:
 		bsr.w	JmpTo15_ObjectMove
 		lea	(loc_1EAF2).l,A1
@@ -35740,8 +35740,8 @@ loc_1E9A8:
 		bsr.w	JmpTo10_AnimateSprite
 		bra.w	JmpTo_MarkObjGone_P1
 loc_1E9C4:
-		dc.w    loc_1E9C8-loc_1E9C4
-		dc.w    loc_1EA58-loc_1E9C4
+		dc.w	loc_1E9C8-loc_1E9C4
+		dc.w	loc_1EA58-loc_1E9C4
 loc_1E9C8:
 		bsr.w	loc_1EA0A
 		subq.w	#1,$0030(a0)
@@ -35829,10 +35829,10 @@ loc_1EAEC:
 		add.w   d0,8(a1)
 		rts		
 loc_1EAF2:
-		dc.w    loc_1EAFA-loc_1EAF2
-		dc.w    loc_1EAFD-loc_1EAF2
-		dc.w    loc_1EB01-loc_1EAF2
-		dc.w    loc_1EB05-loc_1EAF2
+		dc.w	loc_1EAFA-loc_1EAF2
+		dc.w	loc_1EAFD-loc_1EAF2
+		dc.w	loc_1EB01-loc_1EAF2
+		dc.w	loc_1EB05-loc_1EAF2
 loc_1EAFA:		
 		dc.b	$0F,$00,$FF		         
 loc_1EAFD:
@@ -35883,12 +35883,12 @@ Obj_0x4A_Octus: ; loc_1EBB8:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_1EBC6(pc,d0),d1
-		jmp     loc_1EBC6(pc,d1)
+		jmp	loc_1EBC6(pc,d1)
 loc_1EBC6:          
-		dc.w    loc_1EBF6-loc_1EBC6
-		dc.w    loc_1EC5C-loc_1EBC6
-		dc.w    loc_1EBEA-loc_1EBC6
-		dc.w    loc_1EBCE-loc_1EBC6
+		dc.w	loc_1EBF6-loc_1EBC6
+		dc.w	loc_1EC5C-loc_1EBC6
+		dc.w	loc_1EBEA-loc_1EBC6
+		dc.w	loc_1EBCE-loc_1EBC6
 loc_1EBCE:
 		subi.w	#$0001,$002C(a0)
 		bmi.s	loc_1EBD8
@@ -35936,10 +35936,10 @@ loc_1EC5C:
 		bsr.w	JmpTo11_AnimateSprite
 		bra.w	JmpTo23_MarkObjGone
 loc_1EC78:
-		dc.w    loc_1EC80-loc_1EC78
-		dc.w    loc_1ECA0-loc_1EC78
-		dc.w    loc_1ECC2-loc_1EC78
-		dc.w    loc_1ED94-loc_1EC78
+		dc.w	loc_1EC80-loc_1EC78
+		dc.w	loc_1ECA0-loc_1EC78
+		dc.w	loc_1ECC2-loc_1EC78
+		dc.w	loc_1ED94-loc_1EC78
 loc_1EC80:
 		move.w	8(a0),d0
 		sub.w   (MainCharacter+8).w,d0
@@ -36013,9 +36013,9 @@ loc_1EDA2:
 		add.w   d0,8(a0)
 		bra.w	JmpTo23_MarkObjGone
 loc_1EDAA:
-		dc.w    loc_1EDB0-loc_1EDAA
-		dc.w    loc_1EDB3-loc_1EDAA
-		dc.w    loc_1EDB8-loc_1EDAA
+		dc.w	loc_1EDB0-loc_1EDAA
+		dc.w	loc_1EDB3-loc_1EDAA
+		dc.w	loc_1EDB8-loc_1EDAA
 loc_1EDB0:
 		dc.b	$0F,$00,$FF
 loc_1EDB3:
@@ -36024,13 +36024,13 @@ loc_1EDB8:
 		dc.b	$02,$05,$06,$FF
 Octus_Mappings:		
 loc_1EDBC:
-		dc.w    loc_1EDCA-loc_1EDBC
-		dc.w    loc_1EDDC-loc_1EDBC
-		dc.w    loc_1EDF6-loc_1EDBC
-		dc.w    loc_1EE10-loc_1EDBC
-		dc.w    loc_1EE2A-loc_1EDBC
-		dc.w    loc_1EE34-loc_1EDBC
-		dc.w    loc_1EE3E-loc_1EDBC
+		dc.w	loc_1EDCA-loc_1EDBC
+		dc.w	loc_1EDDC-loc_1EDBC
+		dc.w	loc_1EDF6-loc_1EDBC
+		dc.w	loc_1EE10-loc_1EDBC
+		dc.w	loc_1EE2A-loc_1EDBC
+		dc.w	loc_1EE34-loc_1EDBC
+		dc.w	loc_1EE3E-loc_1EDBC
 loc_1EDCA:
 		dc.w	$0002
 		dc.l	$F00d0000,$0000FFF0,$000d0008,$0004FFF0
@@ -36085,11 +36085,11 @@ Obj_0x4C_Batbot: ; loc_1EE68:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_1EE76(pc,d0),d1
-		jmp     loc_1EE76(pc,d1)
+		jmp	loc_1EE76(pc,d1)
 loc_1EE76:
-		dc.w    loc_1EE7C-loc_1EE76
-		dc.w    loc_1EEBA-loc_1EE76
-		dc.w    loc_1EF28-loc_1EE76
+		dc.w	loc_1EE7C-loc_1EE76
+		dc.w	loc_1EEBA-loc_1EE76
+		dc.w	loc_1EF28-loc_1EE76
 loc_1EE7C:		
 		move.l	#Obj4C_MapUnc_1F106,$0004(a0)  ; loc_1F106
 		move.w	#$2530,$0002(a0)
@@ -36112,9 +36112,9 @@ loc_1EEBA:
 		bsr.w	JmpTo12_AnimateSprite
 		bra.w	JmpTo24_MarkObjGone
 loc_1EEDA:
-		dc.w    loc_1F046-loc_1EEDA
-		dc.w    loc_1F07E-loc_1EEDA
-		dc.w    loc_1F08A-loc_1EEDA		
+		dc.w	loc_1F046-loc_1EEDA
+		dc.w	loc_1F07E-loc_1EEDA
+		dc.w	loc_1F08A-loc_1EEDA		
 loc_1EEE0:
 		move.b	$003F(a0),d0
 		jsr	(CalcSine).l		; loc_320A
@@ -36263,10 +36263,10 @@ loc_1F0B8:
 loc_1F0d0:
 		rts
 loc_1F0d2:
-		dc.w    loc_1F0DA-loc_1F0d2
-		dc.w    loc_1F0DE-loc_1F0d2
-		dc.w    loc_1F0ED-loc_1F0d2
-		dc.w    loc_1F0FE-loc_1F0d2
+		dc.w	loc_1F0DA-loc_1F0d2
+		dc.w	loc_1F0DE-loc_1F0d2
+		dc.w	loc_1F0ED-loc_1F0d2
+		dc.w	loc_1F0FE-loc_1F0d2
 loc_1F0DA:  
 		dc.b	$01,$00,$05,$FF
 loc_1F0DE:
@@ -36302,10 +36302,10 @@ Obj_0x4E_Crocobot: ; loc_1F2F0:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_1F2FE(pc,d0),d1
-		jmp     loc_1F2FE(pc,d1)
+		jmp	loc_1F2FE(pc,d1)
 loc_1F2FE:
-		dc.w    loc_1F302-loc_1F2FE
-		dc.w    loc_1F352-loc_1F2FE
+		dc.w	loc_1F302-loc_1F2FE
+		dc.w	loc_1F352-loc_1F2FE
 loc_1F302:
 		move.l	#Crocobot_Mappings,$0004(a0) ; loc_1F420
 		move.w	#$2300,$0002(a0)
@@ -36333,8 +36333,8 @@ loc_1F352:
 		bsr.w	JmpTo13_AnimateSprite
 		bra.w	JmpTo25_MarkObjGone
 loc_1F36E:
-		dc.w    loc_1F372-loc_1F36E
-		dc.w    loc_1F396-loc_1F36E
+		dc.w	loc_1F372-loc_1F36E
+		dc.w	loc_1F396-loc_1F36E
 loc_1F372:
 		subq.w	#1,$0030(a0)
 		bpl.s	loc_1F394
@@ -36384,9 +36384,9 @@ loc_1F3FE:
 		rts      
 
 loc_1F406:
-		dc.w    loc_1F40C-loc_1F406
-		dc.w    loc_1F414-loc_1F406
-		dc.w    loc_1F417-loc_1F406
+		dc.w	loc_1F40C-loc_1F406
+		dc.w	loc_1F414-loc_1F406
+		dc.w	loc_1F417-loc_1F406
 loc_1F40C:
 		dc.b	$03,$00,$04,$02,$03,$01,$05,$FF
 loc_1F414:
@@ -36395,18 +36395,18 @@ loc_1F417:
 		dc.b	$03,$06,$0A,$08,$09,$07,$0B,$FF,$00
 Crocobot_Mappings:		
 loc_1F420:
-		dc.w    loc_1F438-loc_1F420
-		dc.w    loc_1F45A-loc_1F420
-		dc.w    loc_1F47C-loc_1F420
-		dc.w    loc_1F49E-loc_1F420
-		dc.w    loc_1F4C0-loc_1F420
-		dc.w    loc_1F4E2-loc_1F420
-		dc.w    loc_1F504-loc_1F420
-		dc.w    loc_1F526-loc_1F420
-		dc.w    loc_1F548-loc_1F420
-		dc.w    loc_1F56A-loc_1F420
-		dc.w    loc_1F58C-loc_1F420
-		dc.w    loc_1F5AE-loc_1F420
+		dc.w	loc_1F438-loc_1F420
+		dc.w	loc_1F45A-loc_1F420
+		dc.w	loc_1F47C-loc_1F420
+		dc.w	loc_1F49E-loc_1F420
+		dc.w	loc_1F4C0-loc_1F420
+		dc.w	loc_1F4E2-loc_1F420
+		dc.w	loc_1F504-loc_1F420
+		dc.w	loc_1F526-loc_1F420
+		dc.w	loc_1F548-loc_1F420
+		dc.w	loc_1F56A-loc_1F420
+		dc.w	loc_1F58C-loc_1F420
+		dc.w	loc_1F5AE-loc_1F420
 loc_1F438:
 		dc.w	$0004
 		dc.l	$F80E0000,$0000FFE4,$F8050018,$000C0004
@@ -36486,8 +36486,8 @@ Obj53:
 ; ===========================================================================
 ; off_1F5FA:
 Obj53_Index:
-		dc.w    Obj53_Init-Obj53_Index
-		dc.w    Obj53_Main-Obj53_Index
+		dc.w	Obj53_Init-Obj53_Index
+		dc.w	Obj53_Main-Obj53_Index
 ; ===========================================================================
 ; loc_1F5FE:
 Obj53_Init:
@@ -36561,13 +36561,13 @@ Obj_0x54_Motobug: ; loc_1F6E8:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_1F6F6(pc,d0),d1
-		jmp     loc_1F6F6(pc,d1)
+		jmp	loc_1F6F6(pc,d1)
 loc_1F6F6:		
-		dc.w    loc_1F700-loc_1F6F6
-		dc.w    loc_1F7A0-loc_1F6F6
-		dc.w    loc_1F8CC-loc_1F6F6
-		dc.w    loc_1F904-loc_1F6F6
-		dc.w    loc_1F88A-loc_1F6F6
+		dc.w	loc_1F700-loc_1F6F6
+		dc.w	loc_1F7A0-loc_1F6F6
+		dc.w	loc_1F8CC-loc_1F6F6
+		dc.w	loc_1F904-loc_1F6F6
+		dc.w	loc_1F88A-loc_1F6F6
 loc_1F700:
 		move.l	#Obj54_MapUnc_1F938,$0004(a0) ; loc_1F938
 		move.w	#$0402,$0002(a0)
@@ -36708,8 +36708,8 @@ loc_1F904:
 		move.b	$0001(a1),$0001(a0)
 		bra.w	JmpTo2_MarkObjGone_P1
 loc_1F92C:
-		dc.w    loc_1F930-loc_1F92C
-		dc.w    loc_1F934-loc_1F92C
+		dc.w	loc_1F930-loc_1F92C
+		dc.w	loc_1F934-loc_1F92C
 loc_1F930:
 		dc.b	$05,$00,$01,$FF
 loc_1F934:
@@ -36756,14 +36756,14 @@ Obj_0x57: ; loc_1F99C:
 		moveq	#0,d0
 		move.b	$0025(a0),d0
 		move.w	loc_1F9AA(pc,d0),d1
-		jmp     loc_1F9AA(pc,d1)
+		jmp	loc_1F9AA(pc,d1)
 loc_1F9AA:
-		dc.w    loc_1F9B6-loc_1F9AA
-		dc.w    loc_1F9DC-loc_1F9AA
-		dc.w    loc_1FA38-loc_1F9AA
-		dc.w    loc_1FA6A-loc_1F9AA
-		dc.w    loc_1FA94-loc_1F9AA
-		dc.w    loc_1FAAE-loc_1F9AA
+		dc.w	loc_1F9B6-loc_1F9AA
+		dc.w	loc_1F9DC-loc_1F9AA
+		dc.w	loc_1FA38-loc_1F9AA
+		dc.w	loc_1FA6A-loc_1F9AA
+		dc.w	loc_1FA94-loc_1F9AA
+		dc.w	loc_1FAAE-loc_1F9AA
 loc_1F9B6:
 		move.b	#$00,$0020(a0)
 		cmpi.w	#$29d0,8(a0)
@@ -36778,10 +36778,10 @@ loc_1F9DC:
 		moveq	#0,d0
 		move.b	$002C(a0),d0
 		move.w	loc_1F9EA(pc,d0),d1
-		jmp     loc_1F9EA(pc,d1)
+		jmp	loc_1F9EA(pc,d1)
 loc_1F9EA:
-		dc.w    loc_1F9EE-loc_1F9EA
-		dc.w    loc_1FA14-loc_1F9EA
+		dc.w	loc_1F9EE-loc_1F9EA
+		dc.w	loc_1FA14-loc_1F9EA
 loc_1F9EE:
 		cmpi.w	#$041E,$000C(a0)
 		bge.s   loc_1FA00
@@ -36839,9 +36839,9 @@ loc_1FAAE:
 		jsr	 loc_1FAC0(pc,d1)
 		bra.w	JmpTo18_DisplaySprite
 loc_1FAC0:
-		dc.w    loc_1FAC6-loc_1FAC0
-		dc.w    loc_1FB3E-loc_1FAC0
-		dc.w    loc_1FB58-loc_1FAC0
+		dc.w	loc_1FAC6-loc_1FAC0
+		dc.w	loc_1FB3E-loc_1FAC0
+		dc.w	loc_1FB58-loc_1FAC0
 loc_1FAC6:
 		bclr	#$00,$002D(a0)
 		bsr.w	JmpTo14_SingleObjLoad2
@@ -36944,13 +36944,13 @@ Obj_0x58: ; loc_1FC0A:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_1FC18(pc,d0),d1
-		jmp     loc_1FC18(pc,d1)
+		jmp	loc_1FC18(pc,d1)
 loc_1FC18:
-		dc.w    loc_1FC46-loc_1FC18
-		dc.w    loc_1FCCC-loc_1FC18
-		dc.w    loc_1Fd1E-loc_1FC18
-		dc.w    loc_1FE00-loc_1FC18
-		dc.w    loc_1FC22-loc_1FC18
+		dc.w	loc_1FC46-loc_1FC18
+		dc.w	loc_1FCCC-loc_1FC18
+		dc.w	loc_1Fd1E-loc_1FC18
+		dc.w	loc_1FE00-loc_1FC18
+		dc.w	loc_1FC22-loc_1FC18
 loc_1FC22:
 		subi.w	#$0001,$000C(a0)
 		subi.w	#$0001,$002A(a0)
@@ -36963,10 +36963,10 @@ loc_1FC46:
 		moveq	#0,d0
 		move.b	$0025(a0),d0
 		move.w	loc_1FC54(pc,d0),d1
-		jmp     loc_1FC54(pc,d1)
+		jmp	loc_1FC54(pc,d1)
 loc_1FC54:
-		dc.w    loc_1FC58-loc_1FC54
-		dc.w    loc_1FCA2-loc_1FC54
+		dc.w	loc_1FC58-loc_1FC54
+		dc.w	loc_1FCA2-loc_1FC54
 loc_1FC58:
 		move.l	$0034(a0),A1
 		cmpi.b	#$55,(a1)
@@ -37017,12 +37017,12 @@ loc_1Fd1E:
 		moveq	#0,d0
 		move.b	$0025(a0),d0
 		move.w	loc_1Fd2C(pc,d0),d1
-		jmp     loc_1Fd2C(pc,d1)
+		jmp	loc_1Fd2C(pc,d1)
 loc_1Fd2C:
-		dc.w    loc_1Fd34-loc_1Fd2C
-		dc.w    loc_1Fd52-loc_1Fd2C
-		dc.w    loc_1FDB2-loc_1Fd2C
-		dc.w    loc_1FDDE-loc_1Fd2C
+		dc.w	loc_1Fd34-loc_1Fd2C
+		dc.w	loc_1Fd52-loc_1Fd2C
+		dc.w	loc_1FDB2-loc_1Fd2C
+		dc.w	loc_1FDDE-loc_1Fd2C
 loc_1Fd34:
 		move.l	$0034(a0),A1
 		cmpi.b	#$55,(a1)
@@ -37253,9 +37253,9 @@ loc_200C8:
 loc_2012C:
 		rts		
 loc_2012E:
-		dc.w    loc_20134-loc_2012E
-		dc.w    loc_20138-loc_2012E
-		dc.w    loc_2014E-loc_2012E
+		dc.w	loc_20134-loc_2012E
+		dc.w	loc_20138-loc_2012E
+		dc.w	loc_2014E-loc_2012E
 loc_20134:
 		dc.b	$01,$05,$06,$FF
 loc_20138:
@@ -37266,13 +37266,13 @@ loc_2014E:
 		dc.b	$02,$02,$01,$01,$01,$05,$06,$FE,$02,$00               
 Obj_0x57_Mappings:
 loc_20168:
-		dc.w    loc_20176-loc_20168
-		dc.w    loc_20180-loc_20168
-		dc.w    loc_201AA-loc_20168
-		dc.w    loc_201d4-loc_20168
-		dc.w    loc_201EE-loc_20168
-		dc.w    loc_20208-loc_20168
-		dc.w    loc_20222-loc_20168
+		dc.w	loc_20176-loc_20168
+		dc.w	loc_20180-loc_20168
+		dc.w	loc_201AA-loc_20168
+		dc.w	loc_201d4-loc_20168
+		dc.w	loc_201EE-loc_20168
+		dc.w	loc_20208-loc_20168
+		dc.w	loc_20222-loc_20168
 loc_20176:
 		dc.w	$0001
 		dc.l	$D8050000,$00000002
@@ -37303,9 +37303,9 @@ loc_20222:
 		dc.l	$D8050004,$00020002,$D80d000C,$0006FFE2
 		dc.l	$D80d000C,$0006FFC2     
 loc_2023C:
-		dc.w    loc_20242-loc_2023C
-		dc.w    loc_20247-loc_2023C
-		dc.w    loc_2024B-loc_2023C
+		dc.w	loc_20242-loc_2023C
+		dc.w	loc_20247-loc_2023C
+		dc.w	loc_2024B-loc_2023C
 loc_20242:
 		dc.b	$05,$01,$02,$03,$FF
 loc_20247:
@@ -37314,15 +37314,15 @@ loc_2024B:
 		dc.b	$01,$06,$07,$FF,$00 
 
 loc_20250:
-		dc.w    loc_20262-loc_20250
-		dc.w    loc_2027C-loc_20250
-		dc.w    loc_20286-loc_20250
-		dc.w    loc_20290-loc_20250
-		dc.w    loc_2029A-loc_20250
-		dc.w    loc_202A4-loc_20250
-		dc.w    loc_202AE-loc_20250
-		dc.w    loc_202B8-loc_20250
-		dc.w    loc_202C2-loc_20250
+		dc.w	loc_20262-loc_20250
+		dc.w	loc_2027C-loc_20250
+		dc.w	loc_20286-loc_20250
+		dc.w	loc_20290-loc_20250
+		dc.w	loc_2029A-loc_20250
+		dc.w	loc_202A4-loc_20250
+		dc.w	loc_202AE-loc_20250
+		dc.w	loc_202B8-loc_20250
+		dc.w	loc_202C2-loc_20250
 loc_20262:
 		dc.w	$0003
 		dc.l	$F00F0000,$0000FFd0,$F00F0010,$0008FFF0
@@ -37391,11 +37391,11 @@ Obj_0x55_Ghz_Boss: ; loc_2030C:
 		move.w	loc_2031A(pc,d0),d1
 		jmp	loc_2031A(pc,d1)
 loc_2031A:
-		dc.w    loc_20324-loc_2031A
-		dc.w    loc_2044E-loc_2031A
-		dc.w    loc_2048C-loc_2031A
-		dc.w    loc_204BE-loc_2031A
-		dc.w    loc_20560-loc_2031A
+		dc.w	loc_20324-loc_2031A
+		dc.w	loc_2044E-loc_2031A
+		dc.w	loc_2048C-loc_2031A
+		dc.w	loc_204BE-loc_2031A
+		dc.w	loc_20560-loc_2031A
 loc_20324:
 		move.l	#Ghz_Boss_Mappings,4(a0) ; loc_206BA
 		move.w	#$2400,2(a0)
@@ -37559,10 +37559,10 @@ Obj_0x56: ; loc_205A6:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_205B4(pc,d0),d1
-		jmp     loc_205B4(pc,d1)
+		jmp	loc_205B4(pc,d1)
 loc_205B4:
-		dc.w    loc_205B8-loc_205B4
-		dc.w    loc_205F4-loc_205B4
+		dc.w	loc_205B8-loc_205B4
+		dc.w	loc_205F4-loc_205B4
 loc_205B8:
 		addq.b	#2,$24(a0)
 		move.l	#Obj_0x56_Mappings,4(a0) ; loc_2065A
@@ -37586,8 +37586,8 @@ loc_2060E:
 		bra.w	JmpTo19_DisplaySprite
 Ghz_Boss_Mappings_1: 
 loc_20612:
-		dc.w    loc_20616-loc_20612
-		dc.w    loc_20620-loc_20612
+		dc.w	loc_20616-loc_20612
+		dc.w	loc_20620-loc_20612
 loc_20616:
 		dc.w	$0001
 		dc.l	$00050000,$0000001C
@@ -37596,10 +37596,10 @@ loc_20620:
 		dc.l	$00050004,$0002001C
 Ghz_Boss_Mappings_2: 
 loc_2062A:
-		dc.w    loc_20632-loc_2062A
-		dc.w    loc_2063C-loc_2062A
-		dc.w    loc_20646-loc_2062A
-		dc.w    loc_20650-loc_2062A
+		dc.w	loc_20632-loc_2062A
+		dc.w	loc_2063C-loc_2062A
+		dc.w	loc_20646-loc_2062A
+		dc.w	loc_20650-loc_2062A
 loc_20632:
 		dc.w	$0001
 		dc.l	$F8050000,$0000FFF8
@@ -37614,13 +37614,13 @@ loc_20650:
 		dc.l	$F805000C,$0006FFF8    
 Obj_0x56_Mappings:
 loc_2065A:
-		dc.w    loc_20668-loc_2065A
-		dc.w    loc_20672-loc_2065A
-		dc.w    loc_2067C-loc_2065A
-		dc.w    loc_20686-loc_2065A
-		dc.w    loc_20690-loc_2065A
-		dc.w    loc_2069A-loc_2065A
-		dc.w    loc_206A4-loc_2065A
+		dc.w	loc_20668-loc_2065A
+		dc.w	loc_20672-loc_2065A
+		dc.w	loc_2067C-loc_2065A
+		dc.w	loc_20686-loc_2065A
+		dc.w	loc_20690-loc_2065A
+		dc.w	loc_2069A-loc_2065A
+		dc.w	loc_206A4-loc_2065A
 loc_20668:
 		dc.w	$0001
 		dc.l	$F8050000,$0000FFF8
@@ -37643,17 +37643,17 @@ loc_206A4:
 		dc.w	$0001
 		dc.l	$F00F0054,$002AFFF0		           
 loc_206AE:
-		dc.w    loc_206B2-loc_206AE
-		dc.w    loc_206B5-loc_206AE
+		dc.w	loc_206B2-loc_206AE
+		dc.w	loc_206B5-loc_206AE
 loc_206B2:
 		dc.b	$0F,$00,$FF
 loc_206B5:
 		dc.b	$07,$01,$02,$FF,$00 
 Ghz_Boss_Mappings:		 
 loc_206BA:
-		dc.w    loc_206C0-loc_206BA
-		dc.w    loc_206E2-loc_206BA
-		dc.w    loc_20704-loc_206BA
+		dc.w	loc_206C0-loc_206BA
+		dc.w	loc_206E2-loc_206BA
+		dc.w	loc_20704-loc_206BA
 loc_206C0:
 		dc.w	$0004
 		dc.l	$F8050000,$0000FFE0,$08050004,$0002FFE0
@@ -37955,19 +37955,19 @@ return_210A2:
 ; ===========================================================================
 
 loc_210A4:		
-		dc.w    loc_210A8-loc_210A4
-		dc.w    loc_210A8-loc_210A4
+		dc.w	loc_210A8-loc_210A4
+		dc.w	loc_210A8-loc_210A4
 loc_210A8:
 		dc.b	$02,$01,$03,$FF
 
 loc_210AC:
-		dc.w    loc_210BA-loc_210AC
-		dc.w    loc_210F4-loc_210AC
-		dc.w    loc_210FE-loc_210AC
-		dc.w    loc_21130-loc_210AC
-		dc.w    loc_2113A-loc_210AC
-		dc.w    loc_2114C-loc_210AC
-		dc.w    loc_21156-loc_210AC
+		dc.w	loc_210BA-loc_210AC
+		dc.w	loc_210F4-loc_210AC
+		dc.w	loc_210FE-loc_210AC
+		dc.w	loc_21130-loc_210AC
+		dc.w	loc_2113A-loc_210AC
+		dc.w	loc_2114C-loc_210AC
+		dc.w	loc_21156-loc_210AC
 loc_210BA:
 		dc.w	$0007
 		dc.l	$E00C2000,$2000FFF0,$E80d2004,$2002FFE0
@@ -38920,9 +38920,9 @@ loc_21AF2:
 		dc.l    SS_Red_White_Ball_Mappings ; loc_21CDA 
 		dc.w	$45F0     
 SS_Reverse_Goal_Mappings: ; loc_21CC6:   
-		dc.w    loc_21CCC-SS_Reverse_Goal_Mappings
-		dc.w    loc_21Cd2-SS_Reverse_Goal_Mappings
-		dc.w    loc_21CD8-SS_Reverse_Goal_Mappings
+		dc.w	loc_21CCC-SS_Reverse_Goal_Mappings
+		dc.w	loc_21Cd2-SS_Reverse_Goal_Mappings
+		dc.w	loc_21CD8-SS_Reverse_Goal_Mappings
 loc_21CCC:
 		dc.b	$01
 		dc.b	$F4,$0A,$00,$00,$F4        ; Sonic 1 Mappings Format
@@ -38933,10 +38933,10 @@ loc_21CD8:
 		dc.b	$00
 		dc.b	$00		     ; Filler     
 SS_Red_White_Ball_Mappings: ; loc_21CDA:
-		dc.w    loc_21CE2-SS_Red_White_Ball_Mappings
-		dc.w    loc_21CE8-SS_Red_White_Ball_Mappings
-		dc.w    loc_21CEE-SS_Red_White_Ball_Mappings
-		dc.w    loc_21CF4-SS_Red_White_Ball_Mappings
+		dc.w	loc_21CE2-SS_Red_White_Ball_Mappings
+		dc.w	loc_21CE8-SS_Red_White_Ball_Mappings
+		dc.w	loc_21CEE-SS_Red_White_Ball_Mappings
+		dc.w	loc_21CF4-SS_Red_White_Ball_Mappings
 loc_21CE2:
 		dc.b	$01
 		dc.b	$F4,$0A,$00,$00,$F4        ; Sonic 1 Mappings Format
@@ -38950,8 +38950,8 @@ loc_21CF4:
 		dc.b	$01
 		dc.b	$F4,$0A,$10,$00,$F4        ; Sonic 1 Mappings Format   
 SS_Up_Mappings: ; loc_21CFA:
-		dc.w    loc_21CFE-SS_Up_Mappings
-		dc.w    loc_21d04-SS_Up_Mappings
+		dc.w	loc_21CFE-SS_Up_Mappings
+		dc.w	loc_21d04-SS_Up_Mappings
 loc_21CFE:
 		dc.b	$01
 		dc.b	$F4,$0A,$00,$00,$F4        ; Sonic 1 Mappings Format
@@ -38959,8 +38959,8 @@ loc_21d04:
 		dc.b	$01
 		dc.b	$F4,$0A,$00,$12,$F4        ; Sonic 1 Mappings Format 
 SS_Down_Mappings: ; loc_21d0A:
-		dc.w    loc_21d0E-SS_Down_Mappings
-		dc.w    loc_21d14-SS_Down_Mappings
+		dc.w	loc_21d0E-SS_Down_Mappings
+		dc.w	loc_21d14-SS_Down_Mappings
 loc_21d0E:
 		dc.b	$01
 		dc.b	$F4,$0A,$00,$09,$F4        ; Sonic 1 Mappings Format 
@@ -38968,14 +38968,14 @@ loc_21d14:
 		dc.b	$01
 		dc.b	$F4,$0A,$00,$12,$F4        ; Sonic 1 Mappings Format
 SS_Red_Emerald_Mappings: ; loc_21d1A:
-		dc.w    loc_21d26-SS_Red_Emerald_Mappings
-		dc.w    loc_21d38-SS_Red_Emerald_Mappings
+		dc.w	loc_21d26-SS_Red_Emerald_Mappings
+		dc.w	loc_21d38-SS_Red_Emerald_Mappings
 SS_Gray_Emerald_Mappings: ; loc_21d1E:
-		dc.w    loc_21d2C-SS_Gray_Emerald_Mappings
-		dc.w    loc_21d38-SS_Gray_Emerald_Mappings		
+		dc.w	loc_21d2C-SS_Gray_Emerald_Mappings
+		dc.w	loc_21d38-SS_Gray_Emerald_Mappings		
 SS_Emerald_Mappings: ; loc_21d22:  {Blue / Yellow / Purple / Green}  
-		dc.w    loc_21d32-SS_Emerald_Mappings
-		dc.w    loc_21d38-SS_Emerald_Mappings
+		dc.w	loc_21d32-SS_Emerald_Mappings
+		dc.w	loc_21d38-SS_Emerald_Mappings
 loc_21d26:
 		dc.b	$01
 		dc.b	$F8,$05,$00,$00,$F8        ; Sonic 1 Mappings Format   
@@ -40326,7 +40326,7 @@ loc_22D94:
 ; ===========================================================================
 ; loc_22DF4:
 JmpTo_NemDecToRAM:
-		jmp     (NemDecToRAM).l
+		jmp	(NemDecToRAM).l
 
 		align 4
 
@@ -40412,7 +40412,7 @@ loc_22FE8:
 		addq.b	#1,(Life_count).w
 		addq.b	#1,(Update_HUD_lives).w
 		move.w	#S1MusID_ExtraLife,d0
-		jmp     (PlayMusic).l            ; loc_14C0
+		jmp	(PlayMusic).l            ; loc_14C0
 loc_23010:
 		rts
 HudUpdate: ; loc_23012:
@@ -41499,7 +41499,7 @@ PlrList_GameOver_End:
 
 Green_Hill_Sprites_1:
 loc_244CA:
-		dc.w    (((loc_244FC-loc_244CA-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
+		dc.w	(((loc_244FC-loc_244CA-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
 		dc.l    ArtNem_GHZ    ; loc_81C00
 		dc.w	$0000
 		dc.l    ArtNem_GHZ_Waterfall           ; loc_73B3C
@@ -41518,7 +41518,7 @@ loc_244CA:
 		dc.w	$8E00
 Green_Hill_Sprites_2:
 loc_244FC:
-		dc.w    (((loc_24510-loc_244FC-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
+		dc.w	(((loc_24510-loc_244FC-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
 		dc.l    ArtNem_Buzzer       ; loc_7A4BC
 		dc.w	$7CC0
 		dc.l    ArtNem_Snail             ; loc_7C514
@@ -41527,12 +41527,12 @@ loc_244FC:
 		dc.w	$8380
 Wood_Sprites_1:
 loc_24510:
-		dc.w    (((loc_24518-loc_24510-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
+		dc.w	(((loc_24518-loc_24510-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
 		dc.l    ArtNem_WZ          ; loc_8AB2E
 		dc.w	$0000
 Wood_Sprites_2:
 loc_24518:
-		dc.w    (((loc_24532-loc_24518-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
+		dc.w	(((loc_24532-loc_24518-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
 		dc.l    ArtNem_Spikes		  ; loc_7914E
 		dc.w	$8680
 		dc.l    ArtNem_DignlSprng         ; loc_7883E
@@ -41543,7 +41543,7 @@ loc_24518:
 		dc.w	$8E00
 Metropolis_Sprites_1:
 loc_24532:
-		dc.w    (((loc_2456A-loc_24532-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
+		dc.w	(((loc_2456A-loc_24532-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
 		dc.l    ArtNem_MTZ    ; loc_91716
 		dc.w	$0000
 		dc.l    Mz_Teleport             ; loc_75382
@@ -41564,7 +41564,7 @@ loc_24532:
 		dc.w	$8380
 loc_2456A:
 Metropolis_Sprites_2:
-		dc.w    (((loc_245A2-loc_2456A-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
+		dc.w	(((loc_245A2-loc_2456A-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
 		dc.l    ArtNem_Button		  ; loc_78580
 		dc.w	$8480
 		dc.l    ArtNem_Spikes		  ; loc_7914E
@@ -41585,7 +41585,7 @@ Metropolis_Sprites_2:
 		dc.w	$ABE0
 Hill_Top_Sprites_1:
 loc_245A2:
-		dc.w    (((loc_245E0-loc_245A2-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
+		dc.w	(((loc_245E0-loc_245A2-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
 		dc.l    ArtNem_GHZ    ; loc_81C00
 		dc.w	$0000
 		dc.l    ArtNem_HTZ      ; loc_85200
@@ -41608,7 +41608,7 @@ loc_245A2:
 		dc.w	$8E00
 Hill_Top_Sprites_2:
 loc_245E0:
-		dc.w    (((loc_245F4-loc_245E0-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
+		dc.w	(((loc_245F4-loc_245E0-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
 		dc.l    ArtNem_HtzZipline           ; loc_73E68
 		dc.w	$7CC0
 		dc.l    Htz_Lava_Bubble         ; loc_73C42
@@ -41617,7 +41617,7 @@ loc_245E0:
 		dc.w	$84C0
 Hidden_Palace_Sprites_1:
 loc_245F4:
-		dc.w    (((loc_24626-loc_245F4-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
+		dc.w	(((loc_24626-loc_245F4-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
 		dc.l    ArtNem_HPZ ; loc_98B76
 		dc.w	$0000
 		dc.l    ArtNem_HPZ_Bridge              ; loc_7538E
@@ -41656,7 +41656,7 @@ loc_2463A: ; Not all sprites are loaded in to VRam
 		dc.w	$A600
 Oil_Ocean_Sprites_1:
 loc_24658:
-		dc.w    (((loc_24684-loc_24658-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
+		dc.w	(((loc_24684-loc_24658-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
 		dc.l    ArtNem_OOZ     ; loc_9Ed58
 		dc.w	$0000
 		dc.l    ArtNem_OOZElevator            ; loc_75F70
@@ -41673,7 +41673,7 @@ loc_24658:
 		dc.w	$68C0
 Oil_Ocean_Sprites_2:
 loc_24684:
-		dc.w    (((loc_246C2-loc_24684-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
+		dc.w	(((loc_246C2-loc_24684-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
 		dc.l    ArtNem_OOZBall		; loc_76602
 		dc.w	$6A80
 		dc.l    ArtNem_LaunchBall              ; loc_76722
@@ -41696,7 +41696,7 @@ loc_24684:
 		dc.w	$8E00
 Dust_Hill_Sprites_1:
 loc_246C2:
-		dc.w    (((loc_246E2-loc_246C2-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
+		dc.w	(((loc_246E2-loc_246C2-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
 		dc.l    ArtNem_DHZ     ; loc_A5248
 		dc.w	$0000
 		dc.l    ArtNem_Crate		 ; loc_7708A
@@ -41709,7 +41709,7 @@ loc_246C2:
 		dc.w	$83C0
 Dust_Hill_Sprites_2:
 loc_246E2:
-		dc.w    (((loc_24708-loc_246E2-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
+		dc.w	(((loc_24708-loc_246E2-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
 		dc.l    ArtNem_HorizSpike   ; loc_79A44
 		dc.w	$8580
 		dc.l    ArtNem_Spikes		  ; loc_7914E
@@ -41724,14 +41724,14 @@ loc_246E2:
 		dc.w	$8E00
 Casino_Night_Sprites_1:
 loc_24708:
-		dc.w    (((loc_24716-loc_24708-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
+		dc.w	(((loc_24716-loc_24708-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
 		dc.l    ArtNem_CNZ  ; loc_ABF2A
 		dc.w	$0000
 		dc.l    ArtNem_CNZCards               ; loc_AEF3C
 		dc.w	$7A00
 Casino_Night_Sprites_2:
 loc_24716:
-		dc.w    (((loc_24730-loc_24716-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
+		dc.w	(((loc_24730-loc_24716-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
 		dc.l    ArtNem_Spikes		  ; loc_7914E
 		dc.w	$8680
 		dc.l    ArtNem_DignlSprng         ; loc_7883E
@@ -41742,7 +41742,7 @@ loc_24716:
 		dc.w	$8E00
 Chemical_Plant_Sprites_1:
 loc_24730:
-		dc.w    (((loc_2476E-loc_24730-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
+		dc.w	(((loc_2476E-loc_24730-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
 		dc.l    ArtNem_CPZ ; loc_B2506
 		dc.w	$0000
 		dc.l    Cpz_Metal_Structure     ; loc_77A1C
@@ -41765,7 +41765,7 @@ loc_24730:
 		dc.w	$8600
 Chemical_Plant_Sprites_2:
 loc_2476E:
-		dc.w    (((loc_24794-loc_2476E-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
+		dc.w	(((loc_24794-loc_2476E-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
 		dc.l    Air_Bubbles_Numbers     ; loc_79AC0
 		dc.w	$A000
 		dc.l    ArtNem_Spikes		  ; loc_7914E
@@ -41780,7 +41780,7 @@ loc_2476E:
 		dc.w	$8E00
 Neo_Green_Hill_Sprites_1:
 loc_24794:
-		dc.w    (((loc_247B4-loc_24794-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
+		dc.w	(((loc_247B4-loc_24794-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
 		dc.l    ArtNem_NGHZ ; loc_B9E58
 		dc.w	$0000
 		dc.l    Nghz_Water_Surface      ; loc_78270
@@ -41793,7 +41793,7 @@ loc_24794:
 		dc.w	$8500
 Neo_Green_Hill_Sprites_2:
 loc_247B4:
-		dc.w    (((loc_247d4-loc_247B4-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
+		dc.w	(((loc_247d4-loc_247B4-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
 		dc.l    Air_Bubbles_Numbers     ; loc_79AC0
 		dc.w	$A000
 		dc.l    ArtNem_Spikes		  ; loc_7914E
@@ -41806,12 +41806,12 @@ loc_247B4:
 		dc.w	$8E00
 End_Level_Results_Sprites:
 loc_247d4:
-		dc.w    (((loc_247DC-loc_247d4-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
+		dc.w	(((loc_247DC-loc_247d4-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
 		dc.l    Title_Cards             ; loc_7EA04
 		dc.w	$B000
 End_Level_Sprites:
 loc_247DC:
-		dc.w    (((loc_247E4-loc_247DC-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
+		dc.w	(((loc_247E4-loc_247DC-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
 		dc.l    ArtNem_Signpost               ; loc_7931E
 		dc.w	$8680
 loc_247E4: ; Not all sprites are loaded in to VRam
@@ -41821,7 +41821,7 @@ loc_247E4: ; Not all sprites are loaded in to VRam
 		dc.w	$8C40
 Green_Hill_Boss:
 loc_247F0:
-		dc.w    (((loc_24804-loc_247F0-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
+		dc.w	(((loc_24804-loc_247F0-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
 		dc.l    Robotnik_Ship           ; loc_7CC9E
 		dc.w	$8C00
 		dc.l    ArtNem_GHZBoss            ; loc_7E124
@@ -41841,18 +41841,18 @@ loc_24804: ; Not all sprites are loaded in to VRam
 		dc.w	$9d00
 		dc.l    ArtNem_EggChoppers         ; loc_7E910
 		dc.w	$Ad00
-		dc.w    (ArtNem_LeverSpring&$FFFF) ; loc_798F4 ; Left over from previous build
+		dc.w	(ArtNem_LeverSpring&$FFFF) ; loc_798F4 ; Left over from previous build
 		dc.w	$8800
 		dc.l    ArtNem_VrtclSprng         ; loc_78658
 		dc.w	$8B80
 		dc.l    ArtNem_HrzntlSprng       ; loc_78774
 		dc.w	$8E00
 loc_24838:
-		dc.w    (((loc_24840-loc_24838-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
+		dc.w	(((loc_24840-loc_24838-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
 		dc.l    Title_Cards             ; loc_7EA04
 		dc.w	$B000
 loc_24840:
-		dc.w    (((loc_24848-loc_24840-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
+		dc.w	(((loc_24848-loc_24840-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
 		dc.l    ArtNem_Signpost               ; loc_7931E
 		dc.w	$8680
 loc_24848:
@@ -41861,7 +41861,7 @@ loc_24848:
 		dc.l    Big_Ring_Flash          ; loc_7F9E8
 		dc.w	$8C40
 loc_24854:
-		dc.w    (((loc_24868-loc_24854-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
+		dc.w	(((loc_24868-loc_24854-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
 		dc.l    Robotnik_Ship           ; loc_7CC9E
 		dc.w	$8C00
 		dc.l    ArtNem_GHZBoss            ; loc_7E124
@@ -41881,7 +41881,7 @@ loc_24868:
 		dc.w	$9d00
 		dc.l    ArtNem_EggChoppers         ; loc_7E910
 		dc.w	$Ad00
-		dc.w    (Boss_Smoke&$FFFF)      ; loc_7E03E ; Left over from previous build
+		dc.w	(Boss_Smoke&$FFFF)      ; loc_7E03E ; Left over from previous build
 		dc.w	$9B00
 		dc.l    ArtNem_GHZBoss            ; loc_7E124
 		dc.w	$9d00
@@ -41897,14 +41897,14 @@ loc_24868:
 		dc.w	$8E00
 Casino_Night_Sprites_Previous_Build_1:
 loc_248B4:
-		dc.w    (((loc_248C2-loc_248B4-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
+		dc.w	(((loc_248C2-loc_248B4-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
 		dc.l    ArtNem_CNZ-$07E2 ; loc_AB748 ; Left over from previous build
 		dc.w	$0000
 		dc.l    ArtNem_CNZCards-$07E2              ; loc_AE75A ; Left over from previous build
 		dc.w	$7A00
 Casino_Night_Sprites_Previous_Build_2:
 loc_248C2:
-		dc.w    (((loc_248DC-loc_248C2-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
+		dc.w	(((loc_248DC-loc_248C2-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
 		dc.l    ArtNem_Spikes		  ; loc_7914E
 		dc.w	$8680
 		dc.l    ArtNem_DignlSprng         ; loc_7883E
@@ -41915,7 +41915,7 @@ loc_248C2:
 		dc.w	$8E00
 Chemical_Plant_Sprites_Previous_Build_1:
 loc_248DC:
-		dc.w    (((loc_2491A-loc_248DC-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
+		dc.w	(((loc_2491A-loc_248DC-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
 		dc.l    ArtNem_CPZ-$07E2 ; loc_B1d24
 		dc.w	$0000
 		dc.l    Cpz_Metal_Structure     ; loc_77A1C
@@ -41938,7 +41938,7 @@ loc_248DC:
 		dc.w	$8600
 Chemical_Plant_Sprites_Previous_Build_2:
 loc_2491A:
-		dc.w    (((loc_2493A-loc_2491A-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
+		dc.w	(((loc_2493A-loc_2491A-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
 		dc.l    ArtNem_Spikes		  ; loc_7914E
 		dc.w	$8680
 		dc.l    ArtNem_CPZDroplet               ; loc_779AA
@@ -41951,7 +41951,7 @@ loc_2491A:
 		dc.w	$8E00
 Neo_Green_Hill_Sprites_Previous_Build_1:
 loc_2493A:
-		dc.w    (((loc_2495A-loc_2493A-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
+		dc.w	(((loc_2495A-loc_2493A-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
 		dc.l    ArtNem_NGHZ-$07d2 ; loc_B9686
 		dc.w	$0000
 		dc.l    Nghz_Water_Surface      ; loc_78270
@@ -41964,7 +41964,7 @@ loc_2493A:
 		dc.w	$8500
 Neo_Green_Hill_Sprites_Previous_Build_2:
 loc_2495A:
-		dc.w    (((loc_24974-loc_2495A-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
+		dc.w	(((loc_24974-loc_2495A-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
 		dc.l    ArtNem_Spikes		  ; loc_7914E
 		dc.w	$8680
 		dc.l    (ArtNem_LeverSpring-$0188) ; loc_7976C
@@ -41975,12 +41975,12 @@ loc_2495A:
 		dc.w	$8E00
 End_Level_Results_Sprites_Previous_Build:
 loc_24974:
-		dc.w    (((loc_2497C-loc_24974-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
+		dc.w	(((loc_2497C-loc_24974-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
 		dc.l    Title_Cards-$07E2       ; loc_7E222
 		dc.w	$B000
 End_Level_Sprites_Previous_Build:
 loc_2497C:
-		dc.w    (((loc_24990-loc_2497C-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
+		dc.w	(((loc_24990-loc_2497C-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
 		dc.l    ArtNem_Signpost               ; loc_7931E
 		dc.w	$d000
 		dc.l    Hidden_Points-$07E2     ; loc_7F37A
@@ -41989,7 +41989,7 @@ loc_2497C:
 		dc.w	$8C40
 Green_Hill_Boss_Previous_Build:
 loc_24990:
-		dc.w    (((loc_249A4-loc_24990-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
+		dc.w	(((loc_249A4-loc_24990-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
 		dc.l    Robotnik_Ship-$07E2     ; loc_7C4BC
 		dc.w	$8C00
 		dc.l    ArtNem_GHZBoss-$07E2      ; loc_7D942
@@ -42017,11 +42017,11 @@ loc_249A4:
 		dc.l    ArtNem_HrzntlSprng       ; loc_78774
 		dc.w	$8E00
 loc_249DC:
-		dc.w    (((loc_249E4-loc_249DC-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
+		dc.w	(((loc_249E4-loc_249DC-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
 		dc.l    Title_Cards-$07E2       ; loc_7E222
 		dc.w	$B000
 loc_249E4:
-		dc.w    (((loc_249F8-loc_249E4-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
+		dc.w	(((loc_249F8-loc_249E4-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
 		dc.l    ArtNem_Signpost               ; loc_7931E
 		dc.w	$d000
 		dc.l    Hidden_Points-$07E2     ; loc_7F37A
@@ -42029,7 +42029,7 @@ loc_249E4:
 		dc.l    Big_Ring_Flash-$07E2    ; loc_7F206
 		dc.w	$8C40
 loc_249F8:
-		dc.w    (((loc_24A0C-loc_249F8-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
+		dc.w	(((loc_24A0C-loc_249F8-$02)/$06)-$01) ; Auto Detect Number of Sprites Esrael L. G. Neto
 		dc.l    Robotnik_Ship-$07E2     ; loc_7C4BC
 		dc.w	$8C00
 		dc.l    ArtNem_GHZBoss-$07E2      ; loc_7D942
@@ -42605,139 +42605,139 @@ Invencibility_Stars: ; loc_6E114:
 Unused_Dust: ; loc_6E1FC:
 		binclude	"data\sprites\dust.dat"
 Tails_Mappings: ; loc_6FB3C:
-		dc.w    loc_6FC46-Tails_Mappings
-		dc.w    loc_6FC48-Tails_Mappings
-		dc.w    loc_6FC5A-Tails_Mappings
-		dc.w    loc_6FC6C-Tails_Mappings
-		dc.w    loc_6FC7E-Tails_Mappings
-		dc.w    loc_6FC90-Tails_Mappings
-		dc.w    loc_6FC9A-Tails_Mappings
-		dc.w    loc_6FCA4-Tails_Mappings
-		dc.w    loc_6FCB6-Tails_Mappings
-		dc.w    loc_6FCC8-Tails_Mappings
-		dc.w    loc_6FCd2-Tails_Mappings
-		dc.w    loc_6FCDC-Tails_Mappings
-		dc.w    loc_6FCE6-Tails_Mappings
-		dc.w    loc_6FCF0-Tails_Mappings
-		dc.w    loc_6FCFA-Tails_Mappings
-		dc.w    loc_6Fd14-Tails_Mappings
-		dc.w    loc_6Fd2E-Tails_Mappings
-		dc.w    loc_6Fd48-Tails_Mappings
-		dc.w    loc_6Fd62-Tails_Mappings
-		dc.w    loc_6Fd7C-Tails_Mappings
-		dc.w    loc_6FD96-Tails_Mappings
-		dc.w    loc_6FDB0-Tails_Mappings
-		dc.w    loc_6FDCA-Tails_Mappings
-		dc.w    loc_6FDE4-Tails_Mappings
-		dc.w    loc_6FDFE-Tails_Mappings
-		dc.w    loc_6FE18-Tails_Mappings
-		dc.w    loc_6FE32-Tails_Mappings
-		dc.w    loc_6FE4C-Tails_Mappings
-		dc.w    loc_6FE66-Tails_Mappings
-		dc.w    loc_6FE80-Tails_Mappings
-		dc.w    loc_6FE9A-Tails_Mappings
-		dc.w    loc_6FEB4-Tails_Mappings
-		dc.w    loc_6FECE-Tails_Mappings
-		dc.w    loc_6FEE8-Tails_Mappings
-		dc.w    loc_6FF02-Tails_Mappings
-		dc.w    loc_6FF1C-Tails_Mappings
-		dc.w    loc_6FF36-Tails_Mappings
-		dc.w    loc_6FF50-Tails_Mappings
-		dc.w    loc_6FF6A-Tails_Mappings
-		dc.w    loc_6FF7C-Tails_Mappings
-		dc.w    loc_6FF96-Tails_Mappings
-		dc.w    loc_6FFA8-Tails_Mappings
-		dc.w    loc_6FFC2-Tails_Mappings
-		dc.w    loc_6FFd4-Tails_Mappings
-		dc.w    loc_6FFEE-Tails_Mappings
-		dc.w    loc_70000-Tails_Mappings
-		dc.w    loc_7001A-Tails_Mappings
-		dc.w    loc_7002C-Tails_Mappings
-		dc.w    loc_7003E-Tails_Mappings
-		dc.w    loc_70050-Tails_Mappings
-		dc.w    loc_70062-Tails_Mappings
-		dc.w    loc_70074-Tails_Mappings
-		dc.w    loc_70086-Tails_Mappings
-		dc.w    loc_700A0-Tails_Mappings
-		dc.w    loc_700BA-Tails_Mappings
-		dc.w    loc_700d4-Tails_Mappings
-		dc.w    loc_700EE-Tails_Mappings
-		dc.w    loc_70108-Tails_Mappings
-		dc.w    loc_70122-Tails_Mappings
-		dc.w    loc_7013C-Tails_Mappings
-		dc.w    loc_70156-Tails_Mappings
-		dc.w    loc_7013C-Tails_Mappings
-		dc.w    loc_70170-Tails_Mappings
-		dc.w    loc_7018A-Tails_Mappings
-		dc.w    loc_701A4-Tails_Mappings
-		dc.w    loc_701BE-Tails_Mappings
-		dc.w    loc_701D8-Tails_Mappings
-		dc.w    loc_701F2-Tails_Mappings
-		dc.w    loc_7020C-Tails_Mappings
-		dc.w    loc_70226-Tails_Mappings
-		dc.w    loc_70240-Tails_Mappings
-		dc.w    loc_7024A-Tails_Mappings
-		dc.w    loc_70254-Tails_Mappings
-		dc.w    loc_7025E-Tails_Mappings
-		dc.w    loc_70268-Tails_Mappings
-		dc.w    loc_70272-Tails_Mappings
-		dc.w    loc_7027C-Tails_Mappings
-		dc.w    loc_70286-Tails_Mappings
-		dc.w    loc_70290-Tails_Mappings
-		dc.w    loc_7029A-Tails_Mappings
-		dc.w    loc_702A4-Tails_Mappings
-		dc.w    loc_702AE-Tails_Mappings
-		dc.w    loc_702B8-Tails_Mappings
-		dc.w    loc_702C2-Tails_Mappings
-		dc.w    loc_702CC-Tails_Mappings
-		dc.w    loc_702d6-Tails_Mappings
-		dc.w    loc_702E0-Tails_Mappings
-		dc.w    loc_702EA-Tails_Mappings
-		dc.w    loc_702F4-Tails_Mappings
-		dc.w    loc_702FE-Tails_Mappings
-		dc.w    loc_70310-Tails_Mappings
-		dc.w    loc_70322-Tails_Mappings
-		dc.w    loc_7032C-Tails_Mappings
-		dc.w    loc_70336-Tails_Mappings
-		dc.w    loc_70340-Tails_Mappings
-		dc.w    loc_70352-Tails_Mappings
-		dc.w    loc_70364-Tails_Mappings
-		dc.w    loc_7036E-Tails_Mappings
-		dc.w    loc_70378-Tails_Mappings
-		dc.w    loc_70382-Tails_Mappings
-		dc.w    loc_70394-Tails_Mappings
-		dc.w    loc_703A6-Tails_Mappings
-		dc.w    loc_703B8-Tails_Mappings
-		dc.w    loc_703CA-Tails_Mappings
-		dc.w    loc_703DC-Tails_Mappings
-		dc.w    loc_703EE-Tails_Mappings
-		dc.w    loc_70400-Tails_Mappings
-		dc.w    loc_70412-Tails_Mappings
-		dc.w    loc_7041C-Tails_Mappings
-		dc.w    loc_7042E-Tails_Mappings
-		dc.w    loc_70440-Tails_Mappings
-		dc.w    loc_70452-Tails_Mappings
-		dc.w    loc_70464-Tails_Mappings
-		dc.w    loc_70476-Tails_Mappings
-		dc.w    loc_70488-Tails_Mappings
-		dc.w    loc_7049A-Tails_Mappings
-		dc.w    loc_704AC-Tails_Mappings
-		dc.w    loc_704B6-Tails_Mappings
-		dc.w    loc_704C0-Tails_Mappings
-		dc.w    loc_704d2-Tails_Mappings
-		dc.w    loc_704DC-Tails_Mappings
-		dc.w    loc_704E6-Tails_Mappings
-		dc.w    loc_704F0-Tails_Mappings
-		dc.w    loc_704FA-Tails_Mappings
-		dc.w    loc_70504-Tails_Mappings
-		dc.w    loc_7050E-Tails_Mappings
-		dc.w    loc_70518-Tails_Mappings
-		dc.w    loc_70522-Tails_Mappings
-		dc.w    loc_70534-Tails_Mappings
-		dc.w    loc_70546-Tails_Mappings
-		dc.w    loc_70550-Tails_Mappings
-		dc.w    loc_7055A-Tails_Mappings
-		dc.w    loc_70564-Tails_Mappings
+		dc.w	loc_6FC46-Tails_Mappings
+		dc.w	loc_6FC48-Tails_Mappings
+		dc.w	loc_6FC5A-Tails_Mappings
+		dc.w	loc_6FC6C-Tails_Mappings
+		dc.w	loc_6FC7E-Tails_Mappings
+		dc.w	loc_6FC90-Tails_Mappings
+		dc.w	loc_6FC9A-Tails_Mappings
+		dc.w	loc_6FCA4-Tails_Mappings
+		dc.w	loc_6FCB6-Tails_Mappings
+		dc.w	loc_6FCC8-Tails_Mappings
+		dc.w	loc_6FCd2-Tails_Mappings
+		dc.w	loc_6FCDC-Tails_Mappings
+		dc.w	loc_6FCE6-Tails_Mappings
+		dc.w	loc_6FCF0-Tails_Mappings
+		dc.w	loc_6FCFA-Tails_Mappings
+		dc.w	loc_6Fd14-Tails_Mappings
+		dc.w	loc_6Fd2E-Tails_Mappings
+		dc.w	loc_6Fd48-Tails_Mappings
+		dc.w	loc_6Fd62-Tails_Mappings
+		dc.w	loc_6Fd7C-Tails_Mappings
+		dc.w	loc_6FD96-Tails_Mappings
+		dc.w	loc_6FDB0-Tails_Mappings
+		dc.w	loc_6FDCA-Tails_Mappings
+		dc.w	loc_6FDE4-Tails_Mappings
+		dc.w	loc_6FDFE-Tails_Mappings
+		dc.w	loc_6FE18-Tails_Mappings
+		dc.w	loc_6FE32-Tails_Mappings
+		dc.w	loc_6FE4C-Tails_Mappings
+		dc.w	loc_6FE66-Tails_Mappings
+		dc.w	loc_6FE80-Tails_Mappings
+		dc.w	loc_6FE9A-Tails_Mappings
+		dc.w	loc_6FEB4-Tails_Mappings
+		dc.w	loc_6FECE-Tails_Mappings
+		dc.w	loc_6FEE8-Tails_Mappings
+		dc.w	loc_6FF02-Tails_Mappings
+		dc.w	loc_6FF1C-Tails_Mappings
+		dc.w	loc_6FF36-Tails_Mappings
+		dc.w	loc_6FF50-Tails_Mappings
+		dc.w	loc_6FF6A-Tails_Mappings
+		dc.w	loc_6FF7C-Tails_Mappings
+		dc.w	loc_6FF96-Tails_Mappings
+		dc.w	loc_6FFA8-Tails_Mappings
+		dc.w	loc_6FFC2-Tails_Mappings
+		dc.w	loc_6FFd4-Tails_Mappings
+		dc.w	loc_6FFEE-Tails_Mappings
+		dc.w	loc_70000-Tails_Mappings
+		dc.w	loc_7001A-Tails_Mappings
+		dc.w	loc_7002C-Tails_Mappings
+		dc.w	loc_7003E-Tails_Mappings
+		dc.w	loc_70050-Tails_Mappings
+		dc.w	loc_70062-Tails_Mappings
+		dc.w	loc_70074-Tails_Mappings
+		dc.w	loc_70086-Tails_Mappings
+		dc.w	loc_700A0-Tails_Mappings
+		dc.w	loc_700BA-Tails_Mappings
+		dc.w	loc_700d4-Tails_Mappings
+		dc.w	loc_700EE-Tails_Mappings
+		dc.w	loc_70108-Tails_Mappings
+		dc.w	loc_70122-Tails_Mappings
+		dc.w	loc_7013C-Tails_Mappings
+		dc.w	loc_70156-Tails_Mappings
+		dc.w	loc_7013C-Tails_Mappings
+		dc.w	loc_70170-Tails_Mappings
+		dc.w	loc_7018A-Tails_Mappings
+		dc.w	loc_701A4-Tails_Mappings
+		dc.w	loc_701BE-Tails_Mappings
+		dc.w	loc_701D8-Tails_Mappings
+		dc.w	loc_701F2-Tails_Mappings
+		dc.w	loc_7020C-Tails_Mappings
+		dc.w	loc_70226-Tails_Mappings
+		dc.w	loc_70240-Tails_Mappings
+		dc.w	loc_7024A-Tails_Mappings
+		dc.w	loc_70254-Tails_Mappings
+		dc.w	loc_7025E-Tails_Mappings
+		dc.w	loc_70268-Tails_Mappings
+		dc.w	loc_70272-Tails_Mappings
+		dc.w	loc_7027C-Tails_Mappings
+		dc.w	loc_70286-Tails_Mappings
+		dc.w	loc_70290-Tails_Mappings
+		dc.w	loc_7029A-Tails_Mappings
+		dc.w	loc_702A4-Tails_Mappings
+		dc.w	loc_702AE-Tails_Mappings
+		dc.w	loc_702B8-Tails_Mappings
+		dc.w	loc_702C2-Tails_Mappings
+		dc.w	loc_702CC-Tails_Mappings
+		dc.w	loc_702d6-Tails_Mappings
+		dc.w	loc_702E0-Tails_Mappings
+		dc.w	loc_702EA-Tails_Mappings
+		dc.w	loc_702F4-Tails_Mappings
+		dc.w	loc_702FE-Tails_Mappings
+		dc.w	loc_70310-Tails_Mappings
+		dc.w	loc_70322-Tails_Mappings
+		dc.w	loc_7032C-Tails_Mappings
+		dc.w	loc_70336-Tails_Mappings
+		dc.w	loc_70340-Tails_Mappings
+		dc.w	loc_70352-Tails_Mappings
+		dc.w	loc_70364-Tails_Mappings
+		dc.w	loc_7036E-Tails_Mappings
+		dc.w	loc_70378-Tails_Mappings
+		dc.w	loc_70382-Tails_Mappings
+		dc.w	loc_70394-Tails_Mappings
+		dc.w	loc_703A6-Tails_Mappings
+		dc.w	loc_703B8-Tails_Mappings
+		dc.w	loc_703CA-Tails_Mappings
+		dc.w	loc_703DC-Tails_Mappings
+		dc.w	loc_703EE-Tails_Mappings
+		dc.w	loc_70400-Tails_Mappings
+		dc.w	loc_70412-Tails_Mappings
+		dc.w	loc_7041C-Tails_Mappings
+		dc.w	loc_7042E-Tails_Mappings
+		dc.w	loc_70440-Tails_Mappings
+		dc.w	loc_70452-Tails_Mappings
+		dc.w	loc_70464-Tails_Mappings
+		dc.w	loc_70476-Tails_Mappings
+		dc.w	loc_70488-Tails_Mappings
+		dc.w	loc_7049A-Tails_Mappings
+		dc.w	loc_704AC-Tails_Mappings
+		dc.w	loc_704B6-Tails_Mappings
+		dc.w	loc_704C0-Tails_Mappings
+		dc.w	loc_704d2-Tails_Mappings
+		dc.w	loc_704DC-Tails_Mappings
+		dc.w	loc_704E6-Tails_Mappings
+		dc.w	loc_704F0-Tails_Mappings
+		dc.w	loc_704FA-Tails_Mappings
+		dc.w	loc_70504-Tails_Mappings
+		dc.w	loc_7050E-Tails_Mappings
+		dc.w	loc_70518-Tails_Mappings
+		dc.w	loc_70522-Tails_Mappings
+		dc.w	loc_70534-Tails_Mappings
+		dc.w	loc_70546-Tails_Mappings
+		dc.w	loc_70550-Tails_Mappings
+		dc.w	loc_7055A-Tails_Mappings
+		dc.w	loc_70564-Tails_Mappings
 loc_6FC46:
 		dc.w	$0000
 loc_6FC48:
@@ -43179,139 +43179,139 @@ loc_70564:
 		dc.w	$0001
 		dc.l	$F8090000,$0000FFE0
 Tails_Dyn_Script: ; loc_7056E:   
-		dc.w    loc_70678-Tails_Dyn_Script
-		dc.w    loc_7067A-Tails_Dyn_Script
-		dc.w    loc_70680-Tails_Dyn_Script
-		dc.w    loc_70686-Tails_Dyn_Script
-		dc.w    loc_7068C-Tails_Dyn_Script
-		dc.w    loc_70692-Tails_Dyn_Script
-		dc.w    loc_70696-Tails_Dyn_Script
-		dc.w    loc_7069A-Tails_Dyn_Script
-		dc.w    loc_706A0-Tails_Dyn_Script
-		dc.w    loc_706A6-Tails_Dyn_Script
-		dc.w    loc_706AA-Tails_Dyn_Script
-		dc.w    loc_706AE-Tails_Dyn_Script
-		dc.w    loc_706B2-Tails_Dyn_Script
-		dc.w    loc_706B6-Tails_Dyn_Script
-		dc.w    loc_706BA-Tails_Dyn_Script
-		dc.w    loc_706C2-Tails_Dyn_Script
-		dc.w    loc_706CA-Tails_Dyn_Script
-		dc.w    loc_706d2-Tails_Dyn_Script
-		dc.w    loc_706DA-Tails_Dyn_Script
-		dc.w    loc_706E2-Tails_Dyn_Script
-		dc.w    loc_706EA-Tails_Dyn_Script
-		dc.w    loc_706F2-Tails_Dyn_Script
-		dc.w    loc_706FA-Tails_Dyn_Script
-		dc.w    loc_70702-Tails_Dyn_Script
-		dc.w    loc_7070A-Tails_Dyn_Script
-		dc.w    loc_70712-Tails_Dyn_Script
-		dc.w    loc_7071A-Tails_Dyn_Script
-		dc.w    loc_70722-Tails_Dyn_Script
-		dc.w    loc_7072A-Tails_Dyn_Script
-		dc.w    loc_70732-Tails_Dyn_Script
-		dc.w    loc_7073A-Tails_Dyn_Script
-		dc.w    loc_70742-Tails_Dyn_Script
-		dc.w    loc_7074A-Tails_Dyn_Script
-		dc.w    loc_70752-Tails_Dyn_Script
-		dc.w    loc_7075A-Tails_Dyn_Script
-		dc.w    loc_70762-Tails_Dyn_Script
-		dc.w    loc_7076A-Tails_Dyn_Script
-		dc.w    loc_70772-Tails_Dyn_Script
-		dc.w    loc_7077A-Tails_Dyn_Script
-		dc.w    loc_70780-Tails_Dyn_Script
-		dc.w    loc_70788-Tails_Dyn_Script
-		dc.w    loc_7078E-Tails_Dyn_Script
-		dc.w    loc_70796-Tails_Dyn_Script
-		dc.w    loc_7079C-Tails_Dyn_Script
-		dc.w    loc_707A4-Tails_Dyn_Script
-		dc.w    loc_707AA-Tails_Dyn_Script
-		dc.w    loc_707B2-Tails_Dyn_Script
-		dc.w    loc_707B8-Tails_Dyn_Script
-		dc.w    loc_707BE-Tails_Dyn_Script
-		dc.w    loc_707B8-Tails_Dyn_Script
-		dc.w    loc_707C4-Tails_Dyn_Script
-		dc.w    loc_707CA-Tails_Dyn_Script
-		dc.w    loc_707d0-Tails_Dyn_Script
-		dc.w    loc_707D8-Tails_Dyn_Script
-		dc.w    loc_707E0-Tails_Dyn_Script
-		dc.w    loc_707E8-Tails_Dyn_Script
-		dc.w    loc_707F0-Tails_Dyn_Script
-		dc.w    loc_707F8-Tails_Dyn_Script
-		dc.w    loc_70800-Tails_Dyn_Script
-		dc.w    loc_70808-Tails_Dyn_Script
-		dc.w    loc_70810-Tails_Dyn_Script
-		dc.w    loc_70808-Tails_Dyn_Script
-		dc.w    loc_70818-Tails_Dyn_Script
-		dc.w    loc_70820-Tails_Dyn_Script
-		dc.w    loc_70828-Tails_Dyn_Script
-		dc.w    loc_70830-Tails_Dyn_Script
-		dc.w    loc_70838-Tails_Dyn_Script
-		dc.w    loc_70840-Tails_Dyn_Script
-		dc.w    loc_70848-Tails_Dyn_Script
-		dc.w    loc_70850-Tails_Dyn_Script
-		dc.w    loc_70858-Tails_Dyn_Script
-		dc.w    loc_7085C-Tails_Dyn_Script
-		dc.w    loc_70860-Tails_Dyn_Script
-		dc.w    loc_70864-Tails_Dyn_Script
-		dc.w    loc_70868-Tails_Dyn_Script
-		dc.w    loc_7086C-Tails_Dyn_Script
-		dc.w    loc_70870-Tails_Dyn_Script
-		dc.w    loc_70874-Tails_Dyn_Script
-		dc.w    loc_70878-Tails_Dyn_Script
-		dc.w    loc_7087C-Tails_Dyn_Script
-		dc.w    loc_70880-Tails_Dyn_Script
-		dc.w    loc_70884-Tails_Dyn_Script
-		dc.w    loc_70888-Tails_Dyn_Script
-		dc.w    loc_7088C-Tails_Dyn_Script
-		dc.w    loc_70890-Tails_Dyn_Script
-		dc.w    loc_70894-Tails_Dyn_Script
-		dc.w    loc_70898-Tails_Dyn_Script
-		dc.w    loc_7089C-Tails_Dyn_Script
-		dc.w    loc_708A0-Tails_Dyn_Script
-		dc.w    loc_708A4-Tails_Dyn_Script
-		dc.w    loc_708AA-Tails_Dyn_Script
-		dc.w    loc_708B0-Tails_Dyn_Script
-		dc.w    loc_708B4-Tails_Dyn_Script
-		dc.w    loc_708B8-Tails_Dyn_Script
-		dc.w    loc_708BC-Tails_Dyn_Script
-		dc.w    loc_708BC-Tails_Dyn_Script
-		dc.w    loc_708C2-Tails_Dyn_Script
-		dc.w    loc_708C6-Tails_Dyn_Script
-		dc.w    loc_708CA-Tails_Dyn_Script
-		dc.w    loc_708CE-Tails_Dyn_Script
-		dc.w    loc_708d4-Tails_Dyn_Script
-		dc.w    loc_708DA-Tails_Dyn_Script
-		dc.w    loc_708E0-Tails_Dyn_Script
-		dc.w    loc_708E6-Tails_Dyn_Script
-		dc.w    loc_708EC-Tails_Dyn_Script
-		dc.w    loc_708F2-Tails_Dyn_Script
-		dc.w    loc_708F8-Tails_Dyn_Script
-		dc.w    loc_708FE-Tails_Dyn_Script
-		dc.w    loc_70902-Tails_Dyn_Script
-		dc.w    loc_70908-Tails_Dyn_Script
-		dc.w    loc_7090E-Tails_Dyn_Script
-		dc.w    loc_70914-Tails_Dyn_Script
-		dc.w    loc_7090E-Tails_Dyn_Script
-		dc.w    loc_7091A-Tails_Dyn_Script
-		dc.w    loc_7091A-Tails_Dyn_Script
-		dc.w    loc_70920-Tails_Dyn_Script
-		dc.w    loc_70926-Tails_Dyn_Script
-		dc.w    loc_7092A-Tails_Dyn_Script
-		dc.w    loc_7092E-Tails_Dyn_Script
-		dc.w    loc_70934-Tails_Dyn_Script
-		dc.w    loc_70938-Tails_Dyn_Script
-		dc.w    loc_7093C-Tails_Dyn_Script
-		dc.w    loc_70940-Tails_Dyn_Script
-		dc.w    loc_70944-Tails_Dyn_Script
-		dc.w    loc_70948-Tails_Dyn_Script
-		dc.w    loc_7094C-Tails_Dyn_Script
-		dc.w    loc_70950-Tails_Dyn_Script
-		dc.w    loc_70954-Tails_Dyn_Script
-		dc.w    loc_7095A-Tails_Dyn_Script
-		dc.w    loc_70864-Tails_Dyn_Script
-		dc.w    loc_70868-Tails_Dyn_Script
-		dc.w    loc_7086C-Tails_Dyn_Script
-		dc.w    loc_70870-Tails_Dyn_Script
+		dc.w	loc_70678-Tails_Dyn_Script
+		dc.w	loc_7067A-Tails_Dyn_Script
+		dc.w	loc_70680-Tails_Dyn_Script
+		dc.w	loc_70686-Tails_Dyn_Script
+		dc.w	loc_7068C-Tails_Dyn_Script
+		dc.w	loc_70692-Tails_Dyn_Script
+		dc.w	loc_70696-Tails_Dyn_Script
+		dc.w	loc_7069A-Tails_Dyn_Script
+		dc.w	loc_706A0-Tails_Dyn_Script
+		dc.w	loc_706A6-Tails_Dyn_Script
+		dc.w	loc_706AA-Tails_Dyn_Script
+		dc.w	loc_706AE-Tails_Dyn_Script
+		dc.w	loc_706B2-Tails_Dyn_Script
+		dc.w	loc_706B6-Tails_Dyn_Script
+		dc.w	loc_706BA-Tails_Dyn_Script
+		dc.w	loc_706C2-Tails_Dyn_Script
+		dc.w	loc_706CA-Tails_Dyn_Script
+		dc.w	loc_706d2-Tails_Dyn_Script
+		dc.w	loc_706DA-Tails_Dyn_Script
+		dc.w	loc_706E2-Tails_Dyn_Script
+		dc.w	loc_706EA-Tails_Dyn_Script
+		dc.w	loc_706F2-Tails_Dyn_Script
+		dc.w	loc_706FA-Tails_Dyn_Script
+		dc.w	loc_70702-Tails_Dyn_Script
+		dc.w	loc_7070A-Tails_Dyn_Script
+		dc.w	loc_70712-Tails_Dyn_Script
+		dc.w	loc_7071A-Tails_Dyn_Script
+		dc.w	loc_70722-Tails_Dyn_Script
+		dc.w	loc_7072A-Tails_Dyn_Script
+		dc.w	loc_70732-Tails_Dyn_Script
+		dc.w	loc_7073A-Tails_Dyn_Script
+		dc.w	loc_70742-Tails_Dyn_Script
+		dc.w	loc_7074A-Tails_Dyn_Script
+		dc.w	loc_70752-Tails_Dyn_Script
+		dc.w	loc_7075A-Tails_Dyn_Script
+		dc.w	loc_70762-Tails_Dyn_Script
+		dc.w	loc_7076A-Tails_Dyn_Script
+		dc.w	loc_70772-Tails_Dyn_Script
+		dc.w	loc_7077A-Tails_Dyn_Script
+		dc.w	loc_70780-Tails_Dyn_Script
+		dc.w	loc_70788-Tails_Dyn_Script
+		dc.w	loc_7078E-Tails_Dyn_Script
+		dc.w	loc_70796-Tails_Dyn_Script
+		dc.w	loc_7079C-Tails_Dyn_Script
+		dc.w	loc_707A4-Tails_Dyn_Script
+		dc.w	loc_707AA-Tails_Dyn_Script
+		dc.w	loc_707B2-Tails_Dyn_Script
+		dc.w	loc_707B8-Tails_Dyn_Script
+		dc.w	loc_707BE-Tails_Dyn_Script
+		dc.w	loc_707B8-Tails_Dyn_Script
+		dc.w	loc_707C4-Tails_Dyn_Script
+		dc.w	loc_707CA-Tails_Dyn_Script
+		dc.w	loc_707d0-Tails_Dyn_Script
+		dc.w	loc_707D8-Tails_Dyn_Script
+		dc.w	loc_707E0-Tails_Dyn_Script
+		dc.w	loc_707E8-Tails_Dyn_Script
+		dc.w	loc_707F0-Tails_Dyn_Script
+		dc.w	loc_707F8-Tails_Dyn_Script
+		dc.w	loc_70800-Tails_Dyn_Script
+		dc.w	loc_70808-Tails_Dyn_Script
+		dc.w	loc_70810-Tails_Dyn_Script
+		dc.w	loc_70808-Tails_Dyn_Script
+		dc.w	loc_70818-Tails_Dyn_Script
+		dc.w	loc_70820-Tails_Dyn_Script
+		dc.w	loc_70828-Tails_Dyn_Script
+		dc.w	loc_70830-Tails_Dyn_Script
+		dc.w	loc_70838-Tails_Dyn_Script
+		dc.w	loc_70840-Tails_Dyn_Script
+		dc.w	loc_70848-Tails_Dyn_Script
+		dc.w	loc_70850-Tails_Dyn_Script
+		dc.w	loc_70858-Tails_Dyn_Script
+		dc.w	loc_7085C-Tails_Dyn_Script
+		dc.w	loc_70860-Tails_Dyn_Script
+		dc.w	loc_70864-Tails_Dyn_Script
+		dc.w	loc_70868-Tails_Dyn_Script
+		dc.w	loc_7086C-Tails_Dyn_Script
+		dc.w	loc_70870-Tails_Dyn_Script
+		dc.w	loc_70874-Tails_Dyn_Script
+		dc.w	loc_70878-Tails_Dyn_Script
+		dc.w	loc_7087C-Tails_Dyn_Script
+		dc.w	loc_70880-Tails_Dyn_Script
+		dc.w	loc_70884-Tails_Dyn_Script
+		dc.w	loc_70888-Tails_Dyn_Script
+		dc.w	loc_7088C-Tails_Dyn_Script
+		dc.w	loc_70890-Tails_Dyn_Script
+		dc.w	loc_70894-Tails_Dyn_Script
+		dc.w	loc_70898-Tails_Dyn_Script
+		dc.w	loc_7089C-Tails_Dyn_Script
+		dc.w	loc_708A0-Tails_Dyn_Script
+		dc.w	loc_708A4-Tails_Dyn_Script
+		dc.w	loc_708AA-Tails_Dyn_Script
+		dc.w	loc_708B0-Tails_Dyn_Script
+		dc.w	loc_708B4-Tails_Dyn_Script
+		dc.w	loc_708B8-Tails_Dyn_Script
+		dc.w	loc_708BC-Tails_Dyn_Script
+		dc.w	loc_708BC-Tails_Dyn_Script
+		dc.w	loc_708C2-Tails_Dyn_Script
+		dc.w	loc_708C6-Tails_Dyn_Script
+		dc.w	loc_708CA-Tails_Dyn_Script
+		dc.w	loc_708CE-Tails_Dyn_Script
+		dc.w	loc_708d4-Tails_Dyn_Script
+		dc.w	loc_708DA-Tails_Dyn_Script
+		dc.w	loc_708E0-Tails_Dyn_Script
+		dc.w	loc_708E6-Tails_Dyn_Script
+		dc.w	loc_708EC-Tails_Dyn_Script
+		dc.w	loc_708F2-Tails_Dyn_Script
+		dc.w	loc_708F8-Tails_Dyn_Script
+		dc.w	loc_708FE-Tails_Dyn_Script
+		dc.w	loc_70902-Tails_Dyn_Script
+		dc.w	loc_70908-Tails_Dyn_Script
+		dc.w	loc_7090E-Tails_Dyn_Script
+		dc.w	loc_70914-Tails_Dyn_Script
+		dc.w	loc_7090E-Tails_Dyn_Script
+		dc.w	loc_7091A-Tails_Dyn_Script
+		dc.w	loc_7091A-Tails_Dyn_Script
+		dc.w	loc_70920-Tails_Dyn_Script
+		dc.w	loc_70926-Tails_Dyn_Script
+		dc.w	loc_7092A-Tails_Dyn_Script
+		dc.w	loc_7092E-Tails_Dyn_Script
+		dc.w	loc_70934-Tails_Dyn_Script
+		dc.w	loc_70938-Tails_Dyn_Script
+		dc.w	loc_7093C-Tails_Dyn_Script
+		dc.w	loc_70940-Tails_Dyn_Script
+		dc.w	loc_70944-Tails_Dyn_Script
+		dc.w	loc_70948-Tails_Dyn_Script
+		dc.w	loc_7094C-Tails_Dyn_Script
+		dc.w	loc_70950-Tails_Dyn_Script
+		dc.w	loc_70954-Tails_Dyn_Script
+		dc.w	loc_7095A-Tails_Dyn_Script
+		dc.w	loc_70864-Tails_Dyn_Script
+		dc.w	loc_70868-Tails_Dyn_Script
+		dc.w	loc_7086C-Tails_Dyn_Script
+		dc.w	loc_70870-Tails_Dyn_Script
 loc_70678:
 		dc.w	$0000
 loc_7067A:
