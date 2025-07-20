@@ -11534,7 +11534,7 @@ ChkAnimalInRange:
 		move.w	(MainCharacter+8).w,d0
 		sub.w	8(a0),d0
 		subi.w	#$B8,d0
-		rts   
+		rts 
 ; End of function ChkAnimalInRange
 
 ; ===========================================================================
@@ -12074,11 +12074,11 @@ Obj37_Sparkle:
 Obj37_Delete:
 		bra.w	DeleteObject
 
-;=============================================================================== 
-; Object 0x4B - Big Ring (Special Stage Access)   
+;===============================================================================
+; Object 0x4B - Big Ring (Special Stage Access) 
 ;               Unused - Sonic 1 LeftOver
 ; [ Begin ]
-;===============================================================================		     
+;===============================================================================
 Obj_0x4B_Big_Ring: ; loc_AEB6:  
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -12613,7 +12613,7 @@ loc_B64C:
 		cmp.w	d2,d1
 		bcc.s	loc_B644
 		moveq	#-1,d1
-		rts    
+		rts  
 loc_B66A:
 		dc.w    loc_B680-loc_B66A
 		dc.w    loc_B684-loc_B66A
@@ -14455,7 +14455,7 @@ DeleteObject2:
 		; delete the object by setting all of its bytes to 0
 -		move.l	d1,(a1)+
 		dbf	d0,-
-		rts   
+		rts 
 ; End of function DeleteObject
 
 ; ---------------------------------------------------------------------------
@@ -15385,7 +15385,7 @@ Adjust2PArtPointer: ; loc_DC30:
 		andi.w	#$F800,$0002(a0)
 		add.w   d0,$0002(a0)
 loc_DC4A:
-		rts  
+		rts
 ;=============================================================================== 
 ; Sub Routine Adjust2PArtPointer         
 ; [ End ]				 2P Mode Objects Attributes #1
@@ -15476,7 +15476,7 @@ loc_DCCE:
 loc_Dd00:
 		move.w	d0,(a2)+
 		dbf	d1,loc_DCCE
-		rts      
+		rts    
 loc_Dd08:
 		dc.b	$08,$08,$08,$08,$10,$10,$10,$10,$18,$18,$18,$18,$20,$20,$20,$20  
 loc_Dd18: 
@@ -15507,7 +15507,7 @@ loc_Dd28:
 loc_Dd5C:
 		move.w	d0,(a2)+
 		dbf	d1,loc_Dd28
-		rts           
+		rts         
 loc_Dd64:
 		dc.b	$00,$00,$01,$01,$04,$04,$05,$05,$08,$08,$09,$09,$0C,$0C,$0D,$0D 
 loc_Dd74:  
@@ -15541,7 +15541,7 @@ loc_DD84:
 loc_DDC0:
 		move.w	d0,(a2)+
 		dbf	d1,loc_DD84
-		rts               
+		rts             
 loc_DDC8:
 		dc.b	$08,$08,$08,$08,$10,$10,$10,$10,$18,$18,$18,$18,$20,$20,$20,$20
 loc_DDD8:
@@ -15559,7 +15559,7 @@ loc_DDD8:
 		rts
 loc_DDFC:
 		moveq	#1,d0
-		rts   
+		rts 
 ;loc_DE00:
 		moveq	#0,d1
 		move.b	$0019(a0),d1
@@ -15923,7 +15923,7 @@ loc_E124:
 		lea	$0006(a0),A0
 		cmpa.l  A0,A4
 		bne.w	 loc_E0C4
-		rts     
+		rts   
 loc_E130:
 		dc.b	$00,$00,$01,$01,$04,$04,$05,$05,$08,$08,$09,$09,$0C,$0C,$0D,$0D  
 loc_E140: ; Load Rings routine
@@ -16361,7 +16361,7 @@ loc_E568:
 		bra.s	loc_E55A
 loc_E56C:
 		move.l	A0,(a4)
-		rts              
+		rts            
 loc_E570:
 		addq.w	#$02,d6
 		move.b	(a1),d2
@@ -16424,7 +16424,7 @@ loc_E5E8:
 		bra.s	loc_E5DA
 loc_E5EC:
 		move.l	A0,$0004(a4)   
-		rts  
+		rts
 loc_E5F2:
 		move.l	A1,-(sp)
 		lea	(Object_RAM_block_indices).w,A1
@@ -16468,7 +16468,7 @@ loc_E616:
 		nop
 loc_E64E:
 		subq.w	#1,A1
-		rts    
+		rts  
 loc_E652:
 		lea	(Object_RAM_block_indices).w,A1
 		lea	($FFFFBE00).w,A3
@@ -16514,7 +16514,7 @@ loc_E6B2:
 		dbf	d2,loc_E696 
 		moveq	#0,d2
 		movem.l (sp)+,A1/A3
-		rts       
+		rts     
 loc_E6C2:
 		tst.b	$0004(a0)
 		bpl.s	loc_E6d6
@@ -16544,7 +16544,7 @@ loc_E706:
 		move.b	(a0)+,$0028(a1)
 		moveq	#0,d0
 loc_E710:
-		rts    
+		rts  
 loc_E712:
 		tst.b	$0004(a0)
 		bpl.s	loc_E726
@@ -16956,7 +16956,7 @@ loc_EBA6:
 		bcc.w	 loc_EBCE
 		bsr.w	loc_EA3E
 loc_EBCE:
-		rts    
+		rts  
 loc_EBd0:
 		move.w	#$001B,d1
 		move.w	#8,d2
@@ -17656,7 +17656,7 @@ loc_F5E6:
 		move.w	d4,d2
 		bsr.w	loc_F960
 		moveq	#0,d4
-		rts     
+		rts   
 ; loc_F5F0:
 SolidObject45:
 		lea	(MainCharacter).w,A1
@@ -17885,7 +17885,7 @@ loc_F83A:
 		bclr	#$05,$0022(a1)
 loc_F848:
 		moveq	#0,d4
-		rts   
+		rts 
 loc_F84C:
 		tst.w	d3
 		bmi.s	loc_F858
@@ -18102,7 +18102,7 @@ loc_FA70:
 		move.w	d4,d2
 		bsr.w	loc_F8E4
 		moveq	#0,d4
-		rts        
+		rts      
 loc_FA7A:
 		tst.w	$0012(a1)
 		bmi.w	 loc_FB5E
@@ -19309,7 +19309,7 @@ loc_1053A:
 		move.w	d1,$12(a0)	; immediately reduce Sonic's upward speed to d1
 
 return_1054E:
-		rts  
+		rts
 ; ---------------------------------------------------------------------------
 ; loc_10550:
 Sonic_UpVelCap:
@@ -21298,7 +21298,7 @@ loc_1174C:
 		nop
 loc_1175A:
 		addq.l	#$04,sp
-		rts   
+		rts 
 ;=============================================================================== 
 ; Sub Routine Tails_Spindash
 ; [ End ]		         
@@ -21620,7 +21620,7 @@ loc_11A38:
 		move.w	#0,$0012(a0)
 		move.w	$0010(a0),$0014(a0)
 loc_11A64:
-		rts  
+		rts
 ;=============================================================================== 
 ; Sub Routine Tails_Floor
 ; [ End ]		         
@@ -21657,7 +21657,7 @@ loc_11AAA:
 		move.w	#0,(Chain_Bonus_counter).w
 		move.b	#$00,$0027(a0)
 		move.b	#$00,$0029(a0)
-		rts  
+		rts
 ;=============================================================================== 
 ; Sub Routine Tails_ResetTailsOnFloor
 ; [ End ]		         
@@ -22585,7 +22585,7 @@ loc_12616:
 		jsr	 AnimateSprite           ; (loc_d412)
 		jmp     DisplaySprite           ; (loc_d3C2)
 loc_12646:
-		rts    
+		rts  
 ; loc_12648:
 JmpTo4_DeleteObject:
 		jmp	(DeleteObject).l
@@ -23049,7 +23049,7 @@ loc_12E74:
 		addi.b	#$20,d2
 		andi.b	#$C0,d2
 		move.b	d2,$0026(a0)
-		rts    
+		rts  
 ;===============================================================================		
 Sonic_WalkVertR: ; loc_12E86:
 		move.w	$000C(a0),d2
@@ -23869,7 +23869,7 @@ loc_137E6:
 		beq.s	loc_137F2
 		move.b	d2,d3
 loc_137F2:
-		rts   
+		rts 
 		
 ;=============================================================================== 
 ; Sub Routine ChkFloorEdge
@@ -23899,7 +23899,7 @@ loc_1381E:
 		beq.s	loc_13844
 		move.b	#$00,d3
 loc_13844:
-		rts  
+		rts
 ;=============================================================================== 
 ; Sub Routine ChkFloorEdge
 ; [ End ]		         
@@ -24751,7 +24751,7 @@ loc_142d6:
 		move.w	(Water_Level_1).w,d0
 		cmp.w	$000C(a0),d0
 		bcs.w	 DisplaySprite           ; loc_d3C2
-		rts   
+		rts 
 loc_142F8:
 		dc.w	$0001,$0000,$0000,$0100,$0000,$0001,$0001,$0000
 		dc.w	$0100              
@@ -26680,7 +26680,7 @@ Obj16_Fall:
 		addi.w	#$E0,d0
 		cmp.w	$C(a0),d0
 		bcs.w	JmpTo12_DeleteObject
-		rts   
+		rts 
 ; ---------------------------------------------------------------------------
 ; Sprite mappings
 ; ---------------------------------------------------------------------------
@@ -29782,7 +29782,7 @@ loc_19404:
 		move.b	#$06,(a4)
 		move.w	#$0007,$003C(a0)
 loc_1944C:
-		rts     
+		rts   
 loc_1944E:
 		dc.w	$0000
 loc_19450:
@@ -32476,7 +32476,7 @@ loc_1BC22:
 		bcs.s	loc_1BC5A
 		move.b	#$00,$0038(a0)
 loc_1BC5A:
-		rts    
+		rts  
 loc_1BC5C:
 		dc.w	$0000,$0400,$0010,$0400,$FE00,$0020,$0000,$0400
 		dc.w	$0010,$FC00,$FE00,$0020
@@ -32926,7 +32926,7 @@ loc_1C176:
 		swap	d1
 		move.w	d1,$000E(a0)
 		clr.w	$000A(a0)
-		rts    
+		rts  
 loc_1C18A:
 		dc.w    loc_1C190-loc_1C18A
 		dc.w    loc_1C1BA-loc_1C18A
@@ -33231,7 +33231,7 @@ loc_1C604:
 		bhi.s	loc_1C630
 		move.b	#$00,$0038(a0)
 loc_1C630:
-		rts   
+		rts 
 loc_1C632:
 		dc.w    loc_1C63C-loc_1C632
 		dc.w    loc_1C64A-loc_1C632
@@ -34219,7 +34219,7 @@ loc_1d552:
 		move.w	d2,(a1)+
 		move.w	d1,(a1)+
 loc_1d57A:
-		rts   
+		rts 
 ;=============================================================================== 
 ; Object 0x78 - Chemical Plant - Rotanting Platforms / Down when Touch Platform 
 ; [ End ]		         
@@ -34866,7 +34866,7 @@ loc_1DE3C:
 		addi.l	#$00001800,$0036(a0)
 		move.l	d2,8(a0)
 		move.l	d3,$000C(a0)
-		rts      
+		rts    
 loc_1DE4E:		 
 		dc.w    loc_1DE56-loc_1DE4E
 		dc.w    loc_1DE5A-loc_1DE4E
@@ -35361,7 +35361,7 @@ loc_1E480:
 loc_1E4A2:
 		bra.w	JmpTo36_DeleteObject
 loc_1E4A6:
-		rts    
+		rts  
 loc_1E4A8:
 		dc.w    loc_1E4B8-loc_1E4A8
 		dc.w    loc_1E4BB-loc_1E4A8
@@ -36381,7 +36381,7 @@ loc_1F3F6:
 		rts
 loc_1F3FE:
 		move.b	#$00,$001C(a0)
-		rts        
+		rts      
 
 loc_1F406:
 		dc.w    loc_1F40C-loc_1F406
@@ -37130,7 +37130,7 @@ loc_1FEA4:
 		rts
 loc_1FEAE:
 		bset	#3,$2D(a1)
-		rts  
+		rts
 loc_1FEB6:
 		jsr	(SingleObjLoad2).l	; (loc_E788)
 		bne.s	loc_1FF2E
@@ -38031,7 +38031,7 @@ loc_2119E:
 		dbf	d6,loc_21198  
 		moveq	#0,d0
 Touch_Sizes: ; loc_211A8:		
-		rts  
+		rts
 		dc.b	$14,$14,$0C,$14,$14,$0C,$04,$10,$0C,$12,$10,$10,$06,$06,$18,$0C
 		dc.b	$0C,$10,$10,$0C,$08,$08,$14,$10,$14,$08,$0E,$0E,$18,$18,$28,$10
 		dc.b	$10,$18,$08,$10,$20,$70,$40,$20,$80,$20,$20,$20,$08,$08,$04,$04
@@ -38310,7 +38310,7 @@ loc_214F0:
 		rts
 Touch_E1: ; loc_214F6:		
 		addq.b	#1,$21(a1)
-		rts              
+		rts            
 J_Sonic_ResetOnFloor_00: ; loc_214FC:
 		jmp	(Sonic_ResetOnFloor).l	; loc_1090C
 loc_21502:
@@ -38434,7 +38434,7 @@ loc_21622:
 		rts
 loc_21642:
 		move.b	#0,-5(a2)
-		rts  
+		rts
 loc_2164A:
 		lea	(Chunk_Table+$400C),A1
 		moveq	#0,d0
@@ -38534,7 +38534,7 @@ loc_2170A:
 		move.w	$E(a0),$38(a1)
 		adda.w	#$20,A0
 		adda.w	#$48,A1
-		rts   
+		rts 
 S1SS_WaRiVramSet: ; loc_217F4:
 		dc.w	$142,$6142,$142,$142,$142,$142,$142,$6142
 		dc.w	$142,$6142,$142,$142,$142,$142,$142,$6142
@@ -38685,7 +38685,7 @@ loc_219CE:
 		clr.l   (a0)
 		clr.l   4(a0)
 loc_219FA:
-		rts    
+		rts  
 loc_219FC:		           
 		dc.b	$4B,$4C,$4D,$4E,$4B,$4C,$4D,$4E,$00,$00		
 S1SS_LayoutIndex: ; loc_21A06:		
