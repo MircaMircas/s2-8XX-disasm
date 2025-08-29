@@ -1,11 +1,9 @@
 # Compiler Crap
 s2built.bin
 s2built.prev.bin
-s2.log
-s2.lst
-s2.p
-s2.h
+main.log
+main.lst
+main.p
+main.h
 SonLVL INI Files/dllcache/
-README.md
-Sonic The Hedgehog 2 (Simon Wai Prototype).bin
 SonLVL INI Files/SonLVL.log
