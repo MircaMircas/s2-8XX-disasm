@@ -19,19 +19,32 @@ SMPS2ASMVer	= 1
 psgdelta	EQU 12
 ; ---------------------------------------------------------------------------
 ; Standard Octave Pitch Equates
-	enum smpsPitch10lo=$88,smpsPitch09lo=$94,smpsPitch08lo=$A0,smpsPitch07lo=$AC,smpsPitch06lo=$B8
-	enum smpsPitch05lo=$C4,smpsPitch04lo=$D0,smpsPitch03lo=$DC,smpsPitch02lo=$E8,smpsPitch01lo=$F4
-	enum smpsPitch00=$00,smpsPitch01hi=$0C,smpsPitch02hi=$18,smpsPitch03hi=$24,smpsPitch04hi=$30
-	enum smpsPitch05hi=$3C,smpsPitch06hi=$48,smpsPitch07hi=$54,smpsPitch08hi=$60,smpsPitch09hi=$6C
-	enum smpsPitch10hi=$78
+	enumconf	$C
+	enum		smpsPitch10lo=$88,smpsPitch09lo,smpsPitch08lo,smpsPitch07lo,smpsPitch06lo
+	nextenum	smpsPitch05lo,smpsPitch04lo,smpsPitch03lo,smpsPitch02lo,smpsPitch01lo
+	enum		smpsPitch00=$00,smpsPitch01hi,smpsPitch02hi,smpsPitch03hi,smpsPitch04hi
+	nextenum	smpsPitch05hi,smpsPitch06hi,smpsPitch07hi,smpsPitch08hi,smpsPitch09hi
+	nextenum	smpsPitch10hi
+	enumconf	1
 ; ---------------------------------------------------------------------------
 ; Note Equates
-	enum nRst=$80+0,nC0,nCs0,nD0,nEb0,nE0,nF0,nFs0,nG0,nAb0,nA0,nBb0,nB0,nC1,nCs1,nD1
-	enum nEb1=nD1+1,nE1,nF1,nFs1,nG1,nAb1,nA1,nBb1,nB1,nC2,nCs2,nD2,nEb2,nE2,nF2,nFs2
-	enum nG2=nFs2+1,nAb2,nA2,nBb2,nB2,nC3,nCs3,nD3,nEb3,nE3,nF3,nFs3,nG3,nAb3,nA3,nBb3
-	enum nB3=nBb3+1,nC4,nCs4,nD4,nEb4,nE4,nF4,nFs4,nG4,nAb4,nA4,nBb4,nB4,nC5,nCs5,nD5
-	enum nEb5=nD5+1,nE5,nF5,nFs5,nG5,nAb5,nA5,nBb5,nB5,nC6,nCs6,nD6,nEb6,nE6,nF6,nFs6
-	enum nG6=nFs6+1,nAb6,nA6,nBb6,nB6,nC7,nCs7,nD7,nEb7,nE7,nF7,nFs7,nG7,nAb7,nA7,nBb7
+	enum		nRst=$80
+	nextenum	nC0,nCs0,nDb0=nCs0,nD0,nDs0,nEb0=nDs0,nE0,nFb0=nE0,nEs0,nF0=nEs0
+	nextenum	nFs0,nGb0=nFs0,nG0,nGs0,nAb0=nGs0,nA0,nAs0,nBb0=nAs0,nB0,nCb1=nB0,nBs0
+	nextenum	nC1=nBs0,nCs1,nDb1=nCs1,nD1,nDs1,nEb1=nDs1,nE1,nFb1=nE1,nEs1,nF1=nEs1
+	nextenum	nFs1,nGb1=nFs1,nG1,nGs1,nAb1=nGs1,nA1,nAs1,nBb1=nAs1,nB1,nCb2=nB1,nBs1
+	nextenum	nC2=nBs1,nCs2,nDb2=nCs2,nD2,nDs2,nEb2=nDs2,nE2,nFb2=nE2,nEs2,nF2=nEs2
+	nextenum	nFs2,nGb2=nFs2,nG2,nGs2,nAb2=nGs2,nA2,nAs2,nBb2=nAs2,nB2,nCb3=nB2,nBs2
+	nextenum	nC3=nBs2,nCs3,nDb3=nCs3,nD3,nDs3,nEb3=nDs3,nE3,nFb3=nE3,nEs3,nF3=nEs3
+	nextenum	nFs3,nGb3=nFs3,nG3,nGs3,nAb3=nGs3,nA3,nAs3,nBb3=nAs3,nB3,nCb4=nB3,nBs3
+	nextenum	nC4=nBs3,nCs4,nDb4=nCs4,nD4,nDs4,nEb4=nDs4,nE4,nFb4=nE4,nEs4,nF4=nEs4
+	nextenum	nFs4,nGb4=nFs4,nG4,nGs4,nAb4=nGs4,nA4,nAs4,nBb4=nAs4,nB4,nCb5=nB4,nBs4
+	nextenum	nC5=nBs4,nCs5,nDb5=nCs5,nD5,nDs5,nEb5=nDs5,nE5,nFb5=nE5,nEs5,nF5=nEs5
+	nextenum	nFs5,nGb5=nFs5,nG5,nGs5,nAb5=nGs5,nA5,nAs5,nBb5=nAs5,nB5,nCb6=nB5,nBs5
+	nextenum	nC6=nBs5,nCs6,nDb6=nCs6,nD6,nDs6,nEb6=nDs6,nE6,nFb6=nE6,nEs6,nF6=nEs6
+	nextenum	nFs6,nGb6=nFs6,nG6,nGs6,nAb6=nGs6,nA6,nAs6,nBb6=nAs6,nB6,nCb7=nB6,nBs6
+	nextenum	nC7=nBs6,nCs7,nDb7=nCs7,nD7,nDs7,nEb7=nDs7,nE7,nFb7=nE7,nEs7,nF7=nEs7
+	nextenum	nFs7,nGb7=nFs7,nG7,nGs7,nAb7=nGs7,nA7,nAs7,nBb7=nAs7
 ; SMPS2ASM uses nMaxPSG for songs from S1/S2 drivers.
 ; nMaxPSG1 and nMaxPSG2 are used only for songs from S3/S&K/S3D drivers.
 ; The use of psgdelta is intended to undo the effects of PSGPitchConvert
@@ -47,90 +60,112 @@ nMaxPSG2			EQU nB6
 	endif
 ; ---------------------------------------------------------------------------
 ; PSG volume envelope equates
-	if SonicDriverVer==1
-		enum fTone_01=$01,fTone_02,fTone_03,fTone_04,fTone_05,fTone_06
-		enum fTone_07=fTone_06+1,fTone_08,fTone_09
-	elseif SonicDriverVer==2
-		enum fTone_01=$01,fTone_02,fTone_03,fTone_04,fTone_05,fTone_06
-		enum fTone_07=fTone_06+1,fTone_08,fTone_09,fTone_0A,fTone_0B,fTone_0C
-		enum fTone_0D=fTone_0C+1
-	else
-		enum sTone_01=$01,sTone_02,sTone_03,sTone_04,sTone_05,sTone_06
-		enum sTone_07=sTone_06+1,sTone_08,sTone_09,sTone_0A,sTone_0B,sTone_0C
-		enum sTone_0D=sTone_0C+1,sTone_0E,sTone_0F,sTone_10,sTone_11,sTone_12
-		enum sTone_13=sTone_12+1,sTone_14,sTone_15,sTone_16,sTone_17,sTone_18
-		enum sTone_19=sTone_18+1,sTone_1A,sTone_1B,sTone_1C,sTone_1D,sTone_1E
-		enum sTone_1F=sTone_1E+1,sTone_20,sTone_21,sTone_22,sTone_23,sTone_24
-		enum sTone_25=sTone_24+1,sTone_26,sTone_27
-		; For conversions:
-		if SonicDriverVer>=5
-			enum fTone_01=$28,fTone_02,fTone_03,fTone_04,fTone_05,fTone_06
-			enum fTone_07=fTone_06+1,fTone_08,fTone_09,fTone_0A,fTone_0B,fTone_0C
-			enum fTone_0D=fTone_0C+1
-		endif
-	endif
+	switch SonicDriverVer
+		case 1
+			enum		fTone_01=$01,fTone_02,fTone_03,fTone_04,fTone_05,fTone_06
+			nextenum	fTone_07,fTone_08,fTone_09
+		case 2
+			enum		fTone_01=$01,fTone_02,fTone_03,fTone_04,fTone_05,fTone_06
+			nextenum	fTone_07,fTone_08,fTone_09,fTone_0A,fTone_0B,fTone_0C
+			nextenum	fTone_0D
+		elsecase;SonicDriverVer>=3
+			enum		sTone_01=$01,sTone_02,sTone_03,sTone_04,sTone_05,sTone_06
+			nextenum	sTone_07,sTone_08,sTone_09,sTone_0A,sTone_0B,sTone_0C
+			nextenum	sTone_0D,sTone_0E,sTone_0F,sTone_10,sTone_11,sTone_12
+			nextenum	sTone_13,sTone_14,sTone_15,sTone_16,sTone_17,sTone_18
+			nextenum	sTone_19,sTone_1A,sTone_1B,sTone_1C,sTone_1D,sTone_1E
+			nextenum	sTone_1F,sTone_20,sTone_21,sTone_22,sTone_23,sTone_24
+			nextenum	sTone_25,sTone_26,sTone_27
+			; For conversions:
+			if SonicDriverVer>=5
+				nextenum	fTone_01,fTone_02,fTone_03,fTone_04,fTone_05,fTone_06
+				nextenum	fTone_07,fTone_08,fTone_09,fTone_0A,fTone_0B,fTone_0C
+				nextenum	fTone_0D
+			endif
+	endcase
 ; ---------------------------------------------------------------------------
 ; DAC Equates
-	if SonicDriverVer==1
-		enum dKick=$81,dSnare,dTimpani
-		enum dHiTimpani=$88,dMidTimpani,dLowTimpani,dVLowTimpani
-	elseif SonicDriverVer==2
-		enum dKick=$81,dSnare,dClap,dScratch,dTimpani,dHiTom,dVLowClap,dHiTimpani,dMidTimpani
-		enum dLowTimpani=dMidTimpani+1,dVLowTimpani,dMidTom,dLowTom,dFloorTom,dHiClap
-		enum dMidClap=dHiClap+1,dLowClap
-	else;if SonicDriverVer>=3
-		if (use_s3_samples<>0)||(use_sk_samples<>0)||(use_s3d_samples<>0)
-			enum dSnareS3=$81,dHighTom,dMidTomS3,dLowTomS3,dFloorTomS3,dKickS3,dMuffledSnare
-			enum dCrashCymbal=dMuffledSnare+1,dRideCymbal,dLowMetalHit,dMetalHit,dHighMetalHit
-			enum dHigherMetalHit=dHighMetalHit+1,dMidMetalHit,dClapS3,dElectricHighTom
-			enum dElectricMidTom=dElectricHighTom+1,dElectricLowTom,dElectricFloorTom
-			enum dTightSnare=dElectricFloorTom+1,dMidpitchSnare,dLooseSnare,dLooserSnare
-			enum dHiTimpaniS3=dLooserSnare+1,dLowTimpaniS3,dMidTimpaniS3,dQuickLooseSnare
-			enum dClick=dQuickLooseSnare+1,dPowerKick,dQuickGlassCrash
-		endif
-		if (use_s3_samples<>0)||(use_sk_samples<>0)
-			enum dGlassCrashSnare=dQuickGlassCrash+1,dGlassCrash,dGlassCrashKick,dQuietGlassCrash
-			enum dOddSnareKick=dQuietGlassCrash+1,dKickExtraBass,dComeOn,dDanceSnare,dLooseKick
-			enum dModLooseKick=dLooseKick+1,dWoo,dGo,dSnareGo,dPowerTom,dHiWoodBlock,dLowWoodBlock
-			enum dHiHitDrum=dLowWoodBlock+1,dLowHitDrum,dMetalCrashHit,dEchoedClapHit
-			enum dLowerEchoedClapHit=dEchoedClapHit+1,dHipHopHitKick,dHipHopHitPowerKick
-			enum dBassHey=dHipHopHitPowerKick+1,dDanceStyleKick,dHipHopHitKick2,dHipHopHitKick3
-			enum dReverseFadingWind=dHipHopHitKick3+1,dScratchS3,dLooseSnareNoise,dPowerKick2
-			enum dCrashingNoiseWoo=dPowerKick2+1,dQuickHit,dKickHey,dPowerKickHit
-			enum dLowPowerKickHit=dPowerKickHit+1,dLowerPowerKickHit,dLowestPowerKickHit
-		endif
-		; For conversions:
-		if (use_s2_samples<>0)
+	switch SonicDriverVer
+		case 1
+			enum		dKick=$81,dSnare,dTimpani
+			enum		dHiTimpani=$88,dMidTimpani,dLowTimpani,dVLowTimpani
+		case 2
+			enum		dKick=$81,dSnare,dClap,dScratch,dTimpani,dHiTom,dVLowClap,dHiTimpani,dMidTimpani
+			nextenum	dLowTimpani,dVLowTimpani,dMidTom,dLowTom,dFloorTom,dHiClap
+			nextenum	dMidClap,dLowClap
+		case 3
+			enum		dSnareS3=$81,dHighTom,dMidTomS3,dLowTomS3,dFloorTomS3,dKickS3,dMuffledSnare
+			nextenum	dCrashCymbal,dRideCymbal,dLowMetalHit,dMetalHit,dHighMetalHit
+			nextenum	dHigherMetalHit,dMidMetalHit,dClapS3,dElectricHighTom
+			nextenum	dElectricMidTom,dElectricLowTom,dElectricFloorTom
+			nextenum	dTightSnare,dMidpitchSnare,dLooseSnare,dLooserSnare
+			nextenum	dHiTimpaniS3,dLowTimpaniS3,dMidTimpaniS3,dQuickLooseSnare
+			nextenum	dClick,dPowerKick,dQuickGlassCrash
+			nextenum	dGlassCrashSnare,dGlassCrash,dGlassCrashKick,dQuietGlassCrash
+			nextenum	dOddSnareKick,dKickExtraBass,dComeOn,dDanceSnare,dLooseKick
+			nextenum	dModLooseKick,dWoo,dGo,dSnareGo,dPowerTom,dHiWoodBlock,dLowWoodBlock
+			nextenum	dHiHitDrum,dLowHitDrum,dMetalCrashHit,dEchoedClapHit_S3
+			nextenum	dLowerEchoedClapHit_S3,dHipHopHitKick,dHipHopHitPowerKick
+			nextenum	dBassHey,dDanceStyleKick,dHipHopHitKick2,dHipHopHitKick3
+			nextenum	dReverseFadingWind,dScratchS3,dLooseSnareNoise,dPowerKick2
+			nextenum	dCrashingNoiseWoo,dQuickHit,dKickHey,dPowerKickHit
+			nextenum	dLowPowerKickHit,dLowerPowerKickHit,dLowestPowerKickHit
+		case 4
+			enum		dSnareS3=$81,dHighTom,dMidTomS3,dLowTomS3,dFloorTomS3,dKickS3,dMuffledSnare
+			nextenum	dCrashCymbal,dRideCymbal,dLowMetalHit,dMetalHit,dHighMetalHit
+			nextenum	dHigherMetalHit,dMidMetalHit,dClapS3,dElectricHighTom
+			nextenum	dElectricMidTom,dElectricLowTom,dElectricFloorTom
+			nextenum	dTightSnare,dMidpitchSnare,dLooseSnare,dLooserSnare
+			nextenum	dHiTimpaniS3,dLowTimpaniS3,dMidTimpaniS3,dQuickLooseSnare
+			nextenum	dClick,dPowerKick,dQuickGlassCrash
+			nextenum	dGlassCrashSnare,dGlassCrash,dGlassCrashKick,dQuietGlassCrash
+			nextenum	dOddSnareKick,dKickExtraBass,dComeOn,dDanceSnare,dLooseKick
+			nextenum	dModLooseKick,dWoo,dGo,dSnareGo,dPowerTom,dHiWoodBlock,dLowWoodBlock
+			nextenum	dHiHitDrum,dLowHitDrum,dMetalCrashHit,dEchoedClapHit
+			nextenum	dLowerEchoedClapHit,dHipHopHitKick,dHipHopHitPowerKick
+			nextenum	dBassHey,dDanceStyleKick,dHipHopHitKick2,dHipHopHitKick3
+			nextenum	dReverseFadingWind,dScratchS3,dLooseSnareNoise,dPowerKick2
+			nextenum	dCrashingNoiseWoo,dQuickHit,dKickHey,dPowerKickHit
+			nextenum	dLowPowerKickHit,dLowerPowerKickHit,dLowestPowerKickHit
+		elsecase;SonicDriverVer>=5
+			if (use_s3_samples<>0)||(use_sk_samples<>0)||(use_s3d_samples<>0)
+				enum		dSnareS3=$81,dHighTom,dMidTomS3,dLowTomS3,dFloorTomS3,dKickS3,dMuffledSnare
+				nextenum	dCrashCymbal,dRideCymbal,dLowMetalHit,dMetalHit,dHighMetalHit
+				nextenum	dHigherMetalHit,dMidMetalHit,dClapS3,dElectricHighTom
+				nextenum	dElectricMidTom,dElectricLowTom,dElectricFloorTom
+				nextenum	dTightSnare,dMidpitchSnare,dLooseSnare,dLooserSnare
+				nextenum	dHiTimpaniS3,dLowTimpaniS3,dMidTimpaniS3,dQuickLooseSnare
+				nextenum	dClick,dPowerKick,dQuickGlassCrash
+			endif
 			if (use_s3_samples<>0)||(use_sk_samples<>0)
-				enum dKick=dLowestPowerKickHit+1
-			elseif (use_s3d_samples<>0)
-				enum dKick=dQuickGlassCrash+1
-			else
-				enum dKick=$81
+				nextenum	dGlassCrashSnare,dGlassCrash,dGlassCrashKick,dQuietGlassCrash
+				nextenum	dOddSnareKick,dKickExtraBass,dComeOn,dDanceSnare,dLooseKick
+				nextenum	dModLooseKick,dWoo,dGo,dSnareGo,dPowerTom,dHiWoodBlock,dLowWoodBlock
+				nextenum	dHiHitDrum,dLowHitDrum,dMetalCrashHit,dEchoedClapHit
+				nextenum	dLowerEchoedClapHit,dHipHopHitKick,dHipHopHitPowerKick
+				nextenum	dBassHey,dDanceStyleKick,dHipHopHitKick2,dHipHopHitKick3
+				nextenum	dReverseFadingWind,dScratchS3,dLooseSnareNoise,dPowerKick2
+				nextenum	dCrashingNoiseWoo,dQuickHit,dKickHey,dPowerKickHit
+				nextenum	dLowPowerKickHit,dLowerPowerKickHit,dLowestPowerKickHit
 			endif
-			enum dSnare=dKick+1,dClap,dScratch,dTimpani,dHiTom,dVLowClap,dHiTimpani,dMidTimpani
-			enum dLowTimpani=dMidTimpani+1,dVLowTimpani,dMidTom,dLowTom,dFloorTom,dHiClap
-			enum dMidClap=dHiClap+1,dLowClap
-		endif
-		if (use_s3d_samples<>0)
+			; For conversions:
 			if (use_s2_samples<>0)
-				enum dFinalFightMetalCrash=dLowClap+1,dIntroKick
-			elseif (use_s3_samples<>0)||(use_sk_samples<>0)
-				enum dFinalFightMetalCrash=dLowestPowerKickHit+1,dIntroKick
-			else
-				enum dFinalFightMetalCrash=dQuickGlassCrash+1,dIntroKick
+				if (use_s3_samples<>0)||(use_sk_samples<>0)||(use_s3d_samples<>0)
+					nextenum	dKick
+				else
+					enum		dKick=$81
+				endif
+				nextenum	dSnare,dClap,dScratch,dTimpani,dHiTom,dVLowClap,dHiTimpani,dMidTimpani
+				nextenum	dLowTimpani,dVLowTimpani,dMidTom,dLowTom,dFloorTom,dHiClap
+				nextenum	dMidClap,dLowClap
 			endif
-		endif
-		if (use_s3_samples<>0)
 			if (use_s3d_samples<>0)
-				enum dEchoedClapHit_S3=dIntroKick+1,dLowerEchoedClapHit_S3
-			elseif (use_s2_samples<>0)
-				enum dEchoedClapHit_S3=dLowClap+1,dLowerEchoedClapHit_S3
-			else
-				enum dEchoedClapHit_S3=dLowestPowerKickHit+1,dLowerEchoedClapHit_S3
+				nextenum	dFinalFightMetalCrash,dIntroKick
 			endif
-		endif
-	endif
+			if (use_s3_samples<>0)
+				nextenum	dEchoedClapHit_S3,dLowerEchoedClapHit_S3
+			endif
+	endcase
 ; ---------------------------------------------------------------------------
 ; Channel IDs for SFX
 cPSG1				EQU $80
@@ -200,10 +235,8 @@ CheckedChannelPointer macro loc
 	if SonicDriverVer<>1
 		dc.w	z80_ptr(loc)
 	else
-		if MOMPASS==2
-			if loc<songStart
-				fatal "Tracks for Sonic 1 songs must come after the start of the song"
-			endif
+		if (MOMPASS=1)&&(DEFINED(loc))
+			fatal "Tracks for Sonic 1 songs must come after the start of the song"
 		endif
 		dc.w	loc-songStart
 	endif
@@ -215,17 +248,17 @@ smpsHeaderStartSong macro ver, sourcesmps2asmver
 SourceDriver set ver
 
 	if ("sourcesmps2asmver"<>"")
-SourceSMPS2ASM set sourcesmps2asmver
+		set SourceSMPS2ASM,sourcesmps2asmver
 	else
-SourceSMPS2ASM set 0
+		set SourceSMPS2ASM,0
 	endif
 
 songStart set *
 
-	if MOMPASS==2
-	if SMPS2ASMVer < SourceSMPS2ASM
-	message "Song at 0x\{songStart} was made for a newer version of SMPS2ASM (this is version \{SMPS2ASMVer}, but song wants at least version \{SourceSMPS2ASM})."
-	endif
+	if MOMPASS=1
+		if SMPS2ASMVer < SourceSMPS2ASM
+			message "Song at 0x\{songStart} was made for a newer version of SMPS2ASM (this is version \{SMPS2ASMVer}, but song wants at least version \{SourceSMPS2ASM})."
+		endif
 	endif
 
 	endm
@@ -246,10 +279,8 @@ smpsHeaderVoice macro loc
 	if SonicDriverVer<>1
 		dc.w	z80_ptr(loc)
 	else
-		if MOMPASS==2
-		if loc<songStart
-			fatal "Voice banks for Sonic 1 songs must come after the song"
-		endif
+		if (MOMPASS=1)&&(DEFINED(loc))
+			fatal "Voice banks for Sonic 1 songs must come after the start of the song"
 		endif
 		dc.w	loc-songStart
 	endif
@@ -307,7 +338,21 @@ smpsHeaderFM macro loc,pitch,vol
 smpsHeaderPSG macro loc,pitch,vol,mod,voice
 	CheckedChannelPointer loc
 	PSGPitchConvert pitch
-	dc.b	vol,mod,voice
+	dc.b	vol
+	; Frequency envelope
+	if (SonicDriverVer>=3) && (SourceDriver<3)
+		; In SMPS 68k Type 1, this byte is skipped and can contain garbage.
+		; Sonic 2's Oil Ocean Zone and Ending themes set this byte to a non-zero value which
+		; other drivers may try to process as valid data, so manually force it to 0 here.
+		dc.b	0
+	else
+		if (MOMPASS==1) && (SonicDriverVer<3) && (SourceDriver>=3) && (mod<>0)
+			message "This track header specifies a frequency envelope, but this driver does not support them."			
+		endif
+		dc.b	mod
+	endif
+	; Volume envelope
+	dc.b	voice
 	endm
 
 ; Header macros for SFX (not for music)
@@ -354,11 +399,12 @@ smpsDetune macro val
 	dc.b	$E1,val
 	endm
 
-; E2xx - Useless
+; E2xx - Used for setting a variable which can be read by the game, for synchonisation. Ristar does this.
 smpsNop macro val
-	if SonicDriverVer<3
-		dc.b	$E2,val
+	if (SonicDriverVer>=3) && ((val==$FF) || (val==$29))
+		warning "Values $FF and $29 are reserved in S3K's driver; use a different value or remove this command."
 	endif
+	dc.b	$E2,val
 	endm
 
 ; Return (used after smpsCall)
@@ -383,7 +429,8 @@ smpsFade macro val
 			smpsStop
 		endif
 	elseif (SourceDriver>=3) && ("val"<>"") && ("val"<>"$FF")
-		; This is one of those weird S3+ "fades" that we don't need
+		; This is actually a communication byte, not a fade.
+		smpsNop	val
 	else
 		dc.b	$E4
 	endif
@@ -466,14 +513,22 @@ smpsPSGAlterVol macro vol
 	dc.b	$EC,vol
 	endm
 
-; Clears pushing sound flag in S1
-; interesting how this exists in S2 Simon Wai
-smpsClearPush macro
-	if SonicDriverVer<3
-		dc.b	$ED
+smpsPSGAlterVolS2 macro vol
+	; Sonic 2's driver allows the FM command to be used on PSG channels, but others do not.
+	if SonicDriverVer==2
+		smpsAlterVol vol
 	else
-		fatal "Coord. Flag to clear S1 push block flag does not exist in S3 drivers. Complain to Flamewing to add it."
+		smpsPSGAlterVol vol
 	endif
+	endm
+
+; Clears pushing sound flag in S1
+smpsClearPush macro
+;	if SonicDriverVer==1
+		dc.b	$ED
+;	else
+;		fatal "Coord. Flag to clear S1 push block flag does not exist in S2 or S3 drivers. Complain to Flamewing to add it."
+;	endif
 	endm
 
 ; Stops special SFX (S1 only) and restarts overridden music track
@@ -578,9 +633,16 @@ smpsCall macro loc
 ; ---------------------------------------------------------------------------
 ; Alter Volume
 smpsFMAlterVol macro val1,val2
-	if (SonicDriverVer>=3)&&("val2"<>"")
-		dc.b	$E5,val1,val2
+	if ("val2"<>"")
+		; S3K's nerfed 'PSG & FM volume' command with broken PSG support.
+		; The first value is completely unused, while the second is for FM tracks.
+		if (SonicDriverVer>=3)
+			dc.b	$E5,val1,val2
+		else
+			dc.b	$E6,val2
+		endif
 	else
+		; Normal, sane command.
 		dc.b	$E6,val1
 	endif
 	endm
@@ -727,59 +789,59 @@ smpsSetvoice macro
 ; Macros for FM instruments
 ; Voices - Feedback
 smpsVcFeedback macro val
-vcFeedback set val
+vcFeedback eval val
 	endm
 
 ; Voices - Algorithm
 smpsVcAlgorithm macro val
-vcAlgorithm set val
+vcAlgorithm eval val
 	endm
 
 smpsVcUnusedBits macro val,d1r1,d1r2,d1r3,d1r4
-vcUnusedBits set val
+vcUnusedBits eval val
 	if ("d1r1"<>"")&&("d1r2"<>"")&&("d1r3"<>"")&&("d1r4"<>"")
-vcD1R1Unk set d1r1<<5
-vcD1R2Unk set d1r2<<5
-vcD1R3Unk set d1r3<<5
-vcD1R4Unk set d1r4<<5
+		eval vcD1R1Unk,d1r1<<5
+		eval vcD1R2Unk,d1r2<<5
+		eval vcD1R3Unk,d1r3<<5
+		eval vcD1R4Unk,d1r4<<5
 	else
-vcD1R1Unk set 0
-vcD1R2Unk set 0
-vcD1R3Unk set 0
-vcD1R4Unk set 0
+		eval vcD1R1Unk,0
+		eval vcD1R2Unk,0
+		eval vcD1R3Unk,0
+		eval vcD1R4Unk,0
 	endif
 	endm
 
 ; Voices - Detune
 smpsVcDetune macro op1,op2,op3,op4
-vcDT1 set op1
-vcDT2 set op2
-vcDT3 set op3
-vcDT4 set op4
+	eval vcDT1,op1
+	eval vcDT2,op2
+	eval vcDT3,op3
+	eval vcDT4,op4
 	endm
 
 ; Voices - Coarse-Frequency
 smpsVcCoarseFreq macro op1,op2,op3,op4
-vcCF1 set op1
-vcCF2 set op2
-vcCF3 set op3
-vcCF4 set op4
+	eval vcCF1,op1
+	eval vcCF2,op2
+	eval vcCF3,op3
+	eval vcCF4,op4
 	endm
 
 ; Voices - Rate Scale
 smpsVcRateScale macro op1,op2,op3,op4
-vcRS1 set op1
-vcRS2 set op2
-vcRS3 set op3
-vcRS4 set op4
+	eval vcRS1,op1
+	eval vcRS2,op2
+	eval vcRS3,op3
+	eval vcRS4,op4
 	endm
 
 ; Voices - Attack Rate
 smpsVcAttackRate macro op1,op2,op3,op4
-vcAR1 set op1
-vcAR2 set op2
-vcAR3 set op3
-vcAR4 set op4
+	eval vcAR1,op1
+	eval vcAR2,op2
+	eval vcAR3,op3
+	eval vcAR4,op4
 	endm
 
 ; Voices - Amplitude Modulation
@@ -788,48 +850,58 @@ vcAR4 set op4
 ; According to several docs, however, it's actually the high bit.
 smpsVcAmpMod macro op1,op2,op3,op4
 	if SourceSMPS2ASM==0
-vcAM1 set op1<<5
-vcAM2 set op2<<5
-vcAM3 set op3<<5
-vcAM4 set op4<<5
+		eval vcAM1,op1<<5
+		eval vcAM2,op2<<5
+		eval vcAM3,op3<<5
+		eval vcAM4,op4<<5
 	else
-vcAM1 set op1<<7
-vcAM2 set op2<<7
-vcAM3 set op3<<7
-vcAM4 set op4<<7
+		eval vcAM1,op1<<7
+		eval vcAM2,op2<<7
+		eval vcAM3,op3<<7
+		eval vcAM4,op4<<7
 	endif
 	endm
 
 ; Voices - First Decay Rate
 smpsVcDecayRate1 macro op1,op2,op3,op4
-vcD1R1 set op1
-vcD1R2 set op2
-vcD1R3 set op3
-vcD1R4 set op4
+	eval vcD1R1,op1
+	eval vcD1R2,op2
+	eval vcD1R3,op3
+	eval vcD1R4,op4
 	endm
 
 ; Voices - Second Decay Rate
 smpsVcDecayRate2 macro op1,op2,op3,op4
-vcD2R1 set op1
-vcD2R2 set op2
-vcD2R3 set op3
-vcD2R4 set op4
+	eval vcD2R1,op1
+	eval vcD2R2,op2
+	eval vcD2R3,op3
+	eval vcD2R4,op4
 	endm
 
 ; Voices - Decay Level
 smpsVcDecayLevel macro op1,op2,op3,op4
-vcDL1 set op1
-vcDL2 set op2
-vcDL3 set op3
-vcDL4 set op4
+	eval vcDL1,op1
+	eval vcDL2,op2
+	eval vcDL3,op3
+	eval vcDL4,op4
 	endm
 
 ; Voices - Release Rate
 smpsVcReleaseRate macro op1,op2,op3,op4
-vcRR1 set op1
-vcRR2 set op2
-vcRR3 set op3
-vcRR4 set op4
+	eval vcRR1,op1
+	eval vcRR2,op2
+	eval vcRR3,op3
+	eval vcRR4,op4
+	endm
+
+smpsNotZ80 function cpu,(cpu<>128)&&(cpu<>32988)
+
+smpsDcb macro
+		if smpsNotZ80(MOMCPU)
+			dc.b ALLARGS
+		else
+			db ALLARGS
+		endif
 	endm
 
 ; Voices - Total Level
@@ -843,54 +915,54 @@ vcRR4 set op4
 ; an SMPS Z80 song to SMPS 68k. It will ignore the bits no matter
 ; what we do, so we just print a warning.
 smpsVcTotalLevel macro op1,op2,op3,op4
-vcTL1 set op1
-vcTL2 set op2
-vcTL3 set op3
-vcTL4 set op4
-	dc.b	(vcUnusedBits<<6)+(vcFeedback<<3)+vcAlgorithm
+	eval vcTL1,op1
+	eval vcTL2,op2
+	eval vcTL3,op3
+	eval vcTL4,op4
+	smpsDcb	(vcUnusedBits<<6)+(vcFeedback<<3)+vcAlgorithm
 ;   0     1     2     3     4     5     6     7
 ;%1000,%1000,%1000,%1000,%1010,%1110,%1110,%1111
 	if SourceSMPS2ASM==0
-vcTLMask4 set ((vcAlgorithm==7)<<7)
-vcTLMask3 set ((vcAlgorithm>=4)<<7)
-vcTLMask2 set ((vcAlgorithm>=5)<<7)
-vcTLMask1 set $80
+		eval vcTLMask4,((vcAlgorithm==7)<<7)
+		eval vcTLMask3,((vcAlgorithm>=4)<<7)
+		eval vcTLMask2,((vcAlgorithm>=5)<<7)
+		eval vcTLMask1,128
 	else
-vcTLMask4 set 0
-vcTLMask3 set 0
-vcTLMask2 set 0
-vcTLMask1 set 0
+		eval vcTLMask4,0
+		eval vcTLMask3,0
+		eval vcTLMask2,0
+		eval vcTLMask1,0
 	endif
 
 	if (SonicDriverVer>=3)&&(SourceDriver<3)
-vcTLMask4 set ((vcAlgorithm==7)<<7)
-vcTLMask3 set ((vcAlgorithm>=4)<<7)
-vcTLMask2 set ((vcAlgorithm>=5)<<7)
-vcTLMask1 set $80
-vcTL1 set vcTL1&$7F
-vcTL2 set vcTL2&$7F
-vcTL3 set vcTL3&$7F
-vcTL4 set vcTL4&$7F
-	elseif (SonicDriverVer<3)&&(SourceDriver>=3)&&(((vcTL1&$80)<>$80)||((vcTL2&$80)<>((vcAlgorithm>=5)<<7))||((vcTL3&$80)<>((vcAlgorithm>=4)<<7))||((vcTL4&$80)<>((vcAlgorithm==7)<<7)))
-		if MOMPASS==2
+		eval vcTLMask4,((vcAlgorithm==7)<<7)
+		eval vcTLMask3,((vcAlgorithm>=4)<<7)
+		eval vcTLMask2,((vcAlgorithm>=5)<<7)
+		eval vcTLMask1,128
+		eval vcTL1,vcTL1&127
+		eval vcTL2,vcTL2&127
+		eval vcTL3,vcTL3&127
+		eval vcTL4,vcTL4&127
+	elseif (SonicDriverVer<3)&&(SourceDriver>=3)&&((((vcTL1|vcTLMask1)&128)<>128)||(((vcTL2|vcTLMask2)&128)<>((vcAlgorithm>=5)<<7))||(((vcTL3|vcTLMask3)&128)<>((vcAlgorithm>=4)<<7))||(((vcTL4|vcTLMask4)&128)<>((vcAlgorithm==7)<<7)))
+		if MOMPASS=1
 			message "Voice at 0x\{*} has TL bits that do not match its algorithm setting. This voice will not work in S1/S2 drivers."
 		endif
 	endif
 
 	if SonicDriverVer==2
-		dc.b	(vcDT4<<4)+vcCF4       ,(vcDT2<<4)+vcCF2       ,(vcDT3<<4)+vcCF3       ,(vcDT1<<4)+vcCF1
-		dc.b	(vcRS4<<6)+vcAR4       ,(vcRS2<<6)+vcAR2       ,(vcRS3<<6)+vcAR3       ,(vcRS1<<6)+vcAR1
-		dc.b	vcAM4|vcD1R4|vcD1R4Unk ,vcAM2|vcD1R2|vcD1R2Unk ,vcAM3|vcD1R3|vcD1R3Unk ,vcAM1|vcD1R1|vcD1R1Unk
-		dc.b	vcD2R4                 ,vcD2R2                 ,vcD2R3                 ,vcD2R1
-		dc.b	(vcDL4<<4)+vcRR4       ,(vcDL2<<4)+vcRR2       ,(vcDL3<<4)+vcRR3       ,(vcDL1<<4)+vcRR1
-		dc.b	vcTL4|vcTLMask4        ,vcTL2|vcTLMask2        ,vcTL3|vcTLMask3        ,vcTL1|vcTLMask1
+		smpsDcb	(vcDT4<<4)+vcCF4       ,(vcDT2<<4)+vcCF2       ,(vcDT3<<4)+vcCF3       ,(vcDT1<<4)+vcCF1
+		smpsDcb	(vcRS4<<6)+vcAR4       ,(vcRS2<<6)+vcAR2       ,(vcRS3<<6)+vcAR3       ,(vcRS1<<6)+vcAR1
+		smpsDcb	vcAM4|vcD1R4|vcD1R4Unk ,vcAM2|vcD1R2|vcD1R2Unk ,vcAM3|vcD1R3|vcD1R3Unk ,vcAM1|vcD1R1|vcD1R1Unk
+		smpsDcb	vcD2R4                 ,vcD2R2                 ,vcD2R3                 ,vcD2R1
+		smpsDcb	(vcDL4<<4)+vcRR4       ,(vcDL2<<4)+vcRR2       ,(vcDL3<<4)+vcRR3       ,(vcDL1<<4)+vcRR1
+		smpsDcb	vcTL4|vcTLMask4        ,vcTL2|vcTLMask2        ,vcTL3|vcTLMask3        ,vcTL1|vcTLMask1
 	else
-		dc.b	(vcDT4<<4)+vcCF4       ,(vcDT3<<4)+vcCF3       ,(vcDT2<<4)+vcCF2       ,(vcDT1<<4)+vcCF1
-		dc.b	(vcRS4<<6)+vcAR4       ,(vcRS3<<6)+vcAR3       ,(vcRS2<<6)+vcAR2       ,(vcRS1<<6)+vcAR1
-		dc.b	vcAM4|vcD1R4|vcD1R4Unk ,vcAM3|vcD1R3|vcD1R3Unk ,vcAM2|vcD1R2|vcD1R2Unk ,vcAM1|vcD1R1|vcD1R1Unk
-		dc.b	vcD2R4                 ,vcD2R3                 ,vcD2R2                 ,vcD2R1
-		dc.b	(vcDL4<<4)+vcRR4       ,(vcDL3<<4)+vcRR3       ,(vcDL2<<4)+vcRR2       ,(vcDL1<<4)+vcRR1
-		dc.b	vcTL4|vcTLMask4        ,vcTL3|vcTLMask3        ,vcTL2|vcTLMask2        ,vcTL1|vcTLMask1
+		smpsDcb	(vcDT4<<4)+vcCF4       ,(vcDT3<<4)+vcCF3       ,(vcDT2<<4)+vcCF2       ,(vcDT1<<4)+vcCF1
+		smpsDcb	(vcRS4<<6)+vcAR4       ,(vcRS3<<6)+vcAR3       ,(vcRS2<<6)+vcAR2       ,(vcRS1<<6)+vcAR1
+		smpsDcb	vcAM4|vcD1R4|vcD1R4Unk ,vcAM3|vcD1R3|vcD1R3Unk ,vcAM2|vcD1R2|vcD1R2Unk ,vcAM1|vcD1R1|vcD1R1Unk
+		smpsDcb	vcD2R4                 ,vcD2R3                 ,vcD2R2                 ,vcD2R1
+		smpsDcb	(vcDL4<<4)+vcRR4       ,(vcDL3<<4)+vcRR3       ,(vcDL2<<4)+vcRR2       ,(vcDL1<<4)+vcRR1
+		smpsDcb	vcTL4|vcTLMask4        ,vcTL3|vcTLMask3        ,vcTL2|vcTLMask2        ,vcTL1|vcTLMask1
 	endif
 	endm
 
