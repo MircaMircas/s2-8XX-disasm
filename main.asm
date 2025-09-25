@@ -2441,7 +2441,7 @@ loc_286E:
 		lea	(Normal_palette_line2).w,a1
 		moveq	#0,d0
 		moveq	#$2C,d1
-loc_288E:		
+loc_288E:
 		move.w	d0,d2
 		andi.w	#$1E,d2
 		bne.s	loc_2898
@@ -2506,7 +2506,7 @@ loc_2946:
 		move.l	(a2)+,(a3)+
 		dbf	d7,loc_2946
 		rts
-PalPointers: ; loc_294E: ; Palette List		
+PalPointers: ; loc_294E: ; Palette List
 PalPtr_SEGA:		dc.l	Pal_SEGA,$FB00001F
 PalPtr_Title:		dc.l	Pal_Title,$FB00001F
 PalPtr_LevelSel:	dc.l	Pal_LevelSelect,$FB00001F
@@ -2578,7 +2578,7 @@ loc_31F0:
 		asl.l	#2,d1
 		add.l	d0,d1
 		asl.l	#3,d1
-		add.l	d0,d1		
+		add.l	d0,d1
 		move.w	d1,d0
 		swap	d1
 		add.w	d1,d0
@@ -2586,7 +2586,7 @@ loc_31F0:
 		swap	d1
 		move.l	d1,(RNG_seed).w
 		rts
-CalcSine: ; loc_320A:		
+CalcSine: ; loc_320A:
 		andi.w	#$FF,d0
 		add.w	d0,d0
 		addi.w	#$80,d0
@@ -2594,7 +2594,7 @@ CalcSine: ; loc_320A:
 		subi.w	#$80,d0
 		move.w	Sine_Data(pc,d0.w),d0
 		rts
-Sine_Data: ; loc_3222:		 
+Sine_Data: ; loc_3222:
 		dc.w	$0000,$0006,$000C,$0012,$0019,$001F,$0025,$002B
 		dc.w	$0031,$0038,$003E,$0044,$004A,$0050,$0056,$005C
 		dc.w	$0061,$0067,$006D,$0073,$0078,$007E,$0083,$0088
@@ -3228,7 +3228,7 @@ loc_3CBA:
 		move.w	d0,(Sound_test_sound).w
 		bsr.w	LevelSelect_TextLoad
 
-return_3CC2:		
+return_3CC2:
 		rts
 ; ===========================================================================
 ; loc_3CC4:
@@ -3239,11 +3239,11 @@ LevelSelect_TextLoad:
 		move.w	#$8680,d3
 		moveq	#$1A,d1
 
-loc_3CDC:		
+loc_3CDC:
 		move.l	d4,4(a6)
 		bsr.w	loc_3d60
 		addi.l	#$800000,d4
-		dbf	d1,loc_3CDC 
+		dbf	d1,loc_3CDC
 		moveq	#0,d0
 		move.w	(Level_select_zone).w,d0
 		move.w	d0,d1
@@ -3284,12 +3284,12 @@ loc_3d5A:
 		rts
 loc_3d60:
 		moveq	#$1A,d2
-loc_3d62:		
+loc_3d62:
 		moveq	#0,d0
 		move.b	(a1)+,d0
 		bpl.s	loc_3d72
 		move.w	#0,(a6)
-		dbf	d2,loc_3d62 
+		dbf	d2,loc_3d62
 		rts
 loc_3d72:
 		add.w	d3,d0
@@ -3300,11 +3300,11 @@ loc_3d72:
 
 _0 = $00
 _1 = $01
-_2 = $02		
+_2 = $02
 _A = $11
 _B = $12
 _C = $13
-_D = $14		
+_D = $14
 _E = $15
 _F = $16
 _G = $17
@@ -3327,8 +3327,8 @@ _W = $27
 _X = $28
 _Y = $0F
 _Z = $10
-__ = $FF		
-Level_Select_Text: ; loc_3d7C: ; Level Select Menu Text		 
+__ = $FF
+Level_Select_Text: ; loc_3d7C: ; Level Select Menu Text
 		dc.b	_G,_R,_E,_E,_N,__,_H,_I,_L,_L,__,_Z,_O,_N,_E,__,__,__,__,__,_S,_T,_A,_G,_E,__,_0
 		dc.b	__,__,__,__,__,__,__,__,__,__,__,__,__,__,__,__,__,__,__,__,_S,_T,_A,_G,_E,__,_1
 		dc.b	_W,_O,_O,_D,__,_Z,_O,_N,_E,__,__,__,__,__,__,__,__,__,__,__,_S,_T,_A,_G,_E,__,_0
@@ -3385,7 +3385,7 @@ Level_Select_Text: ; loc_3d7C: ; Level Select Menu Text
 		lea	($FE0080).l,a2
 		lea	(Chunk_Table).l,a3
 		move.w	#$3F,d1
-	
+
 -		bsr.w	Unused_Code4
 		bsr.w	Unused_Code4
 		dbf	d1,-
@@ -3396,7 +3396,7 @@ Level_Select_Text: ; loc_3d7C: ; Level Select Menu Text
 -		move.w	#0,(a2)+
 		dbf	d1,-
 		move.w	#$3FBF,d1
-	
+
 -		move.w	(a1)+,(a2)+
 		dbf	d1,-
 		rts
@@ -3413,13 +3413,13 @@ Level_Select_Text: ; loc_3d7C: ; Level Select Menu Text
 		lea	($FE0000),a1
 		move.w	#$FF,d5
 
-Unused_Code3_Loop2: ; loc_40DE:		
+Unused_Code3_Loop2: ; loc_40DE:
 		lea	(Chunk_Table),A3
 		move.w	d7,d6
-Unused_Code3_Loop3: ; loc_40E6:		
+Unused_Code3_Loop3: ; loc_40E6:
 		movem.l A1-A3,-(sp)
 		move.w	#$3F,d0
-Unused_Code3_Loop4: ; loc_40EE:		
+Unused_Code3_Loop4: ; loc_40EE:
 		cmpm.w	(a1)+,(a3)+
 		bne.s	Unused_Code3_loc_4104
 		dbf	d0,Unused_Code3_Loop4	; loc_40EE
@@ -3432,7 +3432,7 @@ Unused_Code3_loc_4104:
 		adda.w	#$80,A3
 		dbf	d6,Unused_Code3_Loop3	; loc_40E6
 		moveq	#$1F,d0
-Unused_Code3_Loop5: ; loc_4112:		
+Unused_Code3_Loop5: ; loc_4112:
 		move.l	(a1)+,(a3)+
 		dbf	d0,Unused_Code3_Loop5	; loc_4112
 		addq.l	#1,d7
@@ -3441,7 +3441,7 @@ Unused_Code3_loc_411E:
 		bra.s	Unused_Code3_loc_411E
 Unused_Code4: ; loc_4120:
 		moveq	#7,d0
-Unused_Code4_Loop: ; loc_4122:		
+Unused_Code4_Loop: ; loc_4122:
 		move.l	(a3)+,(a1)+
 		move.l	(a3)+,(a1)+
 		move.l	(a3)+,(a1)+
@@ -4134,12 +4134,12 @@ loc_4804:
 loc_4816:
 		clr.b	(WindTunnel_flag).w
 loc_481A:
-		rts		
+		rts
 ;loc_481C:
 		dc.w	$A80,$300,$C10,$380
 S1_LZ_Wind_Data: ; loc_4824:
 		dc.w	$F80,$100,$1410,$180,$460,$400,$710,$480
-		dc.w	$A20,$600,$1610,$6E0,$C80,$600,$13D0,$680		
+		dc.w	$A20,$600,$1610,$6E0,$C80,$600,$13D0,$680
 S1_LZ_Water_Slides: ; loc_4844:
 		lea	(MainCharacter).w,A1
 		btst	#1,status(a1)
@@ -4153,7 +4153,7 @@ S1_LZ_Water_Slides: ; loc_4844:
 		move.b	(A2,d0),d0
 		lea	loc_48DD(pc),A2
 		moveq	#6,d1
-loc_4870:		
+loc_4870:
 		cmp.b	-(a2),d0
 		dbeq.w	d1,loc_4870
 		beq.s	loc_488A
@@ -4186,7 +4186,7 @@ loc_48A8:
 loc_48CC:
 		rts
 loc_48CE:
-		dc.b	$A,$F5,$A,$F6,$F5,$F4,$B,0,2,7,3,$4C,$4B,8,$04 
+		dc.b	$A,$F5,$A,$F6,$F5,$F4,$B,0,2,7,3,$4C,$4B,8,$04
 loc_48DD:
 		dc.b	0
 Move_Sonic_In_Demo: ; loc_48DE:
@@ -8584,7 +8584,7 @@ loc_7E44:
 		subi.w	#$100,(Camera_BG_Y_pos).w
 		move.w	#0,(HTZ_Terrain_Delay).w
 		subq.b	#2,(Dynamic_Resize_Routine).w
-loc_7E82:		
+loc_7E82:
 		rts
 loc_7E84:
 		tst.b	(Screen_Shaking_Flag_HTZ).w
@@ -8664,7 +8664,7 @@ loc_7F5C:
 		subi.w	#$100,(Camera_BG_Y_pos).w
 		move.w	#0,(HTZ_Terrain_Delay).w
 		subq.b	#2,(Dynamic_Resize_Routine).w
-loc_7FA2:		
+loc_7FA2:
 		rts
 loc_7FA4:
 		tst.b	(Screen_Shaking_Flag_HTZ).w
@@ -8903,7 +8903,7 @@ loc_81B2:
 loc_81BE:
 		bsr.w	Obj11_Depress
 
-loc_81C2:		
+loc_81C2:
 		moveq	#0,d1
 		move.b	$28(a0),d1
 		lsl.w	#3,d1
@@ -8911,7 +8911,7 @@ loc_81C2:
 		addq.w	#8,d1
 		add.w	d2,d2
 		moveq	#8,d3
-		move.w	8(a0),d4		
+		move.w	8(a0),d4
 		bsr.w	Obj11_Solid
 		bsr.w	sub_8282
 		bra.w	Obj11_Unload
@@ -8923,7 +8923,7 @@ Obj11_Solid:
 		lea	(Sidekick).w,a1		; a1=character
 		moveq	#4,d6
 		moveq	#$3B,d5
-		movem.l	d1-d4,-(sp)		
+		movem.l	d1-d4,-(sp)
 		bsr.s	loc_81FC
 		movem.l	(sp)+,d1-d4
 		lea	(MainCharacter).w,a1	; a1=character
@@ -9040,13 +9040,13 @@ loc_82d0:
 		beq.s	loc_82E2
 		move.b	$3F(a0),d3
 
-loc_82E2:		
+loc_82E2:
 		move.b	$22(a0),d0
 		andi.b	#$10,d0
 		beq.s	loc_82F0
 		move.b	$3B(a0),d4
 
-loc_82F0:		
+loc_82F0:
 		move.l	$30(a0),a1
 		lea	$45(a1),a2
 		lea	$15(a1),a1
@@ -9195,7 +9195,7 @@ Obj11_DepressionOffsets:
 		dc.b   2, 4, 6, 8,$A,$C,$E,$C,$A, 8, 6, 4, 2, 0, 0, 0; 13 logs
 		dc.b   2, 4, 6, 8,$A,$C,$E,$E,$C,$A, 8, 6, 4, 2, 0, 0; 14 logs
 		dc.b   2, 4, 6, 8,$A,$C,$E,$10,$E,$C,$A, 8, 6, 4, 2, 0; 15 logs
-		dc.b   2, 4, 6, 8,$A,$C,$E,$10,$10,$E,$C,$A, 8, 6, 4, 2; 16 logs         
+		dc.b   2, 4, 6, 8,$A,$C,$E,$10,$10,$E,$C,$A, 8, 6, 4, 2; 16 logs
 		even
 
 ; something else important for bridge depression to work (phase? bridge size adjustment?)
@@ -9224,10 +9224,10 @@ byte_8498:
 Obj11_MapUnc_8598:	binclude	"mappings/sprite/obj11_HPZ.bin"	; HPZ bridge
 Obj11_MapUnc_85E0:	binclude	"mappings/sprite/obj11_GHZ.bin"	; GHZ bridge
 
-;=============================================================================== 
+;===============================================================================
 ; Object 0x15 - Swing Platforms - Dust Hill / Oil Ocean
 ; [ Begin ]
-;===============================================================================   
+;===============================================================================
 Obj_0x15_Swing_Platform: ; loc_85F8:
 		btst	#6,1(a0)
 		bne.w	loc_8610
@@ -9258,8 +9258,8 @@ loc_8626:
 		move.w	8(a0),$3A(a0)
 		cmpi.b	#dust_hill_zone,(Current_Zone).w
 		bne.s	loc_867E
-		move.l	#Obj15_MapUnc_8B46,4(a0) ; loc_8B46 
-		move.w	#0,2(a0)		       
+		move.l	#Obj15_MapUnc_8B46,4(a0) ; loc_8B46
+		move.w	#0,2(a0)
 		move.b	#$18,$19(a0)
 		move.b	#8,$16(a0)
 loc_867E:
@@ -9294,7 +9294,7 @@ loc_86B0:
 		move.b	d1,$F(a1)
 		subq.b	#$1,d1
 		lea	$10(a1),A2
-loc_86FC:		
+loc_86FC:
 		move.w	d2,(a2)+
 		move.w	d3,(a2)+
 		move.w	#1,(a2)+
@@ -9391,7 +9391,7 @@ loc_87d4:
 		moveq	#0,d4
 		moveq	#0,d5
 		lea	$10(a1),A2
-loc_881E:		
+loc_881E:
 		movem.l d4/d5,-(sp)
 		swap	d4
 		swap	d5
@@ -9496,7 +9496,7 @@ loc_892E:
 		bne.s	loc_89d4
 		moveq	#0,d0
 		move.w	#$F,d1
-loc_896A:		
+loc_896A:
 		move.l	(A0,d0),(A1,d0)
 		addq.w	#4,d0
 		dbf	d1,loc_896A
@@ -9622,18 +9622,18 @@ Dhz_Swing_Platforms_Map_02: ; loc_8B5E:
 		dc.l	$F8056066,$6033FFF8
 Dhz_Swing_Platforms_Map_03: ; loc_8B68:
 		dc.w	$0002
-		dc.l	$E805406A,$4035FFF4,$F80B406E,$4037FFF4   
+		dc.l	$E805406A,$4035FFF4,$F80B406E,$4037FFF4
 Obj15_MapUnc_8B7A: ; loc_8B7A:
 		dc.w	Dhz_Swing_Platforms_Map_04-Obj15_MapUnc_8B7A
 		dc.w	Dhz_Swing_Platforms_Map_02-Obj15_MapUnc_8B7A
 		dc.w	Dhz_Swing_Platforms_Map_03-Obj15_MapUnc_8B7A
 Dhz_Swing_Platforms_Map_04: ; loc_8B80:
 		dc.w	$0002
-		dc.l	$F80d6058,$602CFFE0,$F80d6858,$682C0000				          
-;=============================================================================== 
+		dc.l	$F80d6058,$602CFFE0,$F80d6858,$682C0000
+;===============================================================================
 ; Object 0x15 - Swing Platforms - Dust Hill / Oil Ocean
 ; [ End ]
-;===============================================================================   
+;===============================================================================
 		nop
 
 ; NOTE:
@@ -10261,11 +10261,11 @@ loc_9396:
 		bra.w	DisplaySprite           ; loc_d3C2
 loc_93A6:
 		addq.b	#1,$1A(a0)
-		bra.s	loc_93B0              
+		bra.s	loc_93B0
 loc_93AC:
 		addq.b	#2,$1A(a0)
-loc_93B0:		
-		move.l	$34(a0),A4		  
+loc_93B0:
+		move.l	$34(a0),A4
 		moveq	#0,d0
 		move.b	$1A(a0),d0
 		add.w   d0,d0
@@ -10299,27 +10299,27 @@ loc_93E2:
 		bsr.w	DisplaySprite2         ; loc_d3E0
 loc_9424:
 		dbf	d1,loc_93DA
-loc_9428:		
+loc_9428:
 		bsr.w	DisplaySprite           ; loc_d3C2
 		move.w	#SndID_Smash,d0
 		jmp	(PlaySound).l              ; loc_14C6
-loc_9436:		
+loc_9436:
 		dc.b	$1C,$18,$14,$10,$1A,$16,$12,$0E,$0A,$06,$18,$14,$10,$0C,$08,$04
-		dc.b	$16,$12,$0E,$0A,$06,$02,$14,$10,$0C		    
+		dc.b	$16,$12,$0E,$0A,$06,$02,$14,$10,$0C
 loc_944F:
 		dc.b	$18,$1C,$20,$1E,$1A,$16,$06,$0E,$14,$12,$0A,$02
-loc_945B:              
+loc_945B:
 		dc.b	$1E,$16,$0E,$06,$1A,$12,$0A,$02
 loc_9463:
 		dc.b	$16,$1E,$1A,$12,$06,$0E,$0A,$02
 loc_946B:
-		dc.b	$1A,$12,$0A,$02,$16,$0E,$06              
-loc_9472:		
-		dc.b	$1A,$16,$12,$0E,$0A,$02				         
+		dc.b	$1A,$12,$0A,$02,$16,$0E,$06
+loc_9472:
+		dc.b	$1A,$16,$12,$0E,$0A,$02
 loc_9478:
 		dc.b	$20,$20,$20,$20,$20,$20,$20,$20,$21,$21,$22,$22,$23,$23,$24,$24
 		dc.b	$25,$25,$26,$26,$27,$27,$28,$28,$29,$29,$2A,$2A,$2B,$2B,$2C,$2C
-		dc.b	$2D,$2D,$2E,$2E,$2F,$2F,$30,$30,$30,$30,$30,$30,$30,$30,$30,$30		  
+		dc.b	$2D,$2D,$2E,$2E,$2F,$2F,$30,$30,$30,$30,$30,$30,$30,$30,$30,$30
 Collapsing_Platforms_Mappings: ; loc_94A8:
 		dc.w	Collapsing_Platforms_Map_01-Collapsing_Platforms_Mappings
 		dc.w	Collapsing_Platforms_Map_02-Collapsing_Platforms_Mappings
@@ -10374,7 +10374,7 @@ Collapsing_Platforms_Map_04: ; loc_967E:
 		dc.l	$000500A7,$00530000,$000500AB,$0055FFF0
 		dc.l	$000500AB,$0055FFE0,$000500B7,$005BFFd0
 		dc.l	$100500AB,$00550020,$100500AB,$00550010
-		dc.l	$100500B7,$005B0000              
+		dc.l	$100500B7,$005B0000
 loc_9748:
 		dc.w	loc_9750-loc_9748
 		dc.w	loc_9772-loc_9748
@@ -11015,7 +11015,7 @@ Obj3F_Init:
 		move.b	#0,$1A(a0)
 		move.w	#SndID_BossExplosion,d0
 		jmp	(PlaySound).l
-; ===========================================================================	
+; ===========================================================================
 ; animation script
 ; off_A174: Ani_S1_Ballhog:
 Ani_S1obj1E:	offsetTable
@@ -11534,7 +11534,7 @@ ChkAnimalInRange:
 		move.w	(MainCharacter+8).w,d0
 		sub.w	8(a0),d0
 		subi.w	#$B8,d0
-		rts 
+		rts
 ; End of function ChkAnimalInRange
 
 ; ===========================================================================
@@ -12075,11 +12075,11 @@ Obj37_Delete:
 		bra.w	DeleteObject
 
 ;===============================================================================
-; Object 0x4B - Big Ring (Special Stage Access) 
+; Object 0x4B - Big Ring (Special Stage Access)
 ;               Unused - Sonic 1 LeftOver
 ; [ Begin ]
 ;===============================================================================
-Obj_0x4B_Big_Ring: ; loc_AEB6:  
+Obj_0x4B_Big_Ring: ; loc_AEB6:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	Big_Ring_Index(pc,d0),d1  ; loc_AEC4
@@ -12089,7 +12089,7 @@ Big_Ring_Index: ; loc_AEC4:
 		dc.w	loc_AF1A-Big_Ring_Index
 		dc.w	loc_AF38-Big_Ring_Index
 		dc.w	loc_AF7C-Big_Ring_Index
-loc_AECC:		
+loc_AECC:
 		move.l	#Big_Ring_Mappings,4(a0) ; loc_B09A
 		move.w	#$2400,2(a0)
 		bsr.w	Adjust2PArtPointer     ; loc_DC30
@@ -12134,18 +12134,18 @@ loc_AF70:
 		bra.s	loc_AF1A
 loc_AF7C:
 		bra.w	DeleteObject            ; loc_d3B4
-;=============================================================================== 
-; Object 0x4B - Big Ring (Special Stage Access)   
+;===============================================================================
+; Object 0x4B - Big Ring (Special Stage Access)
 ;               Unused - Sonic 1 LeftOver
 ; [ End ]
-;===============================================================================  
+;===============================================================================
 
-;=============================================================================== 
-; Object 0x7C - Big Ring Flash (Special Stage Access)   
+;===============================================================================
+; Object 0x7C - Big Ring Flash (Special Stage Access)
 ;               Unused - Sonic 1 LeftOver
 ; [ Begin ]
-;===============================================================================   
-Obj_0x7C_Big_Ring_Flash: ; loc_AF80: 
+;===============================================================================
+Obj_0x7C_Big_Ring_Flash: ; loc_AF80:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	Big_Ring_Flash_Index(pc,d0),d1   ; loc_AF8E
@@ -12154,7 +12154,7 @@ Big_Ring_Flash_Index: ; loc_AF8E:
 		dc.w	loc_AF94-Big_Ring_Flash_Index
 		dc.w	loc_AFC2-Big_Ring_Flash_Index
 		dc.w	loc_B02A-Big_Ring_Flash_Index
-loc_AF94:		
+loc_AF94:
 		addq.b	#2,$24(a0)
 		move.l	#Big_Ring_Flash_Mappings,4(a0) ; loc_B19A
 		move.w	#$2462,2(a0)
@@ -12163,14 +12163,14 @@ loc_AF94:
 		move.b	#0,$18(a0)
 		move.b	#$20,$19(a0)
 		move.b	#$FF,$1A(a0)
-loc_AFC2:  
+loc_AFC2:
 		bsr.s	loc_AFDC
 		move.w	8(a0),d0
 		andi.w	#$FF80,d0
 		sub.w   (Camera_X_pos_coarse).w,d0
 		cmpi.w	#$280,d0
 		bhi.w	DeleteObject            ; loc_d3B4
-		bra.w	DisplaySprite           ; loc_d3C2 
+		bra.w	DisplaySprite           ; loc_d3C2
 loc_AFDC:
 		subq.b	#1,$1E(a0)
 		bpl.s	loc_B01A
@@ -12236,7 +12236,7 @@ Big_Ring_Map_04: ; loc_B158:
 		dc.l	$E00C082C,$0816FFF0,$E8080830,$08180000
 		dc.l	$E8090833,$0819FFE8,$F0070839,$081C0008
 		dc.l	$F8050841,$0820FFE8,$08090845,$0822FFE8
-		dc.l	$1008084B,$08250000,$180C084E,$0827FFF0 
+		dc.l	$1008084B,$08250000,$180C084E,$0827FFF0
 Big_Ring_Flash_Mappings: ; loc_B19A:
 		dc.w	Big_Ring_Flash_Map_01-Big_Ring_Flash_Mappings
 		dc.w	Big_Ring_Flash_Map_02-Big_Ring_Flash_Mappings
@@ -12445,11 +12445,11 @@ loc_B450:
 		move.b	#$A,$1C(a0)
 		bra.w	DisplaySprite
 
-;=============================================================================== 
+;===============================================================================
 ; Object 0x2E - Monitors Contents
 ; [ Begin ]
-;===============================================================================		   
-Obj_0x2E_Monitors_Contents: ; loc_B46A:		
+;===============================================================================
+Obj_0x2E_Monitors_Contents: ; loc_B46A:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_B478(pc,d0),d1
@@ -12595,7 +12595,7 @@ loc_B5F0:
 loc_B63E:
 		cmpi.w	#$10,d3
 		bcs.s	loc_B64C
-loc_B644:		
+loc_B644:
 		moveq	#1,d1
 		rts
 loc_B648:
@@ -12613,7 +12613,7 @@ loc_B64C:
 		cmp.w	d2,d1
 		bcc.s	loc_B644
 		moveq	#-1,d1
-		rts  
+		rts
 loc_B66A:
 		dc.w	loc_B680-loc_B66A
 		dc.w	loc_B684-loc_B66A
@@ -12841,7 +12841,7 @@ Obj34_ChkPos:
 Obj34_Move:
 		add.w	d1,8(a0)
 
-loc_BBF0:		
+loc_BBF0:
 		move.w	8(a0),d0
 		bmi.s	return_BC02
 		cmpi.w	#$200,d0
@@ -12932,14 +12932,14 @@ Obj34_ConData:	dc.w	0,$120,$FEFC,$13C,$414,$154,$214,$154
 		dc.w	0,$120,$FEE4,$124,$3EC,$3EC,$1EC,$12C
 		dc.w	0,$120,$FEE4,$124,$3EC,$3EC,$1EC,$12C
 
-;=============================================================================== 
+;===============================================================================
 ; Object 0x34 - Title Cards / Splash Screen
 ; [ End ]
-;===============================================================================  
-;=============================================================================== 
+;===============================================================================
+;===============================================================================
 ; Object 0x39 - Time Over / Game Over
 ; [ Begin ]
-;=============================================================================== 
+;===============================================================================
 Obj_0x39_Time_Game_Over: ; loc_Bd76:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -13002,14 +13002,14 @@ loc_BE2A:
 		move.w	#1,(Level_Inactive_flag).w
 loc_BE34:
 		bra.w	DisplaySprite           ; loc_d3C2
-;=============================================================================== 
+;===============================================================================
 ; Object 0x39 - Time Over / Game Over
 ; [ End ]
-;=============================================================================== 
-;=============================================================================== 
+;===============================================================================
+;===============================================================================
 ; Object 0x3A - Level Results
 ; [ Begin ]
-;=============================================================================== 
+;===============================================================================
 Obj_0x3A_Level_Results: ; loc_BE38:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -13028,7 +13028,7 @@ loc_BE56:
 		move.l	A0,A1
 		lea	(loc_C030).l,A2
 		moveq	#6,d1
-loc_BE60:		
+loc_BE60:
 		_move.b	#$3A,0(a1)
 		move.w	(a2),8(a1)
 		move.w	(a2)+,$0032(a1)
@@ -13056,7 +13056,7 @@ loc_BEAA:
 		neg.w	d1
 loc_BEBA:
 		add.w   d1,8(a0)
-loc_BEBE:		
+loc_BEBE:
 		move.w	8(a0),d0
 		bmi.s	loc_BEd0
 		cmpi.w	#$200,d0
@@ -13065,7 +13065,7 @@ loc_BEBE:
 		bra.w	DisplaySprite           ; loc_d3C2
 loc_BEd0:
 		rts
-loc_BEd2:		
+loc_BEd2:
 		move.b	#$E,$24(a0)
 		bra.w	loc_BFDE
 loc_BEDC:
@@ -13101,10 +13101,10 @@ loc_BF32:
 		jsr	(PlaySound).l             ; loc_14C6
 		addq.b	#2,$24(a0)
 		move.w	#$B4,$1E(a0)
-loc_BF4A:		
+loc_BF4A:
 		rts
 loc_BF4C:
-		jsr	(AddPoints).l               ; (loc_22Fd0)      
+		jsr	(AddPoints).l               ; (loc_22Fd0)
 		move.b	(Vint_runcount+3).w,d0
 		andi.b	#3,d0
 		bne.s	loc_BF4A
@@ -13202,16 +13202,16 @@ loc_C030:
 		dc.w	$0004,$0124,$00BC,$0200,$FEE0,$0120,$00d0,$0201
 		dc.w	$040C,$014C,$00d6,$0206,$0520,$0120,$00EC,$0202
 		dc.w	$0540,$0120,$00FC,$0203,$0560,$0120,$010C,$0204
-		dc.w	$020C,$014C,$00CC,$0205		
-;=============================================================================== 
+		dc.w	$020C,$014C,$00CC,$0205
+;===============================================================================
 ; Object 0x3A - Level Results
 ; [ End ]
-;=============================================================================== 
+;===============================================================================
 
-;=============================================================================== 
+;===============================================================================
 ; Object 0x?? - Special Stage Results Screen
 ; [ Begin ]
-;=============================================================================== 
+;===============================================================================
 Special_Stage_Results: ; loc_C068:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -13273,7 +13273,7 @@ loc_C104:
 		neg.w	d1
 loc_C114:
 		add.w   d1,8(a0)
-loc_C118:		
+loc_C118:
 		move.w	8(a0),d0
 		bmi.s	loc_C128
 		cmpi.w	#$200,d0
@@ -13396,7 +13396,7 @@ loc_C29C:
 Obj34_MapUnc_C2A0: ; loc_C2A0: ; Object $34 - Mappings
 		dc.w	TC_GHz_Map-Obj34_MapUnc_C2A0  ; Green Hill
 		dc.w	TC_Lz_Map-Obj34_MapUnc_C2A0   ; Labyrinth
-		dc.w	TC_Mz_Map-Obj34_MapUnc_C2A0   ; Marble  
+		dc.w	TC_Mz_Map-Obj34_MapUnc_C2A0   ; Marble
 		dc.w	TC_SLz_Map-Obj34_MapUnc_C2A0  ; Star Light
 		dc.w	TC_SYz_Map-Obj34_MapUnc_C2A0  ; Spring Yard
 		dc.w	TC_SBz_Map-Obj34_MapUnc_C2A0  ; Scrap Brain
@@ -13405,9 +13405,9 @@ Obj34_MapUnc_C2A0: ; loc_C2A0: ; Object $34 - Mappings
 		dc.w	TC_Act2_Map-Obj34_MapUnc_C2A0 ; Act 2
 		dc.w	TC_Act3_Map-Obj34_MapUnc_C2A0 ; Act 3
 		dc.w	TC_Oval_Map-Obj34_MapUnc_C2A0 ; Oval
-		dc.w	TC_Fz_Map-Obj34_MapUnc_C2A0   ; Final  
-TC_GHz_Map: ; loc_C2B8: ; Green Hill		 
-		dc.w	$0009 
+		dc.w	TC_Fz_Map-Obj34_MapUnc_C2A0   ; Final
+TC_GHz_Map: ; loc_C2B8: ; Green Hill
+		dc.w	$0009
 		dc.l	$F8050018,$000CFFB4,$F805003A,$001DFFC4
 		dc.l	$F8050010,$0008FFd4,$F8050010,$0008FFE4
 		dc.l	$F805002E,$0017FFF4,$F805001C,$000E0014
@@ -13420,11 +13420,11 @@ TC_Lz_Map: ; loc_C302: ; Labyrinth
 		dc.l	$F805003A,$001DFFFC,$F8010020,$0010000C
 		dc.l	$F805002E,$00170014,$F8050042,$00210024
 		dc.l	$F805001C,$000E0034
-TC_Mz_Map: ; loc_C34C: ; Marble 
+TC_Mz_Map: ; loc_C34C: ; Marble
 		dc.w	$0006
 		dc.l	$F805002A,$0015FFCF,$F8050000,$0000FFE0
 		dc.l	$F805003A,$001DFFF0,$F8050004,$00020000
-		dc.l	$F8050026,$00130010,$F8050010,$00080020 
+		dc.l	$F8050026,$00130010,$F8050010,$00080020
 TC_SLz_Map: ; loc_C37E: ; Star Light
 		dc.w	$0009
 		dc.l	$F805003E,$001FFFB4,$F8050042,$0021FFC4
@@ -13438,7 +13438,7 @@ TC_SYz_Map: ; loc_C3C8: ; Spring Yard
 		dc.w	$F805,$003A,$001D,$FFCC,$F801,$0020,$0010,$FFDC
 		dc.w	$F805,$002E,$0017,$FFE4,$F805,$0018,$000C,$FFF4
 		dc.w	$F805,$004A,$0025,$0014,$F805,$0000,$0000,$0024
-		dc.w	$F805,$003A,$001D,$0034,$F805,$000C,$0006,$0044 
+		dc.w	$F805,$003A,$001D,$0034,$F805,$000C,$0006,$0044
 TC_SBz_Map: ; loc_C41A: ; Scrap Brain
 		dc.w	$000A
 		dc.l	$F805003E,$001FFFAC,$F8050008,$0004FFBC
@@ -13489,7 +13489,7 @@ loc_C584:
 		dc.l	$F809001C,$000EFFC4,$F80d0008,$0004FFDC
 loc_C596:
 		dc.w	$0002
-		dc.l	$F80d0014,$000A000C,$F80d000C,$0006002C  
+		dc.l	$F80d0014,$000A000C,$F80d000C,$0006002C
 Level_Results_Mappings: ; loc_C5A8:
 		dc.w	LR_Sonic_Has_Map-Level_Results_Mappings
 		dc.w	LR_Passed_Map-Level_Results_Mappings
@@ -13527,7 +13527,7 @@ LR_Ring_Bonus_Map: ; loc_C69A:
 		dc.l	$F80d0152,$00A9FFB0,$F80d0066,$0033FFD9
 		dc.l	$F801014A,$00A5FFF9,$F704006E,$0037FFF6
 		dc.l	$FF04186E,$1837FFF6,$F80DFFF8,$FBFC0028
-		dc.l	$F8010170,$00B80048    
+		dc.l	$F8010170,$00B80048
 Special_Stage_Results_Mappings: ; loc_C6d4:
 		dc.w	loc_C6E6-Special_Stage_Results_Mappings
 		dc.w	loc_C750-Special_Stage_Results_Mappings
@@ -13587,7 +13587,7 @@ loc_C87C:
 		dc.l	$F8050042,$00210010,$F805001C,$000E0020
 		dc.l	$F8050010,$00080030,$F805002A,$00150040
 		dc.l	$F8050000,$00000058,$F8050026,$00130068
-		dc.l	$F8050026,$00130078		
+		dc.l	$F8050026,$00130078
 Emeralds_Mappings: ; loc_C8F6:
 		dc.w	loc_C904-Emeralds_Mappings
 		dc.w	loc_C90E-Emeralds_Mappings
@@ -13615,12 +13615,12 @@ loc_C936:
 		dc.w	$0001
 		dc.l	$F805200C,$2006FFF8
 loc_C940:
-		dc.w	$0000		   ; Filler		            
-		nop		   
-;=============================================================================== 
-; Object 0x36 - Vertical Spikes 
-; [ Begin ]		         
-;===============================================================================		 
+		dc.w	$0000		   ; Filler
+		nop
+;===============================================================================
+; Object 0x36 - Vertical Spikes
+; [ Begin ]
+;===============================================================================
 Obj_0x36_Spikes: ; loc_C944:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -13630,9 +13630,9 @@ loc_C952:
 		dc.w	loc_C96A-loc_C952
 		dc.w	loc_C9d6-loc_C952
 		dc.w	loc_CA26-loc_C952
-		dc.w	loc_CA82-loc_C952		
+		dc.w	loc_CA82-loc_C952
 loc_C95A:
-		dc.b	$10,$10,$20,$10,$30,$10,$40,$10,$10,$10,$10,$20,$10,$30,$10,$40		  
+		dc.b	$10,$10,$20,$10,$30,$10,$40,$10,$10,$10,$10,$20,$10,$30,$10,$40
 loc_C96A:
 		addq.b	#2,$24(a0)
 		move.l	#Obj36_MapUnc_CAB0,4(a0) ; loc_CBA0
@@ -13642,7 +13642,7 @@ loc_C96A:
 		move.b	#4,$18(a0)
 		move.b	$28(a0),d0
 		andi.b	#$F,$28(a0)
-		andi.w	#$F0,d0  
+		andi.w	#$F0,d0
 		lea	loc_C95A(pc),A1
 		lsr.w	#3,d0
 		adda.w	d0,A1
@@ -13688,7 +13688,7 @@ loc_CA10:
 loc_CA1E:
 		move.w	$30(a0),d0
 		bra.w	MarkObjGone2
-loc_CA26:		
+loc_CA26:
 		move.w	8(a0),-(sp)
 		bsr.w	loc_CAFE
 		moveq	#0,d1
@@ -13709,10 +13709,10 @@ loc_CA26:
 		lea	(MainCharacter).w,A1
 		bsr.w	Touch_ChkHurt2            ; loc_CAd0
 		bclr	#5,$22(a0)
-loc_CA66:		
+loc_CA66:
 		andi.b	#2,d6
 		beq.s	loc_CA7A
-		lea	(Sidekick).w,A1  
+		lea	(Sidekick).w,A1
 		bsr.w	Touch_ChkHurt2            ; loc_CAd0
 		bclr	#6,$22(a0)
 loc_CA7A:
@@ -13748,7 +13748,7 @@ loc_CAC8:
 ;===============================================================================
 ; Sub Routine Touch_ChkHurt2
 ;[ Begin ]
-;===============================================================================		
+;===============================================================================
 ; loc_CAd0: Touch_Spikes:
 Touch_ChkHurt2:
 		tst.b	(Invincibility_flag).w           ; Invincibility Running ?
@@ -13771,7 +13771,7 @@ Touch_ChkHurt2_No_Hurt:
 ;===============================================================================
 ; Sub Routine Touch_ChkHurt2
 ;[ End ]
-;===============================================================================		    
+;===============================================================================
 loc_CAFE:
 		moveq	#0,d0
 		move.b	$0028(a0),d0
@@ -13782,7 +13782,7 @@ loc_CB0E:
 		dc.w	loc_CB14-loc_CB0E
 		dc.w	loc_CB16-loc_CB0E
 		dc.w	loc_CB2A-loc_CB0E
-loc_CB14:		  
+loc_CB14:
 		rts
 loc_CB16:
 		bsr.w	loc_CB3E
@@ -14104,9 +14104,9 @@ ObjPtr_WaterSurface:	dc.l	Obj04			; Surface of the water
 ObjPtr_TailsTails:	dc.l	Obj05			; Tails' tails
 ObjPtr_Spiral:		dc.l	Obj06			; Twisting spiral pathway in GHZ
 ObjPtr_Oil:		dc.l	Obj07			; Oil Ocean in OOZ
-			dc.l    Obj_0x08_Water_Splash             ; loc_12B42 
+			dc.l    Obj_0x08_Water_Splash             ; loc_12B42
 			dc.l    Obj_0x09_Sonic_In_Special_Stage   ; loc_21d40
-			dc.l    Obj_0x0A_Bubbles_And_Numbers      ; loc_1207C 
+			dc.l    Obj_0x0A_Bubbles_And_Numbers      ; loc_1207C
 			dc.l	Obj0B			; Section of pipe that tips you off from CPZ
 			dc.l	Obj0C			; Small floating platform (used in CPZ in the Nick Arcade prototype)
 			dc.l	Obj0D			; End of level signpost
@@ -14120,18 +14120,18 @@ ObjPtr_Oil:		dc.l	Obj07			; Oil Ocean in OOZ
 			dc.l    Obj_0x15_Swing_Platform           ; loc_85F8
 			dc.l	Obj16			; Diagonally moving lift from HTZ
 			dc.l	Obj17			; GHZ rotating log helix spikes (leftover from S1)
-			dc.l    Obj_0x18_Platforms		; loc_8d38 
-			dc.l    Obj_0x19_Elevator		 ; loc_1621C		 
-			dc.l    Obj_0x1A_Collapsing_Platforms     ; loc_9128 
+			dc.l    Obj_0x18_Platforms		; loc_8d38
+			dc.l    Obj_0x19_Elevator		 ; loc_1621C
+			dc.l    Obj_0x1A_Collapsing_Platforms     ; loc_9128
 			dc.l	Obj1B			; Speed booster from CPZ
 			dc.l	Obj1C			; Scenery objects
-			dc.l    Obj_0x1D_Worms		    ; loc_165B0   
-			dc.l    Obj_0x1E_Tube_Attributes          ; loc_16724 
-			dc.l    Obj_0x1F_Collapsing_Platforms     ; loc_9274 
+			dc.l    Obj_0x1D_Worms		    ; loc_165B0
+			dc.l    Obj_0x1E_Tube_Attributes          ; loc_16724
+			dc.l    Obj_0x1F_Collapsing_Platforms     ; loc_9274
 			dc.l    Obj_0x20_Fireball		 ; loc_17174
 			dc.l	Obj21			; Score/Rings/Time display
 			dc.l    Obj_0x22_Arrow_Shooter            ; loc_19660
-			dc.l    Obj_0x23_Pillar		   ; loc_19850    
+			dc.l    Obj_0x23_Pillar		   ; loc_19850
 			dc.l	Obj24			; Buzz Bomber missile explosion (leftover from S1)
 			dc.l	Obj25			; A ring
 			dc.l    Obj26			; Monitor
@@ -14145,42 +14145,42 @@ ObjPtr_Oil:		dc.l	Obj07			; Oil Ocean in OOZ
 			dc.l    Obj_0x2E_Monitors_Contents        ; loc_B46A
 			dc.l    Obj_0x2F_Breakable_Floor          ; loc_1747C
 			dc.l    Obj_0x30		          ; loc_17A4C
-			dc.l    Obj_0x31_Lava_Attributes          ; loc_155A0 
+			dc.l    Obj_0x31_Lava_Attributes          ; loc_155A0
 			dc.l    Obj_0x32_Breakable_Obstacule      ; loc_1768A
-			dc.l    Obj_0x33_Touch_Booster            ; loc_17CA0   
+			dc.l    Obj_0x33_Touch_Booster            ; loc_17CA0
 			dc.l	Obj34			; Sonic 1 title cards
 			dc.l    Obj_0x35_Invincibility            ; loc_1264E
-			dc.l    Obj_0x36_Spikes		   ; loc_C944 
+			dc.l    Obj_0x36_Spikes		   ; loc_C944
 			dc.l	Obj37			; Scattering rings (generated when Sonic is hurt and has rings)
 			dc.l    Obj_0x38_Shield		   ; loc_125CE
 			dc.l    Obj_0x39_Time_Game_Over           ; loc_Bd76
-			dc.l    Obj_0x3A_Level_Results            ; loc_BE38 
+			dc.l    Obj_0x3A_Level_Results            ; loc_BE38
 			dc.l	Obj3B			; Purple rock (leftover from S1)
 			dc.l	Obj3C			; Breakable wall (leftover from S1) (mostly unused)
-			dc.l    Obj_0x3D_Break_Boost              ; loc_18E78   
+			dc.l    Obj_0x3D_Break_Boost              ; loc_18E78
 			dc.l	Obj3E			; Egg prison (unaltered from S1 still)
 			dc.l	Obj3F			; Boss explosion (unused)
 			dc.l    Obj_0x40_Diagonal_Springs         ; loc_1A30C
-			dc.l    Obj_0x41_Springs		  ; loc_E7B8 
+			dc.l    Obj_0x41_Springs		  ; loc_E7B8
 			dc.l    Obj_0x42_Steam_Vent               ; loc_1A5CC
-			dc.l    Obj_0x43_Giant_Spikeball          ; loc_17F0C  
+			dc.l    Obj_0x43_Giant_Spikeball          ; loc_17F0C
 			dc.l    Obj_0x44		          ; loc_F10C
 			dc.l    Obj_0x45_Spring_Push_Boost        ; loc_181A0
-			dc.l    Obj_0x46_Spring_Ball              ; loc_18ABE 
+			dc.l    Obj_0x46_Spring_Ball              ; loc_18ABE
 			dc.l    Obj_0x47_Switch		   ; loc_18D9C
 			dc.l    Obj_0x48_Cannon		   ; loc_19250
-			dc.l    Obj_0x49_Waterfall		; loc_15352 
+			dc.l    Obj_0x49_Waterfall		; loc_15352
 			dc.l    Obj_0x4A_Octus		    ; loc_1EBB8
-			dc.l    Obj_0x4B_Buzz_Bomber              ; loc_1E89C 
-			dc.l    Obj_0x4C_Batbot		   ; loc_1EE68 
-			dc.l    Obj_0x4D_Rhinobot		 ; loc_1D984 
+			dc.l    Obj_0x4B_Buzz_Bomber              ; loc_1E89C
+			dc.l    Obj_0x4C_Batbot		   ; loc_1EE68
+			dc.l    Obj_0x4D_Rhinobot		 ; loc_1D984
 			dc.l    Obj_0x4E_Crocobot		 ; loc_1F2F0
 			dc.l    Obj_0x4F_Dinobot		  ; loc_1DEAC
 			dc.l    Obj_0x50_Aquis		    ; loc_1E010
 			dc.l    Obj_0x51_Aquis		    ; loc_1E62C
 			dc.l    Obj_0x52_Piranha		  ; loc_1DC54
 			dc.l	Obj53			; Masher (jumping piranha fish badnik) from GHZ
-			dc.l    Obj_0x54_Motobug		  ; loc_1F6E8 
+			dc.l    Obj_0x54_Motobug		  ; loc_1F6E8
 			dc.l    Obj_0x55_Ghz_Boss		 ; loc_2030C
 			dc.l    Obj_0x56		          ; loc_205A6
 			dc.l    Obj_0x57		          ; loc_1F99C
@@ -14197,7 +14197,7 @@ ObjPtr_Oil:		dc.l	Obj07			; Oil Ocean in OOZ
 			dc.l	Obj_Null
 			dc.l	Obj_Null
 			dc.l    Obj_0x64_Pistons		  ; loc_1A8B4
-			dc.l    Obj_0x65_Platform		 ; loc_1AA74 
+			dc.l    Obj_0x65_Platform		 ; loc_1AA74
 			dc.l    Obj_0x66_Spring_Wall              ; loc_1AEBC
 			dc.l    Obj_0x67_Teleport_Attributes      ; loc_1B0C4
 			dc.l    Obj_0x68_Block_Arrow              ; loc_1B520
@@ -14205,7 +14205,7 @@ ObjPtr_Oil:		dc.l	Obj07			; Oil Ocean in OOZ
 			dc.l    Obj_0x6A_Rotating_Boxes           ; loc_1BA30
 			dc.l    Obj_0x6B_Mz_Platform              ; loc_1BCEC
 			dc.l    Obj_0x6C_Mz_Moving_Platforms      ; loc_1BF6C
-			dc.l    Obj_0x6D_Harpoon		  ; loc_1B720   
+			dc.l    Obj_0x6D_Harpoon		  ; loc_1B720
 			dc.l    Obj_0x6E_Machine		  ; loc_1C2E4
 			dc.l    Obj_Ox6F_Parallelogram_Elevator   ; loc_1C4F8
 			dc.l    Obj_0x70_Rotating_Gears           ; loc_1C850
@@ -14362,7 +14362,7 @@ Mark_Delete2:
 ; Used for objects that do not display at all (usually debug or triggers)
 ; Otherwise identical to the original MarkObjGone
 ; sub_d30C:
-MarkObjGone3:		 
+MarkObjGone3:
 		tst.w	(Two_player_mode).w
 		beq.s	loc_d314
 		rts
@@ -14455,7 +14455,7 @@ DeleteObject2:
 		; delete the object by setting all of its bytes to 0
 -		move.l	d1,(a1)+
 		dbf	d0,-
-		rts 
+		rts
 ; End of function DeleteObject
 
 ; ---------------------------------------------------------------------------
@@ -14523,10 +14523,10 @@ return_d410:
 		rts
 ; End of function DisplaySprite3
 
-;=============================================================================== 
+;===============================================================================
 ; Sub Routine AnimateSprite
-; [ Begin ]		         
-;===============================================================================		   
+; [ Begin ]
+;===============================================================================
 AnimateSprite: ; loc_d412:
 		moveq	#0,d0
 		move.b	$001C(a0),d0
@@ -14545,7 +14545,7 @@ loc_d42E:
 		move.b	$001B(a0),d1
 		move.b	$01(A1,d1),d0
 		bmi.s	loc_d46A
-loc_d44A: 
+loc_d44A:
 		andi.b	#$7F,d0
 		move.b	d0,$001A(a0)
 		move.b	$0022(a0),d1
@@ -14562,7 +14562,7 @@ loc_d46A:
 		move.b	$0001(a1),d0
 		bra.s	loc_d44A
 loc_d47A:
-		addq.b	#1,d0 
+		addq.b	#1,d0
 		bne.s	loc_d48E
 		move.b	$02(A1,d1),d0
 		sub.b   d0,$001B(a0)
@@ -14594,10 +14594,10 @@ loc_d4BE:
 		rts
 loc_d4C8:
 		rts
-;=============================================================================== 
+;===============================================================================
 ; Sub Routine AnimateSprite
-; [ End ]		         
-;===============================================================================   
+; [ End ]
+;===============================================================================
 
 ; ===========================================================================
 ; Bizarrely,Sonic 1 used a table instead of a direct reference to the
@@ -14928,7 +14928,7 @@ loc_d752:
 		rts
 loc_d75A:
 		dc.b	$08,$08,$08,$08,$10,$10,$10,$10,$18,$18,$18,$18,$20,$20,$20,$20
-loc_d76A:		
+loc_d76A:
 		dc.b	$08,$10,$18,$20,$08,$10,$18,$20,$08,$10,$18,$20,$08,$10,$18,$20
 loc_d77A:
 		move.b	(a1)+,d0
@@ -14937,7 +14937,7 @@ loc_d77A:
 		neg.w	d0
 		move.b	loc_d76A(pc,d4),d4
 		sub.w   d4,d0
-		add.w   d2,d0		
+		add.w   d2,d0
 		move.w	d0,(a2)+
 		move.b	(a1)+,(a2)+
 		addq.b	#1,d5
@@ -14953,10 +14953,10 @@ loc_d77A:
 		bne.s	loc_d7AA
 		addq.w	#1,d0
 loc_d7AA:
-		move.w	d0,(a2)+  
-		dbf	d1,loc_d77A				    
-		rts 
-loc_d7B2:		
+		move.w	d0,(a2)+
+		dbf	d1,loc_d77A
+		rts
+loc_d7B2:
 		dc.b	$08,$10,$18,$20,$08,$10,$18,$20,$08,$10,$18,$20,$08,$10,$18,$20
 loc_d7C2:
 		move.b	(a1)+,d0
@@ -14979,7 +14979,7 @@ loc_d7C2:
 		move.w	(a1)+,d0
 		neg.w	d0
 		move.b	loc_D804(pc,d4),d4
-		sub.w   d4,d0    
+		sub.w   d4,d0
 		add.w   d3,d0
 		andi.w	#$01FF,d0
 		bne.s	loc_d7FC
@@ -14990,11 +14990,11 @@ loc_d7FC:
 		rts
 loc_D804:
 		dc.b	$08,$08,$08,$08,$10,$10,$10,$10,$18,$18,$18,$18,$20,$20,$20,$20
-;=============================================================================== 
+;===============================================================================
 ; Sub Routine Build_Sprites_2p
-; [ Begin ]		         
-;===============================================================================  
-BldSpr_ScrPos_2p: ; loc_D814:		
+; [ Begin ]
+;===============================================================================
+BldSpr_ScrPos_2p: ; loc_D814:
 		dc.l	0,Camera_X_pos,Camera_BG_X_pos,Camera_BG3_X_pos
 Build_Sprites_2p: ; loc_D824:
 		tst.w	(Hint_flag).w
@@ -15012,12 +15012,12 @@ Build_Sprites_2p: ; loc_D824:
 loc_D854:
 		lea	(Sprite_Table_Input).w,A4
 		moveq	#$07,d7
-loc_D85A:		
+loc_D85A:
 		move.w	(a4),d0
 		beq.w	 loc_D932
 		move.w	d0,-(sp)
 		moveq	#$02,d6
-loc_D864:		
+loc_D864:
 		move.w	$00(A4,d6),A0
 		tst.b	(a0)
 		beq.w	 loc_D928
@@ -15041,7 +15041,7 @@ loc_D864:
 		cmpi.w	#$0140,d1
 		bge.s   loc_D928
 		addi.w	#$0080,d3
-		btst	#$04,d4  
+		btst	#$04,d4
 		beq.s	loc_D8E6
 		moveq	#0,d0
 		move.b	$0016(a0),d0
@@ -15056,12 +15056,12 @@ loc_D864:
 		bge.s   loc_D928
 		addi.w	#$0100,d2
 		bra.s	loc_D902
-loc_D8D8:		
+loc_D8D8:
 		move.w	$000A(a0),d2
 		move.w	8(a0),d3
 		addi.w	#$0080,d2
 		bra.s	loc_D902
-loc_D8E6:		
+loc_D8E6:
 		move.w	$000C(a0),d2
 		sub.w   $0004(a1),d2
 		addi.w	#$0080,d2
@@ -15085,12 +15085,12 @@ loc_D91E:
 		bsr.w	loc_DC70
 loc_D922:
 		ori.b   #$80,$0001(a0)
-loc_D928:		
+loc_D928:
 		addq.w	#$02,d6
 		subq.w	#$02,(sp)
 		bne.w	 loc_D864
 		addq.w	#$02,sp
-loc_D932:		
+loc_D932:
 		lea	$0080(a4),A4
 		dbf	d7,loc_D85A
 		move.b	d5,(Sprite_count).w
@@ -15102,7 +15102,7 @@ loc_D94C:
 		move.b	#$00,-5(a2)
 		bra.s	loc_D964
 loc_D954:
-		dc.b	$00,$00,$00,$00,$FF,$FF,$EE,$20,$FF,$FF,$EE,$28,$FF,$FF,$EE,$38		           
+		dc.b	$00,$00,$00,$00,$FF,$FF,$EE,$20,$FF,$FF,$EE,$28,$FF,$FF,$EE,$38
 loc_D964:
 		lea	(Sprite_Table_2).w,A2
 		moveq	#0,d5
@@ -15113,11 +15113,11 @@ loc_D964:
 loc_D976:
 		lea	(Sprite_Table_Input).w,A4
 		moveq	#$07,d7
-loc_D97C:		
+loc_D97C:
 		tst.w	(a4)
 		beq.w	 loc_DA4A
 		moveq	#$02,d6
-loc_D984:		
+loc_D984:
 		move.w	$00(A4,d6),A0
 		tst.b	(a0)
 		beq.w	 loc_DA42
@@ -15146,7 +15146,7 @@ loc_D984:
 		move.b	$0016(a0),d0
 		move.w	$000C(a0),d2
 		sub.w   $0004(a1),d2
-		move.w	d2,d1 
+		move.w	d2,d1
 		add.w   d0,d1
 		bmi.s	loc_DA42
 		move.w	d2,d1
@@ -15184,13 +15184,13 @@ loc_DA38:
 		bsr.w	loc_DC70
 loc_DA3C:
 		ori.b   #$80,$0001(a0)
-loc_DA42:		
+loc_DA42:
 		addq.w	#$02,d6
 		subq.w	#$02,(a4)
 		bne.w	 loc_D984
-loc_DA4A:		
+loc_DA4A:
 		lea	$0080(a4),A4
-		dbf	d7,loc_D97C		 
+		dbf	d7,loc_D97C
 		move.b	d5,(Sprite_count).w
 		cmpi.b	#$50,d5
 		beq.s	loc_DA64
@@ -15240,7 +15240,7 @@ loc_DACC:
 		cmpi.w	#$0180,d2
 		bcc.s	loc_DB48
 		addi.w	#$0080,d2
-loc_DAE8:		
+loc_DAE8:
 		moveq	#0,d1
 		move.b	$000B(a0),d1
 		beq.s	loc_DB02
@@ -15258,7 +15258,7 @@ loc_DB02:
 		move.b	$000F(a0),d0
 		subq.w	#1,d0
 		bcs.s	loc_DB48
-loc_DB16:		
+loc_DB16:
 		swap	d0
 		move.w	(a6)+,d3
 		sub.w   (a4),d3
@@ -15281,8 +15281,8 @@ loc_DB42:
 		dbf	d0,loc_DB16
 loc_DB48:
 		move.l	(sp)+,A4
-loc_DB4A:		
-		bra.w	loc_D928		     
+loc_DB4A:
+		bra.w	loc_D928
 loc_DB4E:
 		move.l	A4,-(sp)
 		lea	(Camera_X_pos_P2).w,A4
@@ -15315,7 +15315,7 @@ loc_DB4E:
 		bge.w    loc_DC2A
 		addi.w	#$01E0,d2
 		bra.s	loc_DBCA
-loc_DBAE:		
+loc_DBAE:
 		move.w	$000C(a0),d2
 		sub.w   $0004(a4),d2
 		addi.w	#$0080,d2
@@ -15335,14 +15335,14 @@ loc_DBCA:
 		subq.w	#1,d1
 		bmi.s	loc_DBE4
 		bsr.w	loc_DC68
-loc_DBE4: 
+loc_DBE4:
 		ori.b   #$80,$0001(a0)
 		lea	$0010(a0),A6
 		moveq	#0,d0
 		move.b	$000F(a0),d0
 		subq.w	#1,d0
 		bcs.s	loc_DC2A
-loc_DBF8:		
+loc_DBF8:
 		swap	d0
 		move.w	(a6)+,d3
 		sub.w   (a4),d3
@@ -15362,21 +15362,21 @@ loc_DBF8:
 		bsr.w	loc_DC68
 loc_DC24:
 		swap	d0
-		dbf	d0,loc_DBF8    
+		dbf	d0,loc_DBF8
 loc_DC2A:
 		move.l	(sp)+,A4
 		bra.w	loc_DA42
-;=============================================================================== 
+;===============================================================================
 ; Sub Routine Build_Sprites_2p
-; [ End ]		         
-;===============================================================================		  
+; [ End ]
+;===============================================================================
 
-;=============================================================================== 
-; Sub Routine Adjust2PArtPointer         
+;===============================================================================
+; Sub Routine Adjust2PArtPointer
 ; [ Begin ]		               2P Mode Objects Attributes #1
-;===============================================================================        
-; ModifySpriteAttr_2P:          
-Adjust2PArtPointer: ; loc_DC30: 
+;===============================================================================
+; ModifySpriteAttr_2P:
+Adjust2PArtPointer: ; loc_DC30:
 		tst.w	(Two_player_mode).w
 		beq.s	loc_DC4A
 		move.w	$0002(a0),d0
@@ -15386,17 +15386,17 @@ Adjust2PArtPointer: ; loc_DC30:
 		add.w   d0,$0002(a0)
 loc_DC4A:
 		rts
-;=============================================================================== 
-; Sub Routine Adjust2PArtPointer         
+;===============================================================================
+; Sub Routine Adjust2PArtPointer
 ; [ End ]				 2P Mode Objects Attributes #1
-;===============================================================================		 
+;===============================================================================
 
-;=============================================================================== 
-; Sub Routine Adjust2PArtPointer         
+;===============================================================================
+; Sub Routine Adjust2PArtPointer
 ; [ Begin ]		               2P Mode Objects Attributes #2
-;===============================================================================		  
+;===============================================================================
 ; ModifyA1SpriteAttr_2P:
-Adjust2PArtPointer2: ; loc_DC4C: 
+Adjust2PArtPointer2: ; loc_DC4C:
 		tst.w	(Two_player_mode).w
 		beq.s	ModifySpriteAttr_Not2pmode ; loc_DC66
 		move.w	$0002(a1),d0
@@ -15405,12 +15405,12 @@ Adjust2PArtPointer2: ; loc_DC4C:
 		andi.w	#$F800,$0002(a1)
 		add.w   d0,$0002(a1)
 ModifySpriteAttr_Not2pmode ; loc_DC66:
-		rts 
-;=============================================================================== 
-; Sub Routine Adjust2PArtPointer         
+		rts
+;===============================================================================
+; Sub Routine Adjust2PArtPointer
 ; [ End ]		               2P Mode Objects Attributes #2
 ;===============================================================================
-						  
+
 loc_DC68:
 		cmpi.b	#$50,d5
 		bcs.s	loc_DC88
@@ -15423,13 +15423,13 @@ loc_DC70:
 		bne.s	loc_DCC6
 		btst	#1,d4
 		bne.w	 loc_Dd28
-loc_DC88:		
+loc_DC88:
 		move.b	(a1)+,d0
 		ext.w   d0
 		add.w   d2,d0
 		move.w	d0,(a2)+
-		move.b	(a1)+,d4    
-		move.b	loc_DCB6(pc,d4),(a2)+             
+		move.b	(a1)+,d4
+		move.b	loc_DCB6(pc,d4),(a2)+
 		addq.b	#1,d5
 		move.b	d5,(a2)+
 		addq.w	#$02,A1
@@ -15444,14 +15444,14 @@ loc_DC88:
 loc_DCAE:
 		move.w	d0,(a2)+
 		dbf	d1,loc_DC88
-loc_DCB4:		
-		rts		
-loc_DCB6:               
+loc_DCB4:
+		rts
+loc_DCB6:
 		dc.b	$00,$00,$01,$01,$04,$04,$05,$05,$08,$08,$09,$09,$0C,$0C,$0D,$0D
 loc_DCC6:
 		btst	#1,d4
 		bne.w	 loc_DD84
-loc_DCCE:		
+loc_DCCE:
 		move.b	(a1)+,d0
 		ext.w   d0
 		add.w   d2,d0
@@ -15476,10 +15476,10 @@ loc_DCCE:
 loc_Dd00:
 		move.w	d0,(a2)+
 		dbf	d1,loc_DCCE
-		rts    
+		rts
 loc_Dd08:
-		dc.b	$08,$08,$08,$08,$10,$10,$10,$10,$18,$18,$18,$18,$20,$20,$20,$20  
-loc_Dd18: 
+		dc.b	$08,$08,$08,$08,$10,$10,$10,$10,$18,$18,$18,$18,$20,$20,$20,$20
+loc_Dd18:
 		dc.b	$08,$10,$18,$20,$08,$10,$18,$20,$08,$10,$18,$20,$08,$10,$18,$20
 loc_Dd28:
 		move.b	(a1)+,d0
@@ -15503,14 +15503,14 @@ loc_Dd28:
 		add.w   d3,d0
 		andi.w	#$01FF,d0
 		bne.s	loc_Dd5C
-		addq.w	#1,d0   
+		addq.w	#1,d0
 loc_Dd5C:
 		move.w	d0,(a2)+
 		dbf	d1,loc_Dd28
-		rts         
+		rts
 loc_Dd64:
-		dc.b	$00,$00,$01,$01,$04,$04,$05,$05,$08,$08,$09,$09,$0C,$0C,$0D,$0D 
-loc_Dd74:  
+		dc.b	$00,$00,$01,$01,$04,$04,$05,$05,$08,$08,$09,$09,$0C,$0C,$0D,$0D
+loc_Dd74:
 		dc.b	$08,$10,$18,$20,$08,$10,$18,$20,$08,$10,$18,$20,$08,$10,$18,$20
 loc_DD84:
 		move.b	(a1)+,d0
@@ -15541,7 +15541,7 @@ loc_DD84:
 loc_DDC0:
 		move.w	d0,(a2)+
 		dbf	d1,loc_DD84
-		rts             
+		rts
 loc_DDC8:
 		dc.b	$08,$08,$08,$08,$10,$10,$10,$10,$18,$18,$18,$18,$20,$20,$20,$20
 loc_DDD8:
@@ -15559,7 +15559,7 @@ loc_DDD8:
 		rts
 loc_DDFC:
 		moveq	#1,d0
-		rts 
+		rts
 ;loc_DE00:
 		moveq	#0,d1
 		move.b	$0019(a0),d1
@@ -15618,7 +15618,7 @@ RingsManager_Init:
 		move.w	a1,(Ring_start_addr_P2).w
 		addi.w	#320+16,d4	; advance by a screen (and a bit more)
 		bra.s	+
-		
+
 -		lea	6(a1),a1	; load next ring
 +
 		cmp.w	2(a1),d4	; is the X pos of the ring < camera X + 336?
@@ -15634,7 +15634,7 @@ RingsManager_Main:
 		move.w	(a2)+,d1
 		subq.w	#1,d1	; are any rings currently being consumed?
 		bcs.s	++	; if not,branch
-	
+
 -		move.w	(a2)+,d0	; is there a ring in this slot?
 		beq.s	-		; if not,branch
 		move.w	d0,a1		; load ring address
@@ -15865,7 +15865,7 @@ loc_E068:
 loc_E08C:
 		lea	$0006(a0),A0
 		cmpa.l  A0,A4
-		bne.w	 BuildRings_Loop  
+		bne.w	 BuildRings_Loop
 		rts
 loc_E098:
 		lea	(Camera_X_pos).w,A3
@@ -15880,7 +15880,7 @@ loc_E0AE:
 		move.w	#$0158,d6
 		move.w	(Ring_start_addr_P2).w,A0
 		move.w	(Ring_end_addr_P2).w,A4
-		cmpa.l  A0,A4		
+		cmpa.l  A0,A4
 		bne.s	loc_E0C4
 		rts
 loc_E0C4:
@@ -15919,13 +15919,13 @@ loc_E0FC:
 		move.w	(a1)+,d0
 		add.w   d3,d0
 		move.w	d0,(a2)+
-loc_E124:		
+loc_E124:
 		lea	$0006(a0),A0
 		cmpa.l  A0,A4
 		bne.w	 loc_E0C4
-		rts   
+		rts
 loc_E130:
-		dc.b	$00,$00,$01,$01,$04,$04,$05,$05,$08,$08,$09,$09,$0C,$0C,$0D,$0D  
+		dc.b	$00,$00,$01,$01,$04,$04,$05,$05,$08,$08,$09,$09,$0C,$0C,$0D,$0D
 loc_E140: ; Load Rings routine
 		clearRAM Ring_Positions,Ring_Positions_End
 		lea	(Ring_consumption_table).w,A1
@@ -15943,7 +15943,7 @@ loc_E158:
 		move.w	$00(A1,d0),d0
 		lea	$00(A1,d0),A1
 		lea	(Ring_Positions+6).w,A2
-loc_E17C:		
+loc_E17C:
 		move.w	(a1)+,d2
 		bmi.s	loc_E1C4
 		move.w	(a1)+,d3
@@ -15952,7 +15952,7 @@ loc_E17C:
 		rol.w   #$04,d0
 		andi.w	#$0007,d0
 		andi.w	#$0FFF,d3
-loc_E190:		
+loc_E190:
 		move.w	#0,(a2)+
 		move.w	d2,(a2)+
 		move.w	d3,(a2)+
@@ -15965,7 +15965,7 @@ loc_E1A4:
 		rol.w   #$04,d0
 		andi.w	#$0007,d0
 		andi.w	#$0FFF,d3
-loc_E1B0:		
+loc_E1B0:
 		move.w	#0,(a2)+
 		move.w	d2,(a2)+
 		move.w	d3,(a2)+
@@ -16034,7 +16034,7 @@ loc_E238:
 		dc.l	$F805180A,$1805FFF8
 loc_E240:
 		dc.l	$F805080A,$0805FFF8
-loc_E248: 
+loc_E248:
 		dc.l	$F805100A,$1005FFF8
 
 
@@ -16114,7 +16114,7 @@ loc_E2C6:
 		addq.w	#$06,A0
 		bra.s	loc_E2B8
 loc_E2CA:
-		move.l	A0,(Obj_load_addr_right).w   
+		move.l	A0,(Obj_load_addr_right).w
 		move.l	A0,(Obj_load_addr_right_P2).w
 		move.l	(Obj_load_addr_left).w,A0
 		subi.w	#$0080,d6
@@ -16172,10 +16172,10 @@ loc_E366:
 		addq.b	#1,$0001(a2)
 loc_E370:
 		addq.w	#$06,A0
-loc_E372:		
+loc_E372:
 		move.l	A0,(Obj_load_addr_left).w
 		move.l	(Obj_load_addr_right).w,A0
-		addi.w	#$0300,d6 
+		addi.w	#$0300,d6
 loc_E37E:
 		cmp.w	-6(a0),d6
 		bgt.s   loc_E390
@@ -16305,10 +16305,10 @@ loc_E4C2:
 		beq.s	loc_E4F8
 		bsr.w	loc_E652
 		bra.s	loc_E4FC
-loc_E4F8:		
+loc_E4F8:
 		bsr.w	loc_E616
 loc_E4FC:
-		bsr.w	loc_E5F2 
+		bsr.w	loc_E5F2
 		bne.s	loc_E520
 		move.l	$0004(a4),A0
 loc_E506:
@@ -16361,7 +16361,7 @@ loc_E568:
 		bra.s	loc_E55A
 loc_E56C:
 		move.l	A0,(a4)
-		rts            
+		rts
 loc_E570:
 		addq.w	#$02,d6
 		move.b	(a1),d2
@@ -16408,7 +16408,7 @@ loc_E5CA:
 		bsr.w	loc_E712
 		beq.s	loc_E5BC
 loc_E5d0:
-		move.l	A0,(a4)    
+		move.l	A0,(a4)
 loc_E5d2:
 		move.l	$0004(a4),A0
 		subq.w	#$03,d6
@@ -16423,7 +16423,7 @@ loc_E5E8:
 		addq.w	#$06,A0
 		bra.s	loc_E5DA
 loc_E5EC:
-		move.l	A0,$0004(a4)   
+		move.l	A0,$0004(a4)
 		rts
 loc_E5F2:
 		move.l	A1,-(sp)
@@ -16444,7 +16444,7 @@ loc_E5F2:
 loc_E612:
 		move.l	(sp)+,A1
 		rts
-loc_E616:		
+loc_E616:
 		lea	(Object_RAM_block_indices).w,A1
 		lea	($FFFFBE00).w,A3
 		tst.b	(a1)+
@@ -16463,12 +16463,12 @@ loc_E616:
 		bmi.s	loc_E64E
 		lea	($FFFFCd00).w,A3
 		tst.b	(a1)+
-		bmi.s	loc_E64E		 
+		bmi.s	loc_E64E
 		nop
 		nop
 loc_E64E:
 		subq.w	#1,A1
-		rts  
+		rts
 loc_E652:
 		lea	(Object_RAM_block_indices).w,A1
 		lea	($FFFFBE00).w,A3
@@ -16509,12 +16509,12 @@ loc_E6AA:
 loc_E6AC:
 		move.l	d1,(a1)+
 		dbf	d0,loc_E6AC
-loc_E6B2:    
+loc_E6B2:
 		lea	$0040(a3),A3
-		dbf	d2,loc_E696 
+		dbf	d2,loc_E696
 		moveq	#0,d2
 		movem.l (sp)+,A1/A3
-		rts     
+		rts
 loc_E6C2:
 		tst.b	$0004(a0)
 		bpl.s	loc_E6d6
@@ -16544,7 +16544,7 @@ loc_E706:
 		move.b	(a0)+,$0028(a1)
 		moveq	#0,d0
 loc_E710:
-		rts  
+		rts
 loc_E712:
 		tst.b	$0004(a0)
 		bpl.s	loc_E726
@@ -16563,7 +16563,7 @@ loc_E736:
 		bsr.w	SingleObjLoad3
 		bne.s	loc_E770
 loc_E73C:
-		move.w	(a0)+,8(a1) 
+		move.w	(a0)+,8(a1)
 		move.w	(a0)+,d0
 		move.w	d0,d1
 		andi.w	#$0FFF,d0
@@ -16645,7 +16645,7 @@ SingleObjLoad3:
 		move.l	a3,a1
 		move.w	#$B,d0
 
-loc_E7AA: 
+loc_E7AA:
 		tst.b	(a1)
 		beq.s	return_E7B6
 		lea	$40(a1),a1
@@ -16655,11 +16655,11 @@ return_E7B6:
 		rts
 ; End of function SingleObjLoad3
 
-;=============================================================================== 
-; Object 0x41 - Springs 
+;===============================================================================
+; Object 0x41 - Springs
 ; [ Begin ]
-;===============================================================================		     
-Obj_0x41_Springs: ; loc_E7B8:     
+;===============================================================================
+Obj_0x41_Springs: ; loc_E7B8:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_E7E8(pc,d0),d1
@@ -16698,7 +16698,7 @@ loc_E82A:
 		dc.w	loc_E834-loc_E82A
 		dc.w	loc_E854-loc_E82A
 		dc.w	loc_E868-loc_E82A
-		dc.w	loc_E882-loc_E82A		    
+		dc.w	loc_E882-loc_E82A
 loc_E834:
 		move.b	#$04,$0024(a0)
 		move.b	#$02,$001C(a0)
@@ -16706,18 +16706,18 @@ loc_E834:
 		move.w	#$0470,$0002(a0)
 		move.b	#$08,$0019(a0)
 		bra.s	loc_E8A0
-loc_E854:		
+loc_E854:
 		move.b	#$06,$0024(a0)
 		move.b	#$06,$001A(a0)
 		bset	#1,$0022(a0)
 		bra.s	loc_E8A0
-loc_E868:		
+loc_E868:
 		move.b	#$08,$0024(a0)
 		move.b	#$04,$001C(a0)
 		move.b	#$07,$001A(a0)
-		move.w	#$043C,$0002(a0)		  
+		move.w	#$043C,$0002(a0)
 		bra.s	loc_E8A0
-loc_E882:		
+loc_E882:
 		move.b	#$0A,$0024(a0)
 		move.b	#$04,$001C(a0)
 		move.b	#$0A,$001A(a0)
@@ -16735,7 +16735,7 @@ loc_E8C2:
 		bsr.w	Adjust2PArtPointer     ; loc_DC30
 		rts
 loc_E8C8:
-		dc.w	$F000,$F600		   
+		dc.w	$F000,$F600
 loc_E8CC:
 		move.w	#$001B,d1
 		move.w	#8,d2
@@ -16800,7 +16800,7 @@ loc_E9A2:
 		move.b	#$0F,$003F(a1)
 loc_E9B4:
 		move.w	#SndID_Spring,d0
-		jmp	(PlaySound).l             ; loc_14C6    
+		jmp	(PlaySound).l             ; loc_14C6
 loc_E9BE:
 		move.w	#$0013,d1
 		move.w	#$000E,d2
@@ -16887,14 +16887,14 @@ loc_EAd2:
 loc_EAE8:
 		cmpi.b	#$08,d0
 		bne.s	loc_EAFA
-		move.b	#$0E,$003E(a1)   
+		move.b	#$0E,$003E(a1)
 		move.b	#$0F,$003F(a1)
 loc_EAFA:
 		bclr	#$05,$0022(a0)
 		bclr	#$06,$0022(a0)
 		bclr	#$05,$0022(a1)
 		move.w	#SndID_Spring,d0
-		jmp	(PlaySound).l             ; loc_14C6  
+		jmp	(PlaySound).l             ; loc_14C6
 loc_EB16:
 		cmpi.b	#$03,$001C(a0)
 		beq.w	 loc_EBCE
@@ -16956,7 +16956,7 @@ loc_EBA6:
 		bcc.w	 loc_EBCE
 		bsr.w	loc_EA3E
 loc_EBCE:
-		rts  
+		rts
 loc_EBd0:
 		move.w	#$001B,d1
 		move.w	#8,d2
@@ -17021,7 +17021,7 @@ loc_ECA0:
 		bclr	#$03,$0022(a1)
 		move.b	#$02,$0024(a1)
 		move.w	#SndID_Spring,d0
-		jmp	(PlaySound).l             ; loc_14C6   
+		jmp	(PlaySound).l             ; loc_14C6
 loc_ECBC:
 		move.w	#$001B,d1
 		move.w	#$0010,d2
@@ -17048,7 +17048,7 @@ loc_ECFC:
 		rts
 loc_Ed08:
 		btst	#$00,$0022(a0)
-		bne.s	loc_Ed1E		   
+		bne.s	loc_Ed1E
 		move.w	8(a0),d0
 		subq.w	#$04,d0
 		cmp.w	8(a1),d0
@@ -17106,7 +17106,7 @@ loc_EDd6:
 		move.b	#$0F,$003F(a1)
 loc_EDE8:
 		move.w	#SndID_Spring,d0
-		jmp	(PlaySound).l             ; loc_14C6     
+		jmp	(PlaySound).l             ; loc_14C6
 loc_EDF2:
 		move.w	#$001B,d1
 		move.w	#$0010,d2
@@ -17156,7 +17156,7 @@ loc_EE76:
 		move.b	#$00,$001C(a1)
 		move.b	#1,$002C(a1)
 		move.b	#$08,$002D(a1)
-		btst	#1,d0 
+		btst	#1,d0
 		bne.s	loc_EEBC
 		move.b	#$03,$002C(a1)
 loc_EEBC:
@@ -17177,11 +17177,11 @@ loc_EEE2:
 		move.b	#$0F,$003F(a1)
 loc_EEF4:
 		move.w	#SndID_Spring,d0
-		jmp	(PlaySound).l             ; loc_14C6 
-loc_EEFE:   
+		jmp	(PlaySound).l             ; loc_14C6
+loc_EEFE:
 		dc.b	$10,$10,$10,$10,$10,$10,$10,$10,$10,$10,$10,$10,$0E,$0C,$0A,$08
 		dc.b	$06,$04,$02,$00,$FE,$FC,$FC,$FC,$FC,$FC,$FC,$FC
-loc_EF1A:		
+loc_EF1A:
 		dc.b	$F4,$F0,$F0,$F0,$F0,$F0,$F0,$F0,$F0,$F0,$F0,$F0,$F2,$F4,$F6,$F8
 		dc.b	$FA,$FC,$FE,$00,$02,$04,$04,$04,$04,$04,$04,$04
 loc_EF36:
@@ -17213,7 +17213,7 @@ loc_EF86:
 		dc.w	loc_F08A-loc_EF86
 		dc.w	loc_F0AC-loc_EF86
 		dc.w	loc_F0C6-loc_EF86
-		dc.w	loc_F0E8-loc_EF86		 
+		dc.w	loc_F0E8-loc_EF86
 loc_EF9C:
 		dc.w	$0002
 		dc.l	$F00d0000,$0000FFF0,$00050008,$0004FFF8
@@ -17250,7 +17250,7 @@ loc_F046:
 loc_F068:
 		dc.w	$0004
 		dc.l	$000d1000,$1000FFF0,$F0051008,$10040000
-		dc.l	$F505100C,$1006FFF6,$F005301C,$300EFFF0  
+		dc.l	$F505100C,$1006FFF6,$F005301C,$300EFFF0
 loc_F08A:
 		dc.w	$0004
 		dc.l	$F00d0000,$0000FFF0,$00050008,$00040000
@@ -17266,16 +17266,16 @@ loc_F0C6:
 loc_F0E8:
 		dc.w	$0004
 		dc.l	$000d1000,$1000FFF0,$F0051008,$10040000
-		dc.l	$F505100C,$1006FFF6,$F005101C,$100EFFF0   
-;=============================================================================== 
-; Object 0x41 - Springs 
+		dc.l	$F505100C,$1006FFF6,$F005101C,$100EFFF0
+;===============================================================================
+; Object 0x41 - Springs
 ; [ End ]
-;===============================================================================   
-		nop		             ; Filler  
-;=============================================================================== 
+;===============================================================================
+		nop		             ; Filler
+;===============================================================================
 ; Object 0x44
 ; [ Begin ]
-;===============================================================================		  
+;===============================================================================
 Obj_0x44: ; loc_F10C:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -17327,7 +17327,7 @@ loc_F1B0:
 loc_F1d2:
 		dc.w	$0004
 		dc.l	$E0050000,$0000FFF8,$F0050000,$0000FFF8
-		dc.l	$00050000,$0000FFF8,$10050000,$0000FFF8            
+		dc.l	$00050000,$0000FFF8,$10050000,$0000FFF8
 
 ; ---------------------------------------------------------------------------
 ; Object 0D - End of level sign post
@@ -17432,7 +17432,7 @@ Obj0D_RingSparklePositions:
 ; ===========================================================================
 ; loc_F31C: End_Panel_Sub_04:
 Obj0D_SonicRun:
-		tst.w	(Debug_placement_mode).w  
+		tst.w	(Debug_placement_mode).w
 		bne.w	return_F3B6
 		btst	#1,(MainCharacter+$22).w
 		bne.s	+
@@ -17521,10 +17521,10 @@ Obj0D_MapUnc_F40E:	binclude	"mappings/sprite/obj0D.bin"
 ; ===========================================================================
 		nop
 
-;=============================================================================== 
+;===============================================================================
 ; Sub Routine SolidObject
-; [ Begin ]		         
-;===============================================================================		
+; [ Begin ]
+;===============================================================================
 SolidObject: ; loc_F4A0:
 		lea	(MainCharacter).w,A1
 		moveq	#$03,d6
@@ -17557,8 +17557,8 @@ loc_F4F0:
 		move.w	d4,d2
 		bsr.w	loc_F8E4
 		moveq	#0,d4
-loc_F4F8:		
-		rts		
+loc_F4F8:
+		rts
 ; loc_F4FA:
 SolidObject_Always:
 		lea	(MainCharacter).w,A1
@@ -17580,11 +17580,11 @@ SolidObject_Always_SingleCharacter:
 		sub.w   8(a0),d0
 		add.w   d1,d0
 		bmi.s	loc_F534
-		cmp.w	d2,d0		
+		cmp.w	d2,d0
 		bcs.s	loc_F542
 loc_F534:
 		bclr	#$03,$0022(a1)
-		bclr	d6,$0022(a0) 
+		bclr	d6,$0022(a0)
 		moveq	#0,d4
 		rts
 loc_F542:
@@ -17656,7 +17656,7 @@ loc_F5E6:
 		move.w	d4,d2
 		bsr.w	loc_F960
 		moveq	#0,d4
-		rts   
+		rts
 ; loc_F5F0:
 SolidObject45:
 		lea	(MainCharacter).w,A1
@@ -17718,7 +17718,7 @@ loc_F656:
 		add.w   d4,d4
 		cmp.w	d4,d3
 		bcc.w	 loc_F82A
-		bra.w	loc_F794		
+		bra.w	loc_F794
 loc_F698:
 		move.w	8(a1),d0
 		sub.w   8(a0),d0
@@ -17752,7 +17752,7 @@ loc_F6BE:
 		add.w   d4,d4
 		cmp.w	d4,d3
 		bcc.w	 loc_F82A
-		bra.w	loc_F794   
+		bra.w	loc_F794
 loc_F6F2:
 		move.w	8(a1),d0
 		sub.w   8(a0),d0
@@ -17787,11 +17787,11 @@ loc_F718:
 		add.w   d5,d4
 		cmp.w	d4,d3
 		bcc.w	 loc_F82A
-		bra.w	loc_F794		
+		bra.w	loc_F794
 loc_F752:
 		tst.b	$0001(a0)
 		bpl.w	 loc_F82A
-loc_F75A:		
+loc_F75A:
 		move.w	8(a1),d0
 		sub.w   8(a0),d0
 		add.w   d1,d0
@@ -17812,7 +17812,7 @@ loc_F75A:
 		add.w   d4,d4
 		cmp.w	d4,d3
 		bcc.w	 loc_F82A
-loc_F794:		
+loc_F794:
 		tst.b	$002A(a1)
 		bmi.w	 loc_F82A
 		cmpi.b	#$06,$0024(a1)
@@ -17885,7 +17885,7 @@ loc_F83A:
 		bclr	#$05,$0022(a1)
 loc_F848:
 		moveq	#0,d4
-		rts 
+		rts
 loc_F84C:
 		tst.w	d3
 		bmi.s	loc_F858
@@ -17968,7 +17968,7 @@ loc_F8F4:
 		sub.w   8(a0),d2
 		sub.w   d2,8(a1)
 loc_F91C:
-		rts		
+		rts
 loc_F91E:
 		btst	#$03,$0022(a1)
 		beq.s	loc_F95E
@@ -18048,11 +18048,11 @@ loc_F9d6:
 		movem.l (sp)+,d1-d4
 		lea	(Sidekick).w,A1
 		addq.b	#1,d6
-loc_F9EC:		
+loc_F9EC:
 		btst	d6,$0022(a0)
 		beq.w	 loc_FB60
 		move.w	d1,d2
-		add.w   d2,d2  
+		add.w   d2,d2
 		btst	#1,$0022(a1)
 		bne.s	loc_FA10
 		move.w	8(a1),d0
@@ -18102,7 +18102,7 @@ loc_FA70:
 		move.w	d4,d2
 		bsr.w	loc_F8E4
 		moveq	#0,d4
-		rts      
+		rts
 loc_FA7A:
 		tst.w	$0012(a1)
 		bmi.w	 loc_FB5E
@@ -18113,7 +18113,7 @@ loc_FA7A:
 		cmp.w	d2,d0
 		bcc.w	 loc_FB5E
 		bra.s	loc_FAB6
-loc_FA98:		
+loc_FA98:
 		tst.w	$0012(a1)
 		bmi.w	 loc_FB5E
 		move.w	8(a1),d0
@@ -18143,7 +18143,7 @@ loc_FABC:
 		add.w   d0,d2
 		addq.w	#$03,d2
 		move.w	d2,$000C(a1)
-loc_FAF2:		
+loc_FAF2:
 		btst	#$03,$0022(a1)
 		beq.s	loc_FB0E
 		moveq	#0,d0
@@ -18171,14 +18171,14 @@ loc_FB0E:
 		jsr	 Sonic_ResetOnFloor      ; loc_1090C
 		bra.s	loc_FB52
 loc_FB4C:
-		jsr	 Tails_ResetTailsOnFloor ; loc_11A66 
+		jsr	 Tails_ResetTailsOnFloor ; loc_11A66
 loc_FB52:
 		move.l	(sp)+,A0
 loc_FB54:
 		bset	#$03,$0022(a1)
 		bset	d6,$0022(a0)
 loc_FB5E:
-		rts		      
+		rts
 loc_FB60:
 		tst.w	$0012(a1)
 		bmi.w	 loc_FB5E
@@ -18200,7 +18200,7 @@ loc_FB86:
 		move.w	$000C(a0),d0
 		sub.w   d3,d0
 		bra.w	loc_FABC
-loc_FB98:		
+loc_FB98:
 		tst.w	$0012(a1)
 		bmi.w	 loc_FB5E
 		move.w	8(a1),d0
@@ -18213,7 +18213,7 @@ loc_FB98:
 		move.w	$000C(a0),d0
 		sub.w   d3,d0
 		bra.w	loc_FABC
-loc_FBC0:		
+loc_FBC0:
 		move.w	d1,d2
 		add.w   d2,d2
 		lea	(MainCharacter).w,A1
@@ -18230,7 +18230,7 @@ loc_FBE0:
 		move.b	#$02,$0024(a0)
 		bclr	#$03,$0022(a0)
 loc_FBF2:
-		rts		
+		rts
 loc_FBF4:
 		lea	(MainCharacter).w,A1
 		btst	#$03,$0022(a0)
@@ -18262,7 +18262,7 @@ loc_FC44:
 ; ===========================================================================
 ; ---------------------------------------------------------------------------
 ; Object 01 - Sonic
-; ---------------------------------------------------------------------------            
+; ---------------------------------------------------------------------------
 ; Sprite_FC48: Obj_0x01_Sonic:
 Obj01:
 		tst.w	(Debug_placement_mode).w; is Debug Mode being used?
@@ -18441,7 +18441,7 @@ Obj01_ChkShoes:	; Checks if Sonic should still have the speed shoes
 Obj01_ExitChk:
 		rts
 ; End of subroutine Sonic_Display
-		  
+
 ; ---------------------------------------------------------------------------
 ; Subroutine to record Sonic's previous positions for invincibility stars
 ; and input/status flags for Tails' AI to follow
@@ -18691,10 +18691,10 @@ loc_1003A:
 		cmpi.b	#3,$37(a0)
 		bne.s	Sonic_LookUp
 ; loc_10042:
-Sonic_BalanceOnObjLeft:		
+Sonic_BalanceOnObjLeft:
 		bset	#0,$22(a0)
 
-loc_10048:		
+loc_10048:
 		move.b	#6,$1C(a0)
 		bra.s	Obj01_UpdateSpeedOnGround
 ; ===========================================================================
@@ -18807,7 +18807,7 @@ loc_10124:
 
 loc_10128:
 		rts
-; End of subroutine Sonic_Move    
+; End of subroutine Sonic_Move
 
 
 ; ||||||||||||||| S U B R O U T I N E |||||||||||||||||||||||||||||||||||||||
@@ -18852,7 +18852,7 @@ loc_1016C:
 		addi.b	#$20,d0
 		andi.b	#$C0,d0
 		bne.s	return_1019A
-		cmpi.w	#$400,d0             
+		cmpi.w	#$400,d0
 		blt.s	return_1019A
 		move.b	#$D,$1C(a0)	; use "stopping" animation
 		bclr	#0,$22(a0)
@@ -19320,7 +19320,7 @@ Sonic_UpVelCap:
 return_1055E:
 		rts
 ; End of subroutine Sonic_JumpHeight
-		  
+
 ; ---------------------------------------------------------------------------
 ; Subroutine to check for starting to charge a spindash
 ; ---------------------------------------------------------------------------
@@ -19557,7 +19557,7 @@ Sonic_JumpLeftFlip:
 Sonic_JumpFlipSet:
 		move.b	d0,$27(a0)
 
-return_106FE:		
+return_106FE:
 		rts
 ; End of function Sonic_JumpAngle
 
@@ -19820,7 +19820,7 @@ Obj01_Hurt:
 		beq.s	loc_1098C
 		subi.w	#$20,$12(a0)
 
-loc_1098C:		    
+loc_1098C:
 		bsr.w	Sonic_HurtStop
 		bsr.w	Sonic_LevelBound
 		bsr.w	Sonic_RecordPos
@@ -19891,7 +19891,7 @@ CheckGameOver:
 		bne.s	Obj01_ResetLevel
 		move.w	#0,$3A(a0)
 		move.b	#$39,(GameOver_GameText).w
-		move.b	#$39,(GameOver_OverText).w		 
+		move.b	#$39,(GameOver_OverText).w
 		move.b	#1,(GameOver_OverText+$1A).w
 		clr.b	(Time_Over_flag).w
 ; loc_10A5E:
@@ -19981,7 +19981,7 @@ SAnim_Next:
 		move.b	d0,$1A(a0)	; load sprite number
 		addq.b	#1,$1B(a0)	; go to next frame
 ; return_10B18:
-SAnim_Delay:	
+SAnim_Delay:
 		rts
 ; ===========================================================================
 ; loc_10B1A:
@@ -20195,7 +20195,7 @@ SonAni_Wait:		dc.b $07,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$
 SonAni_Balance:		dc.b $07,$89,$8A,$FF
 SonAni_LookUp:		dc.b $05,$06,$07,$FE,$01
 SonAni_Duck:		dc.b $05,$7F,$80,$FE,$01
-SonAni_Spindash:	dc.b $00,$71,$72,$71,$73,$71,$74,$71,$75,$71,$76,$71,$FF 
+SonAni_Spindash:	dc.b $00,$71,$72,$71,$73,$71,$74,$71,$75,$71,$76,$71,$FF
 SonAni_WallRecoil1:	dc.b $3F,$82,$FF
 SonAni_WallRecoil2:	dc.b $07,$08,$08,$09,$FD,$05
 SonAni_0x0C:		dc.b $07,$09,$FD,$05
@@ -20270,7 +20270,7 @@ JmpTo_KillSonic:	; JmpTo
 ; ===========================================================================
 ; ---------------------------------------------------------------------------
 ; Object 02 - Tails
-; ---------------------------------------------------------------------------            
+; ---------------------------------------------------------------------------
 ; Sprite_10E38: Obj_0x02_Tails:
 Obj02:
 		moveq	#0,d0
@@ -20993,15 +20993,15 @@ loc_11454:
 loc_1145C:
 		move.w	d0,$0014(a0)
 		rts
-;=============================================================================== 
-; Sub Routine Tails_RollLeft
-; [ End ]		         
 ;===============================================================================
-   
-;=============================================================================== 
+; Sub Routine Tails_RollLeft
+; [ End ]
+;===============================================================================
+
+;===============================================================================
 ; Sub Routine Tails_RollRight
-; [ Begin ]		         
-;===============================================================================		   
+; [ Begin ]
+;===============================================================================
 Tails_RollRight: ; loc_11462:
 		move.w	$0014(a0),d0
 		bmi.s	loc_11476
@@ -21015,15 +21015,15 @@ loc_11476:
 loc_1147E:
 		move.w	d0,$0014(a0)
 		rts
-;=============================================================================== 
+;===============================================================================
 ; Sub Routine Tails_RollRight
-; [ End ]		         
-;===============================================================================  
-		  
-;=============================================================================== 
+; [ End ]
+;===============================================================================
+
+;===============================================================================
 ; Sub Routine Tails_ChgJumpDir
-; [ Begin ]		         
-;===============================================================================		  
+; [ Begin ]
+;===============================================================================
 Tails_ChgJumpDir: ; loc_11484:
 		move.w	(Sonic_top_speed).w,d6
 		move.w	(Sonic_acceleration).w,d5
@@ -21071,16 +21071,16 @@ loc_114F0:
 loc_114F8:
 		move.w	d0,$0010(a0)
 loc_114FC:
-		rts 
-;=============================================================================== 
-; Sub Routine Tails_ChgJumpDir
-; [ End ]		         
+		rts
 ;===============================================================================
-		    
-;=============================================================================== 
+; Sub Routine Tails_ChgJumpDir
+; [ End ]
+;===============================================================================
+
+;===============================================================================
 ; Sub Routine Tails_LevelBoundaries
-; [ Begin ]		         
-;=============================================================================== 
+; [ Begin ]
+;===============================================================================
 Tails_LevelBoundaries: ; loc_114FE:
 		move.l	8(a0),d1
 		move.w	$0010(a0),d0
@@ -21100,7 +21100,7 @@ Tails_LevelBoundaries: ; loc_114FE:
 loc_1152C:
 		cmp.w	d1,d0
 		bls.s   loc_1156A
-loc_11530:		
+loc_11530:
 		move.w	(Camera_Max_Y_pos_now).w,d0
 		addi.w	#$00E0,d0
 		cmp.w	$000C(a0),d0
@@ -21122,15 +21122,15 @@ loc_1156A:
 		move.w	#0,$0010(a0)
 		move.w	#0,$0014(a0)
 		bra.s	loc_11530
-;=============================================================================== 
+;===============================================================================
 ; Sub Routine Tails_LevelBoundaries
-; [ End ]		         
-;===============================================================================  
-               
-;=============================================================================== 
+; [ End ]
+;===============================================================================
+
+;===============================================================================
 ; Sub Routine Tails_Roll
-; [ Begin ]		         
-;===============================================================================		   
+; [ Begin ]
+;===============================================================================
 Tails_Roll: ; loc_11582:
 		tst.b	(Sliding_flag).w
 		bne.s	loc_115A8
@@ -21164,15 +21164,15 @@ loc_115B4:
 		move.w	#$0200,$0014(a0)
 loc_115E6:
 		rts
-;=============================================================================== 
+;===============================================================================
 ; Sub Routine Tails_Roll
-; [ End ]		         
-;=============================================================================== 
-		 
-;=============================================================================== 
+; [ End ]
+;===============================================================================
+
+;===============================================================================
 ; Sub Routine Tails_Jump
-; [ Begin ]		         
-;===============================================================================		  
+; [ Begin ]
+;===============================================================================
 Tails_Jump: ; loc_115E8:
 		move.b	(Ctrl_2_Press).w,d0
 		andi.b	#$70,d0
@@ -21219,15 +21219,15 @@ loc_1168C:
 loc_1168E:
 		bset	#$04,$0022(a0)
 		rts
-;=============================================================================== 
+;===============================================================================
 ; Sub Routine Tails_Jump
-; [ End ]		         
-;===============================================================================     
-              
-;=============================================================================== 
+; [ End ]
+;===============================================================================
+
+;===============================================================================
 ; Sub Routine Tails_JumpHeight
-; [ Begin ]		         
-;===============================================================================		   
+; [ Begin ]
+;===============================================================================
 Tails_JumpHeight: ; loc_11696:
 		tst.b	$003C(a0)
 		beq.s	loc_116C2
@@ -21250,15 +21250,15 @@ loc_116C2:
 		move.w	#$F040,$0012(a0)
 loc_116d0:
 		rts
-;=============================================================================== 
+;===============================================================================
 ; Sub Routine Tails_JumpHeight
-; [ End ]		         
-;=============================================================================== 
-		 
-;=============================================================================== 
+; [ End ]
+;===============================================================================
+
+;===============================================================================
 ; Sub Routine Tails_Spindash
-; [ Begin ]		         
-;===============================================================================		  
+; [ Begin ]
+;===============================================================================
 Tails_Spindash: ; loc_116d2:
 		tst.b	$0039(a0)
 		bne.s	loc_11706
@@ -21298,16 +21298,16 @@ loc_1174C:
 		nop
 loc_1175A:
 		addq.l	#$04,sp
-		rts 
-;=============================================================================== 
+		rts
+;===============================================================================
 ; Sub Routine Tails_Spindash
-; [ End ]		         
-;===============================================================================   
- 
-;=============================================================================== 
+; [ End ]
+;===============================================================================
+
+;===============================================================================
 ; Sub Routine Tails_SlopeResist
-; [ Begin ]		         
-;===============================================================================		   
+; [ Begin ]
+;===============================================================================
 Tails_SlopeResist: ; loc_1175E:
 		move.b	$0026(a0),d0
 		addi.b	#$60,d0
@@ -21329,15 +21329,15 @@ loc_1178E:
 		add.w   d0,$0014(a0)
 loc_11792:
 		rts
-;=============================================================================== 
+;===============================================================================
 ; Sub Routine Tails_SlopeResist
-; [ End ]		         
-;===============================================================================     
-             
-;=============================================================================== 
+; [ End ]
+;===============================================================================
+
+;===============================================================================
 ; Sub Routine Tails_RollRepel
-; [ Begin ]		         
-;===============================================================================		   
+; [ Begin ]
+;===============================================================================
 Tails_RollRepel: ; loc_11794:
 		move.b	$0026(a0),d0
 		addi.b	#$60,d0
@@ -21363,15 +21363,15 @@ loc_117CA:
 		add.w   d0,$0014(a0)
 loc_117CE:
 		rts
-;=============================================================================== 
+;===============================================================================
 ; Sub Routine Tails_RollRepel
-; [ End ]		         
-;===============================================================================   
-		
-;=============================================================================== 
+; [ End ]
+;===============================================================================
+
+;===============================================================================
 ; Sub Routine Tails_SlopeRepel
-; [ Begin ]		         
-;===============================================================================		  
+; [ Begin ]
+;===============================================================================
 Tails_SlopeRepel: ; loc_117d0:
 		nop
 		tst.b	$0038(a0)
@@ -21396,15 +21396,15 @@ loc_1180A:
 loc_1180C:
 		subq.w	#1,$002E(a0)
 		rts
-;=============================================================================== 
+;===============================================================================
 ; Sub Routine Tails_SlopeRepel
-; [ End ]		         
-;===============================================================================  
-		 
-;=============================================================================== 
+; [ End ]
+;===============================================================================
+
+;===============================================================================
 ; Sub Routine Tails_JumpAngle
-; [ Begin ]		         
-;===============================================================================		  
+; [ Begin ]
+;===============================================================================
 Tails_JumpAngle: ; loc_11812:
 		move.b	$0026(a0),d0
 		beq.s	loc_1182C
@@ -21425,7 +21425,7 @@ loc_1182C:
 		beq.s	loc_11870
 		tst.w	$0014(a0)
 		bmi.s	loc_11850
-loc_11838:		
+loc_11838:
 		move.b	$002D(a0),d1
 		add.b   d1,d0
 		bcc.s	loc_1184E
@@ -21449,15 +21449,15 @@ loc_1186C:
 		move.b	d0,$0027(a0)
 loc_11870:
 		rts
-;=============================================================================== 
+;===============================================================================
 ; Sub Routine Tails_JumpAngle
-; [ End ]		         
-;===============================================================================     
-             
-;=============================================================================== 
+; [ End ]
+;===============================================================================
+
+;===============================================================================
 ; Sub Routine Tails_Floor
-; [ Begin ]		         
-;===============================================================================		   
+; [ Begin ]
+;===============================================================================
 Tails_Floor: ; loc_11872:
 		move.b	$003F(a0),d5
 		move.w	$0010(a0),d1
@@ -21621,20 +21621,20 @@ loc_11A38:
 		move.w	$0010(a0),$0014(a0)
 loc_11A64:
 		rts
-;=============================================================================== 
+;===============================================================================
 ; Sub Routine Tails_Floor
-; [ End ]		         
-;===============================================================================		  
-		      
-;=============================================================================== 
+; [ End ]
+;===============================================================================
+
+;===============================================================================
 ; Object 0x02 - Tails
 ; [ End ]
-;=============================================================================== 
+;===============================================================================
 
-;=============================================================================== 
+;===============================================================================
 ; Sub Routine Tails_ResetTailsOnFloor
-; [ Begin ]		         
-;===============================================================================               
+; [ Begin ]
+;===============================================================================
 Tails_ResetTailsOnFloor: ; loc_11A66:
 		btst	#$04,$0022(a0)
 		beq.s	loc_11A74
@@ -21658,11 +21658,11 @@ loc_11AAA:
 		move.b	#$00,$0027(a0)
 		move.b	#$00,$0029(a0)
 		rts
-;=============================================================================== 
+;===============================================================================
 ; Sub Routine Tails_ResetTailsOnFloor
-; [ End ]		         
-;=============================================================================== 
-               
+; [ End ]
+;===============================================================================
+
 Tails_Hurt: ; loc_11AC4:
 		jsr	 ObjectMove              ; loc_d27A
 		addi.w	#$0030,$0012(a0)
@@ -21675,11 +21675,11 @@ loc_11ADE:
 		bsr.w	Tails_Animate           ; loc_11BA2
 		bsr.w	LoadTailsDynPLC  ; loc_11F42
 		jmp	DisplaySprite           ; loc_d3C2
-		
-;=============================================================================== 
+
+;===============================================================================
 ; Sub Routine Tails_HurtStop
-; [ Begin ]		         
-;===============================================================================		 
+; [ Begin ]
+;===============================================================================
 Tails_HurtStop: ; loc_11AF4:
 		move.w	(Camera_Max_Y_pos_now).w,d0
 		addi.w	#$00E0,d0
@@ -21697,22 +21697,22 @@ Tails_HurtStop: ; loc_11AF4:
 		move.w	#$0078,$0030(a0)
 loc_11B30:
 		rts
-;=============================================================================== 
+;===============================================================================
 ; Sub Routine Tails_HurtStop
-; [ End ]		         
-;===============================================================================		  
-		
+; [ End ]
+;===============================================================================
+
 Tails_Death: ; loc_11B32:
 		bsr.w	Tails_GameOver          ; loc_11B4A
 		jsr	 ObjectMoveAndFall              ; loc_d24E
 		bsr.w	Tails_Animate           ; loc_11BA2
 		bsr.w	LoadTailsDynPLC  ; loc_11F42
 		jmp	DisplaySprite           ; loc_d3C2
-		
-;=============================================================================== 
+
+;===============================================================================
 ; Sub Routine Tails_GameOver
-; [ Begin ]		         
-;===============================================================================		 
+; [ Begin ]
+;===============================================================================
 Tails_GameOver: ; loc_11B4A:
 		move.w	(Camera_Max_Y_pos_now).w,d0
 		addi.w	#$0100,d0
@@ -21731,11 +21731,11 @@ Tails_GameOver: ; loc_11B4A:
 		nop
 loc_11B8C:
 		rts
-;=============================================================================== 
-; Sub Routine Tails_GameOver
-; [ End ]		         
 ;===============================================================================
-		 
+; Sub Routine Tails_GameOver
+; [ End ]
+;===============================================================================
+
 Tails_ResetLevel: ; loc_11B8E:
 		tst.w	$003A(a0)
 		beq.s	loc_11BA0
@@ -21744,14 +21744,14 @@ Tails_ResetLevel: ; loc_11B8E:
 		move.w	#$0001,(Level_Inactive_flag).w
 loc_11BA0:
 		rts
-		
-;=============================================================================== 
+
+;===============================================================================
 ; Sub Routine Tails_Animate
-; [ Begin ]		         
-;===============================================================================    
-Tails_Animate: ; loc_11BA2: ; Tails Subroutine  
+; [ Begin ]
+;===============================================================================
+Tails_Animate: ; loc_11BA2: ; Tails Subroutine
 		lea	(Tails_AnimateData).l,A1 ; loc_11DF4
-Tails_Animate2: ; loc_11BA8:		
+Tails_Animate2: ; loc_11BA8:
 		moveq	#0,d0
 		move.b	$001C(a0),d0
 		cmp.b	$001D(a0),d0
@@ -21772,13 +21772,13 @@ loc_11BCA:
 		subq.b	#1,$001E(a0)
 		bpl.s	loc_11C08
 		move.b	d0,$001E(a0)
-loc_11BF0:		
+loc_11BF0:
 		moveq	#0,d1
 		move.b	$001B(a0),d1
 		move.b	$01(A1,d1),d0
-		cmpi.b	#$F0,d0		  
+		cmpi.b	#$F0,d0
 		bcc.s	loc_11C0A
-loc_11C00:		
+loc_11C00:
 		move.b	d0,$001A(a0)
 		addq.b	#1,$001B(a0)
 loc_11C08:
@@ -21954,8 +21954,8 @@ loc_11DCA:
 		move.b	#$03,$001E(a0)
 		bsr.w	loc_11BF0
 		add.b   d3,$001A(a0)
-		rts 
-Tails_AnimateData: ; loc_11DF4: ; Tails Data               
+		rts
+Tails_AnimateData: ; loc_11DF4: ; Tails Data
 		dc.w	Tails_Animate_Walk-Tails_AnimateData           ; loc_11E32
 		dc.w	Tails_Animate_Run-Tails_AnimateData            ; loc_11E3C
 		dc.w	Tails_Animate_Roll-Tails_AnimateData           ; loc_11E46
@@ -21988,7 +21988,7 @@ Tails_AnimateData: ; loc_11DF4: ; Tails Data
 		dc.w	Tails_Animate_0x1D-Tails_AnimateData           ; loc_11F06
 		dc.w	Tails_Animate_0x1E-Tails_AnimateData           ; loc_11F10
 Tails_Animate_Walk: ; loc_11E32:
-		dc.b	$FF,$10,$11,$12,$13,$14,$15,$0E,$0F,$FF  
+		dc.b	$FF,$10,$11,$12,$13,$14,$15,$0E,$0F,$FF
 Tails_Animate_Run: ; loc_11E3C:
 		dc.b	$FF,$2E,$2F,$30,$31,$FF,$FF,$FF,$FF,$FF
 Tails_Animate_Roll: ; loc_11E46:
@@ -22001,7 +22001,7 @@ Tails_Animate_Wait: ; loc_11E58:
 		dc.b	$07,$01,$01,$01,$01,$01,$01,$01,$01,$01,$01,$03,$02,$01,$01,$01
 		dc.b	$01,$01,$01,$01,$01,$03,$02,$01,$01,$01,$01,$01,$01,$01,$01,$01
 		dc.b	$05,$05,$05,$05,$05,$05,$05,$05,$05,$05,$05,$05,$05,$05,$05,$05
-		dc.b	$06,$07,$08,$07,$08,$07,$08,$07,$08,$07,$08,$06,$FE,$1C  
+		dc.b	$06,$07,$08,$07,$08,$07,$08,$07,$08,$07,$08,$06,$FE,$1C
 Tails_Animate_Balance_NoArt: ; loc_11E96:
 		dc.b	$1F,$01,$02,$03,$04,$05,$06,$07,$08,$FF
 Tails_Animate_LookUp: ; loc_11EA0:
@@ -22199,10 +22199,10 @@ loc_1205A:	dc.b	  3,$4D,$4E,$4F,$50,$FF
 loc_12060:	dc.b	  3,$51,$52,$53,$54,$FF
 loc_12066:	dc.b	  3,$55,$56,$57,$58,$FF
 loc_1206C: 	dc.b	  2,$81,$82,$83,$84,$FF
-;=============================================================================== 
+;===============================================================================
 ; Object 0x05 - Tails "Tail"
 ; [ End ]
-;===============================================================================		    
+;===============================================================================
 		nop
 KillTails: ; loc_12074:
 		jmp	(KillSonic).l               ; loc_21422
@@ -22559,7 +22559,7 @@ Obj_0x38_Shield: ; loc_125CE:
 		move.b	routine(a0),d0
 		move.w	loc_125DC(pc,d0),d1
 		jmp	loc_125DC(pc,d1)
-loc_125DC:		 
+loc_125DC:
 		dc.w	loc_125E0-loc_125DC
 		dc.w	loc_12616-loc_125DC
 loc_125E0:
@@ -22585,18 +22585,18 @@ loc_12616:
 		jsr	 AnimateSprite           ; (loc_d412)
 		jmp	DisplaySprite           ; (loc_d3C2)
 loc_12646:
-		rts  
+		rts
 ; loc_12648:
 JmpTo4_DeleteObject:
 		jmp	(DeleteObject).l
-;=============================================================================== 
-; Object 0x38 - 
+;===============================================================================
+; Object 0x38 -
 ; [ End ]
-;===============================================================================  
-;=============================================================================== 
-; Object 0x35 - 
+;===============================================================================
+;===============================================================================
+; Object 0x35 -
 ; [ Begin ]
-;===============================================================================		   
+;===============================================================================
 Obj_0x35_Invincibility: ; loc_1264E:
 		moveq	#0,d0
 		move.b	$000A(a0),d0
@@ -22675,7 +22675,7 @@ loc_12726:
 		lea	$0010(a0),A2
 		moveq	#0,d0
 		moveq	#$05,d1
-loc_1273C:		
+loc_1273C:
 		move.b	(a3)+,d0
 		move.b	(a3)+,d2
 		ext.w   d2
@@ -22705,7 +22705,7 @@ loc_12776:
 		lea	(loc_12AA0).l,A3
 		lea	$00(A3,d0),A3
 		moveq	#1,d1
-loc_12786:		
+loc_12786:
 		move.b	(a3)+,d0
 		move.b	(a3)+,d2
 		ext.w   d2
@@ -22723,10 +22723,10 @@ loc_12794:
 		move.b	d0,(a2)+
 		dbf	d1,loc_12786
 		move.w	#$0080,d0
-		bra.w	DisplaySprite3     ; loc_d3FE  
+		bra.w	DisplaySprite3     ; loc_d3FE
 loc_127B0:
 		dc.w	$0000,$0000,$00F8,$00F0,$04F0,$04E0,$00F8,$00F0
-		dc.w	$0000,$0000,$0008,$0010,$0410,$0420,$0008,$0010  
+		dc.w	$0000,$0000,$0008,$0010,$0410,$0420,$0008,$0010
 loc_127d0:
 		dc.b	$02,$F8,$F9,$05,$E5,$F9,$04,$E6,$08,$02,$E8,$FD,$00,$00,$00,$00
 		dc.b	$00,$00,$03,$F7,$F9,$02,$F8,$07,$06,$E4,$F9,$05,$E5,$08,$03,$E7
@@ -22750,7 +22750,7 @@ loc_127d0:
 		dc.b	$F5,$F5,$01,$EB,$F7,$01,$EE,$00,$03,$F1,$0A,$05,$F4,$F6,$02,$E8
 		dc.b	$F9,$00,$00,$00,$01,$EA,$F7,$01,$ED,$00,$02,$F0,$0A,$04,$F3,$F6
 		dc.b	$03,$E7,$F9,$02,$E8,$07,$01,$E9,$F6,$01,$EC,$00,$01,$EF,$09,$03
-		dc.b	$F2,$F6,$04,$E6,$F9,$03,$E7,$07    
+		dc.b	$F2,$F6,$04,$E6,$F9,$03,$E7,$07
 loc_12938:
 		dc.b	$01,$E6,$00,$01,$E7,$0B,$04,$EA,$FA,$05,$ED,$03,$02,$F0,$0E,$00
 		dc.b	$00,$00,$01,$E5,$01,$01,$E6,$0C,$03,$E9,$FA,$06,$EC,$03,$03,$F1
@@ -22774,7 +22774,7 @@ loc_12938:
 		dc.b	$E2,$F6,$03,$E9,$FC,$04,$EA,$0A,$05,$ED,$FC,$02,$F0,$02,$01,$DF
 		dc.b	$09,$03,$E1,$F7,$02,$E8,$FD,$03,$E9,$0A,$06,$EC,$FB,$03,$EF,$02
 		dc.b	$02,$E0,$F7,$00,$00,$00,$01,$E7,$00,$02,$E8,$0B,$05,$EB,$FB,$04
-		dc.b	$EE,$03,$01,$DF,$F8,$00,$00,$00      
+		dc.b	$EE,$03,$01,$DF,$F8,$00,$00,$00
 loc_12AA0:
 		dc.b	$04,$08,$09,$04,$FC,$01,$05,$08,$09,$05,$FC,$01,$06,$08,$09,$06
 		dc.b	$FC,$01,$07,$08,$09,$07,$FC,$01,$08,$08,$09,$08,$FC,$01,$07,$08
@@ -22786,16 +22786,16 @@ loc_12AA0:
 		dc.b	$F4,$09,$05,$03,$F1,$05,$F4,$09,$06,$03,$F1,$06,$F4,$09,$07,$03
 		dc.b	$F1,$07,$F4,$09,$08,$03,$F1,$08,$F4,$09,$07,$03,$F1,$07,$F4,$09
 		dc.b	$06,$03,$F1,$06,$F4,$09,$05,$03,$F1,$05,$F4,$09,$04,$03,$F1,$04
-		dc.b	$F4,$09						         
-;=============================================================================== 
-; Object 0x35 - 
+		dc.b	$F4,$09
+;===============================================================================
+; Object 0x35 -
 ; [ End ]
-;===============================================================================       
+;===============================================================================
 
-;=============================================================================== 
-; Object 0x08 - 
+;===============================================================================
+; Object 0x08 -
 ; [ Begin ]
-;===============================================================================       
+;===============================================================================
 Obj_0x08_Water_Splash: ; loc_12B42:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -22893,11 +22893,11 @@ loc_12CD8:
 loc_12CE2:
 		dc.w	$0001
 		dc.l	$F00F0012,$0009FFF0
-loc_12CEC:		
+loc_12CEC:
 		dc.w	loc_12CEE-loc_12CEC
 loc_12CEE:
-		dc.b	$04,$00,$01,$02,$FC,$00  
-Obj_0x08_Mappings:		 
+		dc.b	$04,$00,$01,$02,$FC,$00
+Obj_0x08_Mappings:
 loc_12CF4:
 		dc.w	loc_12CFA-loc_12CF4
 		dc.w	loc_12d0C-loc_12CF4
@@ -22911,15 +22911,15 @@ loc_12d0C:
 loc_12d1E:
 		dc.w	$0001
 		dc.l	$E20F0080,$0040FFF0
-;=============================================================================== 
-; Object 0x08 - 
+;===============================================================================
+; Object 0x08 -
 ; [ End ]
 ;===============================================================================
 
-;=============================================================================== 
+;===============================================================================
 ; Sub Routine AnglePos
-; [ Begin ]		         
-;===============================================================================        
+; [ Begin ]
+;===============================================================================
 ; loc_12d28: Sonic_AnglePos:
 AnglePos:
 		move.l	#Primary_Collision,(Collision_addr).w
@@ -23016,16 +23016,16 @@ loc_12E2A:
 		rts
 loc_12E30:
 		tst.b	$0038(a0)
-		bne.s	loc_12E2A 
+		bne.s	loc_12E2A
 		bset	#1,$0022(a0)
 		bclr	#$05,$0022(a0)
 		move.b	#1,$001D(a0)
 		rts
-		
-;=============================================================================== 
+
+;===============================================================================
 ; Sub Routine Sonic_Angle
-; [ Begin ]		         
-;===============================================================================		   
+; [ Begin ]
+;===============================================================================
 Sonic_Angle: ; loc_12E4A:
 		move.b	(Secondary_Angle).w,d2
 		cmp.w	d0,d1
@@ -23049,8 +23049,8 @@ loc_12E74:
 		addi.b	#$20,d2
 		andi.b	#$C0,d2
 		move.b	d2,$0026(a0)
-		rts  
-;===============================================================================		
+		rts
+;===============================================================================
 Sonic_WalkVertR: ; loc_12E86:
 		move.w	$000C(a0),d2
 		move.w	8(a0),d3
@@ -23081,25 +23081,25 @@ Sonic_WalkVertR: ; loc_12E86:
 		move.w	#0,d6
 		bsr.w	FindWall		; loc_1349E
 		move.w	(sp)+,d0
-		bsr.w	Sonic_Angle             ; loc_12E4A		
+		bsr.w	Sonic_Angle             ; loc_12E4A
 		tst.w	d1
 		beq.s	loc_12EF4
 		bpl.s	loc_12EF6
 		cmpi.w	#$FFF2,d1
-		blt.s   loc_12EF4		 
+		blt.s   loc_12EF4
 		add.w   d1,8(a0)
 loc_12EF4:
 		rts
 loc_12EF6:
 		move.b	$0012(a0),d0
 		bpl.s	loc_12EFE
-		neg.b   d0  
+		neg.b   d0
 loc_12EFE:
 		addq.b	#$04,d0
 		cmpi.b	#$0E,d0
 		bcs.s	loc_12F0A
 		move.b	#$0E,d0
-loc_12F0A:		
+loc_12F0A:
 		cmp.b	d0,d1
 		bgt.s   loc_12F14
 loc_12F0E:
@@ -23112,7 +23112,7 @@ loc_12F14:
 		bclr	#$05,$0022(a0)
 		move.b	#1,$001D(a0)
 		rts
-;===============================================================================		
+;===============================================================================
 Sonic_WalkCeiling: ; loc_12F2E:
 		move.w	$000C(a0),d2
 		move.w	8(a0),d3
@@ -23170,12 +23170,12 @@ loc_12FBC:
 		rts
 loc_12FC2:
 		tst.b	$0038(a0)
-		bne.s	loc_12FBC   
+		bne.s	loc_12FBC
 		bset	#1,$0022(a0)
 		bclr	#$05,$0022(a0)
 		move.b	#1,$001D(a0)
 		rts
-;===============================================================================		
+;===============================================================================
 Sonic_WalkVertL: ; loc_12FDC:
 		move.w	$000C(a0),d2
 		move.w	8(a0),d3
@@ -23225,25 +23225,25 @@ loc_1305A:
 		cmpi.b	#$0E,d0
 		bcs.s	loc_13066
 		move.b	#$0E,d0
-loc_13066:		
+loc_13066:
 		cmp.b	d0,d1
 		bgt.s   loc_13070
 loc_1306A:
 		sub.w   d1,8(a0)
-		
+
 		rts
 loc_13070:
 		tst.b	$0038(a0)
 		bne.s	loc_1306A
-		bset	#1,$0022(a0)  
+		bset	#1,$0022(a0)
 		bclr	#$05,$0022(a0)
 		move.b	#1,$001D(a0)
 		rts
-		
-;=============================================================================== 
+
+;===============================================================================
 ; Sub Routine Floor_ChkTile
-; [ Begin ]		         
-;===============================================================================		  
+; [ Begin ]
+;===============================================================================
 Floor_ChkTile: ; loc_1308A:
 		move.w	d2,d0
 		add.w   d0,d0
@@ -23300,12 +23300,12 @@ loc_130C4:
 		dc.w	$7400,$7480,$7500,$7580,$7600,$7680,$7700,$7780
 		dc.w	$7800,$7880,$7900,$7980,$7A00,$7A80,$7B00,$7B80
 		dc.w	$7C00,$7C80,$7d00,$7D80,$7E00,$7E80,$7F00,$7F80
-		
-;=============================================================================== 
+
+;===============================================================================
 ; Sub Routine FindFloor
-; [ Begin ]		         
-;===============================================================================		  
-FindFloor: ; loc_132C4:		
+; [ Begin ]
+;===============================================================================
+FindFloor: ; loc_132C4:
 		bsr.w	Floor_ChkTile           ; loc_1308A
 		move.w	(a1),d0
 		move.w	d0,d4
@@ -23337,7 +23337,7 @@ loc_13308:
 		beq.s	loc_13318
 		addi.b	#$40,(a4)
 		neg.b   (a4)
-		subi.b	#$40,(a4)		
+		subi.b	#$40,(a4)
 loc_13318:
 		andi.w	#$000F,d1
 		add.w   d0,d1
@@ -23365,21 +23365,21 @@ loc_13350:
 		andi.w	#$000F,d1
 		add.w   d1,d0
 		bpl.w	 loc_132d6
-loc_1335C:		
+loc_1335C:
 		sub.w   A3,d2
 		bsr.w	FindFloor2              ; loc_1336A
 		add.w   A3,d2
 		subi.w	#$0010,d1
 		rts
-;=============================================================================== 
+;===============================================================================
 ; Sub Routine FindFloor
-; [ End ]		         
-;=============================================================================== 
+; [ End ]
+;===============================================================================
 
-;=============================================================================== 
+;===============================================================================
 ; Sub Routine FindFloor2
-; [ Begin ]		         
-;===============================================================================		 
+; [ Begin ]
+;===============================================================================
 FindFloor2: ; loc_1336A:
 		bsr.w	Floor_ChkTile           ; loc_1308A
 		move.w	(a1),d0
@@ -23417,15 +23417,15 @@ loc_133BE:
 		andi.w	#$000F,d1
 		add.w   d0,d1
 		lea	(Colision_Array_1).l,A2  ; loc_2d2EA
-		move.b	$00(A2,d1),d0		  
+		move.b	$00(A2,d1),d0
 		ext.w   d0
 		eor.w   d6,d4
 		btst	#$0B,d4
 		beq.s	loc_133DA
-		neg.w	d0		 
+		neg.w	d0
 loc_133DA:
 		tst.w	d0
-		beq.s	loc_1337C 
+		beq.s	loc_1337C
 		bmi.s	loc_133F0
 		move.w	d2,d1
 		andi.w	#$000F,d1
@@ -23503,15 +23503,15 @@ loc_13490:
 		add.w   A3,d2
 		subi.w	#$0010,d1
 		rts
-;=============================================================================== 
+;===============================================================================
 ; Sub Routine FindFloor2
-; [ End ]		         
-;===============================================================================		 
-            
-;=============================================================================== 
+; [ End ]
+;===============================================================================
+
+;===============================================================================
 ; Sub Routine FindWall
-; [ Begin ]		         
-;===============================================================================		  
+; [ Begin ]
+;===============================================================================
 FindWall: ; loc_1349E:
 		bsr.w	Floor_ChkTile           ; loc_1308A
 		move.w	(a1),d0
@@ -23578,15 +23578,15 @@ loc_13536:
 		add.w   A3,d3
 		subi.w	#$0010,d1
 		rts
-;=============================================================================== 
+;===============================================================================
 ; Sub Routine FindWall
-; [ End ]		         
-;===============================================================================    
+; [ End ]
+;===============================================================================
 
-;=============================================================================== 
+;===============================================================================
 ; Sub Routine FindWall2
-; [ Begin ]		         
-;===============================================================================		 
+; [ Begin ]
+;===============================================================================
 FindWall2: ; loc_13544:
 		bsr.w	Floor_ChkTile           ; loc_1308A
 		move.w	(a1),d0
@@ -23630,7 +23630,7 @@ loc_13598:
 		btst	#$0A,d4
 		beq.s	loc_135B4
 		neg.w	d0
-loc_135B4:		
+loc_135B4:
 		tst.w	d0
 		beq.s	loc_13556
 		bmi.s	loc_135CA
@@ -23647,10 +23647,10 @@ loc_135CA:
 		bpl.w	 loc_13556
 		not.w  d1
 		rts
-;=============================================================================== 
+;===============================================================================
 ; Sub Routine FindWall2
-; [ End ]		         
-;===============================================================================  
+; [ End ]
+;===============================================================================
 
 ; ---------------------------------------------------------------------------
 ; This subroutine takes 'raw' bitmap-like collision block data as input and
@@ -23684,10 +23684,10 @@ ConvertCollisionArray:
 loc_135EC:
 		moveq	#$10,d5
 		move.w	#$000F,d2
-loc_135F2:		
+loc_135F2:
 		moveq	#0,d4
 		move.w	#$000F,d1
-loc_135F8:		
+loc_135F8:
 		move.w	(a1)+,d0
 		lsr.l	d5,d0
 		addx.w  d4,d4
@@ -23703,15 +23703,15 @@ loc_135F8:
 		bsr.s	loc_13630
 		lea	(RawColBlocks).l,A1  ; loc_2d2EA
 		lea	(Colision_Array_1).l,A2  ; loc_2d2EA
-loc_13630:				
+loc_13630:
 		move.w	#$0FFF,d3
-loc_13634:		
+loc_13634:
 		moveq	#0,d2
 		move.w	#$000F,d1
 		move.w	(a1)+,d0
 		beq.s	loc_13662
 		bmi.s	loc_1364C
-loc_13640:		
+loc_13640:
 		lsr.w	#1,d0
 		bcc.s	loc_13646
 		addq.b	#1,d2
@@ -23721,7 +23721,7 @@ loc_13646:
 loc_1364C:
 		cmpi.w	#$FFFF,d0
 		beq.s	loc_1365E
-loc_13652:		
+loc_13652:
 		lsl.w	#1,d0
 		bcc.s	loc_13658
 		subq.b	#1,d2
@@ -23736,10 +23736,10 @@ loc_13664:
 		move.b	d2,(a2)+
 		dbf	d3,loc_13634
 		rts
-;=============================================================================== 
+;===============================================================================
 ; Sub Routine Sonic_WalkSpeed
-; [ Begin ]		         
-;===============================================================================				  
+; [ Begin ]
+;===============================================================================
 Sonic_WalkSpeed: ; loc_1366C:
 		move.l	#Primary_Collision,(Collision_addr).w
 		cmpi.b	#$0C,$003E(a0)
@@ -23787,7 +23787,7 @@ loc_136CE:
 loc_136E6:
 		cmpi.b	#$40,d0
 		beq.w	 loc_13B04
-		bra.w	loc_13982		    
+		bra.w	loc_13982
 loc_136F2:
 		move.l	#Primary_Collision,(Collision_addr).w
 		cmpi.b	#$0C,$003E(a0)
@@ -23805,7 +23805,7 @@ loc_1370A:
 		beq.w	 Sonic_DontRunOnWalls    ; loc_139CC
 		cmpi.b	#$C0,d0
 		beq.w	 loc_1391A
-loc_13736:		
+loc_13736:
 		move.l	#Primary_Collision,(Collision_addr).w
 		cmpi.b	#$0C,$003E(a0)
 		beq.s	loc_1374E
@@ -23841,7 +23841,7 @@ loc_1374E:
 		bsr.w	FindFloor               ; loc_132C4
 		move.w	(sp)+,d0
 		move.b	#$00,d2
-loc_137AE:		
+loc_137AE:
 		move.b	(Secondary_Angle).w,d3
 		cmp.w	d0,d1
 		ble.s   loc_137BC
@@ -23855,7 +23855,7 @@ loc_137C4:
 		rts
 ; loc_137C6:
 		move.w	$000C(a0),d2
-		move.w	8(a0),d3		
+		move.w	8(a0),d3
 loc_137CE:
 		addi.w	#$000A,d2
 		lea	(Primary_Angle).w,A4
@@ -23863,18 +23863,18 @@ loc_137CE:
 		move.w	#0,d6
 		bsr.w	FindFloor               ; loc_132C4
 		move.b	#$00,d2
-loc_137E6:		
+loc_137E6:
 		move.b	(Primary_Angle).w,d3
 		btst	#$00,d3
 		beq.s	loc_137F2
 		move.b	d2,d3
 loc_137F2:
-		rts 
-		
-;=============================================================================== 
+		rts
+
+;===============================================================================
 ; Sub Routine ChkFloorEdge
-; [ Begin ]		         
-;===============================================================================		               
+; [ Begin ]
+;===============================================================================
 ; loc_137F4: Sonic_HitFloor:
 ChkFloorEdge:
 		move.w	8(a0),d3
@@ -23900,15 +23900,15 @@ loc_1381E:
 		move.b	#$00,d3
 loc_13844:
 		rts
-;=============================================================================== 
+;===============================================================================
 ; Sub Routine ChkFloorEdge
-; [ End ]		         
-;===============================================================================		  
+; [ End ]
+;===============================================================================
 
-;=============================================================================== 
+;===============================================================================
 ; Sub Routine ChkFloorEdge2
-; [ Begin ]		         
-;===============================================================================		 
+; [ Begin ]
+;===============================================================================
 ; loc_13846: Sonic_HitFloor2:
 ChkFloorEdge2:
 		move.w	8(a1),d3
@@ -23934,18 +23934,18 @@ loc_13870:
 		move.b	#$00,d3
 loc_13896:
 		rts
-;=============================================================================== 
+;===============================================================================
 ; Sub Routine ChkFloorEdge2
-; [ End ]		         
-;===============================================================================   
+; [ End ]
+;===============================================================================
 
-;=============================================================================== 
+;===============================================================================
 ; Sub Routine ObjHitFloor
-; [ Begin ]		         
-;===============================================================================		   
+; [ Begin ]
+;===============================================================================
 ObjHitFloor: ; loc_13898:
 		move.w	8(a0),d3
-ObjHitFloor2: ; loc_1389C:               
+ObjHitFloor2: ; loc_1389C:
 		move.w	$000C(a0),d2
 		move.b	$0016(a0),d0
 		ext.w   d0
@@ -23961,12 +23961,12 @@ ObjHitFloor2: ; loc_1389C:
 		beq.s	loc_138CC
 		move.b	#$00,d3
 loc_138CC:
-		rts 
-;=============================================================================== 
+		rts
+;===============================================================================
 ; Sub Routine ObjHitFloor
-; [ End ]		         
-;===============================================================================  
-		 
+; [ End ]
+;===============================================================================
+
 loc_138CE:
 		move.w	8(a1),d3
 		move.w	$000C(a1),d2
@@ -23991,7 +23991,7 @@ loc_138F4:
 		move.w	#0,d6
 		moveq	#$0C,d5
 		bra.w	loc_13400
-;===============================================================================		
+;===============================================================================
 loc_1391A:
 		move.w	$000C(a0),d2
 		move.w	8(a0),d3
@@ -24022,11 +24022,11 @@ loc_1391A:
 		bsr.w	FindWall		; loc_1349E
 		move.w	(sp)+,d0
 		move.b	#$C0,d2
-		bra.w	loc_137AE 
-;===============================================================================		               
+		bra.w	loc_137AE
+;===============================================================================
 loc_1397A:
 		move.w	$000C(a0),d2
-		move.w	8(a0),d3		
+		move.w	8(a0),d3
 loc_13982:
 		addi.w	#$000A,d3
 		lea	(Primary_Angle).w,A4
@@ -24034,12 +24034,12 @@ loc_13982:
 		move.w	#0,d6
 		bsr.w	FindWall		; loc_1349E
 		move.b	#$C0,d2
-		bra.w	loc_137E6 
-		  
-;=============================================================================== 
+		bra.w	loc_137E6
+
+;===============================================================================
 ; Sub Routine ObjHitWallRight
-; [ Begin ]		         
-;===============================================================================		  
+; [ Begin ]
+;===============================================================================
 ObjHitWallRight: ; loc_1399E:
 		add.w   8(a0),d3
 		move.w	$000C(a0),d2
@@ -24055,15 +24055,15 @@ ObjHitWallRight: ; loc_1399E:
 		move.b	#$C0,d3
 loc_139CA:
 		rts
-;=============================================================================== 
+;===============================================================================
 ; Sub Routine ObjHitWallRight
-; [ End ]		         
-;===============================================================================		  
-		
-;=============================================================================== 
+; [ End ]
+;===============================================================================
+
+;===============================================================================
 ; Sub Routine Sonic_DontRunOnWalls
-; [ Begin ]		         
-;===============================================================================		  
+; [ Begin ]
+;===============================================================================
 Sonic_DontRunOnWalls: ; loc_139CC:
 		move.w	$000C(a0),d2
 		move.w	8(a0),d3
@@ -24097,11 +24097,11 @@ Sonic_DontRunOnWalls: ; loc_139CC:
 		move.w	(sp)+,d0
 		move.b	#$80,d2
 		bra.w	loc_137AE
-;=============================================================================== 
+;===============================================================================
 ; Sub Routine Sonic_DontRunOnWalls
-; [ End ]		         
-;===============================================================================               
-              
+; [ End ]
+;===============================================================================
+
 ;loc_13A34:
 		move.w	$000C(a0),d2
 		move.w	8(a0),d3
@@ -24113,8 +24113,8 @@ loc_13A3C:
 		move.w	#$0800,d6
 		bsr.w	FindFloor               ; loc_132C4
 		move.b	#$80,d2
-		bra.w	loc_137E6 
-;===============================================================================		
+		bra.w	loc_137E6
+;===============================================================================
 ; ObjHitCeiling ; loc_13A5C:
 		move.w	$000C(a0),d2
 		move.w	8(a0),d3
@@ -24134,7 +24134,7 @@ loc_13A3C:
 		move.b	#$80,d3
 loc_13A92:
 		rts
-;===============================================================================		
+;===============================================================================
 loc_13A94:
 		move.w	$000C(a0),d2
 		move.w	8(a0),d3
@@ -24167,15 +24167,15 @@ loc_13A94:
 		bsr.w	FindWall		; loc_1349E
 		move.w	(sp)+,d0
 		move.b	#$40,d2
-		bra.w	loc_137AE   
-		
-;=============================================================================== 
+		bra.w	loc_137AE
+
+;===============================================================================
 ; Sub Routine Sonic_HitWall
-; [ Begin ]		         
-;===============================================================================		   
+; [ Begin ]
+;===============================================================================
 Sonic_HitWall: ; loc_13AFC:
 		move.w	$000C(a0),d2
-		move.w	8(a0),d3		
+		move.w	8(a0),d3
 loc_13B04:
 		subi.w	#$000A,d3
 		eori.w  #$000F,d3
@@ -24184,8 +24184,8 @@ loc_13B04:
 		move.w	#$0400,d6
 		bsr.w	FindWall		; loc_1349E
 		move.b	#$40,d2
-		bra.w	loc_137E6    
-;===============================================================================				             
+		bra.w	loc_137E6
+;===============================================================================
 ObjHitWallLeft: ; loc_13B24:
 		add.w   8(a0),d3
 		move.w	$000C(a0),d2
@@ -24202,10 +24202,10 @@ ObjHitWallLeft: ; loc_13B24:
 loc_13B50:
 		rts
 		nop		             ; Filler
-;=============================================================================== 
+;===============================================================================
 ; Object 0x79 - Lamp Post
 ; [ Begin ]
-;===============================================================================		      
+;===============================================================================
 Obj_0x79_Lamp_Post: ; loc_13B54:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -24540,7 +24540,7 @@ loc_14000:
 loc_14002:
 		lea	(loc_14010).l,A1
 		bsr.w	AnimateSprite           ; loc_d412
-		bra.w	MarkObjGone             ; loc_d2A0              
+		bra.w	MarkObjGone             ; loc_d2A0
 loc_14010:
 		dc.w	loc_14014-loc_14010
 		dc.w	loc_14017-loc_14010
@@ -24560,16 +24560,16 @@ loc_14036:
 		dc.l	$F4060008,$0004FFF4,$F4020808,$08040004
 loc_14048:
 		dc.w	$0002
-		dc.l	$F007000E,$0007FFF0,$F007080E,$08070000				  
-;=============================================================================== 
+		dc.l	$F007000E,$0007FFF0,$F007080E,$08070000
+;===============================================================================
 ; Object ??? - Unknow Object 0x013F00
 ; [ Begin ]
-;===============================================================================          
+;===============================================================================
 		nop		             ; Filler
-;=============================================================================== 
+;===============================================================================
 ; Object ??? - Unknow Object 0x01405C
 ; [ Begin ]
-;===============================================================================		  
+;===============================================================================
 S1_Obj_0x64: ; Unknow_Obj_0x01405C: ; loc_1405C:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -24614,7 +24614,7 @@ loc_140F2:
 		move.w	(Water_Level_1).w,d0
 		cmp.w	$000C(a0),d0
 		bcs.s	loc_1410A
-loc_140FC		
+loc_140FC
 		move.b	#$06,$0024(a0)
 		addq.b	#$03,$001C(a0)
 		bra.w	loc_141AC
@@ -24681,7 +24681,7 @@ loc_141CE:
 		subq.w	#1,$0038(a0)
 		bpl.w	 loc_142CA
 		move.w	#$0001,$0036(a0)
-loc_141F6:		
+loc_141F6:
 		jsr	 (PseudoRandomNumber).l      ; loc_31E4
 		move.w	d0,d1
 		andi.w	#$0007,d0
@@ -24751,10 +24751,10 @@ loc_142d6:
 		move.w	(Water_Level_1).w,d0
 		cmp.w	$000C(a0),d0
 		bcs.w	 DisplaySprite           ; loc_d3C2
-		rts 
+		rts
 loc_142F8:
 		dc.w	$0001,$0000,$0000,$0100,$0000,$0001,$0001,$0000
-		dc.w	$0100              
+		dc.w	$0100
 loc_1430A:
 		tst.b	(MainCharacter+$2A).w
 		bmi.s	loc_14344
@@ -24778,7 +24778,7 @@ loc_1430A:
 		rts
 loc_14344:
 		moveq	#0,d0
-		rts		
+		rts
 loc_14348:
 		dc.w	loc_14356-loc_14348
 		dc.w	loc_1435B-loc_14348
@@ -24892,7 +24892,7 @@ loc_144A4:
 		dc.w	$0001
 		dc.l	$F8050070,$0038FFF8
 loc_144AE:
-		dc.w	$0000		
+		dc.w	$0000
 ; ===========================================================================
 ; ---------------------------------------------------------------------------
 ; Object 03 - Collision plane/layer switcher
@@ -25676,11 +25676,11 @@ Obj04_MapUnc_151C2:	binclude	"mappings/sprite/obj04_a.bin"
 ; ---------------------------------------------------------------------------
 Obj04_MapUnc_152B2:	binclude	"mappings/sprite/obj04_b.bin"	; took me awhile to realize I accidentally binclude'd the above mappings twice,oops
 
-;=============================================================================== 
-; Object 0x49 - Green Hill - Waterfalls 
-; [ Begin ]        
-;===============================================================================  
-Obj_0x49_Waterfall: ; loc_15352:		 
+;===============================================================================
+; Object 0x49 - Green Hill - Waterfalls
+; [ Begin ]
+;===============================================================================
+Obj_0x49_Waterfall: ; loc_15352:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_15360(pc,d0),d1
@@ -25688,7 +25688,7 @@ Obj_0x49_Waterfall: ; loc_15352:
 loc_15360:
 		dc.w	loc_15364-loc_15360
 		dc.w	loc_1539E-loc_15360
-               
+
 loc_15364:
 		addq.b	#$02,$0024(a0)
 		move.l	#Obj49_MapUnc_15404,$0004(a0) ; loc_15404
@@ -25738,15 +25738,15 @@ loc_153FC:
 ; Sprite mappings
 ; ---------------------------------------------------------------------------
 Obj49_MapUnc_15404:	binclude	"mappings/sprite/obj49.bin"
-;=============================================================================== 
-; Object 0x49 - Green Hill - Waterfalls 
-; [ End ]		         
-;===============================================================================		
+;===============================================================================
+; Object 0x49 - Green Hill - Waterfalls
+; [ End ]
+;===============================================================================
 
-;=============================================================================== 
-; Object 0x31 - Hill Top / Metropolis - Lava Attributes 
-; [ Begin ]		         
-;===============================================================================   
+;===============================================================================
+; Object 0x31 - Hill Top / Metropolis - Lava Attributes
+; [ Begin ]
+;===============================================================================
 Obj_0x31_Lava_Attributes: ; loc_155A0:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -25755,9 +25755,9 @@ Obj_0x31_Lava_Attributes: ; loc_155A0:
 loc_155AE:
 		dc.w	loc_155B6-loc_155AE
 		dc.w	loc_155EC-loc_155AE
-loc_155B2: 
+loc_155B2:
 		dc.w	$9694,$9500
-		
+
 loc_155B6:
 		addq.b	#$02,$0024(a0)
 		moveq	#0,d0
@@ -25769,7 +25769,7 @@ loc_155B6:
 		move.b	#$80,$0019(a0)
 		move.b	#$04,$0018(a0)
 		move.b	$0028(a0),$001A(a0)
-loc_155EC:		
+loc_155EC:
 		tst.w	(Two_player_mode).w
 		bne.s	loc_15606
 		move.w	8(a0),d0
@@ -25781,7 +25781,7 @@ loc_15606:
 		tst.w	(Debug_placement_mode).w
 		beq.s	loc_15610
 		bsr.w	JmpTo_DisplaySprite
-loc_15610:		
+loc_15610:
 		rts
 ; Lava_Attributes_Mappings:		loc_15612:
 Obj31_MapUnc_15612:
@@ -25790,14 +25790,14 @@ Obj31_MapUnc_15612:
 		dc.w	loc_15618-Obj31_MapUnc_15612
 loc_15618:
 		dc.w	$0000
-;=============================================================================== 
-; Object 0x31 - Hill Top / Metropolis - Lava Attributes 
-; [ End ]		         
-;=============================================================================== 
-;=============================================================================== 
-; Object 0x74 - Hill Top / Metropolis / Dust Hill... - Invisible Block 
-; [ Begin ]		         
-;===============================================================================   
+;===============================================================================
+; Object 0x31 - Hill Top / Metropolis - Lava Attributes
+; [ End ]
+;===============================================================================
+;===============================================================================
+; Object 0x74 - Hill Top / Metropolis / Dust Hill... - Invisible Block
+; [ Begin ]
+;===============================================================================
 Obj_0x74_Invisible_Block: ; loc_1561A:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -26509,7 +26509,7 @@ loc_15E82:
 		clr.w	$12(a0)
 		subq.b	#2,routine(a0)		; set ball to main state
 
-return_15E8E:		
+return_15E8E:
 		rts
 ; ===========================================================================
 ; loc_15E90:
@@ -26680,7 +26680,7 @@ Obj16_Fall:
 		addi.w	#$E0,d0
 		cmp.w	$C(a0),d0
 		bcs.w	JmpTo12_DeleteObject
-		rts 
+		rts
 ; ---------------------------------------------------------------------------
 ; Sprite mappings
 ; ---------------------------------------------------------------------------
@@ -26700,10 +26700,10 @@ JmpTo2_Adjust2PArtPointer:
 JmpTo_ObjectMove:
 		jmp	(ObjectMove).l
 
-;=============================================================================== 
+;===============================================================================
 ; Object 0x19 - Oil Ocean - Elevators
-; [ Begin ]		         
-;===============================================================================  
+; [ Begin ]
+;===============================================================================
 Obj_0x19_Elevator: ; loc_1621C:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -26712,7 +26712,7 @@ Obj_0x19_Elevator: ; loc_1621C:
 loc_1622A:
 		dc.w	loc_16238-loc_1622A
 		dc.w	loc_162A0-loc_1622A
-loc_1622E		
+loc_1622E
 		dc.b	$20,$00,$18,$01,$20,$02,$40,$03,$30,$04
 loc_16238:
 		addq.b	#$02,$0024(a0)
@@ -26900,7 +26900,7 @@ JmpTo3_Adjust2PArtPointer:
 ; loc_16462:
 JmpTo2_ObjectMove:
 		jmp	(ObjectMove).l
-		
+
 ; ===========================================================================
 ; ---------------------------------------------------------------------------
 ; Object 1B - Speed booster from CPZ
@@ -27013,10 +27013,10 @@ JmpTo2_MarkObjGone:
 JmpTo4_Adjust2PArtPointer:
 		jmp	(Adjust2PArtPointer).l
 
-;=============================================================================== 
+;===============================================================================
 ; Object 0x1D - Chemical Plant - Worms
-; [ Begin ]		         
-;===============================================================================  
+; [ Begin ]
+;===============================================================================
 Obj_0x1D_Worms: ; loc_165B0:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -27027,9 +27027,9 @@ loc_165BE:
 		dc.w	loc_1667E-loc_165BE
 		dc.w	loc_1669C-loc_165BE
 		dc.w	loc_1667E-loc_165BE
-		dc.w	loc_166d0-loc_165BE		 
+		dc.w	loc_166d0-loc_165BE
 ;loc_165C8:
-		dc.w	$FB80,$FB00,$FA00,$F900		  
+		dc.w	$FB80,$FB00,$FA00,$F900
 loc_165d0:
 		addq.b	#$02,$0024(a0)
 		move.w	#$FB80,$0012(a0)
@@ -27046,7 +27046,7 @@ loc_165F0:
 		moveq	#0,d2
 		move.l	A0,A1
 		bra.s	loc_16600
-loc_165FA:		
+loc_165FA:
 		bsr.w	SingleObjLoad2      ; loc_E788
 		bne.s	loc_16678
 loc_16600:
@@ -27135,10 +27135,10 @@ JmpTo3_ObjectMove:
 
 		align 4
 
-;=============================================================================== 
+;===============================================================================
 ; Object 0x1E - Chemical Plant - Tube Attributes
-; [ Begin ]		         
-;===============================================================================		  
+; [ Begin ]
+;===============================================================================
 Obj_0x1E_Tube_Attributes: ; loc_16724:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -27151,7 +27151,7 @@ Obj_0x1E_Tube_Attributes: ; loc_16724:
 loc_16740:
 		dc.w	loc_1674A-loc_16740
 		dc.w	loc_1675E-loc_16740
-loc_16744:		
+loc_16744:
 		dc.w	$00A0,$0100,$0120
 loc_1674A:
 		addq.b	#$02,$0024(a0)
@@ -27461,7 +27461,7 @@ loc_16AEA:
 loc_16AF8:
 		move.w	d0,$0002(a4)
 		rts
-loc_16AFE:              
+loc_16AFE:
 		dc.w	loc_16B16-loc_16AFE
 		dc.w	loc_16B8C-loc_16AFE
 		dc.w	loc_16BEA-loc_16AFE
@@ -27483,7 +27483,7 @@ loc_16B16:
 		dc.w	$005E,$0012,$0068,$0018,$006D,$0024,$0070,$0030
 		dc.w	$006D,$003D,$0068,$0048,$005E,$004E,$0050,$0050
 		dc.w	$0030,$0050,$0022,$0052,$0017,$005A,$0011,$0063
-		dc.w	$0010,$0070 
+		dc.w	$0010,$0070
 loc_16B8C:
 		dc.w	$005C
 		dc.w	$0090,$0010,$0090,$0070,$0040,$0070,$002E,$006E
@@ -27518,7 +27518,7 @@ loc_16CBE:
 		dc.w	$00ED,$002E,$00E8,$0026,$00E3,$001E,$00DB,$0017
 		dc.w	$00d4,$0014,$00CA,$0012,$00C0,$0010,$00B7,$0011
 		dc.w	$00AF,$0012,$00A6,$0017,$009E,$001E,$0097,$0026
-		dc.w	$0093,$002E,$0091,$0036,$0090,$0040,$0090,$0070		  
+		dc.w	$0093,$002E,$0091,$0036,$0090,$0040,$0090,$0070
 loc_16d30:
 		dc.w	$005C
 		dc.w	$0010,$0010,$0010,$0070,$00C0,$0070,$00d2,$006E
@@ -27535,7 +27535,7 @@ loc_16D8E:
 		dc.w	$00DB,$0017,$00E3,$001E,$00E8,$0026,$00ED,$002E
 		dc.w	$00EF,$0036,$00F0,$0040,$00EF,$0048,$00ED,$0052
 		dc.w	$00E8,$005A,$00E3,$0062,$00DB,$0068,$00d4,$006C
-		dc.w	$00CA,$006F,$00C0,$0070,$0010,$0070,$0010,$0010		
+		dc.w	$00CA,$006F,$00C0,$0070,$0010,$0070,$0010,$0010
 loc_16E00:
 		dc.w	$005C
 		dc.w	$00F0,$0030,$00D8,$0030,$00CA,$0032,$00C0,$0038
@@ -27648,20 +27648,20 @@ loc_17140:
 loc_1714E:
 		dc.w	$001C
 		dc.w	$0D90,$02B0,$0C90,$02B0,$0C90,$00B0,$0E80,$00B0
-		dc.w	$1110,$00B0,$1110,$0230,$10F0,$0230 
-;=============================================================================== 
+		dc.w	$1110,$00B0,$1110,$0230,$10F0,$0230
+;===============================================================================
 ; Object 0x1E - Chemical Plant - Tube Attributes
-; [ End ]		         
-;===============================================================================		   
+; [ End ]
+;===============================================================================
 ; loc_1716C:
 JmpTo_MarkObjGone3:
 		jmp	(MarkObjGone3).l
 
 		align 4
-;=============================================================================== 
-; Object 0x20 - Fireball - Hill Top 
-; [ Begin ]		         
-;===============================================================================  
+;===============================================================================
+; Object 0x20 - Fireball - Hill Top
+; [ Begin ]
+;===============================================================================
 Obj_0x20_Fireball: ; loc_17174:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -27793,7 +27793,7 @@ loc_1734E:
 		bne.s	loc_173A0
 		moveq	#0,d0
 		move.w	#$000F,d1
-loc_1736C:		
+loc_1736C:
 		move.l	$00(A0,d0),$00(A1,d0)
 		addq.w	#$04,d0
 		dbf	d1,loc_1736C
@@ -27825,7 +27825,7 @@ loc_173BF:
 		dc.b	$7F,$05,$FF
 loc_173C2:
 		dc.b	$05,$04,$05,$02,$03,$00,$01,$00,$01,$02,$03,$04,$05,$FC
-Fireball_Mappings:		
+Fireball_Mappings:
 loc_173d0:
 		dc.w	loc_173DC-loc_173d0
 		dc.w	loc_173E6-loc_173d0
@@ -27874,7 +27874,7 @@ loc_17444:
 		dc.l	$00050010,$0008FFF8
 loc_1744E:
 		dc.w	$0001
-		dc.l	$00050810,$0808FFF8    
+		dc.l	$00050810,$0808FFF8
 ; loc_17458:
 JmpTo14_DeleteObject:
 		jmp	(DeleteObject).l
@@ -27893,14 +27893,14 @@ JmpTo5_Adjust2PArtPointer:
 ; loc_17476:
 JmpTo4_ObjectMove:
 		jmp	(ObjectMove).l
-;=============================================================================== 
-; Object 0x20 - Fireball - Hill Top 
-; [ End ]		         
-;=============================================================================== 
-;=============================================================================== 
+;===============================================================================
+; Object 0x20 - Fireball - Hill Top
+; [ End ]
+;===============================================================================
+;===============================================================================
 ; Object 0x2F - Hill Top - Breakable Floor
-; [ Begin ]		         
-;=============================================================================== 
+; [ Begin ]
+;===============================================================================
 Obj_0x2F_Breakable_Floor: ; loc_1747C:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -27942,7 +27942,7 @@ loc_174D8:
 		move.b	$0022(a0),d0
 		andi.b	#$18,d0
 		bne.s	loc_17514
-loc_17510:		
+loc_17510:
 		bra.w	JmpTo5_MarkObjGone
 loc_17514:
 		cmpi.b	#$18,d0
@@ -28046,15 +28046,15 @@ loc_1764C:
 loc_17662:
 		dc.w	$FF00,$F800,$0100,$F800,$FF20,$F900,$00E0,$F900
 		dc.w	$FF40,$FA00,$00C0,$FA00,$FF60,$FB00,$00A0,$FB00
-		dc.w	$FF80,$FC00,$0080,$FC00  
-;=============================================================================== 
+		dc.w	$FF80,$FC00,$0080,$FC00
+;===============================================================================
 ; Object 0x2F - Hill Top - Breakable Floor
-; [ End ]		         
-;===============================================================================  
-;=============================================================================== 
+; [ End ]
+;===============================================================================
+;===============================================================================
 ; Object 0x32 - Rock - Hill Top / Tunel Obstacule - Chemical Plant
-; [ Begin ]		         
-;=============================================================================== 
+; [ Begin ]
+;===============================================================================
 Obj_0x32_Breakable_Obstacule: ; loc_1768A:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -28094,7 +28094,7 @@ loc_176F2:
 		move.b	$0022(a0),d0
 		andi.b	#$18,d0
 		bne.s	loc_1772C
-loc_17728:		
+loc_17728:
 		bra.w	JmpTo5_MarkObjGone
 loc_1772C:
 		cmpi.b	#$18,d0
@@ -28157,11 +28157,11 @@ loc_177F0:
 		dc.w	$FE00,$FE00,$0000,$FD80,$0200,$FE00,$FE40,$FE40
 		dc.w	$0000,$FE00,$01C0,$FE40
 loc_17808:
-		dc.w	$FF00,$FE00,$0100,$FE00,$FF40,$FE40,$00C0,$FE40		
-;=============================================================================== 
+		dc.w	$FF00,$FE00,$0100,$FE00,$FF40,$FE40,$00C0,$FE40
+;===============================================================================
 ; Object 0x32 - Rock - Hill Top / Tunel Obstacule - Chemical Plant
-; [ End ]		         
-;===============================================================================              
+; [ End ]
+;===============================================================================
 loc_17818:
 		bsr.w	JmpTo_SingleObjLoad
 		bne.s	loc_17860
@@ -28224,10 +28224,10 @@ JmpTo_SolidObject:
 JmpTo5_ObjectMove:
 		jmp	(ObjectMove).l
 
-;=============================================================================== 
-; Object 0x30 - 
-; [ Begin ]		         
-;===============================================================================		  
+;===============================================================================
+; Object 0x30 -
+; [ Begin ]
+;===============================================================================
 Obj_0x30: ; loc_17A4C:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -28293,7 +28293,7 @@ loc_17AFA:
 		move.w	8(a0),d4
 		bsr.w	JmpTo_SolidObject_Always
 		bsr.w	loc_FBF4
-loc_17B12:               
+loc_17B12:
 		btst	#$03,$0022(a0)
 		beq.s	loc_17B28
 		move.l	A0,-(sp)
@@ -28325,7 +28325,7 @@ loc_17B5A:
 		move.w	8(a0),d4
 		lea	(loc_17B74).l,A2
 		bsr.w	JmpTo_SlopedSolid
-		bra.w	loc_FBF4     
+		bra.w	loc_FBF4
 loc_17B74:
 		dc.b	$40,$40,$40,$40,$40,$40,$40,$40,$3F,$3F,$3E,$3E,$3D,$3D,$3C,$3C
 		dc.b	$3B,$3B,$3A,$3A,$39,$39,$38,$38,$37,$37,$36,$36,$35,$35,$34,$34
@@ -28343,11 +28343,11 @@ loc_17B74:
 		dc.b	$DB,$DB,$DA,$DA,$D9,$D9,$D8,$D8,$d7,$d7,$d6,$d6,$d5,$d5,$d4,$d4
 		dc.b	$d3,$d3,$d2,$d2,$d1,$d1,$d0,$d0,$CF,$CF,$CE,$CE,$CD,$CD,$CC,$CC
 		dc.b	$CB,$CB,$CA,$CA,$C9,$C9,$C8,$C8,$C7,$C7,$C6,$C6,$C5,$C5,$C4,$C4
-		dc.b	$C3,$C3,$C2,$C2,$C1,$C1,$C0,$C0,$C0,$C0,$C0,$C0		         
-;=============================================================================== 
-; Object 0x30 - 
-; [ End ]		         
-;===============================================================================  
+		dc.b	$C3,$C3,$C2,$C2,$C1,$C1,$C0,$C0,$C0,$C0,$C0,$C0
+;===============================================================================
+; Object 0x30 -
+; [ End ]
+;===============================================================================
 ; loc_17C80:
 JmpTo16_DeleteObject:
 		jmp	(DeleteObject).l
@@ -28366,10 +28366,10 @@ JmpTo_SlopedSolid:
 
 		align 4
 
-;=============================================================================== 
+;===============================================================================
 ; Object 0x33 - Oil Ocean - Touch to Boost Up
-; [ Begin ]		         
-;===============================================================================		  
+; [ Begin ]
+;===============================================================================
 Obj_0x33_Touch_Booster: ; loc_17CA0:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -28554,10 +28554,10 @@ JmpTo2_SolidObject:
 
 		align 4
 
-;=============================================================================== 
+;===============================================================================
 ; Object 0x43 - Oil Ocean - Giant Spikeball
-; [ Begin ]		         
-;===============================================================================		 
+; [ Begin ]
+;===============================================================================
 Obj_0x43_Giant_Spikeball: ; loc_17F0C:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -28580,7 +28580,7 @@ loc_17F32:
 		move.b	(a2)+,d1
 		move.l	A0,A1
 		bra.s	loc_17F74
-loc_17F50:		
+loc_17F50:
 		bsr.w	JmpTo2_SingleObjLoad2
 		bne.s	loc_17FA0
 		_move.b	0(a0),0(a1)
@@ -28789,10 +28789,10 @@ JmpTo3_KillCharacter:
 JmpTo_PlatformObject_SingleCharacter:
 		jmp	(PlatformObject_SingleCharacter).l
 
-;=============================================================================== 
-; Object 0x45 - Oil Ocean - Spring Push to Boost 
-; [ Begin ]		         
-;===============================================================================  
+;===============================================================================
+; Object 0x45 - Oil Ocean - Spring Push to Boost
+; [ Begin ]
+;===============================================================================
 Obj_0x45_Spring_Push_Boost: ; loc_181A0:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -29088,7 +29088,7 @@ loc_18562:
 		move.w	#SndID_Spring,d0
 		jmp	(PlaySound).l             ; loc_14C6
 loc_18578:
-		rts 
+		rts
 loc_1857A:   ; Unused Obj Conf
 		dc.w	loc_1857E-loc_1857A
 		dc.w	loc_185A0-loc_1857A
@@ -29099,17 +29099,17 @@ loc_1857E:
 loc_185A0:
 		dc.b	$00,$0A,$0B,$0C,$0D,$0E,$0F,$10,$11,$12,$13,$13,$13,$13,$13,$13
 		dc.b	$13,$13,$12,$11,$10,$0F,$0E,$0D,$0C,$0B,$0A,$0A,$0A,$0A,$0A,$0A
-		dc.b	$0A,$FF		
+		dc.b	$0A,$FF
 ; ---------------------------------------------------------------------------
 ; Sprite mappings
 ; ---------------------------------------------------------------------------
 Obj45_MapUnc_185C2:	binclude	"mappings/sprite/obj45.bin"
 ; ===========================================================================
 
-;=============================================================================== 
-; Object 0x46 - Oil Ocean - Spring With Ball - Sonic call stay on ball 
-; [ Begin ]		         
-;===============================================================================  
+;===============================================================================
+; Object 0x46 - Oil Ocean - Spring With Ball - Sonic call stay on ball
+; [ Begin ]
+;===============================================================================
 Obj_0x46_Spring_Ball: ; loc_18ABE:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -29280,7 +29280,7 @@ loc_18CE6:
 		moveq	#$03,d0
 loc_18CF4:
 		move.b	d0,$001F(a0)
-		bra.s	loc_18Cd2 
+		bra.s	loc_18Cd2
 ; ---------------------------------------------------------------------------
 ; Sprite mappings
 ; ---------------------------------------------------------------------------
@@ -29312,16 +29312,16 @@ JmpTo_SolidObject45:
 JmpTo6_ObjectMove:
 		jmp	(ObjectMove).l
 
-;=============================================================================== 
+;===============================================================================
 ; Object 0x47 - Switch - Oil Ocean / Dust Hill
-; [ Begin ]		         
-;===============================================================================		  
+; [ Begin ]
+;===============================================================================
 Obj_0x47_Switch: ; loc_18D9C:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_18DAA(pc,d0),d1
-		jmp	loc_18DAA(pc,d1)  
-loc_18DAA:		  
+		jmp	loc_18DAA(pc,d1)
+loc_18DAA:
 		dc.w	loc_18DAE-loc_18DAA
 		dc.w	loc_18DDA-loc_18DAA
 loc_18DAE:
@@ -29384,10 +29384,10 @@ JmpTo4_SolidObject:
 
 		align 4
 
-;=============================================================================== 
+;===============================================================================
 ; Object 0x3D - Break to Boost - Oil Ocean
-; [ Begin ]		         
-;===============================================================================  
+; [ Begin ]
+;===============================================================================
 Obj_0x3D_Break_Boost: ; loc_18E78:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -29419,7 +29419,7 @@ loc_18EB6:
 		move.b	$0022(a0),d0
 		andi.b	#$18,d0
 		bne.s	loc_18EF0
-loc_18EEC:		
+loc_18EEC:
 		bra.w	JmpTo9_MarkObjGone
 loc_18EF0:
 		cmpi.b	#$18,d0
@@ -29476,7 +29476,7 @@ loc_18F94:
 		bne.s	loc_18FB8
 		moveq	#0,d0
 		move.w	#$0009,d1
-loc_18FA6:		
+loc_18FA6:
 		move.l	$00(A0,d0),$00(A1,d0)
 		addq.w	#$04,d0
 		dbf	d1,loc_18FA6
@@ -29508,7 +29508,7 @@ loc_19004:
 		moveq	#0,d0
 		move.b	(a4),d0
 		move.w	loc_19010(pc,d0),d0
-		jmp	loc_19010(pc,d0)   
+		jmp	loc_19010(pc,d0)
 loc_19010:
 		dc.w	loc_19014-loc_19010
 		dc.w	loc_19092-loc_19010
@@ -29592,12 +29592,12 @@ loc_19116:
 		move.b	#$06,(a4)
 		clr.b   $002A(a1)
 		move.w	#SndID_SpindashRelease,d0
-		jmp	(PlaySound).l             ; loc_14C6     
+		jmp	(PlaySound).l             ; loc_14C6
 loc_1912E:
 		dc.w	$FC00,$FC00,$FE00,$FC00,$0200,$FC00,$0400,$FC00
 		dc.w	$FC40,$FE00,$FE40,$FE00,$01C0,$FE00,$03C0,$FE00
 		dc.w	$FC80,$0200,$FE80,$0200,$0180,$0200,$0380,$0200
-		dc.w	$FCC0,$0400,$FEC0,$0400,$0140,$0400,$0340,$0400 
+		dc.w	$FCC0,$0400,$FEC0,$0400,$0140,$0400,$0340,$0400
 ; ---------------------------------------------------------------------------
 ; Sprite mappings
 ; ---------------------------------------------------------------------------
@@ -29634,10 +29634,10 @@ JmpTo7_ObjectMove:
 
 		align 4
 
-;=============================================================================== 
-; Object 0x48 - Cannon - Oil Ocean 
-; [ Begin ]		         
-;===============================================================================		  
+;===============================================================================
+; Object 0x48 - Cannon - Oil Ocean
+; [ Begin ]
+;===============================================================================
 Obj_0x48_Cannon: ; loc_19250:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -29782,7 +29782,7 @@ loc_19404:
 		move.b	#$06,(a4)
 		move.w	#$0007,$003C(a0)
 loc_1944C:
-		rts   
+		rts
 loc_1944E:
 		dc.w	$0000
 loc_19450:
@@ -29824,7 +29824,7 @@ loc_194BE:
 		bpl.s	loc_194C8
 		move.b	#$00,(a4)
 loc_194C8:
-		rts		
+		rts
 ; ---------------------------------------------------------------------------
 ; Sprite mappings
 ; ---------------------------------------------------------------------------
@@ -29842,10 +29842,10 @@ JmpTo12_Adjust2PArtPointer:
 		jmp	(Adjust2PArtPointer).l
 
 		align 4
-;=============================================================================== 
-; Object 0x22 - Arrow Shooter - Neo Green Hill 
-; [ Begin ]		         
-;===============================================================================  
+;===============================================================================
+; Object 0x22 - Arrow Shooter - Neo Green Hill
+; [ Begin ]
+;===============================================================================
 Obj_0x22_Arrow_Shooter: ; loc_19660:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -29945,7 +29945,7 @@ loc_197A0:
 		tst.w	d1
 		bmi.w	 loc_1979C
 		bra.w	JmpTo11_MarkObjGone
-loc_197B0:		
+loc_197B0:
 		dc.w	loc_197B6-loc_197B0
 		dc.w	loc_197B9-loc_197B0
 		dc.w	loc_197BD-loc_197B0
@@ -29979,11 +29979,11 @@ JmpTo13_Adjust2PArtPointer:
 ; loc_1984A:
 JmpTo8_ObjectMove:
 		jmp	(ObjectMove).l
-	             
-;=============================================================================== 
-; Object 0x23 - Neo Green Hill - Pillar That Drops Lower Half 
-; [ Begin ]		         
-;=============================================================================== 
+
+;===============================================================================
+; Object 0x23 - Neo Green Hill - Pillar That Drops Lower Half
+; [ Begin ]
+;===============================================================================
 Obj_0x23_Pillar: ; loc_19850:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -30034,7 +30034,7 @@ loc_1990C:
 		moveq	#0,d0
 		move.b	$0025(a0),d0
 		move.w	loc_1991A(pc,d0),d1
-		jmp	loc_1991A(pc,d1)		 
+		jmp	loc_1991A(pc,d1)
 loc_1991A:
 		dc.w	loc_19950-loc_1991A
 		dc.w	loc_19922-loc_1991A
@@ -30086,8 +30086,8 @@ loc_1997C:
 		clr.b   $0025(a0)
 loc_199A8:
 		rts
-Pillar_Mappings:		
-loc_199AA:		
+Pillar_Mappings:
+loc_199AA:
 		dc.w	loc_199B0-loc_199AA
 		dc.w	loc_199E2-loc_199AA
 		dc.w	loc_199FC-loc_199AA
@@ -30104,14 +30104,14 @@ loc_199FC:
 		dc.w	$0004
 		dc.l	$090d208B,$2045FFF0,$F00d0069,$0034FFF0
 		dc.l	$000d0079,$003CFFF0,$10040081,$0040FFF0
-;=============================================================================== 
-; Object 0x23 - Neo Green Hill - Pillar That Drops Lower Half 
-; [ End ]		         
-;===============================================================================		 
-;=============================================================================== 
+;===============================================================================
+; Object 0x23 - Neo Green Hill - Pillar That Drops Lower Half
+; [ End ]
+;===============================================================================
+;===============================================================================
 ; Object 0x2B - Neo Green Hill - Breakable Pillar
-; [ Begin ]		         
-;===============================================================================		       
+; [ Begin ]
+;===============================================================================
 Obj_0x2B_Breakable_Pillar: ; loc_19A1E:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -30220,12 +30220,12 @@ loc_19B66:
 		bpl.w	 JmpTo21_DeleteObject
 		bra.w	JmpTo6_DisplaySprite
 loc_19B72:
-		dc.b	$00,$00,$00,$00,$04,$04,$08,$08,$0C,$0C,$10,$10,$14,$14		
+		dc.b	$00,$00,$00,$00,$04,$04,$08,$08,$0C,$0C,$10,$10,$14,$14
 loc_19B80:
 		dc.w	$FE00,$FE00,$0200,$FE00,$FE40,$FE40,$01C0,$FE40
 		dc.w	$FE80,$FE80,$0180,$FE80,$FEC0,$FEC0,$0140,$FEC0
 		dc.w	$FF00,$FF00,$0100,$FF00,$FF40,$FF40,$00C0,$FF40
-		dc.w	$FF80,$FF80,$0080,$FF80  
+		dc.w	$FF80,$FF80,$0080,$FF80
 loc_19BB8:
 		moveq	#0,d0
 		move.b	$001A(a0),d0
@@ -30239,7 +30239,7 @@ loc_19BB8:
 		move.b	$0001(a0),d5
 		move.l	A0,A1
 		bra.s	loc_19BE6
-loc_19BDE:		
+loc_19BDE:
 		bsr.w	JmpTo4_SingleObjLoad2
 		bne.s	loc_19C26
 		addq.w	#$08,A3
@@ -30259,8 +30259,8 @@ loc_19BE6:
 		dbf	d1,loc_19BDE
 loc_19C26:
 		move.w	#SndID_SlowSmash,d0
-		jmp	(PlaySound).l             ; loc_14C6  
-Breakable_Pillar_Mappings:				             
+		jmp	(PlaySound).l             ; loc_14C6
+Breakable_Pillar_Mappings:
 loc_19C30:
 		dc.w	loc_19C4C-loc_19C30
 		dc.w	loc_19C7E-loc_19C30
@@ -30372,11 +30372,11 @@ loc_1A026:
 		dc.l	$F0050069,$0034FFF0,$F005006D,$00360000
 		dc.l	$00050069,$0034FFF0,$0005006D,$00360000
 		dc.l	$10050069,$0034FFF0,$1005006D,$00360000
-		dc.l	$20050083,$0041FFF0,$20050087,$00430000		
-;=============================================================================== 
+		dc.l	$20050083,$0041FFF0,$20050087,$00430000
+;===============================================================================
 ; Object 0x2B - Neo Green Hill - Breakable Pillar
-; [ End ]		         
-;=============================================================================== 
+; [ End ]
+;===============================================================================
 ; loc_1A098:
 JmpTo6_DisplaySprite:
 		jmp	(DisplaySprite).l
@@ -30499,7 +30499,7 @@ loc_1A18A:
 		lea	(Obj2C_Speeds).l,a3
 		moveq	#4-1,d6
 
-loc_1A192:		
+loc_1A192:
 		bsr.w	JmpTo4_SingleObjLoad
 		bne.w	loc_1A21E
 		_move.b	#$2C,0(a1)		; load obj2C (leaves generator)
@@ -30616,10 +30616,10 @@ JmpTo3_CalcSine:
 
 		align 4
 
-;=============================================================================== 
-; Object 0x40 - Chemical Plant / Neo Green Hill - Springs 
-; [ Begin ]		         
-;===============================================================================  
+;===============================================================================
+; Object 0x40 - Chemical Plant / Neo Green Hill - Springs
+; [ Begin ]
+;===============================================================================
 Obj_0x40_Diagonal_Springs: ; loc_1A30C:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -30759,28 +30759,28 @@ loc_1A4CA:
 		move.b	#$0F,$003F(a1)
 loc_1A4DC:
 		move.w	#SndID_Spring,d0
-		jmp	(PlaySound).l             ; loc_14C6   
+		jmp	(PlaySound).l             ; loc_14C6
 loc_1A4E6:
 		dc.b	$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00
 		dc.b	$00,$00,$00,$00,$00,$00,$00,$00,$01,$01,$01,$01,$01,$01,$01,$01
 		dc.b	$01,$01,$01,$01,$01,$01,$01,$01,$02,$02,$02,$02,$02,$02,$02,$02
 		dc.b	$03,$03,$03,$03,$03,$03,$04,$04,$00,$00,$00,$00,$00,$00,$00,$00
-		dc.b	$00,$00,$00,$00,$00,$00,$00,$00   
+		dc.b	$00,$00,$00,$00,$00,$00,$00,$00
 loc_1A52E:
 		dc.b	$08,$08,$08,$08,$08,$08,$08,$09,$0A,$0B,$0C,$0D,$0E,$0F,$10,$10
 		dc.b	$11,$12,$13,$14,$14,$15,$15,$16,$17,$18,$18,$18,$18,$18,$18,$18
-		dc.b	$18,$18,$18,$18,$18,$18,$18,$18      
+		dc.b	$18,$18,$18,$18,$18,$18,$18,$18
 loc_1A556:
 		dc.b	$08,$08,$08,$08,$08,$08,$08,$09,$0A,$0B,$0C,$0C,$0C,$0C,$0D,$0D
 		dc.b	$0D,$0D,$0D,$0D,$0E,$0E,$0F,$0F,$10,$10,$10,$10,$0F,$0F,$0E,$0E
-		dc.b	$0D,$0D,$0D,$0D,$0D,$0D,$0D,$0D		
+		dc.b	$0D,$0D,$0D,$0D,$0D,$0D,$0D,$0D
 loc_1A57E:
 		dc.w	loc_1A582-loc_1A57E
 		dc.w	loc_1A585-loc_1A57E
 loc_1A582:
 		dc.b	$0F,$00,$FF
 loc_1A585:
-		dc.b	$03,$01,$00,$FD,$00 
+		dc.b	$03,$01,$00,$FD,$00
 ; ---------------------------------------------------------------------------
 ; Sprite mappings
 ; ---------------------------------------------------------------------------
@@ -30799,11 +30799,11 @@ JmpTo15_Adjust2PArtPointer:
 ; loc_1A5C6:
 JmpTo_SlopedSolid_SingleCharacter:
 		jmp	(SlopedSolid_SingleCharacter).l
-		
-;=============================================================================== 
-; Object 0x42 - Metropolis - Steam Vent 
-; [ Begin ]		         
-;===============================================================================		  
+
+;===============================================================================
+; Object 0x42 - Metropolis - Steam Vent
+; [ Begin ]
+;===============================================================================
 Obj_0x42_Steam_Vent: ; loc_1A5CC:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -30985,10 +30985,10 @@ JmpTo16_Adjust2PArtPointer:
 JmpTo2_SolidObject_Always_SingleCharacter:
 		jmp	(SolidObject_Always_SingleCharacter).l
 
-;=============================================================================== 
-; Object 0x64 - Metropolis - Pistons 
-; [ Begin ]		         
-;===============================================================================		  
+;===============================================================================
+; Object 0x64 - Metropolis - Pistons
+; [ Begin ]
+;===============================================================================
 Obj_0x64_Pistons: ; loc_1A8B4:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -31051,8 +31051,8 @@ loc_1A96A:
 		bhi.s	J_DeleteObject_17       ; loc_1A982
 		jmp	DisplaySprite           ; (loc_d3C2)
 J_DeleteObject_17: ; loc_1A982:
-		jmp	DeleteObject            ; (loc_d3B4)   
-loc_1A988:		              
+		jmp	DeleteObject            ; (loc_d3B4)
+loc_1A988:
 		dc.w	loc_1A98C-loc_1A988
 		dc.w	loc_1A98E-loc_1A988
 loc_1A98C:
@@ -31090,16 +31090,16 @@ loc_1A9E4:
 		move.w	$0030(a0),d1
 		add.w   d0,d1
 		move.w	d1,$000C(a0)
-		rts		   
+		rts
 ; ---------------------------------------------------------------------------
 ; Sprite mappings
 ; ---------------------------------------------------------------------------
 Obj64_MapUnc_1A9F0:	binclude	"mappings/sprite/obj64.bin"
 
-;=============================================================================== 
-; Object 0x64 - Metropolis - Pistons 
-; [ End ]		         
-;===============================================================================		  
+;===============================================================================
+; Object 0x64 - Metropolis - Pistons
+; [ End ]
+;===============================================================================
 ; loc_1AA68:
 JmpTo17_Adjust2PArtPointer:
 		jmp	(Adjust2PArtPointer).l
@@ -31107,10 +31107,10 @@ JmpTo17_Adjust2PArtPointer:
 JmpTo7_SolidObject:
 		jmp	(SolidObject).l
 
-;=============================================================================== 
+;===============================================================================
 ; Object 0x65 - Metropolis - Platform / Platform Over Gears
-; [ Begin ]		         
-;===============================================================================		 
+; [ Begin ]
+;===============================================================================
 Obj_0x65_Platform: ; loc_1AA74:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -31409,7 +31409,7 @@ loc_1ADFA:
 loc_1AE08:
 		move.l	$003C(a0),A1
 		move.w	$003A(a1),d0
-loc_1AE10:		
+loc_1AE10:
 		andi.w	#$0007,d0
 		move.b	loc_1AE1E(pc,d0),$001A(a0)
 		bra.w	JmpTo15_MarkObjGone
@@ -31417,17 +31417,17 @@ loc_1AE1E:
 		dc.b	$00,$00,$02,$02,$02,$01,$01,$01
 loc_1AE26:
 		move.w	(MTZ_Platform_Cog_X).w,d0
-		bra.s	loc_1AE10  
+		bra.s	loc_1AE10
 ; ---------------------------------------------------------------------------
 ; Sprite mappings
 ; ---------------------------------------------------------------------------
 Obj65_MapUnc_1AE2C:	binclude	"mappings/sprite/obj65_a.bin"
 Obj65_MapUnc_1AE68:	binclude	"mappings/sprite/obj65_b.bin"
 
-;=============================================================================== 
+;===============================================================================
 ; Object 0x65 - Metropolis - Platform Over Gears
-; [ End ]		         
-;===============================================================================		  
+; [ End ]
+;===============================================================================
 ; loc_1AEA4:
 JmpTo15_MarkObjGone:
 		jmp	(MarkObjGone).l
@@ -31441,10 +31441,10 @@ JmpTo18_Adjust2PArtPointer:
 JmpTo8_SolidObject:
 		jmp	(SolidObject).l
 
-;=============================================================================== 
+;===============================================================================
 ; Object 0x66 - Metropolis - Springs on Walls
-; [ Begin ]		         
-;===============================================================================		   
+; [ Begin ]
+;===============================================================================
 Obj_0x66_Spring_Wall: ; loc_1AEBC:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -31897,15 +31897,15 @@ loc_1B486:
 loc_1B4A0:
 		dc.w	$0018
 		dc.b	$22,$D8,$02,$B0,$23,$30,$02,$B0,$23,$40,$02,$C0,$23,$40,$04,$60
-		dc.b	$23,$30,$04,$70,$22,$D8,$04,$70		
-loc_1B4BA:		 
+		dc.b	$23,$30,$04,$70,$22,$D8,$04,$70
+loc_1B4BA:
 		dc.w	loc_1B4BE-loc_1B4BA
 		dc.w	loc_1B4C1-loc_1B4BA
 loc_1B4BE:
 		dc.b	$1F,$00,$FF
 loc_1B4C1:
 		dc.b	$01,$01,$00,$00,$00,$00,$00,$01,$00,$00,$00,$01,$00,$00,$01,$00
-		dc.b	$FE,$02,$00   
+		dc.b	$FE,$02,$00
 Teleport_Attributes_Mappings:
 loc_1B4d4:
 		dc.w	loc_1B4D8-loc_1B4d4
@@ -31916,11 +31916,11 @@ loc_1B4DA:
 		dc.w	$0006
 		dc.l	$E0050000,$0000FFEC,$E0050000,$0000FFF8
 		dc.l	$F0050000,$0000FFEC,$F0050000,$0000FFF8
-		dc.l	$00050000,$0000FFEC,$00050000,$0000FFF8		             
-;=============================================================================== 
+		dc.l	$00050000,$0000FFEC,$00050000,$0000FFF8
+;===============================================================================
 ; Object 0x67 - Metropolis - Teleport Attributes
-; [ End ]		         
-;===============================================================================               
+; [ End ]
+;===============================================================================
 ; loc_1B50C:
 JmpTo10_DisplaySprite:
 		jmp	(DisplaySprite).l
@@ -31932,10 +31932,10 @@ JmpTo4_MarkObjGone3:
 		jmp	(MarkObjGone3).l
 
 		align 4
-;=============================================================================== 
+;===============================================================================
 ; Object 0x68 - Metropolis - Block with Arrow
-; [ Begin ]		         
-;===============================================================================		    
+; [ Begin ]
+;===============================================================================
 Obj_0x68_Block_Arrow: ; loc_1B520:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -32063,20 +32063,20 @@ loc_1B6B6:
 loc_1B6d6:
 		rts
 loc_1B6D8:
-		dc.b	$84,$A6,$84,$A6  
+		dc.b	$84,$A6,$84,$A6
 ; ---------------------------------------------------------------------------
 ; Sprite mappings
 ; ---------------------------------------------------------------------------
 Obj68_MapUnc_1B6DC:	binclude	"mappings/sprite/obj68.bin"
 
-;=============================================================================== 
+;===============================================================================
 ; Object 0x68 - Metropolis - Block with Arrow
-; [ End ]		         
-;===============================================================================  
-;=============================================================================== 
+; [ End ]
+;===============================================================================
+;===============================================================================
 ; Object 0x6D - Metropolis - Floor Harpoon
-; [ Begin ]		         
-;===============================================================================  
+; [ Begin ]
+;===============================================================================
 Obj_0x6D_Harpoon: ; loc_1B720:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -32136,10 +32136,10 @@ loc_1B7CE:
 		move.w	#$0003,$003A(a0)
 loc_1B7EE:
 		rts
-;=============================================================================== 
+;===============================================================================
 ; Object 0x6D - Metropolis - Floor Harpoon
-; [ End ]		         
-;===============================================================================  
+; [ End ]
+;===============================================================================
 JmpTo16_MarkObjGone:
 		jmp	(MarkObjGone).l
 ; loc_1B7F6:
@@ -32157,10 +32157,10 @@ JmpTo2_MarkObjGone2:
 
 		align 4
 
-;=============================================================================== 
+;===============================================================================
 ; Object 0x69 - Metropolis - Screew Nut
-; [ Begin ]		         
-;===============================================================================		   
+; [ Begin ]
+;===============================================================================
 Obj_0x69_Screw_Nut: ; loc_1B810:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -32295,7 +32295,7 @@ loc_1B982:
 		clr.w	$0012(a0)
 		addq.b	#$02,$0024(a0)
 loc_1B9A2:
-		bra.w	loc_1B880     
+		bra.w	loc_1B880
 ; ---------------------------------------------------------------------------
 ; Sprite mappings
 ; ---------------------------------------------------------------------------
@@ -32320,10 +32320,10 @@ JmpTo_ObjHitFloor:
 
 		align 4
 
-;=============================================================================== 
+;===============================================================================
 ; Object 0x6A - Dust Hill - Three Rotating Boxes
-; [ Begin ]		         
-;===============================================================================		  
+; [ Begin ]
+;===============================================================================
 Obj_0x6A_Rotating_Boxes: ; loc_1BA30:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -32476,7 +32476,7 @@ loc_1BC22:
 		bcs.s	loc_1BC5A
 		move.b	#$00,$0038(a0)
 loc_1BC5A:
-		rts  
+		rts
 loc_1BC5C:
 		dc.w	$0000,$0400,$0010,$0400,$FE00,$0020,$0000,$0400
 		dc.w	$0010,$FC00,$FE00,$0020
@@ -32504,10 +32504,10 @@ JmpTo11_SolidObject:
 JmpTo3_MarkObjGone2:
 		jmp	(MarkObjGone2).l
 
-;=============================================================================== 
+;===============================================================================
 ; Object 0x6B - Metropolis Platforms / Chemical Plant - Block
-; [ Begin ]		         
-;===============================================================================   
+; [ Begin ]
+;===============================================================================
 Obj_0x6B_Mz_Platform: ; Obj_0x6B_Block: ; loc_1BCEC:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -32723,7 +32723,7 @@ loc_1BF34:
 		neg.w	d1
 		add.w   $0034(a0),d1
 		move.w	d1,8(a0)
-		rts 
+		rts
 ; ---------------------------------------------------------------------------
 ; Sprite mappings
 ; ---------------------------------------------------------------------------
@@ -32741,10 +32741,10 @@ JmpTo4_MarkObjGone2:
 		jmp	(MarkObjGone2).l
 
 		align 4
-;=============================================================================== 
+;===============================================================================
 ; Object 0x6C - Moving platforms - clockwise
-; [ Begin ]		         
-;===============================================================================		  
+; [ Begin ]
+;===============================================================================
 Obj_0x6C_Mz_Moving_Platforms: ; loc_1BF6C:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -32813,14 +32813,14 @@ loc_1C02A:
 loc_1C04A:
 		andi.w	#$007F,d0
 		add.w   d0,d0
-		lea	(loc_1C20E).l,A2    
+		lea	(loc_1C20E).l,A2
 		adda.w	$00(A2,d0),A2
 		move.w	(a2)+,d1
 		move.l	A0,A1
 		move.w	8(a0),d2
 		move.w	$000C(a0),d3
 		bra.s	loc_1C06E
-loc_1C068:		
+loc_1C068:
 		bsr.w	JmpTo6_SingleObjLoad
 		bne.s	loc_1C098
 loc_1C06E:
@@ -32926,7 +32926,7 @@ loc_1C176:
 		swap	d1
 		move.w	d1,$000E(a0)
 		clr.w	$000A(a0)
-		rts  
+		rts
 loc_1C18A:
 		dc.w	loc_1C190-loc_1C18A
 		dc.w	loc_1C1BA-loc_1C18A
@@ -32945,8 +32945,8 @@ loc_1C1E4:
 		dc.w	$0028
 		dc.b	$00,$00,$00,$00,$FF,$EA,$00,$0A,$FF,$E0,$00,$20,$FF,$E0,$01,$E0
 		dc.b	$FF,$EA,$01,$F6,$00,$00,$02,$00,$00,$16,$01,$F6,$00,$20,$01,$E0
-		dc.b	$00,$20,$00,$20,$00,$16,$00,$0A		
-loc_1C20E: 
+		dc.b	$00,$20,$00,$20,$00,$16,$00,$0A
+loc_1C20E:
 		dc.w	loc_1C214-loc_1C20E
 		dc.w	loc_1C246-loc_1C20E
 		dc.w	loc_1C278-loc_1C20E
@@ -32954,12 +32954,12 @@ loc_1C214:
 		dc.w	$0007
 		dc.b	$00,$00,$00,$00,$00,$01,$FF,$E0,$00,$3A,$00,$03,$FF,$E0,$00,$80
 		dc.b	$00,$03,$FF,$E0,$00,$C6,$00,$03,$00,$00,$01,$00,$00,$06,$00,$20
-		dc.b	$00,$C6,$00,$08,$00,$20,$00,$80,$00,$08,$00,$20,$00,$3A,$00,$08  
+		dc.b	$00,$C6,$00,$08,$00,$20,$00,$80,$00,$08,$00,$20,$00,$3A,$00,$08
 loc_1C246:
 		dc.w	$0007
 		dc.b	$00,$00,$00,$00,$00,$11,$FF,$E0,$00,$5A,$00,$13,$FF,$E0,$00,$C0
 		dc.b	$00,$13,$FF,$E0,$01,$26,$00,$13,$00,$00,$01,$80,$00,$16,$00,$20
-		dc.b	$01,$26,$00,$18,$00,$20,$00,$C0,$00,$18,$00,$20,$00,$5A,$00,$18		
+		dc.b	$01,$26,$00,$18,$00,$20,$00,$C0,$00,$18,$00,$20,$00,$5A,$00,$18
 loc_1C278:
 		dc.w	$0007
 		dc.b	$00,$00,$00,$00,$00,$21,$FF,$E0,$00,$7A,$00,$23,$FF,$E0,$01,$00
@@ -32990,10 +32990,10 @@ JmpTo_PlatformObject:
 JmpTo11_ObjectMove:
 		jmp	(ObjectMove).l
 
-;=============================================================================== 
+;===============================================================================
 ; Object 0x6E - Metropolis - Machine
-; [ Begin ]		         
-;===============================================================================		   
+; [ Begin ]
+;===============================================================================
 Obj_0x6E_Machine: ; loc_1C2E4:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -33003,7 +33003,7 @@ loc_1C2F2:
 		dc.w	loc_1C300-loc_1C2F2
 		dc.w	loc_1C36A-loc_1C2F2
 		dc.w	loc_1C3F4-loc_1C2F2
-loc_1C2F8: 
+loc_1C2F8:
 		dc.b	$10,$0C,$28,$08,$60,$18,$0C,$0C
 loc_1C300:
 		addq.b	#$02,$0024(a0)
@@ -33119,10 +33119,10 @@ JmpTo29_DeleteObject:
 ; ---------------------------------------------------------------------------
 Obj6E_MapUnc_1C464:	binclude	"mappings/sprite/obj6E.bin"
 
-;=============================================================================== 
+;===============================================================================
 ; Object 0x6E - Metropolis - Machine
-; [ End ]		         
-;===============================================================================		   
+; [ End ]
+;===============================================================================
 ; loc_1C4EC:
 JmpTo25_Adjust2PArtPointer:
 		jmp	(Adjust2PArtPointer).l
@@ -33130,10 +33130,10 @@ JmpTo25_Adjust2PArtPointer:
 JmpTo13_SolidObject:
 		jmp	(SolidObject).l
 
-;=============================================================================== 
+;===============================================================================
 ; Object 0x6F - Metropolis - Parallelogram Elevators
-; [ Begin ]		         
-;===============================================================================		    
+; [ Begin ]
+;===============================================================================
 Obj_Ox6F_Parallelogram_Elevator: ; loc_1C4F8:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -33231,7 +33231,7 @@ loc_1C604:
 		bhi.s	loc_1C630
 		move.b	#$00,$0038(a0)
 loc_1C630:
-		rts 
+		rts
 loc_1C632:
 		dc.w	loc_1C63C-loc_1C632
 		dc.w	loc_1C64A-loc_1C632
@@ -33256,7 +33256,7 @@ loc_1C672:
 loc_1C6A4:
 		dc.w	$0018
 		dc.b	$FF,$00,$00,$80,$01,$80,$01,$00,$00,$00,$02,$00,$FF,$00,$00,$00
-		dc.b	$02,$00,$01,$00,$FF,$80,$01,$80  
+		dc.b	$02,$00,$01,$00,$FF,$80,$01,$80
 loc_1C6BE:
 		dc.w	$E101,$E202,$E303,$E404,$E505,$E606,$E707,$E808
 		dc.w	$E909,$EA0A,$EB0B,$EC0C,$Ed0D,$EE0E,$EF0F,$F010
@@ -33273,7 +33273,7 @@ loc_1C6BE:
 		dc.w	$2020,$201F,$201E,$201D,$201C,$201B,$201A,$2019
 		dc.w	$2018,$2017,$2016,$2015,$2014,$2013,$2012,$2011
 		dc.w	$2010,$200F,$200E,$200D,$200C,$200B,$200A,$2009
-		dc.w	$2008,$2007,$2006,$2005,$2004,$2003,$2002,$2001   
+		dc.w	$2008,$2007,$2006,$2005,$2004,$2003,$2002,$2001
 ; ---------------------------------------------------------------------------
 ; Sprite mappings
 ; ---------------------------------------------------------------------------
@@ -33287,10 +33287,10 @@ JmpTo26_Adjust2PArtPointer:
 JmpTo_DoubleSlopedSolid:
 		jmp	(DoubleSlopedSolid).l
 
-;=============================================================================== 
+;===============================================================================
 ; Object 0x70 - Metropolis - Rotating Gears
-; [ Begin ]		         
-;===============================================================================		     
+; [ Begin ]
+;===============================================================================
 Obj_0x70_Rotating_Gears: ; loc_1C850:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -33308,7 +33308,7 @@ loc_1C862:
 		move.w	$000C(a0),d3
 		bset	#$07,$0022(a0)
 		bra.s	loc_1C884
-loc_1C87E:		
+loc_1C87E:
 		bsr.w	JmpTo8_SingleObjLoad2
 		bne.s	loc_1C8DE
 loc_1C884:
@@ -33395,7 +33395,7 @@ loc_1C95A:
 JmpTo31_DeleteObject:
 		jmp	(DeleteObject).l
 
-loc_1C996:		  
+loc_1C996:
 		dc.b	$10
 loc_1C997:
 		dc.b	$10,$10,$10,$10,$10,$10,$10,$10,$10,$10,$10,$10,$10,$10,$0C,$10
@@ -33425,10 +33425,10 @@ JmpTo14_SolidObject:
 
 		align 4
 
-;=============================================================================== 
+;===============================================================================
 ; Object 0x72 - Metropolis - Conveyor Belt Attributes
-; [ Begin ]		         
-;===============================================================================		   
+; [ Begin ]
+;===============================================================================
 Obj_0x72_Conveyor_Belt_Attributes: ; loc_1CBCC:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -33473,11 +33473,11 @@ loc_1CC0E:
 		add.w   d0,8(a1)
 loc_1CC48:
 		rts
-		
-;=============================================================================== 
+
+;===============================================================================
 ; Object 0x72 - Metropolis - Conveyor Belt Attributes
-; [ End ]		         
-;===============================================================================             
+; [ End ]
+;===============================================================================
 		nop
 ; loc_1CC4C:
 JmpTo5_MarkObjGone3:
@@ -33666,10 +33666,10 @@ JmpTo15_SolidObject:
 
 		align 4
 
-;=============================================================================== 
+;===============================================================================
 ; Object 0x75 - Dust Hill - Spikeball with chain
-; [ Begin ]		         
-;===============================================================================		
+; [ Begin ]
+;===============================================================================
 Obj_0x75_Spikeball_Chain: ; loc_1CE48:
 		btst	#$06,$0001(a0)
 		bne.w	 loc_1CE60
@@ -33726,7 +33726,7 @@ loc_1CEDE:
 		move.b	d1,$000F(a1)
 		subq.w	#1,d1
 		lea	$0010(a1),A2
-loc_1CF20:		
+loc_1CF20:
 		move.w	d2,(a2)+
 		move.w	d3,(a2)+
 		move.w	#$0001,(a2)+
@@ -33758,7 +33758,7 @@ loc_1CF4A:
 		moveq	#0,d4
 		moveq	#0,d5
 		lea	$0010(a1),A2
-loc_1CF84:		
+loc_1CF84:
 		movem.l d4/d5,-(sp)
 		swap	d4
 		swap	d5
@@ -33839,10 +33839,10 @@ JmpTo16_SolidObject:
 
 		align 4
 
-;=============================================================================== 
-; Object 0x76 - Dust Hill - Platform with spikes on sides 
-; [ Begin ]		         
-;===============================================================================		    
+;===============================================================================
+; Object 0x76 - Dust Hill - Platform with spikes on sides
+; [ Begin ]
+;===============================================================================
 Obj_0x76_Platform_Spikes: ; loc_1d078:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -33906,7 +33906,7 @@ loc_1d12E:
 loc_1d142:
 		move.w	$0034(a0),d0
 		bra.w	JmpTo5_MarkObjGone2
-loc_1d14A:		  
+loc_1d14A:
 		dc.w	loc_1d14E-loc_1d14A
 		dc.w	loc_1d19E-loc_1d14A
 loc_1d14E:
@@ -33966,10 +33966,10 @@ JmpTo17_SolidObject:
 JmpTo5_MarkObjGone2:
 		jmp	(MarkObjGone2).l
 
-;=============================================================================== 
-; Object 0x77 - Dust Hill - Bridge 
-; [ Begin ]		         
-;===============================================================================		    
+;===============================================================================
+; Object 0x77 - Dust Hill - Bridge
+; [ Begin ]
+;===============================================================================
 Obj_0x77_Bridge: ; loc_1d208:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -34030,7 +34030,7 @@ loc_1d2C6:
 loc_1d2CC:
 		bra.w	JmpTo19_MarkObjGone
 
-loc_1d2d0:               
+loc_1d2d0:
 		dc.w	loc_1d2d4-loc_1d2d0
 		dc.w	loc_1d2DA-loc_1d2d0
 loc_1d2d4:
@@ -34054,10 +34054,10 @@ JmpTo18_SolidObject:
 
 		align 4
 
-;=============================================================================== 
-; Object 0x78 - Chemical Plant - Rotanting Platforms / Down when Touch Platform 
-; [ Begin ]		         
-;===============================================================================		  
+;===============================================================================
+; Object 0x78 - Chemical Plant - Rotanting Platforms / Down when Touch Platform
+; [ Begin ]
+;===============================================================================
 Obj_0x78_Rotating_Platforms: ; loc_1d3C0:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -34082,7 +34082,7 @@ loc_1d3F0:
 		move.l	A0,A1
 		moveq	#$03,d1
 		bra.s	loc_1d408
-loc_1d3FA:		
+loc_1d3FA:
 		bsr.w	JmpTo10_SingleObjLoad2
 		bne.w	 loc_1d460
 		move.b	#$04,$0024(a1)
@@ -34219,11 +34219,11 @@ loc_1d552:
 		move.w	d2,(a1)+
 		move.w	d1,(a1)+
 loc_1d57A:
-		rts 
-;=============================================================================== 
-; Object 0x78 - Chemical Plant - Rotanting Platforms / Down when Touch Platform 
-; [ End ]		         
-;===============================================================================		   
+		rts
+;===============================================================================
+; Object 0x78 - Chemical Plant - Rotanting Platforms / Down when Touch Platform
+; [ End ]
+;===============================================================================
 ; loc_1d57C:
 JmpTo10_SingleObjLoad2:
 		jmp	(SingleObjLoad2).l
@@ -34237,10 +34237,10 @@ JmpTo19_SolidObject:
 JmpTo6_MarkObjGone2:
 		jmp	(MarkObjGone2).l
 
-;=============================================================================== 
+;===============================================================================
 ; Object 0x7A - Chemical Plant - Platforms - Move horizontally
-; [ Begin ]		         
-;===============================================================================		     
+; [ Begin ]
+;===============================================================================
 Obj_0x7A_Platform_Horizontal: ; loc_1d594:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -34250,7 +34250,7 @@ loc_1d5A2:
 		dc.w	loc_1d5BA-loc_1d5A2
 		dc.w	loc_1d660-loc_1d5A2
 		dc.w	loc_1d6B2-loc_1d5A2
-loc_1d5A8:		
+loc_1d5A8:
 		dc.b	$00,$70,$FF,$90,$00,$00,$01,$B0,$FF,$50,$00,$40,$01,$F0,$FF,$80
 		dc.b	$00,$80
 loc_1d5BA:
@@ -34263,7 +34263,7 @@ loc_1d5BA:
 		move.b	(a2)+,d1
 		move.l	A0,A1
 		bra.s	loc_1d5F6
-loc_1d5D8:		
+loc_1d5D8:
 		bsr.w	JmpTo11_SingleObjLoad2
 		bne.s	loc_1d61C
 		_move.b	0(a0),0(a1)
@@ -34386,10 +34386,10 @@ JmpTo2_PlatformObject:
 
 		align 4
 
-;=============================================================================== 
-; Object 0x7B - Chemical Plant - Spring Over Tubes 
-; [ Begin ]		         
-;===============================================================================		 
+;===============================================================================
+; Object 0x7B - Chemical Plant - Spring Over Tubes
+; [ Begin ]
+;===============================================================================
 Obj_0x7B_Spring_Tubes: ; loc_1d74C:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -34518,7 +34518,7 @@ loc_1D8EC:
 		move.b	#$0F,$003F(a1)
 loc_1D8FE:
 		move.w	#SndID_Spring,d0
-		jmp	(PlaySound).l             ; loc_14C6    
+		jmp	(PlaySound).l             ; loc_14C6
 loc_1D908:
 		dc.w	loc_1D910-loc_1D908
 		dc.w	loc_1D913-loc_1D908
@@ -34529,7 +34529,7 @@ loc_1D910:
 loc_1D913:
 		dc.b	$00,$03,$FD,$00
 loc_1D917:
-		dc.b	$05,$01,$02,$02,$02,$04,$FD,$00,$00  
+		dc.b	$05,$01,$02,$02,$02,$04,$FD,$00,$00
 ; ---------------------------------------------------------------------------
 ; Sprite mappings
 ; ---------------------------------------------------------------------------
@@ -34554,10 +34554,10 @@ JmpTo4_SolidObject_Always_SingleCharacter:
 
 		align 4
 
-;=============================================================================== 
-; Object 0x4D - Hidden Palace - Rhinobot 
-; [ Begin ]		         
-;===============================================================================		      
+;===============================================================================
+; Object 0x4D - Hidden Palace - Rhinobot
+; [ Begin ]
+;===============================================================================
 Obj_0x4D_Rhinobot: ; loc_1D984:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -34666,7 +34666,7 @@ loc_1DAE6:
 		dc.b	$0F,$00,$FF
 loc_1DAE9:
 		dc.b	$02,$06,$07,$FF,$00
-Rhinobot_Mappings:		
+Rhinobot_Mappings:
 loc_1DAEE:
 		dc.w	loc_1DAFE-loc_1DAEE
 		dc.w	loc_1DB28-loc_1DAEE
@@ -34713,11 +34713,11 @@ loc_1DBFA:
 loc_1DC1C:
 		dc.w	$0004
 		dc.l	$F00B0016,$000BFFE8,$F0050004,$00020000
-		dc.l	$00090028,$00140000,$FB010030,$0018001A		
-;=============================================================================== 
-; Object 0x4D - Hidden Palace - Rhinobot 
-; [ End ]		         
-;===============================================================================  
+		dc.l	$00090028,$00140000,$FB010030,$0018001A
+;===============================================================================
+; Object 0x4D - Hidden Palace - Rhinobot
+; [ End ]
+;===============================================================================
 		align 4
 ; loc_1DC40:
 JmpTo20_MarkObjGone:
@@ -34731,10 +34731,10 @@ JmpTo2_ObjectMoveAndFall:
 
 		align 4
 
-;=============================================================================== 
-; Object 0x52 - Piranha 
-; [ Begin ]		         
-;===============================================================================		  
+;===============================================================================
+; Object 0x52 - Piranha
+; [ Begin ]
+;===============================================================================
 Obj_0x52_Piranha: ; loc_1DC54:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -34866,8 +34866,8 @@ loc_1DE3C:
 		addi.l	#$00001800,$0036(a0)
 		move.l	d2,8(a0)
 		move.l	d3,$000C(a0)
-		rts    
-loc_1DE4E:		 
+		rts
+loc_1DE4E:
 		dc.w	loc_1DE56-loc_1DE4E
 		dc.w	loc_1DE5A-loc_1DE4E
 		dc.w	loc_1DE5E-loc_1DE4E
@@ -34879,12 +34879,12 @@ loc_1DE5A:
 loc_1DE5E:
 		dc.b	$0E,$02,$03,$FF
 loc_1DE62:
-		dc.b	$03,$02,$03,$FF  
+		dc.b	$03,$02,$03,$FF
 Piranha_Mappings: ; loc_1DE66:
 		dc.w	loc_1DE6E-Piranha_Mappings
 		dc.w	loc_1DE78-Piranha_Mappings
 		dc.w	loc_1DE82-Piranha_Mappings
-		dc.w	loc_1DE8C-Piranha_Mappings               
+		dc.w	loc_1DE8C-Piranha_Mappings
 loc_1DE6E:
 		dc.w	$0001
 		dc.l	$F00F0000,$0000FFF0
@@ -34896,11 +34896,11 @@ loc_1DE82:
 		dc.l	$F00F0020,$0010FFF0
 loc_1DE8C:
 		dc.w	$0001
-		dc.l	$F00F0030,$0018FFF0				  
-;=============================================================================== 
-; Object 0x52 - Piranha 
-; [ End ]		         
-;===============================================================================   
+		dc.l	$F00F0030,$0018FFF0
+;===============================================================================
+; Object 0x52 - Piranha
+; [ End ]
+;===============================================================================
 		align 4
 ; loc_1DE98:
 JmpTo21_MarkObjGone:
@@ -34914,16 +34914,16 @@ JmpTo12_ObjectMove:
 
 		align 4
 
-;=============================================================================== 
-; Object 0x4F - Hidden Palace - Dinobot 
-; [ Begin ]		         
-;===============================================================================		 
-Obj_0x4F_Dinobot: ; loc_1DEAC:               
+;===============================================================================
+; Object 0x4F - Hidden Palace - Dinobot
+; [ Begin ]
+;===============================================================================
+Obj_0x4F_Dinobot: ; loc_1DEAC:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_1DEBA(pc,d0),d1
 		jmp	loc_1DEBA(pc,d1)
-loc_1DEBA:		
+loc_1DEBA:
 		dc.w	loc_1DEC0-loc_1DEBA
 		dc.w	loc_1DF16-loc_1DEBA
 		dc.w	loc_1DFB8-loc_1DEBA
@@ -34967,7 +34967,7 @@ loc_1DF46:
 		bclr	#$07,$02(A2,d0)
 loc_1DF58:
 		bra.w	JmpTo35_DeleteObject
-loc_1DF5C:               
+loc_1DF5C:
 		ori.b   #$28,d4
 		subq.w	#1,$0030(a0)
 		bpl.s	loc_1DF82
@@ -34998,10 +34998,10 @@ loc_1DFB8:
 loc_1DFBC:
 		dc.w	loc_1DFC0-loc_1DFBC
 		dc.w	loc_1DFC3-loc_1DFBC
-loc_1DFC0:				 
-		dc.b	$09,$01,$FF 
+loc_1DFC0:
+		dc.b	$09,$01,$FF
 loc_1DFC3:
-		dc.b	$09,$00,$01,$02,$01,$FF,$00  
+		dc.b	$09,$00,$01,$02,$01,$FF,$00
 ; ---------------------------------------------------------------------------
 ; Sprite mappings
 ; ---------------------------------------------------------------------------
@@ -35027,10 +35027,10 @@ JmpTo13_ObjectMove:
 
 		align 4
 
-;=============================================================================== 
-; Object 0x50 - Oil Ocean - Aquis (Seahorse)  
-; [ Begin ]		         
-;===============================================================================  
+;===============================================================================
+; Object 0x50 - Oil Ocean - Aquis (Seahorse)
+; [ Begin ]
+;===============================================================================
 Obj_0x50_Aquis: ; loc_1E010:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -35324,7 +35324,7 @@ loc_1E404:
 		tst.b	$0021(a0)
 		beq.w	 loc_1E4A6
 		moveq	#$02,d3
-loc_1E40E:		
+loc_1E40E:
 		bsr.w	JmpTo8_SingleObjLoad
 		bne.s	loc_1E480
 		_move.b	0(a0),0(a1)
@@ -35361,7 +35361,7 @@ loc_1E480:
 loc_1E4A2:
 		bra.w	JmpTo36_DeleteObject
 loc_1E4A6:
-		rts  
+		rts
 loc_1E4A8:
 		dc.w	loc_1E4B8-loc_1E4A8
 		dc.w	loc_1E4BB-loc_1E4A8
@@ -35387,7 +35387,7 @@ loc_1E4d3:
 		dc.b	$01,$09,$0A,$FF
 loc_1E4d7:
 		dc.b	$05,$0B,$0C,$0B,$0C,$0B,$0C,$FF,$00
-Aquis_Mappings:		
+Aquis_Mappings:
 loc_1E4E0:
 		dc.w	loc_1E4FA-loc_1E4E0
 		dc.w	loc_1E514-loc_1E4E0
@@ -35449,15 +35449,15 @@ loc_1E602:
 		dc.w	$0005
 		dc.l	$E8090010,$0008FFF0,$E801000E,$00070008
 		dc.l	$F805001C,$000EFFF8,$F8010022,$00110008
-		dc.l	$08050024,$0012FFF8		           
-;=============================================================================== 
-; Object 0x50 - Oil Ocean - Aquis (Seahorse)  
-; [ End ]		         
-;===============================================================================  
-;=============================================================================== 
-; Object 0x51 - Oil Ocean - Aquis (Seahorse)  
-; [ Begin ]		         
-;===============================================================================  
+		dc.l	$08050024,$0012FFF8
+;===============================================================================
+; Object 0x50 - Oil Ocean - Aquis (Seahorse)
+; [ End ]
+;===============================================================================
+;===============================================================================
+; Object 0x51 - Oil Ocean - Aquis (Seahorse)
+; [ Begin ]
+;===============================================================================
 Obj_0x51_Aquis: ; loc_1E62C:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -35635,10 +35635,10 @@ loc_1E864:
 		move.w	#0,$0012(a0)
 loc_1E86E:
 		rts
-;=============================================================================== 
-; Object 0x51 - Oil Ocean - Aquis (Seahorse)  
-; [ End ]		         
-;===============================================================================  
+;===============================================================================
+; Object 0x51 - Oil Ocean - Aquis (Seahorse)
+; [ End ]
+;===============================================================================
 ; loc_1E870:
 JmpTo16_DisplaySprite:
 		jmp	(DisplaySprite).l
@@ -35663,10 +35663,10 @@ JmpTo14_ObjectMove:
 
 		align 4
 
-;=============================================================================== 
-; Object 0x4B - Green Hill - Buzz Bomber  
-; [ Begin ]		         
-;===============================================================================		  
+;===============================================================================
+; Object 0x4B - Green Hill - Buzz Bomber
+; [ Begin ]
+;===============================================================================
 Obj_0x4B_Buzz_Bomber: ; loc_1E89C:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -35827,29 +35827,29 @@ loc_1EA72:
 		neg.w	d0
 loc_1EAEC:
 		add.w   d0,8(a1)
-		rts		
+		rts
 loc_1EAF2:
 		dc.w	loc_1EAFA-loc_1EAF2
 		dc.w	loc_1EAFD-loc_1EAF2
 		dc.w	loc_1EB01-loc_1EAF2
 		dc.w	loc_1EB05-loc_1EAF2
-loc_1EAFA:		
-		dc.b	$0F,$00,$FF		         
+loc_1EAFA:
+		dc.b	$0F,$00,$FF
 loc_1EAFD:
 		dc.b	$02,$03,$04,$FF
-loc_1EB01:		
+loc_1EB01:
 		dc.b	$03,$05,$06,$FF
-loc_1EB05:		
-		dc.b	$09,$01,$01,$01,$01,$01,$FD,$00,$00 
+loc_1EB05:
+		dc.b	$09,$01,$01,$01,$01,$01,$FD,$00,$00
 ; ---------------------------------------------------------------------------
 ; Sprite mappings
 ; ---------------------------------------------------------------------------
 Obj4B_MapUnc_1EB0E:	binclude	"mappings/sprite/obj4B.bin"
 
-;=============================================================================== 
-; Object 0x4B - Green Hill - Buzz Bomber  
-; [ End ]		         
-;===============================================================================  
+;===============================================================================
+; Object 0x4B - Green Hill - Buzz Bomber
+; [ End ]
+;===============================================================================
 		align 4
 ; loc_1EB8C:
 JmpTo37_DeleteObject:
@@ -35875,16 +35875,16 @@ JmpTo15_ObjectMove:
 
 		align 4
 
-;=============================================================================== 
+;===============================================================================
 ; Object 0x4A - Oil Ocean - Octus
-; [ Begin ]		         
-;===============================================================================		 
+; [ Begin ]
+;===============================================================================
 Obj_0x4A_Octus: ; loc_1EBB8:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_1EBC6(pc,d0),d1
 		jmp	loc_1EBC6(pc,d1)
-loc_1EBC6:          
+loc_1EBC6:
 		dc.w	loc_1EBF6-loc_1EBC6
 		dc.w	loc_1EC5C-loc_1EBC6
 		dc.w	loc_1EBEA-loc_1EBC6
@@ -36022,7 +36022,7 @@ loc_1EDB3:
 		dc.b	$03,$01,$02,$03,$FF
 loc_1EDB8:
 		dc.b	$02,$05,$06,$FF
-Octus_Mappings:		
+Octus_Mappings:
 loc_1EDBC:
 		dc.w	loc_1EDCA-loc_1EDBC
 		dc.w	loc_1EDDC-loc_1EDBC
@@ -36054,11 +36054,11 @@ loc_1EE34:
 		dc.l	$F2010036,$001BFFF0
 loc_1EE3E:
 		dc.w	$0001
-		dc.l	$F2010038,$001CFFF0				         
-;=============================================================================== 
+		dc.l	$F2010038,$001CFFF0
+;===============================================================================
 ; Object 0x4A - Oil Ocean - Octus
-; [ End ]		         
-;===============================================================================    
+; [ End ]
+;===============================================================================
 ; loc_1EE48:
 JmpTo17_DisplaySprite:
 		jmp	(DisplaySprite).l
@@ -36077,11 +36077,11 @@ JmpTo5_ObjectMoveAndFall:
 
 		align 4
 
-;=============================================================================== 
+;===============================================================================
 ; Object 0x4C - Hidden Palace - Batbot
-; [ Begin ]		         
-;=============================================================================== 
-Obj_0x4C_Batbot: ; loc_1EE68:  
+; [ Begin ]
+;===============================================================================
+Obj_0x4C_Batbot: ; loc_1EE68:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_1EE76(pc,d0),d1
@@ -36090,7 +36090,7 @@ loc_1EE76:
 		dc.w	loc_1EE7C-loc_1EE76
 		dc.w	loc_1EEBA-loc_1EE76
 		dc.w	loc_1EF28-loc_1EE76
-loc_1EE7C:		
+loc_1EE7C:
 		move.l	#Obj4C_MapUnc_1F106,$0004(a0)  ; loc_1F106
 		move.w	#$2530,$0002(a0)
 		ori.b   #$04,$0001(a0)
@@ -36114,7 +36114,7 @@ loc_1EEBA:
 loc_1EEDA:
 		dc.w	loc_1F046-loc_1EEDA
 		dc.w	loc_1F07E-loc_1EEDA
-		dc.w	loc_1F08A-loc_1EEDA		
+		dc.w	loc_1F08A-loc_1EEDA
 loc_1EEE0:
 		move.b	$003F(a0),d0
 		jsr	(CalcSine).l		; loc_320A
@@ -36123,7 +36123,7 @@ loc_1EEE0:
 		move.w	d0,$000C(a0)
 		addq.b	#$04,$003F(a0)
 		rts
-loc_1EEFA:		
+loc_1EEFA:
 		move.w	8(a0),d0
 		sub.w   (MainCharacter+8).w,d0
 		cmpi.w	#$0080,d0
@@ -36152,7 +36152,7 @@ loc_1EF48:
 		bset	#$00,$0022(a0)
 loc_1EF5A:
 		rts
-loc_1EF5C:		
+loc_1EF5C:
 		subi.w	#$0001,$002C(a0)
 		bpl.s	loc_1EFA6
 		move.w	8(a0),d0
@@ -36267,7 +36267,7 @@ loc_1F0d2:
 		dc.w	loc_1F0DE-loc_1F0d2
 		dc.w	loc_1F0ED-loc_1F0d2
 		dc.w	loc_1F0FE-loc_1F0d2
-loc_1F0DA:  
+loc_1F0DA:
 		dc.b	$01,$00,$05,$FF
 loc_1F0DE:
 		dc.b	$01,$01,$06,$01,$06,$02,$07,$02,$07,$01,$06,$01,$06,$FD,$00
@@ -36294,10 +36294,10 @@ JmpTo16_ObjectMove:
 
 		align 4
 
-;=============================================================================== 
-; Object 0x4E - (Desert Level) - Crocobot 
-; [ Begin ]		         
-;===============================================================================		   
+;===============================================================================
+; Object 0x4E - (Desert Level) - Crocobot
+; [ Begin ]
+;===============================================================================
 Obj_0x4E_Crocobot: ; loc_1F2F0:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -36381,7 +36381,7 @@ loc_1F3F6:
 		rts
 loc_1F3FE:
 		move.b	#$00,$001C(a0)
-		rts      
+		rts
 
 loc_1F406:
 		dc.w	loc_1F40C-loc_1F406
@@ -36393,7 +36393,7 @@ loc_1F414:
 		dc.b	$0F,$00,$FF
 loc_1F417:
 		dc.b	$03,$06,$0A,$08,$09,$07,$0B,$FF,$00
-Crocobot_Mappings:		
+Crocobot_Mappings:
 loc_1F420:
 		dc.w	loc_1F438-loc_1F420
 		dc.w	loc_1F45A-loc_1F420
@@ -36454,11 +36454,11 @@ loc_1F58C:
 loc_1F5AE:
 		dc.w	$0004
 		dc.l	$F00B000C,$0006FFEC,$F8050018,$000C0004
-		dc.l	$0001001E,$000F0004,$00050028,$0014000C		
-;=============================================================================== 
-; Object 0x4E - (Desert Level) - Crocobot 
-; [ End ]		         
-;===============================================================================		 
+		dc.l	$0001001E,$000F0004,$00050028,$0014000C
+;===============================================================================
+; Object 0x4E - (Desert Level) - Crocobot
+; [ End ]
+;===============================================================================
 ; loc_1F5d0:
 JmpTo25_MarkObjGone:
 		jmp	(MarkObjGone).l
@@ -36553,16 +36553,16 @@ JmpTo34_Adjust2PArtPointer:
 ; loc_1F6E2:
 JmpTo18_ObjectMove:
 		jmp	(ObjectMove).l
-;=============================================================================== 
+;===============================================================================
 ; Object 0x54 - Green Hill - Motobug
-; [ Begin ]		         
-;===============================================================================  
-Obj_0x54_Motobug: ; loc_1F6E8:		 
+; [ Begin ]
+;===============================================================================
+Obj_0x54_Motobug: ; loc_1F6E8:
 		moveq	#0,d0
 		move.b	routine(a0),d0
 		move.w	loc_1F6F6(pc,d0),d1
 		jmp	loc_1F6F6(pc,d1)
-loc_1F6F6:		
+loc_1F6F6:
 		dc.w	loc_1F700-loc_1F6F6
 		dc.w	loc_1F7A0-loc_1F6F6
 		dc.w	loc_1F8CC-loc_1F6F6
@@ -36719,10 +36719,10 @@ loc_1F934:
 ; ---------------------------------------------------------------------------
 Obj54_MapUnc_1F938:	binclude	"mappings/sprite/obj54.bin"
 
-;=============================================================================== 
+;===============================================================================
 ; Object 0x54 - Green Hill - Motobug
-; [ End ]		         
-;=============================================================================== 
+; [ End ]
+;===============================================================================
 ; loc_1F96C:
 JmpTo39_DeleteObject:
 		jmp	(DeleteObject).l
@@ -36748,10 +36748,10 @@ JmpTo7_ObjectMoveAndFall:
 JmpTo19_ObjectMove:
 		jmp	(ObjectMove).l
 
-;=============================================================================== 
-; Object 0x57 - 
-; [ Begin ]		         
-;===============================================================================		    
+;===============================================================================
+; Object 0x57 -
+; [ Begin ]
+;===============================================================================
 Obj_0x57: ; loc_1F99C:
 		moveq	#0,d0
 		move.b	$0025(a0),d0
@@ -36930,16 +36930,16 @@ loc_1FBF0:
 		move.b	#$06,$0025(a0)
 		move.w	#$00B3,$003C(a0)
 		bset	#$03,$002D(a0)
-		rts		       
-;=============================================================================== 
-; Object 0x57 - 
-; [ End ]		         
-;===============================================================================   
+		rts
+;===============================================================================
+; Object 0x57 -
+; [ End ]
+;===============================================================================
 
-;=============================================================================== 
-; Object 0x58 - 
-; [ Begin ]		         
-;===============================================================================  
+;===============================================================================
+; Object 0x58 -
+; [ Begin ]
+;===============================================================================
 Obj_0x58: ; loc_1FC0A:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -37216,7 +37216,7 @@ loc_2001E:
 		move.b	#1,$1A(a1)
 		move.b	#0,$1C(a1)
 loc_2007E:
-		rts		
+		rts
 loc_20080:
 		jsr	(SingleObjLoad2).l	; (loc_E788)
 		bne.s	loc_200C8
@@ -37251,7 +37251,7 @@ loc_200C8:
 		move.w	#$1E,$2A(a1)
 		move.b	#0,$24(a1)
 loc_2012C:
-		rts		
+		rts
 loc_2012E:
 		dc.w	loc_20134-loc_2012E
 		dc.w	loc_20138-loc_2012E
@@ -37263,7 +37263,7 @@ loc_20138:
 		dc.b	$00,$00,$00,$00,$00,$FF
 loc_2014E:
 		dc.b	$01,$00,$00,$00,$00,$00,$00,$00,$00,$04,$04,$04,$03,$03,$03,$02
-		dc.b	$02,$02,$01,$01,$01,$05,$06,$FE,$02,$00               
+		dc.b	$02,$02,$01,$01,$01,$05,$06,$FE,$02,$00
 Obj_0x57_Mappings:
 loc_20168:
 		dc.w	loc_20176-loc_20168
@@ -37301,7 +37301,7 @@ loc_20208:
 loc_20222:
 		dc.w	$0003
 		dc.l	$D8050004,$00020002,$D80d000C,$0006FFE2
-		dc.l	$D80d000C,$0006FFC2     
+		dc.l	$D80d000C,$0006FFC2
 loc_2023C:
 		dc.w	loc_20242-loc_2023C
 		dc.w	loc_20247-loc_2023C
@@ -37311,7 +37311,7 @@ loc_20242:
 loc_20247:
 		dc.b	$01,$04,$05,$FF
 loc_2024B:
-		dc.b	$01,$06,$07,$FF,$00 
+		dc.b	$01,$06,$07,$FF,$00
 
 loc_20250:
 		dc.w	loc_20262-loc_20250
@@ -37351,11 +37351,11 @@ loc_202B8:
 loc_202C2:
 		dc.w	$0003
 		dc.l	$F00F8000,$8000FFd0,$F00F8010,$8008FFF0
-		dc.l	$F00F8020,$80100010				       
-;=============================================================================== 
-; Object 0x58 - 
-; [ End ]		         
-;===============================================================================    
+		dc.l	$F00F8020,$80100010
+;===============================================================================
+; Object 0x58 -
+; [ End ]
+;===============================================================================
 ; loc_202DC:
 JmpTo18_DisplaySprite:
 		jmp	(DisplaySprite).l
@@ -37381,10 +37381,10 @@ JmpTo2_ObjHitFloor:
 JmpTo8_ObjectMoveAndFall:
 		jmp	(ObjectMoveAndFall).l
 
-;=============================================================================== 
+;===============================================================================
 ; Object 0x55 - Ghz Boss
-; [ Begin ]		         
-;===============================================================================		 
+; [ Begin ]
+;===============================================================================
 Obj_0x55_Ghz_Boss: ; loc_2030C:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -37460,7 +37460,7 @@ loc_20434:
 		jmp	(a1)
 loc_20446:
 		dc.l	0
-		dc.l    loc_20080 
+		dc.l    loc_20080
 loc_2044E:
 		move.b	$28(a0),d0
 		andi.w	#$7F,d0
@@ -37486,7 +37486,7 @@ loc_2048C:
 		move.b	1(a1),1(a0)
 		move.l	#loc_206AE,A1
 		jsr	(AnimateSprite).l	; (loc_d412)
-		jmp	(DisplaySprite).l	; (loc_d3C2)		   
+		jmp	(DisplaySprite).l	; (loc_d3C2)
 loc_204BA:
 		dc.b	$00,$FF,$01,$00
 loc_204BE:
@@ -37547,14 +37547,14 @@ loc_20560:
 		subi.w	#$28,8(a0)
 loc_205A2:
 		bra.w	JmpTo19_DisplaySprite
-;=============================================================================== 
+;===============================================================================
 ; Object 0x55 - Ghz Boss
-; [ End ]		         
-;===============================================================================				        
-;=============================================================================== 
+; [ End ]
+;===============================================================================
+;===============================================================================
 ; Object 0x56 - Ghz Boss
-; [ Begin ]		         
-;===============================================================================  
+; [ Begin ]
+;===============================================================================
 Obj_0x56: ; loc_205A6:
 		moveq	#0,d0
 		move.b	routine(a0),d0
@@ -37584,7 +37584,7 @@ loc_205F4:
 		beq.w	JmpTo41_DeleteObject
 loc_2060E:
 		bra.w	JmpTo19_DisplaySprite
-Ghz_Boss_Mappings_1: 
+Ghz_Boss_Mappings_1:
 loc_20612:
 		dc.w	loc_20616-loc_20612
 		dc.w	loc_20620-loc_20612
@@ -37594,7 +37594,7 @@ loc_20616:
 loc_20620:
 		dc.w	$0001
 		dc.l	$00050004,$0002001C
-Ghz_Boss_Mappings_2: 
+Ghz_Boss_Mappings_2:
 loc_2062A:
 		dc.w	loc_20632-loc_2062A
 		dc.w	loc_2063C-loc_2062A
@@ -37611,7 +37611,7 @@ loc_20646:
 		dc.l	$F8050008,$0004FFF8
 loc_20650:
 		dc.w	$0001
-		dc.l	$F805000C,$0006FFF8    
+		dc.l	$F805000C,$0006FFF8
 Obj_0x56_Mappings:
 loc_2065A:
 		dc.w	loc_20668-loc_2065A
@@ -37641,15 +37641,15 @@ loc_2069A:
 		dc.l	$F00F0044,$0022FFF0
 loc_206A4:
 		dc.w	$0001
-		dc.l	$F00F0054,$002AFFF0		           
+		dc.l	$F00F0054,$002AFFF0
 loc_206AE:
 		dc.w	loc_206B2-loc_206AE
 		dc.w	loc_206B5-loc_206AE
 loc_206B2:
 		dc.b	$0F,$00,$FF
 loc_206B5:
-		dc.b	$07,$01,$02,$FF,$00 
-Ghz_Boss_Mappings:		 
+		dc.b	$07,$01,$02,$FF,$00
+Ghz_Boss_Mappings:
 loc_206BA:
 		dc.w	loc_206C0-loc_206BA
 		dc.w	loc_206E2-loc_206BA
@@ -37665,11 +37665,11 @@ loc_206E2:
 loc_20704:
 		dc.w	$0004
 		dc.l	$E8050028,$0014FFE0,$E80d0038,$001CFFF0
-		dc.l	$E8050024,$00120010,$D8050020,$00100002		              
-;=============================================================================== 
+		dc.l	$E8050024,$00120010,$D8050020,$00100002
+;===============================================================================
 ; Object 0x56 - Ghz Boss
-; [ End ]		         
-;===============================================================================		  
+; [ End ]
+;===============================================================================
 		nop
 ; loc_20728:
 JmpTo19_DisplaySprite:
@@ -37954,7 +37954,7 @@ return_210A2:
 		rts
 ; ===========================================================================
 
-loc_210A4:		
+loc_210A4:
 		dc.w	loc_210A8-loc_210A4
 		dc.w	loc_210A8-loc_210A4
 loc_210A8:
@@ -38000,11 +38000,11 @@ JmpTo38_Adjust2PArtPointer:
 
 		align 4
 
-;=============================================================================== 
+;===============================================================================
 ; Sub Routine TouchResponse
-; [ Begin ]		         
-;===============================================================================  
-TouchResponse: ; loc_21160:   
+; [ Begin ]
+;===============================================================================
+TouchResponse: ; loc_21160:
 		nop
 		bsr.w	loc_21502
 		move.w	8(a0),d2
@@ -38026,11 +38026,11 @@ loc_2118A:
 loc_21198:
 		move.b	$20(a1),d0
 		bne.s	Touch_Height	; loc_211F8
-loc_2119E:		
+loc_2119E:
 		lea	$40(a1),A1
-		dbf	d6,loc_21198  
+		dbf	d6,loc_21198
 		moveq	#0,d0
-Touch_Sizes: ; loc_211A8:		
+Touch_Sizes: ; loc_211A8:
 		rts
 		dc.b	$14,$14,$0C,$14,$14,$0C,$04,$10,$0C,$12,$10,$10,$06,$06,$18,$0C
 		dc.b	$0C,$10,$10,$0C,$08,$08,$14,$10,$14,$08,$0E,$0E,$18,$18,$28,$10
@@ -38052,10 +38052,10 @@ Touch_Height: ; loc_211F8:
 		add.w   d1,d0
 		bcs.s	loc_21220
 		bra.w	loc_2119E
-loc_2121A:		
+loc_2121A:
 		cmp.w	d4,d0
 		bhi.w	loc_2119E
-loc_21220:		
+loc_21220:
 		moveq	#0,d1
 		move.b	(a2)+,d1
 		move.w	$C(a1),d0
@@ -38065,7 +38065,7 @@ loc_21220:
 		add.w   d1,d1
 		add.w   d1,d0
 		bcs.s	loc_2123E
-		bra.w	loc_2119E		
+		bra.w	loc_2119E
 loc_21238:
 		cmp.w	d5,d0
 		bhi.w	loc_2119E
@@ -38084,14 +38084,14 @@ loc_2123E:
 		cmpi.w	#$5A,$30(a0)
 		bcc.w	loc_21276
 		move.b	#4,$24(a1)
-loc_21276:		
+loc_21276:
 		rts
-loc_21278:		
+loc_21278:
 		tst.w	$12(a0)
 		bpl.s	loc_212A4
 		move.w	$C(a0),d0
 		subi.w	#$10,d0
-		cmp.w	$C(a1),d0  
+		cmp.w	$C(a1),d0
 		bcs.s	loc_212B6
 		neg.w	$12(a0)
 		move.w	#$FE80,$12(a1)
@@ -38126,7 +38126,7 @@ loc_212d0:
 		bset	#7,$22(a1)
 loc_212F8:
 		rts
-;===============================================================================		
+;===============================================================================
 Touch_KillEnemy: ; loc_212FA:
 		bset	#7,$22(a1)
 		moveq	#0,d0
@@ -38143,7 +38143,7 @@ loc_21312:
 		move.w	#1000,d0
 		move.w	#$A,$3E(a1)
 loc_2132C:
-		bsr.w	AddPoints	; loc_22Fd0		
+		bsr.w	AddPoints	; loc_22Fd0
 		_move.b	#$27,0(a1)
 		move.b	#$00,$24(a1)
 		tst.w	$12(a0)
@@ -38158,29 +38158,29 @@ loc_21352:
 		rts
 loc_2135A:
 		subi.w	#$100,$12(a0)
-		rts				
+		rts
 Enemy_Points: ; loc_21362:
 		dc.w	10,20,50,100
 loc_2136A:
-		bset	#7,$22(a1)				
+		bset	#7,$22(a1)
 ; loc_21370:
 Touch_ChkHurt:
 		tst.b	(Invincibility_flag).w
 		beq.s	Touch_Hurt	; loc_2137A
-loc_21376:		
+loc_21376:
 		moveq	#-1,d0
 		rts
-;===============================================================================		
+;===============================================================================
 Touch_Hurt: ; loc_2137A:
 		nop
 		tst.w	$30(a0)
 		bne.s	loc_21376
-		move.l	A1,A2  
+		move.l	A1,A2
 
-;=============================================================================== 
+;===============================================================================
 ; Sub Routine HurtSonic
-; [ Begin ]		         
-;===============================================================================		 
+; [ Begin ]
+;===============================================================================
 HurtSonic: ; loc_21384:
 		tst.b	(Shield_flag).w
 		bne.s	HurtShield	; loc_213AC
@@ -38205,7 +38205,7 @@ HurtShield: ; loc_213AC:
 Hurt_Reverse: ; loc_213E2:
 		move.w	8(a0),d0
 		cmp.w	8(a2),d0
-		bcs.s	Hurt_ChkSpikes	; loc_213F0 
+		bcs.s	Hurt_ChkSpikes	; loc_213F0
 		neg.w	$10(a0)
 Hurt_ChkSpikes: ; loc_213F0:
 		move.w	#0,$14(a0)
@@ -38221,16 +38221,16 @@ loc_21410:
 		rts
 Hurt_NoRings: ; loc_2141A:
 		tst.w	(Debug_mode_flag).w
-		bne.w	HurtShield	; loc_213AC 
-;=============================================================================== 
+		bne.w	HurtShield	; loc_213AC
+;===============================================================================
 ; Sub Routine HurtSonic
-; [ End ]		         
-;===============================================================================  
-		       
-;=============================================================================== 
+; [ End ]
+;===============================================================================
+
+;===============================================================================
 ; Sub Routine KillSonic
-; [ Begin ]		         
-;===============================================================================		  
+; [ Begin ]
+;===============================================================================
 KillSonic: ; loc_21422:
 		tst.w	(Debug_placement_mode).w
 		bne.s	Kill_NoDeath	; loc_21476
@@ -38250,14 +38250,14 @@ KillSonic: ; loc_21422:
 		move.w	#SndID_HurtBySpikes,d0
 loc_21470:
 		jsr	(PlaySound).l	; loc_14C6
-Kill_NoDeath ; loc_21476:		
+Kill_NoDeath ; loc_21476:
 		moveq	#-1,d0
 		rts
-;=============================================================================== 
-; Sub Routine KillSonic
-; [ End ]		         
 ;===============================================================================
-		   
+; Sub Routine KillSonic
+; [ End ]
+;===============================================================================
+
 Touch_Special: ; loc_2147A:
 		move.b	$20(a1),d1
 		andi.b	#$3F,d1
@@ -38308,21 +38308,21 @@ Touch_d7: ; loc_214E4:
 loc_214F0:
 		addq.b	#1,$21(a1)
 		rts
-Touch_E1: ; loc_214F6:		
+Touch_E1: ; loc_214F6:
 		addq.b	#1,$21(a1)
-		rts            
+		rts
 J_Sonic_ResetOnFloor_00: ; loc_214FC:
 		jmp	(Sonic_ResetOnFloor).l	; loc_1090C
 loc_21502:
-		jmp	(Touch_Rings).l	; loc_DF6C 
-;=============================================================================== 
+		jmp	(Touch_Rings).l	; loc_DF6C
+;===============================================================================
 ; Sub Routine TouchResponse
-; [ End ]		         
-;=============================================================================== 
-		
+; [ End ]
+;===============================================================================
+
 ;===============================================================================
 ; Special Stage - Sub-routine
-; [ Begin ]              
+; [ Begin ]
 ;===============================================================================
 S1_SS_Show_Layout: ; loc_21508:
 		bsr.w	loc_2164A
@@ -38349,7 +38349,7 @@ S1_SS_Show_Layout: ; loc_21508:
 		neg.w	d3
 		addi.w	#$FF4C,d3
 		move.w	#$F,d7
-loc_21558:		
+loc_21558:
 		movem.w d0-d2,-(sp)
 		movem.w d0/d1,-(sp)
 		neg.w	d0
@@ -38363,7 +38363,7 @@ loc_21558:
 		add.l   d0,d1
 		move.l	d6,d2
 		move.w	#$F,d6
-loc_2157A:		
+loc_2157A:
 		move.l	d2,d0
 		asr.l   #8,d0
 		move.w	d0,(a1)+
@@ -38389,9 +38389,9 @@ loc_2157A:
 		adda.w	d0,A0
 		lea	(Level_Layout).w,A4
 		move.w	#$F,d7
-loc_215C6:		
+loc_215C6:
 		move.w	#$F,d6
-loc_215CA:		
+loc_215CA:
 		moveq	#0,d0
 		move.b	(a0)+,d0
 		beq.s	loc_21622
@@ -38442,7 +38442,7 @@ loc_2164A:
 		lsr.b	#2,d0
 		andi.w	#$F,d0
 		moveq	#$23,d1
-loc_2165E:		
+loc_2165E:
 		move.w	d0,(a1)
 		addq.w	#8,A1
 		dbf	d1,loc_2165E
@@ -38534,7 +38534,7 @@ loc_2170A:
 		move.w	$E(a0),$38(a1)
 		adda.w	#$20,A0
 		adda.w	#$48,A1
-		rts 
+		rts
 S1SS_WaRiVramSet: ; loc_217F4:
 		dc.w	$142,$6142,$142,$142,$142,$142,$142,$6142
 		dc.w	$142,$6142,$142,$142,$142,$142,$142,$6142
@@ -38543,21 +38543,21 @@ S1SS_WaRiVramSet: ; loc_217F4:
 		dc.w	$4142,$2142,$4142,$4142,$4142,$4142,$4142,$2142
 		dc.w	$4142,$2142,$4142,$4142,$4142,$4142,$4142,$2142
 		dc.w	$6142,$4142,$6142,$6142,$6142,$6142,$6142,$4142
-		dc.w	$6142,$4142,$6142,$6142,$6142,$6142,$6142,$4142		
+		dc.w	$6142,$4142,$6142,$6142,$6142,$6142,$6142,$4142
 loc_21874:
 		lea	(Chunk_Table+$4400),A2
 		move.w	#$1F,d0
-loc_2187E:		
+loc_2187E:
 		tst.b	(a2)
 		beq.s	loc_21888
 		addq.w	#8,A2
 		dbf	d0,loc_2187E
 loc_21888:
 		rts
-loc_2188A:               
+loc_2188A:
 		lea	(Chunk_Table+$4400),A0
 		move.w	#$1F,d7
-loc_21894:		
+loc_21894:
 		moveq	#0,d0
 		move.b	(a0),d0
 		beq.s	loc_218A2
@@ -38567,9 +38567,9 @@ loc_21894:
 loc_218A2:
 		addq.w	#8,A0
 		dbf	d7,loc_21894
-		rts 
-;===============================================================================		
-S1SS_AniIndex: ; loc_218AA: 
+		rts
+;===============================================================================
+S1SS_AniIndex: ; loc_218AA:
 		dc.l    loc_218C2
 		dc.l    loc_218F2
 		dc.l    loc_21928
@@ -38588,7 +38588,7 @@ loc_218C2:
 		move.b	d0,(a1)
 		bne.s	loc_218EA
 		clr.l   (a0)
-		clr.l   4(a0)		
+		clr.l   4(a0)
 loc_218EA:
 		rts
 loc_218EC:
@@ -38685,13 +38685,13 @@ loc_219CE:
 		clr.l   (a0)
 		clr.l   4(a0)
 loc_219FA:
-		rts  
-loc_219FC:		           
-		dc.b	$4B,$4C,$4D,$4E,$4B,$4C,$4D,$4E,$00,$00		
-S1SS_LayoutIndex: ; loc_21A06:		
-		dc.l    Special_Stage_1   ; loc_31CEA		             
+		rts
+loc_219FC:
+		dc.b	$4B,$4C,$4D,$4E,$4B,$4C,$4D,$4E,$00,$00
+S1SS_LayoutIndex: ; loc_21A06:
+		dc.l    Special_Stage_1   ; loc_31CEA
 		dc.l    Special_Stage_2   ; loc_31F64
-		dc.l    Special_Stage_3   ; loc_32376        
+		dc.l    Special_Stage_3   ; loc_32376
 		dc.l    Special_Stage_4   ; loc_326d2
 		dc.l    Special_Stage_5   ; loc_32BAC
 		dc.l    Special_Stage_6   ; loc_3305C
@@ -38717,7 +38717,7 @@ loc_21A4E:
 		subq.b	#1,d1
 		bcs.s	loc_21A70
 		lea	(Got_Emeralds_array).w,A3
-loc_21A64:		
+loc_21A64:
 		cmp.b	(A3,d1),d0
 		bne.s	loc_21A6C
 		bra.s	S1_Special_Stage_Load   ; loc_21A36
@@ -38734,15 +38734,15 @@ loc_21A70:
 		jsr	 (EniDec).l               ; loc_18DA
 		lea	(Chunk_Table),A1
 		move.w	#$FFF,d0
-loc_21A9C:		
+loc_21A9C:
 		clr.l   (a1)+
 		dbf	d0,loc_21A9C
 		lea	(Chunk_Table+$1020),A1
 		lea	(Chunk_Table+$4000),A0
 		moveq	#$3F,d1
-loc_21AB0:		
+loc_21AB0:
 		moveq	#$3F,d2
-loc_21AB2:		
+loc_21AB2:
 		move.b	(a0)+,(a1)+
 		dbf	d2,loc_21AB2
 		lea	$40(a1),A1
@@ -38750,7 +38750,7 @@ loc_21AB2:
 		lea	(Chunk_Table+$4008),A1
 		lea	(loc_21AF2).l,A0
 		moveq	#$4D,d1
-loc_21ACE:		
+loc_21ACE:
 		move.l	(a0)+,(a1)+
 		move.w	#0,(a1)+
 		move.b	-4(a0),-1(a1)
@@ -38758,13 +38758,11 @@ loc_21ACE:
 		dbf	d1,loc_21ACE
 		lea	(Chunk_Table+$4400),A1
 		move.w	#$3F,d1
-loc_21AEA:		
+loc_21AEA:
 		clr.l   (a1)+
 		dbf	d1,loc_21AEA
 		rts
 loc_21AF2:
-		dc.l    SS_Reverse_Goal_Mappings ; loc_21CC6		 
-		dc.w	$0142 
 		dc.l    SS_Reverse_Goal_Mappings ; loc_21CC6
 		dc.w	$0142
 		dc.l    SS_Reverse_Goal_Mappings ; loc_21CC6
@@ -38776,29 +38774,39 @@ loc_21AF2:
 		dc.l    SS_Reverse_Goal_Mappings ; loc_21CC6
 		dc.w	$0142
 		dc.l    SS_Reverse_Goal_Mappings ; loc_21CC6
-		dc.w	$0142 
+		dc.w	$0142
 		dc.l    SS_Reverse_Goal_Mappings ; loc_21CC6
-		dc.w	$0142 
+		dc.w	$0142
 		dc.l    SS_Reverse_Goal_Mappings ; loc_21CC6
-		dc.w	$0142 
+		dc.w	$0142
 		dc.l    SS_Reverse_Goal_Mappings ; loc_21CC6
-		dc.w	$2142 
+		dc.w	$0142
 		dc.l    SS_Reverse_Goal_Mappings ; loc_21CC6
-		dc.w	$2142  
+		dc.w	$2142
 		dc.l    SS_Reverse_Goal_Mappings ; loc_21CC6
-		dc.w	$2142  
+		dc.w	$2142
 		dc.l    SS_Reverse_Goal_Mappings ; loc_21CC6
-		dc.w	$2142  
+		dc.w	$2142
 		dc.l    SS_Reverse_Goal_Mappings ; loc_21CC6
-		dc.w	$2142  
+		dc.w	$2142
 		dc.l    SS_Reverse_Goal_Mappings ; loc_21CC6
-		dc.w	$2142  
+		dc.w	$2142
 		dc.l    SS_Reverse_Goal_Mappings ; loc_21CC6
-		dc.w	$2142  
+		dc.w	$2142
 		dc.l    SS_Reverse_Goal_Mappings ; loc_21CC6
-		dc.w	$2142  
+		dc.w	$2142
 		dc.l    SS_Reverse_Goal_Mappings ; loc_21CC6
-		dc.w	$2142  
+		dc.w	$2142
+		dc.l    SS_Reverse_Goal_Mappings ; loc_21CC6
+		dc.w	$2142
+		dc.l    SS_Reverse_Goal_Mappings ; loc_21CC6
+		dc.w	$4142
+		dc.l    SS_Reverse_Goal_Mappings ; loc_21CC6
+		dc.w	$4142
+		dc.l    SS_Reverse_Goal_Mappings ; loc_21CC6
+		dc.w	$4142
+		dc.l    SS_Reverse_Goal_Mappings ; loc_21CC6
+		dc.w	$4142
 		dc.l    SS_Reverse_Goal_Mappings ; loc_21CC6
 		dc.w	$4142
 		dc.l    SS_Reverse_Goal_Mappings ; loc_21CC6
@@ -38810,31 +38818,23 @@ loc_21AF2:
 		dc.l    SS_Reverse_Goal_Mappings ; loc_21CC6
 		dc.w	$4142
 		dc.l    SS_Reverse_Goal_Mappings ; loc_21CC6
-		dc.w	$4142
+		dc.w	$6142
 		dc.l    SS_Reverse_Goal_Mappings ; loc_21CC6
-		dc.w	$4142		      
+		dc.w	$6142
 		dc.l    SS_Reverse_Goal_Mappings ; loc_21CC6
-		dc.w	$4142 
+		dc.w	$6142
 		dc.l    SS_Reverse_Goal_Mappings ; loc_21CC6
-		dc.w	$4142   
+		dc.w	$6142
 		dc.l    SS_Reverse_Goal_Mappings ; loc_21CC6
-		dc.w	$6142   
+		dc.w	$6142
 		dc.l    SS_Reverse_Goal_Mappings ; loc_21CC6
-		dc.w	$6142   
+		dc.w	$6142
 		dc.l    SS_Reverse_Goal_Mappings ; loc_21CC6
-		dc.w	$6142   
+		dc.w	$6142
 		dc.l    SS_Reverse_Goal_Mappings ; loc_21CC6
-		dc.w	$6142  
+		dc.w	$6142
 		dc.l    SS_Reverse_Goal_Mappings ; loc_21CC6
-		dc.w	$6142 
-		dc.l    SS_Reverse_Goal_Mappings ; loc_21CC6
-		dc.w	$6142 
-		dc.l    SS_Reverse_Goal_Mappings ; loc_21CC6
-		dc.w	$6142 
-		dc.l    SS_Reverse_Goal_Mappings ; loc_21CC6
-		dc.w	$6142 
-		dc.l    SS_Reverse_Goal_Mappings ; loc_21CC6
-		dc.w	$6142  
+		dc.w	$6142
 		dc.l    S1_Obj_0x47_Mappings ; loc_1401E
 		dc.w	$023B
 		dc.l    SS_Reverse_Goal_Mappings ; loc_21CC6
@@ -38847,7 +38847,7 @@ loc_21AF2:
 		dc.w	$0263
 		dc.l    SS_Down_Mappings        ; loc_21d0A
 		dc.w	$0263
-		dc.l    SS_Reverse_Goal_Mappings ; loc_21CC6		
+		dc.l    SS_Reverse_Goal_Mappings ; loc_21CC6
 		dc.w	$22F0
 		dc.l    SS_Red_White_Ball_Mappings ; loc_21CDA
 		dc.w	$0470
@@ -38864,7 +38864,7 @@ loc_21AF2:
 		dc.l    (($01<<$18)|S1_Obj_0x47_Mappings) ; loc_1401E
 		dc.w	$023B
 		dc.l    (($02<<$18)|S1_Obj_0x47_Mappings) ; loc_1401E
-		dc.w	$023B 
+		dc.w	$023B
 		dc.l    SS_Reverse_Goal_Mappings ; loc_21CC6
 		dc.w	$0797
 		dc.l    SS_Reverse_Goal_Mappings ; loc_21CC6
@@ -38885,7 +38885,7 @@ loc_21AF2:
 		dc.w	$2770
 		dc.l    SS_Emerald_Mappings     ; loc_21d22
 		dc.w	$4770
-		dc.l    SS_Emerald_Mappings     ; loc_21d22		   
+		dc.l    SS_Emerald_Mappings     ; loc_21d22
 		dc.w	$6770
 		dc.l    SS_Red_Emerald_Mappings ; loc_21d1A
 		dc.w	$0770
@@ -38895,11 +38895,11 @@ loc_21AF2:
 		dc.w	$04F0
 		dc.l    (($04<<$18)|Obj25_MapUnc_B036) ; loc_B036
 		dc.w	$27B2
-		dc.l    (($05<<$18)|Obj25_MapUnc_B036) ; loc_B036		   
+		dc.l    (($05<<$18)|Obj25_MapUnc_B036) ; loc_B036
 		dc.w	$27B2
-		dc.l    (($06<<$18)|Obj25_MapUnc_B036) ; loc_B036  
+		dc.l    (($06<<$18)|Obj25_MapUnc_B036) ; loc_B036
 		dc.w	$27B2
-		dc.l    (($07<<$18)|Obj25_MapUnc_B036) ; loc_B036 
+		dc.l    (($07<<$18)|Obj25_MapUnc_B036) ; loc_B036
 		dc.w	$27B2
 		dc.l    SS_Red_White_Ball_Mappings ; loc_21CDA
 		dc.w	$23F0
@@ -38908,18 +38908,18 @@ loc_21AF2:
 		dc.l    (($02<<$18)|SS_Red_White_Ball_Mappings) ; loc_21CDA
 		dc.w	$23F0
 		dc.l    (($03<<$18)|SS_Red_White_Ball_Mappings) ; loc_21CDA
-		dc.w	$23F0  
+		dc.w	$23F0
 		dc.l    (($02<<$18)|SS_Reverse_Goal_Mappings) ; loc_21CC6
 		dc.w	$04F0
-		dc.l    SS_Red_White_Ball_Mappings ; loc_21CDA		  
-		dc.w	$05F0		   
-		dc.l    SS_Red_White_Ball_Mappings ; loc_21CDA 
+		dc.l    SS_Red_White_Ball_Mappings ; loc_21CDA
+		dc.w	$05F0
+		dc.l    SS_Red_White_Ball_Mappings ; loc_21CDA
 		dc.w	$65F0
-		dc.l    SS_Red_White_Ball_Mappings ; loc_21CDA 
+		dc.l    SS_Red_White_Ball_Mappings ; loc_21CDA
 		dc.w	$25F0
-		dc.l    SS_Red_White_Ball_Mappings ; loc_21CDA 
-		dc.w	$45F0     
-SS_Reverse_Goal_Mappings: ; loc_21CC6:   
+		dc.l    SS_Red_White_Ball_Mappings ; loc_21CDA
+		dc.w	$45F0
+SS_Reverse_Goal_Mappings: ; loc_21CC6:
 		dc.w	loc_21CCC-SS_Reverse_Goal_Mappings
 		dc.w	loc_21Cd2-SS_Reverse_Goal_Mappings
 		dc.w	loc_21CD8-SS_Reverse_Goal_Mappings
@@ -38931,7 +38931,7 @@ loc_21Cd2:
 		dc.b	$F4,$0A,$00,$09,$F4        ; Sonic 1 Mappings Format
 loc_21CD8:
 		dc.b	$00
-		dc.b	$00		     ; Filler     
+		dc.b	$00		     ; Filler
 SS_Red_White_Ball_Mappings: ; loc_21CDA:
 		dc.w	loc_21CE2-SS_Red_White_Ball_Mappings
 		dc.w	loc_21CE8-SS_Red_White_Ball_Mappings
@@ -38948,7 +38948,7 @@ loc_21CEE:
 		dc.b	$F4,$0A,$18,$00,$F4        ; Sonic 1 Mappings Format
 loc_21CF4:
 		dc.b	$01
-		dc.b	$F4,$0A,$10,$00,$F4        ; Sonic 1 Mappings Format   
+		dc.b	$F4,$0A,$10,$00,$F4        ; Sonic 1 Mappings Format
 SS_Up_Mappings: ; loc_21CFA:
 		dc.w	loc_21CFE-SS_Up_Mappings
 		dc.w	loc_21d04-SS_Up_Mappings
@@ -38957,13 +38957,13 @@ loc_21CFE:
 		dc.b	$F4,$0A,$00,$00,$F4        ; Sonic 1 Mappings Format
 loc_21d04:
 		dc.b	$01
-		dc.b	$F4,$0A,$00,$12,$F4        ; Sonic 1 Mappings Format 
+		dc.b	$F4,$0A,$00,$12,$F4        ; Sonic 1 Mappings Format
 SS_Down_Mappings: ; loc_21d0A:
 		dc.w	loc_21d0E-SS_Down_Mappings
 		dc.w	loc_21d14-SS_Down_Mappings
 loc_21d0E:
 		dc.b	$01
-		dc.b	$F4,$0A,$00,$09,$F4        ; Sonic 1 Mappings Format 
+		dc.b	$F4,$0A,$00,$09,$F4        ; Sonic 1 Mappings Format
 loc_21d14:
 		dc.b	$01
 		dc.b	$F4,$0A,$00,$12,$F4        ; Sonic 1 Mappings Format
@@ -38972,31 +38972,31 @@ SS_Red_Emerald_Mappings: ; loc_21d1A:
 		dc.w	loc_21d38-SS_Red_Emerald_Mappings
 SS_Gray_Emerald_Mappings: ; loc_21d1E:
 		dc.w	loc_21d2C-SS_Gray_Emerald_Mappings
-		dc.w	loc_21d38-SS_Gray_Emerald_Mappings		
-SS_Emerald_Mappings: ; loc_21d22:  {Blue / Yellow / Purple / Green}  
+		dc.w	loc_21d38-SS_Gray_Emerald_Mappings
+SS_Emerald_Mappings: ; loc_21d22:  {Blue / Yellow / Purple / Green}
 		dc.w	loc_21d32-SS_Emerald_Mappings
 		dc.w	loc_21d38-SS_Emerald_Mappings
 loc_21d26:
 		dc.b	$01
-		dc.b	$F8,$05,$00,$00,$F8        ; Sonic 1 Mappings Format   
+		dc.b	$F8,$05,$00,$00,$F8        ; Sonic 1 Mappings Format
 loc_21d2C:
 		dc.b	$01
-		dc.b	$F8,$05,$00,$04,$F8        ; Sonic 1 Mappings Format		
+		dc.b	$F8,$05,$00,$04,$F8        ; Sonic 1 Mappings Format
 loc_21d32:
 		dc.b	$01
 		dc.b	$F8,$05,$00,$08,$F8        ; Sonic 1 Mappings Format
 loc_21d38:
 		dc.b	$01
-		dc.b	$F8,$05,$00,$0C,$F8        ; Sonic 1 Mappings Format						       
+		dc.b	$F8,$05,$00,$0C,$F8        ; Sonic 1 Mappings Format
 ;===============================================================================
 ; Special Stage - Sub-routine
-; [ End ]              
-;===============================================================================  
+; [ End ]
+;===============================================================================
 		nop
-;=============================================================================== 
+;===============================================================================
 ; Object 0x09 - Sonic In Special Stage
-; [ Begin ]		         
-;===============================================================================		 
+; [ Begin ]
+;===============================================================================
 Obj_0x09_Sonic_In_Special_Stage: ; loc_21d40:
 		tst.w	(Debug_placement_mode).w
 		beq.s	Sonic_In_SS_Normal	; loc_21d4E
@@ -39007,13 +39007,13 @@ Sonic_In_SS_Normal: ; loc_21d4E:
 		move.b	routine(a0),d0
 		move.w	loc_21d5C(pc,d0),d1
 		jmp	loc_21d5C(pc,d1)
-loc_21d5C:		
+loc_21d5C:
 		dc.w	loc_21d64-loc_21d5C
 		dc.w	loc_21DA4-loc_21d5C
 		dc.w	loc_21FA0-loc_21d5C
 		dc.w	loc_21FF4-loc_21d5C
 loc_21d64:
-		addq.b	#2,$24(a0)    
+		addq.b	#2,$24(a0)
 		move.b	#$E,$16(a0)
 		move.b	#7,$17(a0)
 		move.l	#MapUnc_Sonic,$4(a0)	; loc_614C0
@@ -39111,11 +39111,11 @@ loc_21E68:
 loc_21EB2:
 		movem.l (sp)+,d0/d1
 		rts
-		
-;=============================================================================== 
+
+;===============================================================================
 ; Sub Routine SonicInSS_MoveLeft
-; [ Begin ]		         
-;===============================================================================		 
+; [ Begin ]
+;===============================================================================
 SonicInSS_MoveLeft: ; loc_21EB8:
 		bset	#0,$22(a0)
 		move.w	$14(a0),d0
@@ -39136,15 +39136,15 @@ loc_21EDA:
 loc_21EE2:
 		move.w	d0,$14(a0)
 		rts
-;=============================================================================== 
+;===============================================================================
 ; Sub Routine SonicInSS_MoveLeft
-; [ End ]		         
-;===============================================================================		 
+; [ End ]
+;===============================================================================
 
-;=============================================================================== 
+;===============================================================================
 ; Sub Routine SonicInSS_MoveRight
-; [ Begin ]		         
-;===============================================================================		 
+; [ Begin ]
+;===============================================================================
 SonicInSS_MoveRight: ; loc_21EE8:
 		bclr	#0,$22(a0)
 		move.w	$14(a0),d0
@@ -39164,15 +39164,15 @@ loc_21F10:
 		move.w	d0,$14(a0)
 loc_21F14:
 		rts
-;=============================================================================== 
-; Sub Routine SonicInSS_MoveRight
-; [ End ]		         
 ;===============================================================================
-		 
-;=============================================================================== 
+; Sub Routine SonicInSS_MoveRight
+; [ End ]
+;===============================================================================
+
+;===============================================================================
 ; Sub Routine SonicInSS_Jump
-; [ Begin ]		         
-;===============================================================================		 
+; [ Begin ]
+;===============================================================================
 SonicInSS_Jump: ; loc_21F16:
 		move.b	(Ctrl_1_Press_Logical).w,d0
 		andi.b	#$70,d0
@@ -39193,21 +39193,21 @@ SonicInSS_Jump: ; loc_21F16:
 		jsr	(PlaySound).l	; loc_14C6
 loc_21F58:
 		rts
-;=============================================================================== 
+;===============================================================================
 ; Sub Routine SonicInSS_Jump
-; [ End ]		         
-;===============================================================================		 
+; [ End ]
+;===============================================================================
 
-;=============================================================================== 
+;===============================================================================
 ; Sub Routine SonicInSS_Null
-; [ Begin ]		         
-;===============================================================================		 
-SonicInSS_Null: ; loc_21F5A:   
+; [ Begin ]
+;===============================================================================
+SonicInSS_Null: ; loc_21F5A:
 		rts
-;=============================================================================== 
+;===============================================================================
 ; Sub Routine SonicInSS_Null
-; [ End ]		         
-;===============================================================================		 
+; [ End ]
+;===============================================================================
 		move.w	#-$400,d1
 		cmp.w	$12(a0),d1
 		ble.s   loc_21F74
@@ -39217,10 +39217,10 @@ SonicInSS_Null: ; loc_21F5A:
 		move.w	d1,$12(a0)
 loc_21F74:
 		rts
-;=============================================================================== 
+;===============================================================================
 ; Sub Routine S1SS_FixCamera
-; [ Begin ]		         
-;===============================================================================  
+; [ Begin ]
+;===============================================================================
 S1SS_FixCamera: ; loc_21F76:
 		move.w	$C(a0),d2
 		move.w	8(a0),d3
@@ -39237,10 +39237,10 @@ loc_21F8E:
 		sub.w   d0,(Camera_Y_pos).w
 loc_21F9E:
 		rts
-;=============================================================================== 
+;===============================================================================
 ; Sub Routine S1SS_FixCamera
-; [ End ]		         
-;===============================================================================		  
+; [ End ]
+;===============================================================================
 loc_21FA0:
 		addi.w	#$40,(SpecialStage_speed).w
 		cmpi.w	#$1800,(SpecialStage_speed).w
@@ -39270,11 +39270,11 @@ loc_22000:
 		jsr	(LoadSonicDynPLC).l	; (loc_10DDC)
 		bsr.w	S1SS_FixCamera	; loc_21F76
 		jmp	(DisplaySprite).l	; (loc_d3C2)
-		
-;=============================================================================== 
+
+;===============================================================================
 ; Sub Routine SonicInSS_Fall
-; [ Begin ]		         
-;===============================================================================		  
+; [ Begin ]
+;===============================================================================
 SonicInSS_Fall: ; loc_22016:
 		move.l	$C(a0),d2
 		move.l	8(a0),d3
@@ -39326,11 +39326,11 @@ loc_22094:
 		move.w	d1,$12(a0)
 		bset	#1,$22(a0)
 		rts
-;=============================================================================== 
+;===============================================================================
 ; Sub Routine SonicInSS_Fall
-; [ End ]		         
-;===============================================================================  
-		
+; [ End ]
+;===============================================================================
+
 loc_220A8:
 		lea	(Chunk_Table),A1
 		moveq	#0,d4
@@ -39372,14 +39372,14 @@ loc_22104:
 		rts
 loc_22106:
 		move.b	d4,$30(a0)
-		move.l	A1,$32(a0)		
+		move.l	A1,$32(a0)
 		moveq	#-1,d5
 		rts
-		
-;=============================================================================== 
+
+;===============================================================================
 ; Sub Routine SonicInSS_ChkItems
-; [ Begin ]		         
-;===============================================================================		  
+; [ Begin ]
+;===============================================================================
 SonicInSS_ChkItems: ; loc_22112:
 		lea	(Chunk_Table),A1
 		moveq	#0,d4
@@ -39465,7 +39465,7 @@ loc_22204:
 		cmpi.b	#1,$3A(a0)
 		bne.s	loc_22218
 		move.b	#2,$3A(a0)
-loc_22218:		  
+loc_22218:
 		moveq	#-1,d4
 		rts
 loc_2221C:
@@ -39473,9 +39473,9 @@ loc_2221C:
 		bne.s	loc_22246
 		lea	(Chunk_Table+$1020),A1
 		moveq	#$3F,d1
-loc_2222C:		
+loc_2222C:
 		moveq	#$3F,d2
-loc_2222E:		
+loc_2222E:
 		cmpi.b	#$41,(a1)
 		bne.s	loc_22238
 		move.b	#$2C,(a1)
@@ -39488,15 +39488,15 @@ loc_22246:
 		clr.b   $3A(a0)
 		moveq	#0,d4
 		rts
-;=============================================================================== 
+;===============================================================================
 ; Sub Routine SonicInSS_ChkItems
-; [ End ]		         
-;===============================================================================		  
+; [ End ]
+;===============================================================================
 
-;=============================================================================== 
+;===============================================================================
 ; Sub Routine SonicInSS_ChkItems2
-; [ Begin ]		         
-;===============================================================================		  
+; [ Begin ]
+;===============================================================================
 SonicInSS_ChkItems2: ; loc_2224E:
 		move.b	$30(a0),d0
 		bne.s	loc_2226E
@@ -43178,7 +43178,7 @@ loc_7055A:
 loc_70564:
 		dc.w	$0001
 		dc.l	$F8090000,$0000FFE0
-Tails_Dyn_Script: ; loc_7056E:   
+Tails_Dyn_Script: ; loc_7056E:
 		dc.w	loc_70678-Tails_Dyn_Script
 		dc.w	loc_7067A-Tails_Dyn_Script
 		dc.w	loc_70680-Tails_Dyn_Script
