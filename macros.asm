@@ -53,13 +53,13 @@ clearRAM macro startaddr,endaddr
     if ((startaddr)&1)
 	move.b	d0,(a1)+
     endif
-	move.w	#bytesToLcnt((endaddr-startaddr) - ((startaddr)&1)),d1
+	move.w	#bytesToLcnt((endaddr-startaddr)-((startaddr)&1)),d1
 .loop:	move.l	d0,(a1)+
 	dbf	d1,.loop
-    if (((endaddr-startaddr) - ((startaddr)&1))&2)
+    if (((endaddr-startaddr)-((startaddr)&1))&2)
 	move.w	d0,(a1)+
     endif
-    if (((endaddr-startaddr) - ((startaddr)&1))&1)
+    if (((endaddr-startaddr)-((startaddr)&1))&1)
 	move.b	d0,(a1)+
     endif
     endm
